@@ -116,3 +116,11 @@ Can be used to add a message at repo level (repository view, see [#4653](https:/
 ### ON_EVENT
 
 This exit allows you to extend abapGit with new features that are not suitable for abapGit itself. For example, you can link to a new page from a wall message. Another use case is redirecting menu items to a custom page rather than standard abapGit, for example using a company-specific solution to replace "Advanced > Run Code Inspector" (see [#4722](https://github.com/abapGit/abapGit/issues/4722)).
+
+### ADJUST_DISPLAY_FILENAME
+
+This exit can be used to change the path and filename displayed in the repository view (see [#5185](https://github.com/abapGit/abapGit/issues/5185)). For example, you can implement a logic to shorten the path avoiding output of repetetive details. 
+
+### SERIALIZE_POSTPROCESSING
+
+This exit is called at the end of the serialize process and gives an opportunity to change the content of the serialzed files (see [#5194](https://github.com/abapGit/abapGit/issues/5194)).
