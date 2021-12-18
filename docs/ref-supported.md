@@ -7,6 +7,7 @@ order: 20
 Type   | Description   | Supported
 :------------ | :------------ | ------------:
 `ACID` | Checkpoint Group | Yes
+`AIFC` | Objects from AIF content | Yes
 `AMSD` | Logical Database Schema | Yes
 `AOBJ` | Archiving Object | [#804](https://github.com/abapGit/abapGit/issues/804)
 `AREA` | InfoArea | Yes
