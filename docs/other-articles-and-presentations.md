@@ -152,3 +152,7 @@ Michael Pang
 [ABAP Code Review Guideline is out](https://blogs.sap.com/2021/04/06/abap-code-review-guideline-is-out/), Christoph Pohl
 
 [Automagic standalone renaming of ABAP objects](https://blogs.sap.com/2021/04/20/automagic-standalone-renaming-of-abap-objects/), Lars Hvam
+
+[abapGit for Beginners](https://www.youtube.com/watch?v=GqsfIb1RnaU&t=26763s), Marc Bernard
+
+[A Practical Guide to DevOps for SAP ERP](https://blogs.sap.com/2021/12/13/a-practical-guide-to-devops-for-sap-erp/), Nestor Lara
