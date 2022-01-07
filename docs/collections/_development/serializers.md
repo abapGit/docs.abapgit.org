@@ -185,7 +185,7 @@ abapGit determines which objects need to be serialized based on the SAP package 
 
 If a sufficient number of work processes is available, abapGit will activate objects in parallel (unless "Disable Parallel Processing" is selected in the repository settings).
 
-For details, see [`ZCL_ABAPGIT_SERIALIZE`](https://github.com/abapGit/abapGit/blob/main/src/zcl_abapgit_serialize.clas.abap).
+For details, see [`ZCL_ABAPGIT_SERIALIZE`](https://github.com/abapGit/abapGit/blob/main/src/objects/core/zcl_abapgit_serialize.clas.abap).
 
 ### Deserialize Process
 
@@ -197,10 +197,10 @@ Step | Description | Activation
 `ABAP` | Used for non-DDIC objects (code or mostly anything else) which might depend on DDIC objects   | Workbench Mass Activation
 `LATE` | Used for objects that depend on other objects processed in the previous two phases            | DDIC & Workbench Mass Activation
 
-Within each phase, the sequence of objects is determined by abapGit based on known object type dependencies. For details, see [`ZCL_ABAPGIT_OBJECTS->PRIORITIZE_DESER`](https://github.com/abapGit/abapGit/blob/main/src/objects/zcl_abapgit_objects.clas.abap#L1047).
+Within each phase, the sequence of objects is determined by abapGit based on known object type dependencies. For details, see method `PRIORITIZE_DESER` in [`ZCL_ABAPGIT_FILE_DESERIALIZE`](https://github.com/abapGit/abapGit/blob/main/src/objects/core/zcl_abapgit_file_deserialize.clas.abap).
 
 ### Uninstall Process
 
-During uninstallation of a repository, abapGit will determine the objects in the same fashion as the serialize process. The sequence of objects is determined by abapGit based on known object type dependencies. For details, see [`ZCL_ABAPGIT_DEPENDENCIES->RESOLVE`](https://github.com/abapGit/abapGit/blob/main/src/zcl_abapgit_dependencies.clas.abap#L69).
+During uninstallation of a repository, abapGit will determine the objects in the same fashion as the serialize process. The sequence of objects is determined by abapGit based on known object type dependencies. For details, see method `RESOLVE` in [`ZCL_ABAPGIT_DEPENDENCIES`](https://github.com/abapGit/abapGit/blob/main/src/objects/core/zcl_abapgit_dependencies.clas.abap).
 
 Note: There are suggestions to [refactor the logic to determine the processing order](https://github.com/abapGit/abapGit/issues/3536).
