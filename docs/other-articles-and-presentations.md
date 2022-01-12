@@ -156,3 +156,7 @@ Michael Pang
 [abapGit for Beginners](https://www.youtube.com/watch?v=GqsfIb1RnaU&t=26763s), Marc Bernard
 
 [A Practical Guide to DevOps for SAP ERP](https://blogs.sap.com/2021/12/13/a-practical-guide-to-devops-for-sap-erp/), Nestor Lara
+
+### 2021
+
+[Export Objects from SAP System to Github Indirectly (ABAPGIT Offline Mode)](https://adityaaufar.medium.com/export-objects-from-sap-system-to-github-indirectly-abapgit-offline-mode-a7adf34e9c0c), Aditya Aufar
