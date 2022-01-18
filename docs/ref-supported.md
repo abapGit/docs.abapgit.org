@@ -21,6 +21,9 @@ Type   | Description   | Supported
 `BOBF` | BOPF: Business Object Model | [#165](https://github.com/abapGit/abapGit/issues/165)
 `CHAR` | Object characteristic | Yes
 `CHDO` | Change Document Object | Yes
+`CHKC` | ATC Check Category | Yes
+`CHKO` | ATC Check | Yes
+`CHKV` | ATC Check Variant | Yes
 `CLAS` | Class (ABAP Objects) | Yes
 `CMOD` | Customer enhancement projects | Yes
 `CMPT` | Code Composer Template | Yes
