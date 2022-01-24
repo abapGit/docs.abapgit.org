@@ -3,6 +3,16 @@ title: Development Guidelines
 order: 10
 ---
 
+## Object Types
+
+abapGit is merged into a [stand-alone version](https://docs.abapgit.org/guide-install.html). For this reason, the only allowed object types for *new* repository objects are classes and interfaces. In particular, function groups or modules must *not* be included.
+
+Exceptions for existing objects:
+- Transaction `ZABAPGIT`
+- Program `ZABAPGIT` and its includes
+- Function group `ZABAPGIT_PARALLEL` for parallel serialization (only availble in developer version)
+- MIME objects `ZABAPGIT_*` for UI (CSS, JS, and fonts)
+
 ## Conventions
 
 ### Prefixing
