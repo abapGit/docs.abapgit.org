@@ -24,6 +24,7 @@ order: 50
 * Computerservice Wolf
 * [CQSE](https://www.cqse.eu/)
 * [Discovery Consulting](https://www.discoveryconsulting.com.au)
+* [dbosoft](https://www.dbosoft.eu)
 * [emineo](https://www.emineo.ch/)
 * [Hochfrequenz Unternehmensberatung GmbH](https://www.hochfrequenz.de/)
 * [INVIXO](http://invixo.com/)
