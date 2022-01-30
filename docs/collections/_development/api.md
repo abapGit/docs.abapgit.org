@@ -11,12 +11,12 @@ This page describes how to execute various abapGit tasks using your own code. Th
 
 ### Create Online ###
 
-Create a new abapGit repository for a given online project and branch and associate it with an SAP package (must exist already):
+Create a new abapGit repository for a given online project and branch and associate it with an SAP package:
 
 ```abap
 DATA(lo_repo) = zcl_abapgit_repo_srv=>get_instance( )->new_online(
   iv_url         = lv_url
-  iv_branch_name = lv_branch_name
+  iv_branch_name = lv_branch_name " optional
   iv_package     = lv_package ).
 ```
 
@@ -24,7 +24,7 @@ Optional parameters correspond to the input fields of "New Online" in abapGit.
 
 ### Create Offline ###
 
-Create a new abapGit repository for an offline project and associate it with an SAP package (must exist already):
+Create a new abapGit repository for an offline project and associate it with an SAP package:
 
 ```abap
 DATA(lo_repo) = zcl_abapgit_repo_srv=>get_instance( )->new_offline(
@@ -242,7 +242,10 @@ Alternative 2: Use the following code to trigger the pull.
 METHOD pull.
 
   DATA: lo_repo   TYPE REF TO zcl_abapgit_repo_online,
+        li_log    TYPE REF TO zif_abapgit_log,
         ls_checks TYPE zif_abapgit_definitions=>ty_deserialize_checks.
+
+  CREATE OBJECT li_log TYPE zcl_abapgit_log.
 
   lo_repo ?= zcl_abapgit_repo_srv=>get_instance( )->get( iv_key ).
 
@@ -251,7 +254,9 @@ METHOD pull.
 * the code must decide what to do with warnings, see example below
   ls_checks = decisions( ls_checks ).
 
-  lo_repo->deserialize( ls_checks ).
+  lo_repo->deserialize(
+    is_checks = ls_checks
+    ii_log    = li_log ).
 
 ENDMETHOD.
 
