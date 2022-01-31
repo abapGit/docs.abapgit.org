@@ -29,6 +29,7 @@ order: 50
 * [Hochfrequenz Unternehmensberatung GmbH](https://www.hochfrequenz.de/)
 * [INVIXO](http://invixo.com/)
 * [majcon](https://www.majcon.de/)
+* [Marc Bernard Tools](https://marcbernardtools.com/)
 * [Microsoft Azure](https://github.com/Microsoft/ABAP-SDK-for-Azure)
 * [objective partner](https://www.objective-partner.de)
 * [percept ltd](https://www.percept.sk)
@@ -39,6 +40,10 @@ order: 50
 * [Yelcho Systems Consulting](http://www.yelcho.com.au/)
 * [Resulto Consultoria](https://www.resultoconsultoria.com/)
 
-[Projects using abapGit listed on dotabap.org](http://dotabap.org)
+### Projects 
 
-Initial list reported at [issue #1574](https://github.com/abapGit/abapGit/issues/1574). Updates can be made via pull request.
+Projects using abapGit are listed on [dotabap.org](http://dotabap.org).
+
+### Updates
+
+Feel free to add your company to this list via pull request (the initial list came from [here](https://github.com/abapGit/abapGit/issues/1574)).
