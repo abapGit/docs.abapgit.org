@@ -12,7 +12,7 @@ If the error persists, submit an issue to the maintainer of the repository reque
 Or alternatively install an old version of abapGit to allow for installing the files, see next section "For maintainers"
 
 ### For maintainers
-If the latest version of abapGit is installed and the erorr message is shown, then the serialized files should be updated to the latest version.
+If the latest version of abapGit is installed and the error message is shown, then the serialized files should be updated to the latest version.
 
 The steps are:
 
