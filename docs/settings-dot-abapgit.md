@@ -4,7 +4,7 @@ category: repo settings
 order: 10
 ---
 
-`**.abapgit.xml**` is a special abapGit file. It contains meta information of the abapGit project. The file must be located in the root folder of the git repository.
+**`.abapgit.xml`** is a special abapGit file. It contains meta information of the abapGit project. The file must be located in the root folder of the git repository.
 
 It is recommended to edit .abapgit.xml using "Repository Settings" ![](img/repo_settings.png) in abapGit. 
 (In exceptional cases, you could edit the XML directly via "Utilities > Database Util" ![](img/utilities.png).)
@@ -21,18 +21,6 @@ Example: abapGit's own `.abapgit.xml`
    <MASTER_LANGUAGE>E</MASTER_LANGUAGE>
    <STARTING_FOLDER>/src/</STARTING_FOLDER>
    <FOLDER_LOGIC>PREFIX</FOLDER_LOGIC>
-   <IGNORE>
-    <item>/.travis.yml</item>
-    <item>/CONTRIBUTING.md</item>
-    <item>/LICENSE</item>
-    <item>/README.md</item>
-    <item>/package.json</item>
-    <item>/changelog.txt</item>
-    <item>/.gitignore</item>
-    <item>/CODE_OF_CONDUCT.md</item>
-    <item>/abaplint.json</item>
-    <item>/.eslintrc.yaml</item>
-   </IGNORE>
   </DATA>
  </asx:values>
 </asx:abap>
