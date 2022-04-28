@@ -53,22 +53,34 @@ The Git repository folder that defines the root folder where deserialization sta
 
 ### Folder Logic
 
-abapGit follows two folder logics: "Prefix" and "Full".
+abapGit follows three folder logics: "Prefix", "Full", and "Mixed".
 
 #### Prefix
 
 A package name must contain its parent package name as a prefix. Examples:
 
-Valid prefix:
-* ZFOO
-  * **ZFOO**_BAR
-    * **ZFOO_BAR**_QUX
+Valid package prefix:
 
-will produce folder structure /bar/qux/
+```
+ZFOO
+  ZFOO_BAR
+    ZFOO_BAR_QUX
+```
 
-Invalid prefix:
-* ZFOO
-  * ZBAR
+This will produce the following folder structure:
+
+```
+/src
+/src/bar
+/src/bar/qux
+```
+
+Invalid package prefix:
+
+```
+ZFOO
+  ZBAR
+```
 
 The folder logic PREFIX allows to install a repository into a different parent package (in different systems). This can even be local packages (`$*`), in which case no transport order is required.
 
@@ -76,12 +88,43 @@ The folder logic PREFIX allows to install a repository into a different parent p
 
 Any package name is accepted.
 
-* ZSOMETHING
-  * ZHELLO
+```
+ZBASE
+  ZSOMETHING
+    ZHELLO
+```
 
-will produce folder structure /zsomething/zhello/
+This will produce the following folder structure:
+
+```
+/src
+/src/zsomething
+/src/zsomething/zhello
+```
 
 The folder logic FULL forces the installation of a repository into packages with exactly the same name. Note that this can be problematic for contributors who use a system where specific prefixes for the package names are to be used.
+
+#### Mixed
+
+The folder logic MIXED combines PREFIX and FULL. The root package name will be used as prefix for all sub-packages but the package names are not concatenated recursively. This will allow to use significantly logic package names. 
+
+Example package hierarchy:
+
+```
+ZBASE
+  ZBASE_ZFOO
+    ZBASE_ZBAR
+      ZBASE_ZSUB_PACK_WITH_LONG_NAME
+```
+
+This will produce the following folder structure:
+
+```
+/src
+/src/zfoo
+/src/zfoo/zbar
+/src/zfoo/zbar/zsub_pack_with_long_name
+```
 
 ### Ignore Files
 
