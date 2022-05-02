@@ -22,8 +22,6 @@ The head of the repository used by abapGit can be defined in one of four ways:
 - Commit
 - Pull Request
 
-To change to a different head, simply use one of the value helps and save the settings.
-
 The default setting is to use the main or default branch of the repository (`refs/heads/main`).
 
 ### Offline Repositories
