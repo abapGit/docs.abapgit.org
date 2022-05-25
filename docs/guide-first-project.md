@@ -1,5 +1,5 @@
 ---
-title: First project
+title: First Project
 category: online projects
 order: 40
 ---

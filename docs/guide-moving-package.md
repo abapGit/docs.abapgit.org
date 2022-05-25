@@ -1,5 +1,5 @@
 ---
-title: Moving package into git
+title: Moving Package into Git
 category: online projects
 order: 50
 ---

@@ -1,5 +1,5 @@
 ---
-title: Uninstall repository
+title: Uninstall Repository
 category: online projects
 order: 30
 ---

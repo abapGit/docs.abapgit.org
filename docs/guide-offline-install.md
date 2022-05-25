@@ -1,5 +1,5 @@
 ---
-title: Installing offline repo
+title: Installing Offline Repo
 category: offline projects
 order: 05
 ---

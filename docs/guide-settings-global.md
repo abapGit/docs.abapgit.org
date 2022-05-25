@@ -1,5 +1,5 @@
 ---
-title: Global settings
+title: Global Settings
 category: setup
 order: 100
 ---

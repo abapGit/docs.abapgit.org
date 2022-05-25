@@ -1,5 +1,5 @@
 ---
-title: Supported object types
+title: Supported Object Types
 category: reference
 order: 20
 ---

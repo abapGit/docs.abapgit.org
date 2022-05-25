@@ -1,5 +1,5 @@
 ---
-title: UI features
+title: UI Features
 category: getting-started
 order: 40
 ---

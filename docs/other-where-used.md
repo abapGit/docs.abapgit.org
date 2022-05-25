@@ -1,5 +1,5 @@
 ---
-title: Who uses abapGit?
+title: Who Uses abapGit?
 category: other
 order: 50
 ---

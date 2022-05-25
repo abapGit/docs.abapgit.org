@@ -1,5 +1,5 @@
 ---
-title: Translations and i18n
+title: Translations and I18n
 category: reference
 order: 11
 ---
