@@ -25,7 +25,7 @@ The existing objects will show up in the worklist making it possible to commit t
 ## Stage and Commit
 
 Select "Stage", "Add All and Commit", and finally "Commit" to transfer all changes to your git repository. For details, see 
-[Committing changes to git](https://docs.abapgit.org/guide-stage_commit.html).
+[Committing changes to git](https://docs.abapgit.org/guide-stage-commit.html).
 
 Now your local abapGit repo and the remote git repository are in sync. 
 
