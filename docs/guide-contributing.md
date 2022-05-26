@@ -1,5 +1,5 @@
 ---
-title: Contributing to a project
+title: Contributing to a Project
 category: online projects
 order: 60
 ---

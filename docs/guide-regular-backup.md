@@ -1,5 +1,5 @@
 ---
-title: Regular backup
+title: Regular Backup
 category: other
 order: 10
 ---

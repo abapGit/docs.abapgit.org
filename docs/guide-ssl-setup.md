@@ -1,5 +1,5 @@
 ---
-title: SSL setup
+title: SSL Setup
 category: setup
 order: 10
 ---

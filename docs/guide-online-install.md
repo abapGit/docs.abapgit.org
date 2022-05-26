@@ -1,5 +1,5 @@
 ---
-title: Installing online repo
+title: Installing Online Repo
 category: online projects
 order: 10
 ---

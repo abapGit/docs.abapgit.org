@@ -1,5 +1,5 @@
 ---
-title: Pushing changes to git
+title: Pushing Changes to Git
 category: online projects
 order: 55
 ---

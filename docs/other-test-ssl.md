@@ -1,5 +1,5 @@
 ---
-title: ZABAPGIT_TEST_SSL
+title: SSL Test
 category: other
 order: 60
 ---

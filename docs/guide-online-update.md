@@ -1,5 +1,5 @@
 ---
-title: Keeping code up to date
+title: Keeping Code Up-to-date
 category: online projects
 order: 20
 ---

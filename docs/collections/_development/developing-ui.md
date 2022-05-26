@@ -1,5 +1,5 @@
 ---
-title: UI - HTML pages
+title: UI - HTML Pages
 order: 91
 ---
 

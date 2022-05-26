@@ -1,5 +1,5 @@
 ---
-title: Personal settings
+title: Personal Settings
 category: setup
 order: 200
 ---

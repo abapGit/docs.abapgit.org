@@ -1,5 +1,5 @@
 ---
-title: Adding icons
+title: Adding Icons
 order: 90
 ---
 
