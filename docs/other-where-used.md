@@ -5,15 +5,16 @@ order: 50
 ---
 
 ### Customer
+* bonprix Handelsgesellschaft mbH, Germany
+* [CHS Inc.](https://www.chsinc.com)
 * [Haufe Group](https://www.haufegroup.com/en/home)
 * Inchcape Australia
+* [Linde Engineering](https://www.linde-engineering.com/en/index.html)
+* [Orica](https://www.orica.com)
 * Queensland Health
 * RheinEnergie AG, Cologne, Germany
 * Sword Holdings
-* bonprix Handelsgesellschaft mbH, Germany
-* [CHS Inc.](https://www.chsinc.com)
 * [TRR, Sweden](https://www.trr.se)
-* [Linde Engineering](https://www.linde-engineering.com/en/index.html)
 
 ### SAP
 * [SAP IBSO](https://www.sap.com/services/application-development.html)
@@ -37,6 +38,7 @@ order: 50
 * [Progress Management](http://www.pmconseil.com/)
 * [SBCG](https://www.sbcg.com.ua/)
 * SE38 IT-Engineering, Neuss, Germany
+* [SoftwareONE](https://www.softwareone.com)
 * [Tricktresor](https://www.tricktresor.de)
 * [Yelcho Systems Consulting](http://www.yelcho.com.au/)
 * [Resulto Consultoria](https://www.resultoconsultoria.com/)
