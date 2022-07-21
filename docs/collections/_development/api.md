@@ -192,6 +192,7 @@ Alternative 2: Use the following code to add files to staging and push them to t
 METHOD stage_and_push.
 
   DATA: lo_repo  TYPE REF TO zcl_abapgit_repo_online,
+        ls_comment TYPE zif_abapgit_definitions=>ty_comment,
         lo_stage TYPE REF TO zcl_abapgit_stage.
 
   lo_repo ?= zcl_abapgit_repo_srv=>get_instance( )->get( iv_key ).
