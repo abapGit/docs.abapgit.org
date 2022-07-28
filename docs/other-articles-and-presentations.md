@@ -160,3 +160,7 @@ Michael Pang
 ### 2022
 
 [Export Objects from SAP System to Github Indirectly (ABAPGIT Offline Mode)](https://adityaaufar.medium.com/export-objects-from-sap-system-to-github-indirectly-abapgit-offline-mode-a7adf34e9c0c), Aditya Aufar
+
+[Storing ABAP build artifacts in OCI registry](https://blogs.sap.com/2022/07/26/storing-abap-build-artifacts-in-oci-registry/), Lars Hvam
+
+[Managing SAP Application Dependencies with abapGit and APACK](https://blogs.sap.com/2022/07/28/managing-sap-application-dependencies-with-abapgit-and-apack/), Limor Wainstein
