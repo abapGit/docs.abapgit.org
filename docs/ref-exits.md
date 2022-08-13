@@ -69,7 +69,7 @@ Possibility to change the default `ANONYM` ssl id to something system specific.
 ### CUSTOM_SERIALIZE_ABAP_CLIF
 
 Allows for a custom serializer to be used for global classes' CLIF sources. See [#2321](https://github.com/abapGit/abapGit/issues/2321) and [#2491](https://github.com/abapGit/abapGit/pull/2491) for use cases.
-This [example implementation](https://gist.github.com/flaiker/999c8165b89131608b05cd371529fef5) forces the old class serializer to be used for specific packages.
+This [example implementation](https://gist.github.com/fabianlupa/999c8165b89131608b05cd371529fef5) forces the old class serializer to be used for specific packages.
 
 As of [#4953](https://github.com/abapGit/abapGit/pull/4953), the exit offers a post-processing option. First, the exit is called with the optional parameter
 `it_source` set to initial. If you do not return any serialization (`rt_source` is initial), then abapGit will serialize the object as usual and call the
