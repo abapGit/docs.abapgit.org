@@ -21,9 +21,9 @@ Type   | Description   | Supported
 `BOBF` | BOPF: Business Object Model | [#165](https://github.com/abapGit/abapGit/issues/165)
 `CHAR` | Object characteristic | Yes
 `CHDO` | Change Document Object | Yes
-`CHKC` | ATC Check Category | Yes
-`CHKO` | ATC Check | Yes
-`CHKV` | ATC Check Variant | Yes
+`CHKC` | ATC Check Category | Yes, [AFF](https://github.com/SAP/abap-file-formats)
+`CHKO` | ATC Check | Yes, [AFF](https://github.com/SAP/abap-file-formats)
+`CHKV` | ATC Check Variant | Yes, [AFF](https://github.com/SAP/abap-file-formats)
 `CLAS` | Class (ABAP Objects) | Yes
 `CMOD` | Customer enhancement projects | Yes
 `CMPT` | Code Composer Template | Yes
@@ -53,6 +53,7 @@ Type   | Description   | Supported
 `ENHS` | Enhancement Spot | Yes
 `ENQU` | Lock Object | Yes
 `ENSC` | Composite Enhancement Spot | Yes
+`EVTB` | Event Binding | Yes, [AFF](https://github.com/SAP/abap-file-formats)
 `FDT0` | FDT/BRFplus: System Application | Yes
 `FDT1` | FDT/BRFplus: Customizing Application | [#33](https://github.com/abapGit/abapGit/issues/33)
 `FORM` | SAPscript form | Yes
@@ -60,7 +61,7 @@ Type   | Description   | Supported
 `FUGR` | Function Group | Yes
 `FUGS` | Function Group with Customer Include: SAP Part | [#2851](https://github.com/abapGit/abapGit/issues/2851)
 `FUGX` | Function Group with Customer Include: Customer Part | [#2851](https://github.com/abapGit/abapGit/issues/2851)
-`G4BA` | SAP Gateway OData V4 Backend Service Group & Assigments | Yes
+`G4BA` | SAP Gateway OData V4 Backend Service Group & Assignments | Yes
 `G4BS` | SAP Gateway OData V4 Backend Service | Yes
 `IAMU` | Language-Independent IAC Binary Data | Yes
 `IARP` | Parameters of IAC Language Resource | Yes
@@ -106,7 +107,7 @@ Type   | Description   | Supported
 `SFPI` | Form Object: Interface | Yes
 `SFSW` | Switch + Assignment of Objects to the Switch | Yes
 `SHI3` | General structure storage: Definition of a structure | Yes
-`SHI5` | Gen. hierarchy storage extrension name | Yes
+`SHI5` | Gen. hierarchy storage extension name | Yes
 `SHI8` | SFW Switch Assignment in Hierarchy Tool | Yes
 `SHLP` | Search Help | Yes
 `SHMA` | Shared Objects: Defined Area Attributes | Yes
