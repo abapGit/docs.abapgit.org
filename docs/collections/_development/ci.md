@@ -26,7 +26,7 @@ Run report `ZABAPGIT_CI_UPDATE_ABAPGIT_CI` to update the abapGit CI repo.
 
 There are currently three possibilities to run abapGit CI:
 
-**1) Adhoc CI with report `ZABAPGIT_CI`**
+## 1) Adhoc CI with report `ZABAPGIT_CI`
 
 Selection screen:
 
@@ -36,13 +36,13 @@ Result list:
 
 ![abapGit CI results](/img/ZABAPGIT_CI_result.png)
 
-**2) REST API**
+## 2) REST API
 
 `POST /sap/zabapgit_ci/run`
 
 [response.json](example/response.json)
 
-**3) Schedule job sequence with report `ZABAPGIT_CI_JOB_SCHEDULER`**
+## 3) Schedule job sequence with report `ZABAPGIT_CI_JOB_SCHEDULER`
 
 A job sequence is created with
 
