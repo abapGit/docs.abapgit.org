@@ -164,3 +164,5 @@ Michael Pang
 [Storing ABAP build artifacts in OCI registry](https://blogs.sap.com/2022/07/26/storing-abap-build-artifacts-in-oci-registry/), Lars Hvam
 
 [Managing SAP Application Dependencies with abapGit and APACK](https://blogs.sap.com/2022/07/28/managing-sap-application-dependencies-with-abapgit-and-apack/), Limor Wainstein
+
+[Part 5: Using ABAPGit to Transfer On-Premise ABAP Source Code to SAP BW bridge](https://blogs.sap.com/2022/08/25/part-5-using-abapgit-to-transfer-on-premise-abap-source-code-to-sap-bw-bridge/), Wilson Kurian
