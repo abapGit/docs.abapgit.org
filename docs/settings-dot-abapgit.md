@@ -36,6 +36,8 @@ The following settings are stored in the repository and therefore valid for all 
 
 The main language is the languages in which all texts belonging to repository objects will be created. It follows the SAP `sy-langu` values. Note that this implies that all objects in a repository must have the same main language.
 
+**Note:** abapGit does *not* support changing the main language of objects. Therefore, this setting can not be changed using abapGit. If the main language was changed in the git repository, you will have to uninstall the repository your system (in the current main language) and reinstall it (in the new main language). 
+
 ### Translation Languages
 
 There are currently two options available for including translations in a repository: 
