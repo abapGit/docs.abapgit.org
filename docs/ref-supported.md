@@ -114,6 +114,7 @@ Type   | Description   | Supported
 `SICF` | ICF Service | Yes
 `SMIM` | Info Object from the MIME Repository | Yes
 `SMTG` | OM: Email Template | Yes
+`SOBJ` | Business Object Type | Yes
 `SOTS` | All Concepts (OTR) of a Package - Long Texts | Yes
 `SPLO` | Format Types | Yes
 `SPPF` | Page Format | Yes
