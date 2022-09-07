@@ -6,7 +6,7 @@ order: 78
 
 ## Folders
 
-abapGit is mapping SAP packages and subpackages to folders in the git repository. There are three options for defining the folder logic (mapping mode) which 
+abapGit is mapping SAP packages and sub-packages to folders in the git repository. There are three options for defining the folder logic (mapping mode) which 
 are described in the [Repository Settings](settings-dot-abapgit.html#folder-logic).
 
 The correct setting (`Prefix`, `Mixed`, or `Full`) for your system typically depends on the name of the target package for the repository as well as 
@@ -18,7 +18,7 @@ When creating a repository for your own package(s) or installing a third-party r
 defined in the third-party repository. However, not all possible combinations are possible due to length restrictions of SAP package names. 
 
 For example, if your target package name is already 20 characters long, installing a repository with mode `Prefix` and folder names longer than 
-10 chararacters will lead to an error message since the resulting subpackage name will become too long. 
+10 chararacters will lead to an error message since the resulting sub-package name will become too long. 
 
 ### Troubleshooting
 
@@ -32,7 +32,7 @@ folder logic. If this does not work, change the naming conventions and possibly 
 
 Try to use a starting package with a shorter name. If this does not work, use a different folder logic. 
 
-`Package { package } has a subpackage with the same name`
+`Package { package } has a sub-package with the same name`
 
 This error can happen if you try to install a repository with folder logic `Prefix` into a system where you selected folder logic `Full`.
 Try using `Prefix` as in the original repository.
@@ -122,7 +122,7 @@ To resolve the issue, move the files to the same folder in git.
 `Check your package and folder logic, and either assign { package } to the package hierarchy of { top package } or remove package { package } from the repository.`
 
 If package already exist but is not included in the package hierarchy of the package assigned to the repository, then a manual change of the package
-is required i.e. setting a parent package to the repo package (or one of its subpackages). We don't do this automatically since it's not clear where in the
+is required i.e. setting a parent package to the repo package (or one of its sub-packages). We don't do this automatically since it's not clear where in the
 hierarchy the new package should be located or whether the sub package shall be removed from the repo.
 
 `Package and path do not match for object { type } { name }`
