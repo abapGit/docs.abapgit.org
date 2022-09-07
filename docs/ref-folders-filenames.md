@@ -105,3 +105,51 @@ It's possible that SAP object names contain characters that are not valid for gi
 ### Technical Details
 
 The mapping is implemented in class `zcl_abapgit_filename_logic`, methods `object_to_file` (SAP to Repo) and `file_to_object` (Repo to SAP).
+
+## Related Checks
+
+`Changed package assignment for object { type } { name }`
+
+If an object is assigned to a different package/folder in the repository, abapGit will show a warning. Pulling such objects will automatically
+reassign the object to the new pacakge.
+
+`Files for object { type } { name } are not placed in the same folder`
+
+For objects that are split into several files, all files must be included in the same folder. This can happen if files are moved manually in git.
+To resolve the issue, move the files to the same folder in git.
+
+`Package { package } already exists but is not a sub-package of { top package }.`
+`Check your package and folder logic, and either assign { package } to the package hierarchy of { top package } or remove package { package } from the repository.`
+
+If package already exist but is not included in the package hierarchy of the package assigned to the repository, then a manual change of the package
+is required i.e. setting a parent package to the repo package (or one of its subpackages). We don't do this automatically since it's not clear where in the
+hierarchy the new package should be located or whether the sub package shall be removed from the repo.
+
+`Package and path do not match for object { type } { name }`
+
+This warning can happen if an object that is part of the repository exists already in the SAP system but is *not* included in the package hierarchy. 
+Either delete the object (and pull it from the repo afterwards) or assign it to a package in the hierarchy.
+
+`Multiple files with same filename { filename }`
+
+Aside from the special name for packages (`package.devc.xml`) all filenames in the repository (under the starting folder) must be unique. If this is
+not the case, rename the files accordingly.
+
+`Filename is empty for object { type } { name }`
+
+Unknown causes. Open an [issue](https://github.com/sbcgua/ajson/issues).
+
+`Namespace { namespace } does not exist. Create it in transaction SE03`
+
+If repository objects are based on a namespace, the namespace must be created first before other objects can be pulled. Either perform 
+*Advanced > Selective Pull* and pull *only* the namespace, or create the namespace in transaction `SE03` manually.
+
+`Namespace { namespace } is not modifiable. Check it in transaction SE03`
+
+Set the namespace to `modifiable` in transaction `SE03`.
+
+### Technical Details
+
+The checks are implemented in class `zcl_abapgit_file_status`.
+
+
