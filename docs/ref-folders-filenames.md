@@ -23,6 +23,7 @@ For example, if your target package name is already 20 characters long, installi
 ### Troubleshooting
 
 `Unexpected package naming ({ package }). You might switch the folder logic`
+
 `Folder logic: length = 0, parent: { parent_package }, child: { package }`
 
 If these errors occur, then the package hierarchy cannot be converted to a folder structure for the given folder logic. First, try to use a different 
@@ -39,7 +40,7 @@ Try using `Prefix` as in the original repository.
 
 ### Technical Details
 
-The mapping is implemented in class `zcl_abapgit_folder_logic`, methods `package_to_path` (SAP to Repo) and `path_to_package` (Repo to SAP).
+The mapping is implemented in class [`zcl_abapgit_folder_logic`](https://github.com/abapGit/abapGit/blob/main/src/objects/core/zcl_abapgit_folder_logic.clas.abap), methods `package_to_path` (SAP to Repo) and `path_to_package` (Repo to SAP).
 
 ## Files
 
@@ -104,7 +105,7 @@ It's possible that SAP object names contain characters that are not valid for gi
 
 ### Technical Details
 
-The mapping is implemented in class `zcl_abapgit_filename_logic`, methods `object_to_file` (SAP to Repo) and `file_to_object` (Repo to SAP).
+The mapping is implemented in class `zcl_abapgit_filename_logic`](https://github.com/abapGit/abapGit/blob/main/src/objects/core/zcl_abapgit_filename_logic.clas.abap), methods `object_to_file` (SAP to Repo) and `file_to_object` (Repo to SAP).
 
 ## Related Checks
 
@@ -118,8 +119,7 @@ reassign the object to the new pacakge.
 For objects that are split into several files, all files must be included in the same folder. This can happen if files are moved manually in git.
 To resolve the issue, move the files to the same folder in git.
 
-`Package { package } already exists but is not a sub-package of { top package }.`
-`Check your package and folder logic, and either assign { package } to the package hierarchy of { top package } or remove package { package } from the repository.`
+`Package { package } already exists but is not a sub-package of { top package }. Check your package and folder logic, and either assign { package } to the package hierarchy of { top package } or remove package { package } from the repository.`
 
 If package already exist but is not included in the package hierarchy of the package assigned to the repository, then a manual change of the package
 is required i.e. setting a parent package to the repo package (or one of its sub-packages). We don't do this automatically since it's not clear where in the
@@ -150,6 +150,6 @@ Set the namespace to `modifiable` in transaction `SE03`.
 
 ### Technical Details
 
-The checks are implemented in class `zcl_abapgit_file_status`.
+The checks are implemented in class [`zcl_abapgit_file_status`](https://github.com/abapGit/abapGit/blob/main/src/objects/core/zcl_abapgit_file_status.clas.abap).
 
 
