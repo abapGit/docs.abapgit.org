@@ -7,7 +7,7 @@ order: 20
 
 ## Standalone Version
 
-To update to the current version, upload the code from [zabapgit.abap](https://raw.githubusercontent.com/abapGit/build/main/zabapgit.abap) into the ZABAPGIT_STANDALONE report (formerly ZABAPGIT_FULL) and activate the program.
+To update to the current version, upload the code from [zabapgit_standalone.prog.abap](https://raw.githubusercontent.com/abapGit/build/main/zabapgit_standalone.prog.abap) into the ZABAPGIT_STANDALONE report (formerly ZABAPGIT_FULL) and activate the program.
 
 ## Developer Version
 
