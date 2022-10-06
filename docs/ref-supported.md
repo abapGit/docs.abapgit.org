@@ -112,6 +112,7 @@ Type   | Description   | Supported
 `SHLP` | Search Help | Yes
 `SHMA` | Shared Objects: Defined Area Attributes | Yes
 `SICF` | ICF Service | Yes
+`SMBC` | Business Configuration Maintenance Objects | Yes, [AFF](https://github.com/SAP/abap-file-formats)
 `SMIM` | Info Object from the MIME Repository | Yes
 `SMTG` | OM: Email Template | Yes
 `SOBJ` | Business Object Type | Yes
