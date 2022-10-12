@@ -23,7 +23,7 @@ If you turn on "Show Last Opened Repository", abapGit will jump directly to the 
 You can switch the theme for abapGit between several choices: Default, Dark, and Belize. Alternatively, you can select "Synced with SAP GUI" to use the same theme
 you are using for SAP GUI (availability depends on SAP GUI release).
 
-The size of icons can be changed using "icon scaling".
+The size of icons can be changed using "icon scaling". The setting is intended for [High DPI displays](https://doc.qt.io/qt-5/highdpi.html).
 
 "List Size" defines the maximum number of items shown in a list. If there are more items, then abapGit start paging.
 
