@@ -19,7 +19,14 @@ order: 10
 3. Switch to the Details Tab and choose the first certificate of the tree and click Export
 4. Do the same for the next certificate in the tree
 
-##### Option C - Manual #####
+##### Option C - Safari (macOS) #####
+1. Use Safari to go to [https://github.com](https://github.com)
+2. Click on the lock icon and then "View Certificate"
+3. In the certificate hierarchy, select the root certificate
+4. Holding down the Option key (⌥), drag the large certificate icon into a text editor
+5. Save the document as a `.PEM` file 
+
+##### Option D - Manual #####
 1. Goto github, find the certificate that it is using
 2. Download certificate from [https://www.digicert.com/digicert-root-certificates.htm](https://www.digicert.com/digicert-root-certificates.htm)
 
