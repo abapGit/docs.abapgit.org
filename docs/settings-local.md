@@ -14,6 +14,10 @@ The following settings are stored in and valid for the current system only.
 
 This setting overwrites the default name of the repository (which is derived from the later part of the repository URL).
 
+### Labels
+
+Labels allow to organize your repos and group/filter them more efficiently. Specify label list separated with commas. Note allowed character set (e.g. no special symbols allowed). Example: `"work,clientX"`.
+
 ### Write Protected
 
 If you write protect a repository, it will make sure that users cannot overwrite objects in the SAP system with objects from the  repository. It helps enforcing that data can only go from the SAP system to the repository.
