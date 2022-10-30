@@ -16,7 +16,7 @@ This setting overwrites the default name of the repository (which is derived fro
 
 ### Labels
 
-Labels allow to organize your repos and group/filter them more efficiently. Specify label list separated with commas. Note allowed character set (e.g. no special symbols allowed). Example: `"work,clientX"`.
+Labels allow to organize your repos and group/filter them more efficiently. Specify label list separated with commas. Note allowed character set (e.g. no special symbols allowed). Example: `"work,client X,open-source"`.
 
 ### Write Protected
 
