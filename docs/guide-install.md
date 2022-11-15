@@ -13,7 +13,7 @@ abapGit exists in 2 flavours: _standalone_ version or _developer_ version.
 ## Prerequisites ##
 abapGit requires SAP BASIS version 702 or higher.
 
-For abapGit to work properly, the SAP GUI Browser Control must be set to `Internet Explorer` under `SAP GUI Options > Interaction Design > HTML Control > Browser Control`
+For abapGit to work properly, the SAP GUI Browser Control must be set to `Internet Explorer` under `SAP GUI Options > Interaction Design > HTML Control > Browser Control` (see [known issues with Chromium-based browser control](https://github.com/abapGit/abapGit/issues/4841))
 
 ## Install Standalone Version ##
 1. Download the [ABAP code](https://raw.githubusercontent.com/abapGit/build/main/zabapgit_standalone.prog.abap) (right click -> save-as) to a file.
