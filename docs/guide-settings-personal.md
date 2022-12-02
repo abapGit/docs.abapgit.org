@@ -38,7 +38,7 @@ If you are using ABAP Development Tools (ADT) in Eclipse, we recommend to turn o
 open the object in ADT (if available).
 
 **Enable Vimium-like Link Hints** and **Key to Activate Link Hints** provide a feature similarly to the [Vimium browser](https://vimium.github.io/). After pressing the
-activation key (default "f"), abapGit will uses a clever highlighting method to navigate using links.
+activation key (default "t"), abapGit will uses a clever highlighting method to navigate using links.
 
 ![](img/settings-personal-3.png)
 
