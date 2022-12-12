@@ -129,7 +129,7 @@ On the left, you find a link to the [Sponsor Us](https://abapgit.org/sponsor.htm
 
 ### Version
 
-In the middle under the abapGit logo, you see the current version of abapGit. This includes version number and a description whether you can running the standalone or the developer version.
+In the middle under the abapGit logo, you see the current version of abapGit. This includes version number and a description whether you can running the [standalone](guide-install.html#install-standalone-version) or the [developer version](guide-install.html#install-developer-version).
 
 Hovering of the logo shows the backend runtime of the last navigation step. Clicking the logo takes you to the [abapGit Homepage](https://abapgit.org/).
 
