@@ -25,9 +25,11 @@ Secure connections require installation of the SAP Crypto Library (CommonCryptoL
 
 Note: It's highly recommended to run a recent version of the Crypto Library to avoid known security issues. As of December 2022, the latest version is `8.5.47`.
 
+[Crypto Library in SAP Download Center](https://launchpad.support.sap.com/#/softwarecenter/template/products/%20_APP=00200682500000001943&_EVENT=DISPHIER&HEADER=Y&FUNCTIONBAR=N&EVENT=TREE&NE=NAVIGATE&ENR=01200615320100002625&V=MAINT&TA=ACTUAL&PAGE=SEARCH/SAPCRYPTOLIB)
+
 You can find the installed version number in transaction `STRUST` > Environment > Display SSF Version:
 
-[Crypto Library in SAP Download Center](https://launchpad.support.sap.com/#/softwarecenter/template/products/%20_APP=00200682500000001943&_EVENT=DISPHIER&HEADER=Y&FUNCTIONBAR=N&EVENT=TREE&NE=NAVIGATE&ENR=01200615320100002625&V=MAINT&TA=ACTUAL&PAGE=SEARCH/SAPCRYPTOLIB)
+![ssl_setup_cryptolib](img/ssl_setup_cryptolib.png)
 
 ### SAP System Profile
 
