@@ -37,7 +37,7 @@ abapGit supports the general browser control keys:
 
 ### Hotkeys
 
-For each page, abapGit defines certain hotkeys (or keyboard shortcuts). If you press a hotkey, it will execute the corresponding command immediately. You can display the list of possible hotkeys by pressing `?` anywhere in abapGit.
+For each page, abapGit defines certain hotkeys (or keyboard shortcuts). If you press a hotkey, it will execute the corresponding command immediately. You can display the list of possible hotkeys by pressing `?` anywhere in abapGit. You can find a [Hotkeys Cheat Sheet](ref-hotkeys.html) under references.
 
 ![keyboard_hotkeys](img/keyboard_hotkeys.png)
 
