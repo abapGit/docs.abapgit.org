@@ -121,6 +121,8 @@ In the area between header and footer is filled differently depending on the sel
 
 At the end of each page, abapGit displays a footer.
 
+![ui_footer](img/ui_footer.png)
+
 ### Sponsor Us
 
 On the left, you find a link to the [Sponsor Us](https://abapgit.org/sponsor.html) page. abapGit is exclusively developed and maintained by volunteers. Any donations are highly appreciated.
