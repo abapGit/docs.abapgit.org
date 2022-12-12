@@ -28,4 +28,4 @@ The default setting is to use the main or default branch of the repository (`ref
 
 ![](img/repo_settings_remote_offline.png)
 
-You can change the name of offline repositories that is shown in the abapGit repository overview.
+You can change the name of offline repositories that is shown in the abapGit repository list.
