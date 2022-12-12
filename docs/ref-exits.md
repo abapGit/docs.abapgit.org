@@ -107,7 +107,7 @@ The exit also receives a repo meta data snapshot (`zif_abapgit_persistence=>ty_r
 
 ### WALL_MESSAGE_LIST
 
-Can be used to add a message at list level (repository overview, see [#4653](https://github.com/abapGit/abapGit/issues/4653)).
+Can be used to add a message at list level (repository list, see [#4653](https://github.com/abapGit/abapGit/issues/4653)).
 
 ### WALL_MESSAGE_REPO
 

@@ -26,7 +26,7 @@ The size of icons can be changed using **Icon scaling**. The setting is intended
 
 **List Size** defines the maximum number of items shown in a list. If there are more items, then abapGit start paging.
 
-**Repo label colors** allows you to customize colors of organization labels at repo overview page. The format of the configuration is: `"label1:color,label2:color"`. `Color` param accepts either a predefined css-style name or RGB color spec in format of `#<foreground>/<background>` e.g. `#3040ff/ff8a80`. See more (in particular, css style list) in "?" hint box.
+**Repo Label Colors** allows you to customize colors of organization labels use on repository list and view. The format of the configuration is: `"label1:color,label2:color"`. `Color` param accepts either a predefined css-style name or RGB color spec in format of `#<foreground>/<background>` e.g. `#3040ff/ff8a80`. See more (in particular, CSS style list) in "?" hint box.
 
 ## Interaction
 
