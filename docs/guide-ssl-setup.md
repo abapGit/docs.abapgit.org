@@ -57,7 +57,7 @@ For [preview, evaluation, and developer versions of SAP NetWeaver](https://go.su
 
 If configured correctly, transaction `SMICM` > Goto > Services (`Shift + F1`) will show a green checkmark next to the HTTPS service.
 
-![ssl_setup_service](img/ssl_setup_service.png)
+![ssl_setup_services](img/ssl_setup_services.png)
 
 ### SAP Trust Manager
 
