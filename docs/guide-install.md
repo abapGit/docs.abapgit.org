@@ -34,7 +34,7 @@ In order to contribute to the abapGit project, you install the developer version
 Prerequisite to using the online feature is that [SSL must be setup](guide-ssl-setup.html). If your system is not connected to the Internet (e.g. behind a firewall) or doesn't allow proper SSL configuration, then you can use the offline scenario (see below).
 
 1. Run the standalone version of abapGit
-1. On the repository overview page, select "New Online"
+1. On the repository list page, select "New Online"
 1. Enter `https://github.com/abapGit/abapGit/` for the URL
 1. Enter package name `$ABAPGIT` (or select an existing or create new package)
 1. Select "Clone Online Repo"
@@ -49,7 +49,7 @@ Download latest version of the abapGit developer version from https://github.com
 ![](img/zip_download.png)
 
 1. Run the standalone version of abapGit
-1. On the repository overview page, select "New Offline"
+1. On the repository list page, select "New Offline"
 1. Enter repo name `abapGit` and package name `$ABAPGIT` (or select an existing or create new package)
 1. Select "Create Offline Repo"
 1. Select "Import <sup>zip</sup>"
