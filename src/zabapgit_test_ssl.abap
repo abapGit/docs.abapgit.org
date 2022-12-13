@@ -1,144 +1,364 @@
 REPORT zabapgit_test_ssl.
-* See https://github.com/larshp/abapGit/
+
+* See https://docs.abapgit.org
+
+********************************************************************************
+* The MIT License (MIT)
+*
+* Copyright (c) 2014 abapGit Contributors
+*
+* Permission is hereby granted, free of charge, to any person obtaining a copy
+* of this software and associated documentation files (the "Software"), to deal
+* in the Software without restriction, including without limitation the rights
+* to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+* copies of the Software, and to permit persons to whom the Software is
+* furnished to do so, subject to the following conditions:
+*
+* The above copyright notice and this permission notice shall be included in all
+* copies or substantial portions of the Software.
+*
+* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+* IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+* FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+* AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+* LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+* OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+* SOFTWARE.
+********************************************************************************
+
+SELECTION-SCREEN BEGIN OF BLOCK sc_header WITH FRAME TITLE sc_titl1.
+  SELECTION-SCREEN SKIP.
+  SELECTION-SCREEN COMMENT 1(77) sc_txt1.
+  SELECTION-SCREEN SKIP.
+  SELECTION-SCREEN COMMENT /1(77) sc_txt2.
+  SELECTION-SCREEN COMMENT /1(77) sc_txt3.
+  SELECTION-SCREEN COMMENT /1(77) sc_txt4.
+SELECTION-SCREEN END OF BLOCK sc_header.
+
+SELECTION-SCREEN SKIP.
+
+SELECTION-SCREEN BEGIN OF BLOCK sc_serv WITH FRAME TITLE sc_titl2.
+  PARAMETERS:
+    p_url1 TYPE string LOWER CASE DEFAULT 'https://github.com' OBLIGATORY,
+    p_url2 TYPE string LOWER CASE DEFAULT 'https://api.github.com',
+    p_id   TYPE strustssl-applic DEFAULT 'ANONYM' OBLIGATORY.
+* api.github.com is used when pushing code back to github
+SELECTION-SCREEN END OF BLOCK sc_serv.
+
+SELECTION-SCREEN SKIP.
+
+SELECTION-SCREEN BEGIN OF BLOCK sc_proxy WITH FRAME TITLE sc_titl3.
+* proxy settings, fill if your system is behind a proxy
+  PARAMETERS:
+    p_proxy TYPE string LOWER CASE,
+    p_pport TYPE string LOWER CASE,
+    p_puser TYPE string LOWER CASE,
+    p_ppwd  TYPE string LOWER CASE.
+SELECTION-SCREEN END OF BLOCK sc_proxy.
 
 CLASS lcl_report DEFINITION.
+
   PUBLIC SECTION.
-    METHODS: run IMPORTING i_url TYPE swc_value,
-      display_response.
+
+    METHODS run
+      IMPORTING
+        iv_url TYPE string.
+
+    METHODS display_response.
+
+    METHODS f4_url
+      RETURNING
+        VALUE(rv_url) TYPE string.
+
   PRIVATE SECTION.
-    TYPES: BEGIN OF ty_link,
-             line     TYPE i,
-             response TYPE string,
-           END OF ty_link,
-           ty_links TYPE STANDARD TABLE OF ty_link WITH NON-UNIQUE KEY line.
-    DATA links TYPE ty_links.
-    METHODS add_response_link IMPORTING response TYPE string.
+
+    TYPES:
+      BEGIN OF ty_server,
+        server TYPE w3server,
+        url    TYPE w3url,
+      END OF ty_server,
+      ty_servers TYPE STANDARD TABLE OF ty_server WITH KEY server.
+
+    TYPES:
+      BEGIN OF ty_link,
+        line     TYPE i,
+        response TYPE string,
+      END OF ty_link,
+      ty_links TYPE STANDARD TABLE OF ty_link WITH NON-UNIQUE KEY line.
+
+    DATA mt_links TYPE ty_links.
+
+    METHODS display_error
+      IMPORTING
+        iv_text TYPE string.
+
+    METHODS display_messages
+      IMPORTING
+        iv_response TYPE string.
+
+    METHODS add_response_link
+      IMPORTING
+        iv_response TYPE string.
+
+    METHODS get_servers
+      RETURNING
+        VALUE(rt_servers) TYPE ty_servers.
+
 ENDCLASS.
-
-PARAMETERS: p_url1 TYPE swc_value DEFAULT 'https://github.com',
-            p_url2 TYPE swc_value DEFAULT 'https://api.github.com',
-            p_id   TYPE ssfapplssl DEFAULT 'ANONYM'.
-* api.github.com is used when pushing code back to github
-
-SELECTION-SCREEN BEGIN OF BLOCK proxy WITH FRAME TITLE proxtitl.
-* proxy settings, fill if your system is behind a proxy
-PARAMETERS: p_proxy  TYPE string,
-            p_pxport TYPE string,
-            p_puser  TYPE string,
-            p_ppwd   TYPE string.
-SELECTION-SCREEN END OF BLOCK proxy.
-
-DATA report TYPE REF TO lcl_report.
-
-INITIALIZATION.
-  proxtitl = 'Proxy Settings'.
-  %_p_url1_%_app_%-text = 'URL 1'.
-  %_p_url2_%_app_%-text = 'URL 2'.
-  %_p_id_%_app_%-text = 'SSL Client Identity'.
-  %_p_proxy_%_app_%-text = 'Hostname/IP'.
-  %_p_pxport_%_app_%-text = 'Port'.
-  %_p_puser_%_app_%-text = 'Username'.
-  %_p_ppwd_%_app_%-text = 'Password'.
-
-START-OF-SELECTION.
-  CREATE OBJECT report.
-  report->run( p_url1 ).
-  WRITE: /, '----', /.
-  report->run( p_url2 ).
-
 
 CLASS lcl_report IMPLEMENTATION.
 
   METHOD run.
-    DATA: code          TYPE i,
-          url           TYPE string,
-          http_client   TYPE REF TO if_http_client,
-          error_lines   TYPE TABLE OF string,
-          error_message TYPE string,
-          reason        TYPE string,
-          response      TYPE string.
 
-    IF i_url IS INITIAL.
+    DATA:
+      lv_code          TYPE i,
+      lv_url           TYPE string,
+      li_http_client   TYPE REF TO if_http_client,
+      lv_error_message TYPE string,
+      lv_reason        TYPE string,
+      lv_response      TYPE string.
+
+    IF iv_url IS INITIAL.
       RETURN.
     ENDIF.
 
-    url = i_url.
     cl_http_client=>create_by_url(
       EXPORTING
-        url           = url
-        ssl_id        = p_id
-        proxy_host    = p_proxy
-        proxy_service = p_pxport
+        url                 = iv_url
+        ssl_id              = p_id
+        proxy_host          = p_proxy
+        proxy_service       = p_pport
       IMPORTING
-        client        = http_client ).
+        client              = li_http_client
+      EXCEPTIONS
+        argument_not_found  = 1
+        plugin_not_active   = 2
+        internal_error      = 3
+        pse_not_found       = 4
+        pse_not_distrib     = 5
+        pse_errors          = 6
+        OTHERS              = 7 ).
+
+    IF sy-subrc <> 0.
+      display_error( 'HTTP Client Create' ).
+      RETURN.
+    ENDIF.
 
     IF p_puser IS NOT INITIAL.
-      http_client->authenticate(
+      li_http_client->authenticate(
         proxy_authentication = abap_true
         username             = p_puser
         password             = p_ppwd ).
     ENDIF.
 
-    http_client->send( ).
-    http_client->receive(
+    li_http_client->send( ).
+
+    li_http_client->receive(
       EXCEPTIONS
         http_communication_failure = 1
         http_invalid_state         = 2
         http_processing_failed     = 3
         OTHERS                     = 4 ).
+
     IF sy-subrc <> 0.
-      WRITE: / 'Error Number', sy-subrc, /.
-      MESSAGE ID sy-msgid TYPE sy-msgty NUMBER sy-msgno WITH sy-msgv1 sy-msgv2 sy-msgv3 sy-msgv4.
-      http_client->get_last_error( IMPORTING message = error_message ).
-      SPLIT error_message AT cl_abap_char_utilities=>newline INTO TABLE error_lines.
-      LOOP AT error_lines INTO error_message.
-        WRITE / error_message.
-      ENDLOOP.
+      display_error( 'HTTP Client Receive' ).
+      RETURN.
+
+      li_http_client->get_last_error(
+        IMPORTING
+          message = lv_response ).
+
+      display_messages( lv_response ).
+
       WRITE / 'Also check transaction SMICM -> Goto -> Trace File -> Display End'.
       RETURN.
     ENDIF.
 
 * if SSL Handshake fails, make sure to also check https://launchpad.support.sap.com/#/notes/510007
 
-    http_client->response->get_status(
+    li_http_client->response->get_status(
       IMPORTING
-        code   = code
-        reason = reason ).
-    IF code = 200.
-      WRITE: / url, ': ok'.
+        code   = lv_code
+        reason = lv_reason ).
+    IF lv_code = 200.
+      WRITE: / iv_url, ': ok'.
     ELSE.
-      WRITE: / url, ': Error', code, space, reason.
-      response = http_client->response->get_cdata( ).
-      IF response IS NOT INITIAL.
-        add_response_link( response ).
-      ENDIF.
-      REPLACE ALL OCCURRENCES OF cl_abap_char_utilities=>cr_lf(1) IN response WITH ``.
-      SPLIT response AT cl_abap_char_utilities=>newline INTO TABLE error_lines.
-      LOOP AT error_lines INTO error_message.
-        WRITE / error_message.
-      ENDLOOP.
+      WRITE: / iv_url, ': Error', lv_code, space, lv_reason.
 
+      lv_response = li_http_client->response->get_cdata( ).
+
+      IF lv_response IS NOT INITIAL.
+        add_response_link( lv_response ).
+      ENDIF.
+
+      REPLACE ALL OCCURRENCES OF cl_abap_char_utilities=>cr_lf(1) IN lv_response WITH ``.
+
+      display_messages( lv_response ).
     ENDIF.
+
+  ENDMETHOD.
+
+  METHOD display_error.
+
+    WRITE: / iv_text, '- Error Number:', sy-subrc, /.
+
+    MESSAGE ID sy-msgid TYPE sy-msgty NUMBER sy-msgno
+      DISPLAY LIKE 'I'
+      WITH sy-msgv1 sy-msgv2 sy-msgv3 sy-msgv4.
+
+  ENDMETHOD.
+
+  METHOD display_messages.
+
+    DATA:
+      lt_lines TYPE TABLE OF string,
+      lv_line  TYPE string.
+
+    SPLIT iv_response AT cl_abap_char_utilities=>newline INTO TABLE lt_lines.
+
+    LOOP AT lt_lines INTO lv_line.
+      WRITE / lv_line.
+    ENDLOOP.
+    SKIP.
+
   ENDMETHOD.
 
   METHOD add_response_link.
-    DATA link TYPE ty_link.
+
+    DATA lv_link TYPE ty_link.
+
     WRITE / 'Display Error Response as HTML' COLOR = 6 HOTSPOT.
-    link-line = sy-linno.
-    link-response = response.
-    APPEND link TO links.
+
+    lv_link-line     = sy-linno.
+    lv_link-response = iv_response.
+    APPEND lv_link TO mt_links.
+
   ENDMETHOD.
 
   METHOD display_response.
-    DATA link TYPE ty_link.
-    READ TABLE links INTO link WITH TABLE KEY line = sy-curow.
+
+    DATA lv_link TYPE ty_link.
+
+    READ TABLE mt_links INTO lv_link WITH TABLE KEY line = sy-curow.
     IF sy-subrc = 0.
-      cl_abap_browser=>show_html( html_string = link-response
-                                  check_html  = abap_false ).
+      cl_abap_browser=>show_html(
+        html_string = lv_link-response
+        check_html  = abap_false ).
     ENDIF.
+
+  ENDMETHOD.
+
+  METHOD get_servers.
+
+    DATA ls_server TYPE ty_server.
+
+    ls_server-server = 'GitHub (Read Access)'.
+    ls_server-url    = 'https://github.com'.
+    INSERT ls_server INTO TABLE rt_servers.
+    ls_server-server = 'GitHub (Write Access)'.
+    ls_server-url    = 'https://api.github.com'.
+    INSERT ls_server INTO TABLE rt_servers.
+    ls_server-server = 'GitLab'.
+    ls_server-url    = 'https://gitlab.com/test'.
+    INSERT ls_server INTO TABLE rt_servers.
+    ls_server-server = 'Azure DevOps'.
+    ls_server-url    = 'https://dev.azure.com/<org>'.
+    INSERT ls_server INTO TABLE rt_servers.
+    ls_server-server = 'Bitbucket'.
+    ls_server-url    = 'https://bitbucket.org'.
+    INSERT ls_server INTO TABLE rt_servers.
+    ls_server-server = 'Assembla'.
+    ls_server-url    = 'https://git.assembla.com/<org>'.
+    INSERT ls_server INTO TABLE rt_servers.
+
+    SORT rt_servers.
+
+  ENDMETHOD.
+
+  METHOD f4_url.
+
+    DATA:
+      ls_server  TYPE ty_server,
+      lt_servers TYPE TABLE OF ty_server,
+      ls_return  TYPE ddshretval,
+      lt_return  TYPE TABLE OF ddshretval.
+
+    lt_servers = get_servers( ).
+
+    CALL FUNCTION 'F4IF_INT_TABLE_VALUE_REQUEST'
+      EXPORTING
+        retfield        = 'SERVER'
+        window_title    = 'Git Server Selection'
+        value_org       = 'S'
+      TABLES
+        value_tab       = lt_servers
+        return_tab      = lt_return
+      EXCEPTIONS
+        parameter_error = 1
+        no_values_found = 2
+        OTHERS          = 3.
+    IF sy-subrc <> 0.
+      display_error( 'Server Value Help' ).
+      RETURN.
+    ENDIF.
+
+    READ TABLE lt_return INTO ls_return INDEX 1.
+    IF sy-subrc = 0.
+      READ TABLE lt_servers INTO ls_server WITH KEY server = ls_return-fieldval.
+      IF sy-subrc = 0.
+        rv_url = ls_server-url.
+      ENDIF.
+    ENDIF.
+
   ENDMETHOD.
 
 ENDCLASS.
 
+DATA go_report TYPE REF TO lcl_report.
+
+INITIALIZATION.
+  sc_titl1               = 'Description'.
+  sc_txt1                = 'This report tests the connection from this system to a Git server'.
+  sc_txt2                = 'Select or enter the URL of the Git server and run the report. You can'.
+  sc_txt3                = 'test two URLs at the same time, for example, if read and write'.
+  sc_txt4                = 'access require different servers.'.
+  sc_titl2               = 'Git Server'.
+  %_p_url1_%_app_%-text  = 'URL (Read Access)'.
+  %_p_url2_%_app_%-text  = 'URL (Write Access)'.
+  %_p_id_%_app_%-text    = 'SSL Client Identity'.
+  sc_titl3               = 'Proxy Settings (Optional)'.
+  %_p_proxy_%_app_%-text = 'Hostname/IP'.
+  %_p_pport_%_app_%-text = 'Port'.
+  %_p_puser_%_app_%-text = 'Username'.
+  %_p_ppwd_%_app_%-text  = 'Password'.
+
+  CREATE OBJECT go_report.
+
+AT SELECTION-SCREEN.
+  p_proxy = replace(
+    val   = p_proxy
+    regex = 'http(s?)://'
+    with  = ''
+    occ   = 1 ).
+
+AT SELECTION-SCREEN OUTPUT.
+  LOOP AT SCREEN.
+    IF screen-name = 'P_PPWD'.
+      screen-invisible = 1.
+      MODIFY SCREEN.
+    ENDIF.
+  ENDLOOP.
+
+AT SELECTION-SCREEN ON VALUE-REQUEST FOR p_url1.
+  p_url1 = go_report->f4_url( ).
+
+AT SELECTION-SCREEN ON VALUE-REQUEST FOR p_url2.
+  p_url2 = go_report->f4_url( ).
+
+START-OF-SELECTION.
+  go_report->run( p_url1 ).
+  WRITE: /, '----', /.
+  go_report->run( p_url2 ).
+
 AT LINE-SELECTION.
-  report->display_response( ).
+  go_report->display_response( ).
