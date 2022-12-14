@@ -1,7 +1,7 @@
 ---
 title: SSL Test
-category: other
-order: 60
+category: guide
+order: 15
 ---
 
 The report [zabapgit_test_ssl](https://raw.githubusercontent.com/abapGit/docs.abapgit.org/main/src/zabapgit_test_ssl.abap) can be used to test the SSL connection to GitHub or any other Git server. Copy and paste the report into your ABAP system (package `$TMP`) and run the report.
@@ -9,6 +9,8 @@ The report [zabapgit_test_ssl](https://raw.githubusercontent.com/abapGit/docs.ab
 ### Selection Screen
 
 ![ssl_test_selection](img/ssl_test_selection.png)
+
+Note: The default selection will be testing the connection to GitHub. However, you may select other Git server URL using the value help or enter your own URLs.
 
 ### Expected Result
 
