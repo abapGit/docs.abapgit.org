@@ -1,6 +1,6 @@
 ---
 title: SSL Test
-category: setup
+category: guide
 order: 15
 ---
 
@@ -9,6 +9,8 @@ The report [zabapgit_test_ssl](https://raw.githubusercontent.com/abapGit/docs.ab
 ### Selection Screen
 
 ![ssl_test_selection](img/ssl_test_selection.png)
+
+Note: The default selection will be testing the connection to GitHub. However, you may select a different Git server URL using the value help or enter your own URLs.
 
 ### Expected Result
 
