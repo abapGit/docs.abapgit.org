@@ -32,6 +32,7 @@ order: 50
 * [majcon](https://www.majcon.de/)
 * [Marc Bernard Tools](https://marcbernardtools.com/)
 * [Microsoft Azure](https://github.com/Microsoft/ABAP-SDK-for-Azure)
+* [Nuve Platform](https://www.nuveplatform.com/)
 * [objective partner](https://www.objective-partner.de)
 * [percept ltd](https://www.percept.sk)
 * [PM Eleven](https:///www.pmeleven.com)
