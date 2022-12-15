@@ -48,7 +48,7 @@ SETENV_27 = SAPSSL_CLIENT_CIPHERSUITES=150:PFS:HIGH::EC_X25519:EC_P256:EC_HIGH
 SETENV_28 = SAPSSL_CLIENT_SNI_ENABLED=TRUE 
 ```
 
-To add profile parameters use transaction `RZ10` or update contents of file `DEFAULT.PFL` directly. A system restart might be required.
+To add profile parameters, use transaction `RZ10` or update the contents of file `DEFAULT.PFL` directly. A system restart might be required.
 
 For [preview, evaluation, and developer versions of SAP NetWeaver](https://go.support.sap.com/minisap/#/minisap) refer to following locations, depending on your system name:
 
@@ -61,9 +61,9 @@ If configured correctly, transaction `SMICM` > Goto > Services (`Shift + F1`) wi
 
 ### SAP Trust Manager
 
-As a default, abapGit is using an anonymous client connection (`ANONYM - SSL Client (Anonymous)`). A secure connection requires that the Git server certificate is available in the certificate list. The certificate must also be valid!
+As a default, abapGit uses an anonymous client connection (`ANONYM - SSL Client (Anonymous)`). A secure connection requires that the Git server certificate is available in the certificate list. The certificate must also be valid!
 
-First, download the server certifates to you local machine. Then import and add these certificates to your SAP system.
+First, download the server certificates to you local machine. Then import and add these certificates to your SAP system.
 
 [Trust Manager in SAP Documentation](https://help.sap.com/docs/SAP_NETWEAVER_750/280f016edb8049e998237fcbd80558e7/4c5bdb17f85640f1e10000000a42189c.html)
 
@@ -76,7 +76,7 @@ If done correctly, transaction `STRUST` will show the Git server certificates in
 ##### Option A - Chrome 
 
 1. Using Google Chrome to go to [https://github.com](https://github.com)
-2. Click on the lock icon near the address bar, then click on "Connection is sercure"
+2. Click on the lock icon near the address bar, then click on "Connection is secure"
 3. On the Security tab, click on "Certificate is valid"
 4. Go to the "Details" tab and select "Export..." to download the certificate to a file
 5. In the "Certification hierarchy" box, select the parent node of the GitHub certificate and export it as well. Repeat the same with the root node.
@@ -115,7 +115,7 @@ If done correctly, transaction `STRUST` will show the Git server certificates in
 
 ### abapGit Settings
 
-If your SAP system is behind a firewall, it might require a HTTP proxy to access the Git server. If this is the case, maintain the proxy host, port, and authentication (user/password) in your global abapGit settings.
+If your SAP system is behind a firewall, it might require an HTTP proxy to access the Git server. If this is the case, maintain the proxy host, port, and authentication (user/password) in your global abapGit settings.
 
 ![ssl_setup_proxy](img/ssl_setup_proxy.png)
 
@@ -130,7 +130,7 @@ Report [ZABAPGIT_TEST_SSL](other-test-ssl.html) can be used to verify that the c
 3. Select Goto > Services and check that the HTTPS service is active (green checkmark)
 4. Select Goto > Trace Files > Display All to view the ICM trace (`dev_icm`)
 - Check for any errors
-- Find the sections called "SSL Initialization" and check if it ends with "Success - SapCryptoLib SSL ready!"
+- Find the section called "SSL Initialization" and check if it ends with "Success - SapCryptoLib SSL ready!"
 - Compare the listed SSL settings to the recommended settings of SAP Note 51007 (and mentioned above)
 5. Go to transaction `STRUST`
 6. Select "SSL client SSL Client (Anonymous)"
@@ -150,4 +150,4 @@ To perform operations that require authentication, like e.g. cloning a private r
 
 #### Accessing GitHub
 
-On [2018-02-22](https://githubengineering.com/crypto-removal-notice/), GitHub deprectated weak TLS connections.  See [SAP Note 510007](https://launchpad.support.sap.com/#/notes/510007) for details on required profile parameter changes.
+On [2018-02-22](https://githubengineering.com/crypto-removal-notice/), GitHub deprecated weak TLS connections.  See [SAP Note 510007](https://launchpad.support.sap.com/#/notes/510007) for details on required profile parameter changes.
