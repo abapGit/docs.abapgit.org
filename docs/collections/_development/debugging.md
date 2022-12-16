@@ -1,6 +1,7 @@
 ---
 title: Debugging
-order: 75
+category: testing
+order: 10
 ---
 
 *******************************

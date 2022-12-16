@@ -1,6 +1,7 @@
 ---
-title: UI - HTML Pages
-order: 91
+title: HTML Pages
+category: ui
+order: 10
 ---
 
 This doc covers page creation, html rendering and event handling.

@@ -1,6 +1,7 @@
 ---
-title: UI - HTML Forms
-order: 92
+title: HTML Forms
+category: ui
+order: 20
 ---
 
 This doc covers html form component in abapGit UI. See also the [UI - HTML pages](./developing-ui.html).

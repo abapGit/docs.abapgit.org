@@ -1,6 +1,7 @@
 ---
 title: CI Tests
-order: 75
+category: testing
+order: 30
 ---
 
 # abapGit CI Tests

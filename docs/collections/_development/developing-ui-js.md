@@ -1,6 +1,7 @@
 ---
-title: UI - JavaScript
-order: 94
+title: JavaScript
+category: ui
+order: 40
 ---
 
 This doc covers java script specifics in abapGit UI. See also the [UI - HTML pages](./developing-ui.html).

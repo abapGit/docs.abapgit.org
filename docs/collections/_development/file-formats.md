@@ -1,9 +1,10 @@
 ---
-title: Object File Formats
-order: 40
+title: File Formats
+category: serializers
+order: 30
 ---
 
-All files for an object are located in the same folder, each folder corresponds to a package. Subpackages are organized under parent packages(directories) according to the logic described in [http://docs.abapgit.org/ref-dot-abapgit.html](http://docs.abapgit.org/ref-dot-abapgit.html)
+All files for an object are located in the same folder, each folder corresponds to a package. Subpackages are organized under parent packages(directories) according to the logic described in the [Repository Settings](settings-dot-abapgit.html)
 
 # CLAS
 Files corresponding to the editable parts in source based class builder or ABAP in Eclipse:

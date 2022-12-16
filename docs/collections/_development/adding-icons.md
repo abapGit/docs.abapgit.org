@@ -1,6 +1,7 @@
 ---
-title: Adding Icons
-order: 90
+title: Icons
+category: ui
+order: 50
 ---
 
 abapGit uses SIL and MIT licensed fonts, they are included in the distribution as a MIME object. This includes MIME objects:

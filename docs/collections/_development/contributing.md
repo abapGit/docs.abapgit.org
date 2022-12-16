@@ -1,6 +1,7 @@
 ---
 title: Contributing
-order: 5
+category: read-first
+order: 10
 ---
 
 General contribution guidelines can be found [here](https://github.com/abapGit/abapGit/blob/main/CONTRIBUTING.md).

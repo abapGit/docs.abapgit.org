@@ -1,6 +1,7 @@
 ---
 title: Unit Tests
-order: 70
+category: testing
+order: 20
 ---
 
 abapGit uses dependency lookup as an approach for writing unit tests, see example in `ZCL_ABAPGIT_TADIR`, `ZCL_ABAPGIT_FACTORY`, and [`ZCL_ABAPGIT_INJECTOR`](https://github.com/abapGit/abapGit/blob/main/src/zcl_abapgit_injector.clas.testclasses.abap).

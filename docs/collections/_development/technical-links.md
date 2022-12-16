@@ -1,6 +1,7 @@
 ---
-title: Technical Links
-order: 170
+title: Links
+category: details
+order: 20
 ---
 
 Collection of links to various git related documentation,

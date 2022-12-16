@@ -1,6 +1,7 @@
 ---
-title: UI - CSS and Assets
-order: 93
+title: CSS and Assets
+category: ui
+order: 30
 ---
 
 This doc covers asset management, css processing and recommended asset development flow. See also the [UI - HTML pages](./developing-ui.html).

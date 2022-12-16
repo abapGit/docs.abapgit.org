@@ -1,6 +1,7 @@
 ---
 title: Development Guidelines
-order: 10
+category: read-first
+order: 20
 ---
 
 ## Object Types
