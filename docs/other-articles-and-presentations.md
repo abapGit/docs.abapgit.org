@@ -153,7 +153,7 @@ Michael Pang
 
 [Automagic standalone renaming of ABAP objects](https://blogs.sap.com/2021/04/20/automagic-standalone-renaming-of-abap-objects/), Lars Hvam
 
-[abapGit for Beginners](https://www.youtube.com/watch?v=GqsfIb1RnaU&t=26763s), Marc Bernard
+[abapGit for Beginners](https://www.youtube.com/watch?v=Gbkfz8Kc5EY&list=PL7VGlQRMcLSBLLtopAYkFMZDMEc1TgTfh&index=10), Marc Bernard
 
 [A Practical Guide to DevOps for SAP ERP](https://blogs.sap.com/2021/12/13/a-practical-guide-to-devops-for-sap-erp/), Nestor Lara
 
@@ -166,3 +166,5 @@ Michael Pang
 [Managing SAP Application Dependencies with abapGit and APACK](https://blogs.sap.com/2022/07/28/managing-sap-application-dependencies-with-abapgit-and-apack/), Limor Wainstein
 
 [Part 5: Using ABAPGit to Transfer On-Premise ABAP Source Code to SAP BW bridge](https://blogs.sap.com/2022/08/25/part-5-using-abapgit-to-transfer-on-premise-abap-source-code-to-sap-bw-bridge/), Wilson Kurian
+
+[4 abapGit Use Cases That Will Blow Your Mind (and gCTS won’t help a bit)](https://www.youtube.com/watch?v=Yeo9rz-7Pdc&list=PL7VGlQRMcLSChz9ngnAVc89SqPDuMTsSr&index=2), Marc Bernard
