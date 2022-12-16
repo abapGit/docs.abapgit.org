@@ -121,7 +121,7 @@ If your SAP system is behind a firewall, it might require an HTTP proxy to acces
 
 ### Testing the Connection
 
-Report [ZABAPGIT_TEST_SSL](other-test-ssl.html) can be used to verify that the connection works.
+Report [ZABAPGIT_TEST_SSL](guide-ssl-test.html) can be used to verify that the connection works.
 
 ### Troubleshooting
 
