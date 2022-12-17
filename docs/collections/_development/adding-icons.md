@@ -4,9 +4,9 @@ category: ui
 order: 50
 ---
 
-abapGit uses SIL and MIT licensed fonts, they are included in the distribution as a MIME object. This includes MIME objects:
+abapGit uses SIL and MIT-licensed fonts, they are included in the distribution as a MIME object. This includes MIME objects:
 
-- ZABAPGIT_ICON_FONT - font in WOFF format containing the custom icon set. WOFF is used due to compatibility, SAP GUI for Windows reuse IE (11)
+- ZABAPGIT_ICON_FONT - font in WOFF format containing the custom icon set. WOFF is used due to compatibility, SAP GUI for Windows reusing Internet Explorer control (IE 11)
 - ZABAPGIT_ICON_FONT_CSS - CSS icon map
 
 To add an icon to the icon set follow the next procedure:
@@ -18,6 +18,6 @@ To add an icon to the icon set follow the next procedure:
 5. Upload the new CSS file to ZABAPGIT_ICON_FONT_CSS
 6. Start abapGit and commit the changes the [abapGit/abapGit](https://github.com/abapGit/abapGit) repo (preferably in a separate commit)
 
-Please **mind the licensing** when adding icons not from Font Awesome.
+Please **mind the licensing** when adding icons that are not from Font Awesome.
 
-P.S. Alternatively you can use [w3mipoller](https://github.com/sbcgua/abap_w3mi_poller) for upload step. See also [UI - CSS and assets](./developing-ui-css.html).
+P.S. Alternatively you can use [w3mipoller](https://github.com/sbcgua/abap_w3mi_poller) for the upload step. See also [UI - CSS and assets](./developing-ui-css.html).

@@ -8,11 +8,11 @@ This doc covers java script specifics in abapGit UI. See also the [UI - HTML pag
 
 ## General
 
-abapGit UI contains JS code. Some of dynamic features relate on it e.g. keyboard navigation. The JS code is located in `ui/zabapgit_js_common.w3mi.data.js` - the recommended way to modify it described in "Recommended asset development flow" section of [UI - CSS and assets](./developing-ui-css.html).
+abapGit UI contains JavaScript code. Some of the dynamic features rely on it e.g. keyboard navigation. The JS code is located in `ui/zabapgit_js_common.w3mi.data.js` - the recommended way to modify it is described in the  "Recommended asset development flow" section of [UI - CSS and assets](./developing-ui-css.html).
 
 As SAP GUI uses Internet Explorer component to render HTML the JS code must be optimized for IE11 (and use the features available in it). Although some polyfills are available (and more can be added) at the beginning of the code (like `String.includes`).
 
-The pull request CI check includes a run of eslint, so new code should confirm to the rules defined for the abapGit repository.
+The pull request CI check includes a run of `eslint`, so any new code should conform to the rules defined for the abapGit repository.
 
 ## Components
 
@@ -30,7 +30,7 @@ ro_html->add( '});' ).
 ```
 
 where:
-- `enumerateFn` is a function that returns list of commands in the form of array of
+- `enumerateFn` is a function that returns a list of commands in the form of an array of
 ```js
 {
     action:    "go_home",        // sapevent action or js function
@@ -39,9 +39,9 @@ where:
 }
 ```
 - `toggleKey` is a key to toggle the palette. `"^"` at the beginning requires `Ctrl` (`"^g" = Ctrl+g` )
-- `hotkeyDescription` is the description which is a) added to the shortkey help popup b) used as placeholder in the command palette
+- `hotkeyDescription` is the description that is a) added to the `shortkey` help popup b) used as a placeholder in the command palette
 
-See example of enumerators - `enumerateToolbarActions` and `enumerateTocAllRepos`.
+See an example of enumerators - `enumerateToolbarActions` and `enumerateTocAllRepos`.
 
 ### to do
 

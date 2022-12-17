@@ -6,15 +6,15 @@ order: 10
 
 ## Overview
 
-An abapGit Serializer is an ABAP class that supports create, read, update, and delete (CRUD) of objects of a given object type. In abapGit, read of an object is implemented in a 'serialize' method. Create and update are combined into a 'deserialize' method. There is a 'delete' method to remove an object from the system.
+An abapGit Serializer is an ABAP class that supports creating, reading, updating, and deleting (CRUD) of objects of a given object type. In abapGit, reading of an object is implemented in a `serialize` method. Create and update are combined into a `deserialize` method. There is a `delete` method to remove an object from the system.
 
-All object serializers must implement interface `ZIF_ABAPGIT_OBJECT` and be named `ZCL_ABAPGIT_OBJECT_{type}`, where `{type}` is the corresponding SAP object type (`TADIR-OBJECT`). As a description for the class, use `{type} - {description of type}` (for example, `TABL - Table`). It's recommended to use `ZCL_ABAPGIT_OBJECTS_SUPER` as a super class since it provides several convenient methods.
+All object serializers must implement interface `ZIF_ABAPGIT_OBJECT` and be named `ZCL_ABAPGIT_OBJECT_{type}`, where `{type}` is the corresponding SAP object type (`TADIR-OBJECT`). As a description for the class, use `{type} - {description of type}` (for example, `TABL - Table`). It's recommended to use `ZCL_ABAPGIT_OBJECTS_SUPER` as a superclass since it provides several convenient methods.
 
-In general, only SAP Standard APIs for retriving and updating object information shall be used. If that is not possible, try using `ZCL_ABAPGIT_OBJECTS_GENERIC` which handles any logical transport object.
+In general, only SAP Standard APIs for retrieving and updating object information shall be used. If that is not possible, try using `ZCL_ABAPGIT_OBJECTS_GENERIC` which handles any logical transport object.
 
-As code is stored in git, no usernames, timestamps, states (e.g. active/inactive) or other system specific information should be part of the serialized object files. Only the active, most recent and consistent version of an object shall be serialized.
+As code is stored in git, no usernames, timestamps, states (e.g. active/inactive), or other system-specific information should be part of the serialized object files. Only the active, most recent, and consistent version of an object shall be serialized.
 
-Auto generated artifacts should be skipped if possible, example: a CDS view might generate a VIEW artifact, the VIEW should not be serialized, as it is not something the developer creates.
+Auto-generated artifacts should be skipped if possible, for example: a CDS view might generate a VIEW artifact, and the VIEW should not be serialized, as it is not something the developer creates.
 
 If an inactive version of an object exists, the class shall indicate so in the `is_active` method. abapGit displays such objects with a yellow bolt icon in the repo view. However, the inactive version must be ignored by the serializer.
 
@@ -22,7 +22,7 @@ As a result, a repo shall only contain the definition of active objects. Therefo
 
 ## Constructor
 
-The constructor is implemented in the super class and take two parameters as input:
+The constructor is implemented in the superclass and takes two parameters as input:
 
 Parameter | Description
 ----------|------------
@@ -84,9 +84,6 @@ Attribute | Description
 ----------|------------
 `CLASS`        | Technical name used to identify the serializer within serialized XML files (format `LCL_OBJECT_{type}`)
 `VERSION`      | Version number of the serializer (format `v1.0.0`)
-`DELETE_TADIR` | Set to `abap_true` to force the removal of the TADIR entry after deletion of the object
-`DDIC`         | Set to `abap_true` if it is a DDIC object type (used for mass activation of DDIC objects)
-`LATE_DESER`   | Obsolete (to be removed)
 
 It's recommended to fill `CLASS` and `VERSION` metadata using `SUPER->GET_METADATA( )` and then changing settings as required.
 
@@ -138,7 +135,7 @@ Method | Description
 
 ## Deserialize Object
 
-The deserialize method shall read the file or files representing a given object and create such object in the system. If such object already exist, it shall be updated according to the  definition in the file or files. There are a few methods available to process files using [`ZIF_ABAPGIT_INPUT_XML`](https://github.com/abapGit/abapGit/blob/main/src/xml/zif_abapgit_xml_input.intf.abap) (input parameter `IO_XML`).
+The deserialize method shall read the file or files representing a given object and create the object in the system. If the object already exists, it shall be updated according to the definition in the file or files. There are a few methods available to process files using [`ZIF_ABAPGIT_INPUT_XML`](https://github.com/abapGit/abapGit/blob/main/src/xml/zif_abapgit_xml_input.intf.abap) (input parameter `IO_XML`).
 
 Method | Description
 -------|------------
@@ -169,7 +166,7 @@ Example: [`TABL`](https://github.com/abapGit/abapGit/blob/main/src/objects/zcl_a
 
 ## Testing
 
-When adding new serializers, add at least one test repository to organization [abapGit-tests](https://github.com/abapGit-tests) which the name of the object type in capitals (for example, [`TABL`](https://github.com/abapGit-tests/TABL). This test will be used by [abapGit Continuous Integration](https://github.com/abapGit/CI).
+When adding new serializers, add at least one test repository to the organization [abapGit-tests](https://github.com/abapGit-tests) with the name of the object type in capitals (for example, [`TABL`](https://github.com/abapGit-tests/TABL). This test will be used by [abapGit Continuous Integration](https://github.com/abapGit/CI).
 
 Example (using `SUSH`):
 
@@ -184,7 +181,7 @@ Example (using `SUSH`):
 
 ### Serialize Process
 
-abapGit determines which objects need to be serialized based on the SAP package assigned to a repository (including subpackages unless "Ignore subpackages" is selected in the repository settings). The list of objects is then sorted by package, object type, and object name.
+abapGit determines which objects need to be serialized based on the SAP package assigned to a repository (including sub-packages unless "Ignore sub-packages" is selected in the repository settings). The list of objects is then sorted by package, object type, and object name.
 
 If a sufficient number of work processes is available, abapGit will activate objects in parallel (unless "Disable Parallel Processing" is selected in the repository settings).
 
@@ -192,18 +189,19 @@ For details, see [`ZCL_ABAPGIT_SERIALIZE`](https://github.com/abapGit/abapGit/bl
 
 ### Deserialize Process
 
-Objects are deserialized in three phases. After each phase all objects included in the phase will be activated.
+Objects are deserialized in three phases. After each phase, all objects included in the phase will be activated.
 
 Step | Description | Activation
 -----|-------------|-----------
-`DDIC` | Used for DDIC objects which require early processing and activation before other object types | DDIC Mass Activation
-`ABAP` | Used for non-DDIC objects (code or mostly anything else) which might depend on DDIC objects   | Workbench Mass Activation
-`LATE` | Used for objects that depend on other objects processed in the previous two phases            | DDIC & Workbench Mass Activation
+`EARLY` | Used for objects (like classes and interfaces) that are dependencies for DDIC objects
+`DDIC`  | Used for DDIC objects which require processing and activation before other object types | DDIC Mass Activation
+`ABAP`  | Used for non-DDIC objects (code or mostly anything else) which might depend on DDIC objects   | Workbench Mass Activation
+`LATE`  | Used for objects that depend on other objects processed in the previous two phases            | DDIC & Workbench Mass Activation
 
 Within each phase, the sequence of objects is determined by abapGit based on known object type dependencies. For details, see method `PRIORITIZE_DESER` in [`ZCL_ABAPGIT_FILE_DESERIALIZE`](https://github.com/abapGit/abapGit/blob/main/src/objects/core/zcl_abapgit_file_deserialize.clas.abap).
 
 ### Uninstall Process
 
-During uninstallation of a repository, abapGit will determine the objects in the same fashion as the serialize process. The sequence of objects is determined by abapGit based on known object type dependencies. For details, see method `RESOLVE` in [`ZCL_ABAPGIT_DEPENDENCIES`](https://github.com/abapGit/abapGit/blob/main/src/objects/core/zcl_abapgit_dependencies.clas.abap).
+During the uninstallation of a repository, abapGit will determine the objects in the same fashion as the `serialize` process. The sequence of objects is determined by abapGit based on known object type dependencies. For details, see method `RESOLVE` in [`ZCL_ABAPGIT_DEPENDENCIES`](https://github.com/abapGit/abapGit/blob/main/src/objects/core/zcl_abapgit_dependencies.clas.abap).
 
 Note: There are suggestions to [refactor the logic to determine the processing order](https://github.com/abapGit/abapGit/issues/3536).

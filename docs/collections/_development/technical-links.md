@@ -4,7 +4,7 @@ category: details
 order: 20
 ---
 
-Collection of links to various git related documentation,
+Collection of links to various git-related documentation,
 
 [https://gist.github.com/schacon/6092633](https://gist.github.com/schacon/6092633)
 

@@ -10,7 +10,7 @@ abapGit does not have a predefined release cycle. However, we strive to tag a ne
 
 ## Version
 
-abapGit follows [semantic version](https://semver.org/) format. The community has settle on releasing enhancements and changes as minor versions. A more granular approach to release every change as a patch is adding too much overhead. 
+abapGit follows [semantic version](https://semver.org/) format. The community has settled on releasing enhancements and changes as minor versions. A more granular approach to releasing every change as a patch is adding too much overhead. 
 
 Example release sequence: `1.118.0 > 1.119.0 > 1.120.0` 
 
