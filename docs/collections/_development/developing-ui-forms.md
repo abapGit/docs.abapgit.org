@@ -60,7 +60,7 @@ ro_html->add( lo_form->render(
 
 ```
 
-## Values normalization
+## Values Normalization
 
 The class has `validate_normalize_form_data` method as a default validator/normalizer. It accepts `string_map` with field `key-values`. And they run through them doing the following:
 - fields, missing in the form definition will raise an exception
@@ -80,7 +80,7 @@ lo_field_map = lo_form->validate_normalize_form_data( lo_field_map ).
 " 'my_checkbox' = 'X'
 ```
 
-## Values and validation
+## Values and Validation
 
 The class is designed so that its instance is more a declaration of the form, that can be created once and then rendered each time with different values. On render you pass a CSS class of the form, values, and optionally validation results.
 
