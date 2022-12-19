@@ -11,7 +11,9 @@ It's possible to edit database entries of type
 - `SETTINGS`
 - `USER`
 - `REPO`
+- `REPO_CS`
 - `BACKGROUND`
+- `PACKAGES`
 
 Caution: Backup all abapGit database entries, first! Be careful when you edit these entries from within abapGit. Corrupting the XML or setting invalid options might break your abapGit!
 
@@ -110,7 +112,11 @@ A `USER` entry contains meta information like the favorites of an user and their
 
 ## Repository Meta Data
 
-The `REPO` entries contain meta data like Git repository URL, branch and package information and information about files known and to be excluded. This is an example:
+The `REPO` entries contain meta data like Git repository URL, branch, and package information and information about files known and to be excluded. 
+
+Note: Older versions of abapGit also stored local checksums under `REPO`. These have been migrated to `REPO_CS` (see below).
+
+This is an example:
 
 ```xml
 <?xml version="1.0" encoding="utf-16"?>
@@ -125,73 +131,6 @@ The `REPO` entries contain meta data like Git repository URL, branch and package
    <DESERIALIZED_BY>my_user</DESERIALIZED_BY>
    <DESERIALIZED_AT>20200507134505.184445</DESERIALIZED_AT>
    <OFFLINE/>
-   <LOCAL_CHECKSUMS>
-    <item>
-     <ITEM>
-      <OBJ_TYPE/>
-      <OBJ_NAME/>
-      <DEVCLASS/>
-      <INACTIVE/>
-     </ITEM>
-     <FILES>
-      <item>
-       <PATH>/</PATH>
-       <FILENAME>.abapgit.xml</FILENAME>
-       <SHA1>[...]</SHA1>
-      </item>
-     </FILES>
-    </item>
-    <item>
-     <ITEM>
-      <OBJ_TYPE>DEVC</OBJ_TYPE>
-      <OBJ_NAME>Z_MY_PACKAGE</OBJ_NAME>
-      <DEVCLASS>Z_MY_PACKAGE</DEVCLASS>
-      <INACTIVE/>
-     </ITEM>
-     <FILES>
-      <item>
-       <PATH>/src/</PATH>
-       <FILENAME>package.devc.xml</FILENAME>
-       <SHA1>[...]</SHA1>
-      </item>
-     </FILES>
-    </item>
-    <item>
-     <ITEM>
-      <OBJ_TYPE>DEVC</OBJ_TYPE>
-      <OBJ_NAME>Z_ANOTHER_PACKAGE</OBJ_NAME>
-      <DEVCLASS>Z_ANOTHER_PACKAGE</DEVCLASS>
-      <INACTIVE/>
-     </ITEM>
-     <FILES>
-      <item>
-       <PATH>/src/abaplinted_sample/</PATH>
-       <FILENAME>package.devc.xml</FILENAME>
-       <SHA1>[...]</SHA1>
-      </item>
-     </FILES>
-    </item>
-    <item>
-     <ITEM>
-      <OBJ_TYPE>PROG</OBJ_TYPE>
-      <OBJ_NAME>Z_MY_REPORT</OBJ_NAME>
-      <DEVCLASS>Z_ANOTHER_PACKAGE</DEVCLASS>
-      <INACTIVE/>
-     </ITEM>
-     <FILES>
-      <item>
-       <PATH>/src/abaplinted_sample/</PATH>
-       <FILENAME>z_my_report.prog.abap</FILENAME>
-       <SHA1>[...]</SHA1>
-      </item>
-      <item>
-       <PATH>/src/abaplinted_sample/</PATH>
-       <FILENAME>z_my_report.prog.xml</FILENAME>
-       <SHA1>[...]</SHA1>
-      </item>
-     </FILES>
-    </item>
-   </LOCAL_CHECKSUMS>
    <DOT_ABAPGIT>
     <MASTER_LANGUAGE>E</MASTER_LANGUAGE>
     <STARTING_FOLDER>/src/</STARTING_FOLDER>
@@ -225,6 +164,32 @@ The `REPO` entries contain meta data like Git repository URL, branch and package
 ```
 
 If you remove a repository entry from the database util, the repository is not shown in abapGit anymore. This is useful for example if you want to remove a repository which has a non-existing package assigned and thus can't be opened and deleted normally.
+
+## Repository Checksums
+
+abapGit persists the checksum (SHA1) of repository files under `REPO_CS`. For optimized storage, these entries do not use XML but a condensed text format:
+
+- Repository name
+- For each object: 
+  - Object Type | Object Name | Package
+  - Path | Filename | Checksum
+
+Example:
+
+```
+#repo_name#abapGit
+@
+/|.abapgit.xml|7c0506a2af34fd1b42027e0288198a00d933d3d4
+CLAS|ZCL_ABAPGIT_ADT_LINK|$ABAPGIT_UTILS
+/src/utils/|zcl_abapgit_adt_link.clas.abap|909437692c00ea4b93c708d2572eb4f014756b2e
+/src/utils/|zcl_abapgit_adt_link.clas.xml|b171192bcffce8241f08dbd70ed2d5bcfab17f76
+CLAS|ZCL_ABAPGIT_AJSON|$ABAPGIT_JSON
+/src/json/|zcl_abapgit_ajson.clas.abap|ed2a5c09e6cde2c79d667747c42743f60b84e23d
+/src/json/|zcl_abapgit_ajson.clas.locals_imp.abap|5faf4e8b3bef9ba5033b5e2d325a2b751379b1c3
+/src/json/|zcl_abapgit_ajson.clas.testclasses.abap|aa76c1c55421c3b84d52fb79e568f258c3526f55
+/src/json/|zcl_abapgit_ajson.clas.xml|94cbfc7bed436a920ed8806359d5323cd8def85e
+...
+```
 
 ## Background
 
@@ -272,3 +237,25 @@ How to start abapGit in "Emergency Mode":
 
 ![](img/db_util_emergency_mode.png)
 
+## Package Settings
+
+SAP does not support assigning local packages to an application component. To stay in sync with repositories that use application components (in transportable packages), abapGit persists the application component for local package separately.
+
+Example:
+
+```xml
+<?xml version="1.0" encoding="utf-16"?>
+<abapGit version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <PACKAGES>
+    <item>
+     <DEVCLASS>$DEVC_SUB</DEVCLASS>
+     <COMPONENT>HLB0009083</COMPONENT>
+     <COMP_POSID>BC-ABA</COMP_POSID>
+    </item>
+   </PACKAGES>
+  </asx:values>
+ </asx:abap>
+</abapGit>
+```
