@@ -4,7 +4,7 @@
   {% assign pages = site.development | sort: 'order' %}
   {% for doc in pages %}
     {% if doc.category == "read-first" %}
-      <li><a href=".{{ doc.url }}">{{ doc.title }}</a></li>
+      <li><a href="..{{ doc.url }}">{{ doc.title }}</a></li>
     {% endif %}
   {% endfor %}
 </ul>
@@ -14,7 +14,7 @@
   {% assign pages = site.development | sort: 'order' %}
   {% for doc in pages %}
     {% if doc.category == "serializers" %}
-      <li><a href=".{{ doc.url }}">{{ doc.title }}</a></li>
+      <li><a href="..{{ doc.url }}">{{ doc.title }}</a></li>
     {% endif %}
   {% endfor %}
 </ul>
@@ -24,7 +24,7 @@
   {% assign pages = site.development | sort: 'order' %}
   {% for doc in pages %}
     {% if doc.category == "testing" %}
-      <li><a href=".{{ doc.url }}">{{ doc.title }}</a></li>
+      <li><a href="..{{ doc.url }}">{{ doc.title }}</a></li>
     {% endif %}
   {% endfor %}
 </ul>
@@ -34,7 +34,7 @@
   {% assign pages = site.development | sort: 'order' %}
   {% for doc in pages %}
     {% if doc.category == "ui" %}
-      <li><a href=".{{ doc.url }}">{{ doc.title }}</a></li>
+      <li><a href="..{{ doc.url }}">{{ doc.title }}</a></li>
     {% endif %}
   {% endfor %}
 </ul>
@@ -44,7 +44,7 @@
   {% assign pages = site.development | sort: 'order' %}
   {% for doc in pages %}
     {% if doc.category == "api" %}
-      <li><a href=".{{ doc.url }}">{{ doc.title }}</a></li>
+      <li><a href="..{{ doc.url }}">{{ doc.title }}</a></li>
     {% endif %}
   {% endfor %}
 </ul>
@@ -54,7 +54,7 @@
   {% assign pages = site.development | sort: 'order' %}
   {% for doc in pages %}
     {% if doc.category == "details" %}
-      <li><a href=".{{ doc.url }}">{{ doc.title }}</a></li>
+      <li><a href="..{{ doc.url }}">{{ doc.title }}</a></li>
     {% endif %}
   {% endfor %}
 </ul>
