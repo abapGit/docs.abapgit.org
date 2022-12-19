@@ -4,7 +4,7 @@ category: ui
 order: 30
 ---
 
-This doc covers asset management, CSS processing, and recommended asset development flow. See also the [UI - HTML pages](./developing-ui.html).
+This documentation covers asset management, CSS processing, and recommended asset development flow. See also the [UI - HTML Pages](./developing-ui.html).
 
 ## TL;DR
 
@@ -15,7 +15,7 @@ This doc covers asset management, CSS processing, and recommended asset developm
 - A convenient way for changing and uploading CSS and other assets is [W3MIPOLLER](https://github.com/sbcgua/abap_w3mi_poller)
 
 
-## Asset manager
+## Asset Manager
 
 `ZCL_ABAPGIT_GUI_ASSET_MANAGER` class is responsible for managing static assets. Very briefly: relevant assets must be registered in the asset manager instance during GUI initiation so that they can be used in the browser UI. The registration happens in `ZCL_ABAPGIT_UI_FACTORY=>INIT_ASSET_MANAGER`. Here is an abstract from the method for example:
 
@@ -57,7 +57,7 @@ There are several ways to store the content of a static asset in abapGit.
 2. Inline can be also a text then should be passed with `iv_inline`
 3. Read from a MIME object - if inline is not passed, the asset falls back to the MIME
 
-### Ensuring working of standalone version of abapGit (abapmerge)
+### Compiling Standalone Version of abapGit (abapmerge)
 
 The tricky thing is that abapGit can be either installed as a development version, deploying all the MIME objects in particular **or** as a single program (standalone version). This program must contain all the assets (images, CSS, JavaScript, and fonts) **in-code**. This is enabled by **abapmerge** tool. Consider the `css/common.css` registration above.
 
@@ -66,7 +66,7 @@ The tricky thing is that abapGit can be either installed as a development versio
 
 Note: for the binary files, like fonts, use `@@abapmerge include-base64` pragma.
 
-## CSS structure and themes
+## CSS Structure and Themes
 
 abapGit uses several CSS sheets to style its visual design:
 
@@ -77,7 +77,7 @@ abapGit uses several CSS sheets to style its visual design:
 
 A regular page loads: icons, common, default theme, and optionally, one of the custom themes. So the resulting style is defined by a combination of them. **Importantly** custom themes take the default one as the basis, so colors and variables **not** defined explicitly in the theme will be taken from the default one.
 
-### CSS variables support
+### CSS Variables Support
 
 Internet explorer - which is the undercover browser component of SAP GUI - does not support CSS variables which are quite useful, for example, color definitions. However, abapGit preprocesses `theme-*` files, detecting the variables and applying them explicitly to other attributes and classes.
 
@@ -97,7 +97,7 @@ Internally this is done by a combination of `ZCL_ABAPGIT_GUI_HTML_PROCESSOR` and
   </head>
 ```
 
-## Recommended asset development flow
+## Recommended Asset Development Flow
 
 To edit CSS files you have to download them to the frontend, edit, debug in IE or Chrome Devtools, and upload them back. Doing so via SMW0 may be inconvenient for multiple assets (main CSS + themes + js). One of the solutions is to use [W3MIPOLLER](https://github.com/sbcgua/abap_w3mi_poller). The idea of the tool is to define a connection between a MIME asset and a frontend file and then monitor file changes - as soon as you save the file, the poller detects it and automatically uploads it to the MIME storage.
 
