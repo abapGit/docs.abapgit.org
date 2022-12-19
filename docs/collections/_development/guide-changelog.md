@@ -1,16 +1,18 @@
 ---
 title: Changelog
-order: 150
+category: read-first
+order: 30
 ---
 
-abapGit allows to show a changelog notes, based on changelog file in the repository base, and on [APACK](ref-apack.html) class containing the current version.
+abapGit allows showing a changelog notes, based on the changelog file in the repository base, and on [APACK](ref-apack.html) class containing the current version.
 
-abapGit itself does not use APACK and gets the current version from zif_abapgit_version=>c_abap_version. The version is then used to determine if the changelog was updated and should be shown to the user.
+abapGit itself does not use APACK and gets the current version from `zif_abapgit_version=>c_abap_version`. The version is then used to determine if the changelog was updated and should be shown to the user.
 
 ## File format ##
-A file named as pattern `CHANGELOG*` or `changelog*`
 
-Changelog file should have a specific format:
+A file named with pattern `CHANGELOG*` or `changelog*`
+
+The changelog file should have a specific format:
 
 Header with the title
 

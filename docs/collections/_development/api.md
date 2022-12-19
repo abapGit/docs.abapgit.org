@@ -1,11 +1,10 @@
 ---
 title: API
-order: 80
+category: api
+order: 10
 ---
 
-*******************************
-
-This page describes how to execute various abapGit tasks using your own code. These classes and methods have existed for quite some time and are stable. However, they do **not** provide a guaranteed API. Future changes are a possibility.
+This page describes how to execute various abapGit tasks using your code. These classes and methods have existed for quite some time and are stable. However, they do **not** provide a guaranteed API. Future changes are a possibility.
 
 ## Repositories ##
 
@@ -133,7 +132,7 @@ zcl_abapgit_login_manager=>set(
 
 ### List Branches ###
 
-Get a list of all branches (including main branch):
+Get a list of all branches (including `main` branch):
 
 ```abap
 lo_branches = zcl_abapgit_git_transport=>branches( lo_repo->get_url( ) ).
@@ -142,7 +141,7 @@ lt_list = lo_branches->get_branches_only( ).
 
 ### Switch Branch ###
 
-Switch abapGit repository to a different branch:
+Switch the abapGit repository to a different branch:
 
 ```abap
 lo_repo->set_branch_name( lv_name ).
@@ -150,7 +149,7 @@ lo_repo->set_branch_name( lv_name ).
 
 ### Create Branch ###
 
-Create a new branch in an online repository, note that IV_FROM can also be set, if not the branch will be created from the current checked out SHA1 of the repo,
+Create a new branch in an online repository, note that IV_FROM can also be set, if not the branch will be created from the currently checked-out commit of the repo,
 
 ```abap
 lo_repo->create_branch( lv_name ).
@@ -183,7 +182,7 @@ li_background->run(
   it_settings = lt_settings ).
 ```
 
-Alternative 1: implement your own logic using interface `zif_abapgit_background` (see
+Alternative 1: implement your logic using interface `zif_abapgit_background` (see
 [Background Package](https://github.com/abapGit/abapGit/tree/main/src/background) for details).
 
 Alternative 2: Use the following code to add files to staging and push them to the repository.
@@ -234,7 +233,7 @@ li_background->run(
   it_settings = lt_settings ).
 ```
 
-Alternative 1: implement your own logic using interface `zif_abapgit_background` (see
+Alternative 1: implement your logic using interface `zif_abapgit_background` (see
 [Background Package](https://github.com/abapGit/abapGit/tree/main/src/background) for details).
 
 Alternative 2: Use the following code to trigger the pull.
@@ -299,7 +298,7 @@ The following tasks are supported for offline repositories only (`lo_repo type r
 
 ### Import ZIP ###
 
-Upload ZIP file from frontend to an offline repository:
+Upload a ZIP file from frontend to an offline repository:
 
 ```abap
 lv_xstr = zcl_abapgit_ui_factory=>get_frontend_services( )->file_upload( lv_file_with_path ).
@@ -310,7 +309,7 @@ zcl_abapgit_services_repo=>refresh( lv_key ).
 
 ### Export ZIP ###
 
-Download ZIP file of an offline repository to frontend:
+Download a ZIP file of an offline repository to frontend:
 
 ```abap
 lv_xstr = zcl_abapgit_zip=>export( lo_repo ).
@@ -324,4 +323,4 @@ zcl_abapgit_ui_factory=>get_frontend_services( )->file_download(
 
 ## Progress Indicator ##
 
-The default progress indicator shows progress in SAP GUI, however it is possible to inject a custom progress indicator via `ZCL_ABAPGIT_PROGRESS=>SET_INSTANCE` which can catch the status in non SAP GUI scenarios.
+The default progress indicator shows progress in SAP GUI, however, it is possible to inject a custom progress indicator via `ZCL_ABAPGIT_PROGRESS=>SET_INSTANCE` which can catch the status in non-SAP GUI scenarios.

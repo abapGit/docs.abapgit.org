@@ -5,18 +5,8 @@
 {% include header.html %}
 <div class="container wrap">
   <div class="nav nav-print">
-  <h3>Development</h3>
-  <ul>
-  {% assign pages = site.development | sort: 'order' %}
-  {% for doc in pages %}
-  {% if doc.title != "Development" %}
-  <li><a href="{{ doc.url }}">{{ doc.title }}</a></li>
-  {% endif %}
-  {% endfor %}
-  </ul>
-  <p><a href="/">Back to User Docs</a></p>
+  {% include navigation-dev.html %}
   </div>
-
   <div class="content">
   <h1>{{ page.title }}</h1>
   <small><a href="{{ site.github.repository_url }}/tree/main/docs/collections/{{ page.path }}">{% octicon pencil %} Improve this page</a></small>
