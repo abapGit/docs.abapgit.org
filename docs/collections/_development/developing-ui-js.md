@@ -4,11 +4,11 @@ category: ui
 order: 40
 ---
 
-This doc covers java script specifics in abapGit UI. See also the [UI - HTML pages](./developing-ui.html).
+This documentation covers java script specifics in abapGit UI. See also the [UI - HTML Pages](./developing-ui.html).
 
 ## General
 
-abapGit UI contains JavaScript code. Some of the dynamic features rely on it e.g. keyboard navigation. The JS code is located in `ui/zabapgit_js_common.w3mi.data.js` - the recommended way to modify it is described in the  "Recommended asset development flow" section of [UI - CSS and assets](./developing-ui-css.html).
+abapGit UI contains JavaScript code. Some of the dynamic features rely on it e.g. keyboard navigation. The JS code is located in `ui/zabapgit_js_common.w3mi.data.js` - the recommended way to modify it is described in the  "Recommended asset development flow" section of [UI - CSS and Assets](./developing-ui-css.html).
 
 As SAP GUI uses Internet Explorer component to render HTML the JS code must be optimized for IE11 (and use the features available in it). Although some polyfills are available (and more can be added) at the beginning of the code (like `String.includes`).
 
@@ -43,7 +43,7 @@ where:
 
 See an example of enumerators - `enumerateToolbarActions` and `enumerateTocAllRepos`.
 
-### to do
+### To-Do
 
 - `debugOutput`
 - `submitSapeventForm`
