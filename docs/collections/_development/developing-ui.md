@@ -4,10 +4,10 @@ category: ui
 order: 10
 ---
 
-This doc covers page creation, HTML rendering, and event handling.
-- See also [UI - CSS and assets](./developing-ui-css.html)
-- See also [UI - Java script](./developing-ui-js.html)
-- See also [HTML forms](./developing-ui-forms.html)
+This documentation covers page creation, HTML rendering, and event handling.
+- See also [UI - CSS and Assets](./developing-ui-css.html)
+- See also [UI - JavaScript](./developing-ui-js.html)
+- See also [HTML Forms](./developing-ui-forms.html)
 
 ## TL;DR
 
@@ -19,7 +19,7 @@ This doc covers page creation, HTML rendering, and event handling.
 - Check `ZCL_ABAPGIT_GUI_CHUNK_LIB` for some existing HTML chunks like `render_error`
 - To register postponed HTML parts, scripts, and hotkeys - access corresponding methods via `gui_services` method of `zcl_abapgit_gui_component`
 
-## GUI components
+## GUI Components
 
 abapGit UI is based on HTML and `CL_GUI_HTML_VIEWER`. The main parts are:
 
@@ -27,13 +27,13 @@ abapGit UI is based on HTML and `CL_GUI_HTML_VIEWER`. The main parts are:
 - *ZCL_ABAPGIT_GUI_ASSET_MANAGER* - manages static assets like images, CSS, JS code, and fonts
 - *ZCL_ABAPGIT_HTML* - helper for HTML accumulation and rendering
 - *ZCL_ABAPGIT_GUI_ROUTER* - abapGit specific global event handling, main to route between the pages or run globally defined actions like repo installation
-- *ZCL_ABAPGIT_GUI_PAGE* - base class for pages. It renders typical HTML headers and abapGit-related java scripts. ~~So in most cases you probably just want to subclass it and render just the content~~
+- *ZCL_ABAPGIT_GUI_PAGE* - base class for pages. It renders typical HTML headers and abapGit-related java scripts. ~So in most cases you probably just want to subclass it and render just the content~
 - *ZCL_ABAPGIT_GUI_COMPONENT* - base class for GUI components. Gives access to `gui_services` to register postponed HTML parts, scripts, and hotkeys. Usually, it is a good idea to subclass from it, if you want to use these features.
 - *ZIF_ABAPGIT_GUI_RENDERABLE* - interface which a renderable component must expose to be able to interact with `ZCL_ABAPGIT_GUI`
 - *ZIF_ABAPGIT_GUI_EVENT_HANDLER* - interface which a component must expose to be able to register itself as an event handler in `ZCL_ABAPGIT_GUI`
 - *ZIF_ABAPGIT_GUI_HOTKEYS* - interface which a component must expose to be able to register hotkey actions
 
-## Rendering content
+## Rendering Content
 
 An example of `RENDER_CONTENT` (or any other helper method with HTML output)
 
@@ -54,7 +54,7 @@ METHOD render_content.
 ENDMETHOD.
 ```
 
-### Html helper
+### HTML Helper
 
 `ro_html` which is the instance of `ZCL_ABAPGIT_HTML` is a helper tool for HTML rendering. It accumulates HTML content and then can output it with `render` method. It has a couple of important methods:
 
@@ -83,7 +83,7 @@ It makes sense to also subclass your component from `ZCL_ABAPGIT_GUI_COMPONENT`.
 - accessing hotkey services (`get_hotkeys_ctl`) - to register own hotkeys for the page (hotkeys are combined from the whole component stack)
 - registering postponed HTML parts (`get_html_parts`)
 
-## Postponed HTML parts
+## Postponed HTML Parts
 
 Components may have postponed parts, e.g. scripts or hidden forms. These chunks may need to be rendered in another location on the page (e.g. scripts are rendered at the end). There is a mechanism to enable it:
 
@@ -97,7 +97,7 @@ where `render_my_scripts( )` must return an instance of `ZCL_ABAPGIT_HTML`.
 
 Currently, two collections are supported out of the box - scripts and hidden_forms (see definition of `zcl_abapgit_gui_component`). Scripts rendered after the page body. Hidden forms right before the end of the body. But this does not limit you to these categories only - you may register your own collections to exchange postponed parts between components supported by you. The collection is just a named list of `ZCL_ABAPGIT_HTML` instances.
 
-## Router and event handlers
+## Router and Event Handlers
 
 To process sapevents in abap the component (page) must implement `ZIF_ABAPGIT_GUI_EVENT_HANDLER=>on_event`. It imports `ii_event` instance which represents `sapevent` handler of `cl_gui_html_viewer`. In particular:
 - `ii_event->mv_action` - sapevent code (part of URL before `?`)
@@ -130,8 +130,6 @@ In order to indicate the result of event handling an `on_event` implementation m
 - `go_back_to_bookmark` - go back and skip all the page stack till the first bookmark (works with `new_page_w_bookmark`)
 
 ## Hotkey
-
-TODO ...
 
 In a nutshell:
 
