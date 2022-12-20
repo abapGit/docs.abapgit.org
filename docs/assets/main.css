@@ -52,6 +52,11 @@ table {
 
 th {
   background-color: #edf2f9;
+  padding: 5px;
+}
+
+td {
+  padding: 5px;
 }
 
 .container {
