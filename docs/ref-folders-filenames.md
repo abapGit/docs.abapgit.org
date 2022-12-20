@@ -44,8 +44,7 @@ The mapping is implemented in class [`zcl_abapgit_folder_logic`](https://github.
 
 ## Files
 
-abapGit is mapping SAP objects and object parts to files in the git repository. For each object* at least one file is being created. 
-Often there are two files, one containing the object metadata and one containing the coding. Some object are split into several files
+abapGit is mapping SAP objects and object parts to files in the git repository. For each object (for [supported object types](ref-supported.html)), at least one file is being created. Often there are two files, one containing the object metadata and one containing the coding. Some object are split into several files
 to allow for easier editing and change tracking in git.
 
 For example, DDIC objects are mapped to one file, programs are mapped to two files, and classes as well as function groups are mapped to several files.
@@ -62,28 +61,25 @@ You can find examples for most object types in the [abapGit Test Repositories](h
 The metadata is stored either in XML or JSON format. JSON format has been introduced for some object and is based the 
 [ABAP File Format](https://github.com/SAP/abap-file-formats).
 
-* Only for [supported object types](ref-supported.html). 
-
 ### Special Cases
 
-There are some files with special meaning.
+There are some files with special meaning:
 
 1. `.abapgit.xml`
 
-This file contains [meta information](settings-dot-abapgit.html) of the abapGit project. The file must be located in the root folder of the git repository.
+   This file contains [meta information](settings-dot-abapgit.html) of the abapGit project. The file must be located in the root folder of the git repository.
 
 2. `.apack-manifest.xml`
 
-This is an optional file which can be used to define [package dependencies](ref-apack.html) for your project.
+   This is an optional file which can be used to define [package dependencies](ref-apack.html) for your project.
 
 3. `package.devc.xml`
 
-abapGit repositories do not store any SAP package names. Only the package metadata is stored in these XML files. When installing a repository
-abapGit will map the folder names to the SAP packages (see above).
+   abapGit repositories do not store any SAP package names. Only the package metadata is stored in these XML files. When installing a repository, abapGit will map the folder names to the SAP packages (see above).
 
 4. `#namespace#`
 
-`/NAMESPACE/` in SAP object names is mapped to `#namespace#` in filenames.
+   `/NAMESPACE/` in SAP object names is mapped to `#namespace#` in filenames.
 
 ### Limitations
 
@@ -105,7 +101,7 @@ It's possible that SAP object names contain characters that are not valid for gi
 
 ### Technical Details
 
-The mapping is implemented in class `zcl_abapgit_filename_logic`](https://github.com/abapGit/abapGit/blob/main/src/objects/core/zcl_abapgit_filename_logic.clas.abap), methods `object_to_file` (SAP to Repo) and `file_to_object` (Repo to SAP).
+The mapping is implemented in class [`zcl_abapgit_filename_logic`](https://github.com/abapGit/abapGit/blob/main/src/objects/core/zcl_abapgit_filename_logic.clas.abap), methods `object_to_file` (SAP to Repo) and `file_to_object` (Repo to SAP).
 
 ## Related Checks
 
