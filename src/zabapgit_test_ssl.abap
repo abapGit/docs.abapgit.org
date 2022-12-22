@@ -159,8 +159,7 @@ CLASS lcl_report IMPLEMENTATION.
 
     IF sy-subrc <> 0.
       display_error( 'HTTP Client Receive' ).
-      RETURN.
-
+      
       li_http_client->get_last_error(
         IMPORTING
           message = lv_response ).
