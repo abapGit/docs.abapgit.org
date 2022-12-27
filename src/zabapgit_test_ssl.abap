@@ -134,10 +134,7 @@ CLASS lcl_report IMPLEMENTATION.
         argument_not_found  = 1
         plugin_not_active   = 2
         internal_error      = 3
-        pse_not_found       = 4
-        pse_not_distrib     = 5
-        pse_errors          = 6
-        OTHERS              = 7 ).
+        OTHERS              = 4 ).
 
     IF sy-subrc <> 0.
       display_error( 'HTTP Client Create' ).
