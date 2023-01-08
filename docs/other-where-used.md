@@ -29,6 +29,7 @@ order: 50
 * [emineo](https://www.emineo.ch/)
 * [Hochfrequenz Unternehmensberatung GmbH](https://www.hochfrequenz.de/)
 * [INVIXO](http://invixo.com/)
+* [IT Culture](https://www.it-culture.net/)
 * [majcon](https://www.majcon.de/)
 * [Marc Bernard Tools](https://marcbernardtools.com/)
 * [Microsoft Azure](https://github.com/Microsoft/ABAP-SDK-for-Azure)
