@@ -7,7 +7,7 @@ order: 11
 There are currently two options available for including translations in a repository: 
 
 1. Object-specific logic provided by the object serializer class
-2. LXE framework (experimental, #4415) 
+2. LXE framework (experimental, [#4415](https://github.com/abapGit/abapGit/pull/4415)) 
 
 If no translation languages are maintained in this setting, the first approach is used.
 
