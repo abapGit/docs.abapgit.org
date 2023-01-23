@@ -167,6 +167,6 @@ Michael Pang
 
 [Part 5: Using ABAPGit to Transfer On-Premise ABAP Source Code to SAP BW bridge](https://blogs.sap.com/2022/08/25/part-5-using-abapgit-to-transfer-on-premise-abap-source-code-to-sap-bw-bridge/), Wilson Kurian
 
-[4 abapGit Use Cases That Will Blow Your Mind (and gCTS won’t help a bit)](https://www.youtube.com/watch?v=Yeo9rz-7Pdc&list=PL7VGlQRMcLSChz9ngnAVc89SqPDuMTsSr&index=2), Marc Bernard
+[4 abapGit Use Cases That Will Blow Your Mind (and gCTS won’t help a bit)](https://www.youtube.com/watch?v=Yeo9rz-7Pdc&t=31223s), Marc Bernard
 
 [ABAP File Formats](https://larshp.github.io/abapconf2022/), Albert Mink & Lars Hvam
