@@ -1,6 +1,7 @@
 ---
-title: Technical Documentation
-order: 200
+title: Documentation
+category: details
+order: 10
 ---
 
 abapGit uses [github pages](https://help.github.com/articles/what-is-github-pages/) for documentation,

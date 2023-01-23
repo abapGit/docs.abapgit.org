@@ -1,0 +1,62 @@
+<!-- Navigation -->
+<h3>Read First</h3>
+<ul>
+  {% assign pages = site.development | sort: 'order' %}
+  {% for doc in pages %}
+    {% if doc.category == "read-first" %}
+      <li><a href="..{{ doc.url }}">{{ doc.title }}</a></li>
+    {% endif %}
+  {% endfor %}
+</ul>
+
+<h3>Serializers</h3>
+<ul>
+  {% assign pages = site.development | sort: 'order' %}
+  {% for doc in pages %}
+    {% if doc.category == "serializers" %}
+      <li><a href="..{{ doc.url }}">{{ doc.title }}</a></li>
+    {% endif %}
+  {% endfor %}
+</ul>
+
+<h3>Testing</h3>
+<ul>
+  {% assign pages = site.development | sort: 'order' %}
+  {% for doc in pages %}
+    {% if doc.category == "testing" %}
+      <li><a href="..{{ doc.url }}">{{ doc.title }}</a></li>
+    {% endif %}
+  {% endfor %}
+</ul>
+
+<h3>User Interface</h3>
+<ul>
+  {% assign pages = site.development | sort: 'order' %}
+  {% for doc in pages %}
+    {% if doc.category == "ui" %}
+      <li><a href="..{{ doc.url }}">{{ doc.title }}</a></li>
+    {% endif %}
+  {% endfor %}
+</ul>
+
+<h3>API</h3>
+<ul>
+  {% assign pages = site.development | sort: 'order' %}
+  {% for doc in pages %}
+    {% if doc.category == "api" %}
+      <li><a href="..{{ doc.url }}">{{ doc.title }}</a></li>
+    {% endif %}
+  {% endfor %}
+</ul>
+
+<h3>Technical Details</h3>
+<ul>
+  {% assign pages = site.development | sort: 'order' %}
+  {% for doc in pages %}
+    {% if doc.category == "details" %}
+      <li><a href="..{{ doc.url }}">{{ doc.title }}</a></li>
+    {% endif %}
+  {% endfor %}
+</ul>
+
+<p><a href="/">Back to User Docs</a></p>

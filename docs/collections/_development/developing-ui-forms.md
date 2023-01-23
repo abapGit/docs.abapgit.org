@@ -1,21 +1,22 @@
 ---
-title: UI - HTML Forms
-order: 92
+title: HTML Forms
+category: ui
+order: 20
 ---
 
-This doc covers html form component in abapGit UI. See also the [UI - HTML pages](./developing-ui.html).
+This doc covers the HTML form component in abapGit UI. See also the [UI - HTML pages](./developing-ui.html).
 
 ## General
 
-There is a helper class to render html forms - `zcl_abapgit_html_form`. To see an example - open the online repo creation dialog (code: class `zcl_abapgit_gui_page_addonline`). Typical usage:
-- create the form (preferable in constructor - it is descriptive)
+There is a helper class to render HTML forms - `zcl_abapgit_html_form`. To see an example - open the online repo creation dialog (code: class `zcl_abapgit_gui_page_addonline`). Typical usage:
+- create the form (preferably in constructor - it is descriptive)
 - add fields one by one
 - for complex fields (radio) - add `options` right after the field
 - on render - pass `zcl_abapgit_string_map` instance of values and, optionally, a map of validation results (see below)
 - fields can be required (`iv_required = abap_true`)
 - fields can have tooltips (`iv_hint = 'help for the field'`)
 - text fields may have placeholders (`iv_placeholder = '...'`)
-- text fields may be upper cased (`iv_upper_case = abap_bool` - for normalization - see below)
+- text fields may be uppercased (`iv_upper_case = abap_bool` - for normalization - see below)
 - text fields may have side-actions - button next to them - passing current form state to abap for additional logic and re-render
 - a form may have one or more *commands* at the bottom. *Main* ones (`iv_is_main = abap_true`) - will be highlighted
 
@@ -59,12 +60,12 @@ ro_html->add( lo_form->render(
 
 ```
 
-## Values normalization
+## Values Normalization
 
-The class has `validate_normalize_form_data` method as a default validator/normalizer. It accepts `string_map` with field key-values. And the run through them doing the following:
+The class has `validate_normalize_form_data` method as a default validator/normalizer. It accepts `string_map` with field `key-values`. And they run through them doing the following:
 - fields, missing in the form definition will raise an exception
-- text fields, marked with `upper_case` during definition, are converted to upper case
-- checkbox fields, convert `on` value (html default), to `abap_true`
+- text fields, marked with `upper_case` during definition, are converted to uppercase
+- checkbox fields, convert `on` value (HTML default), to `abap_true`
 
 ```abap
 " lo_field_map:
@@ -79,11 +80,11 @@ lo_field_map = lo_form->validate_normalize_form_data( lo_field_map ).
 " 'my_checkbox' = 'X'
 ```
 
-## Values and validation
+## Values and Validation
 
-The class is designed so that it's instance is more a declaration of the form, that can be created once and then rendered each time with different values. On render you pass CSS class of the form, values and optionally validation results.
+The class is designed so that its instance is more a declaration of the form, that can be created once and then rendered each time with different values. On render you pass a CSS class of the form, values, and optionally validation results.
 
-Values is an instance of `zcl_abapgit_string_map` - key value map, where key must be same as field name (thus it's recommended to define names as constants). E.g.
+`Values` is an instance of `zcl_abapgit_string_map` - key-value map, where the key must be the same as the field name (thus it's recommended to define names as constants). E.g.
 
 ```abap
 lo_form->text(
@@ -101,7 +102,7 @@ lo_form->render(
     io_values     = mo_form_data ).
 ```
 
-If validation log is passed, then it's checked for a non-empty value of field name, and renders it as the error message.
+If a validation log is passed, then it's checked for a non-empty value of the field name, and renders it as the error message.
 
 ```abap
 lo_form->text(

@@ -1,20 +1,26 @@
 ---
 title: CI Tests
-order: 75
+category: testing
+order: 30
 ---
 
 # abapGit CI Tests
 
 Latest build: [https://ci.abapgit.org](https://ci.abapgit.org)
 
-Repo [abapGit CI](https://github.com/abapGit/CI) provides basic continuous integration capabilities for abapGit. The repository aims to test the serialization and deserialization of object types, as these cannot be unit tested properly.
+Repo [abapGit CI](https://github.com/abapGit/CI) provides basic continuous integration capabilities for abapGit. The repository aims to test the serialization and deserialization of object types, as these cannot be unit-tested properly.
 
-The CI process fetches abapGit test repos from https://github.com/abapGit-tests. Then for each repo the following steps are executed:
-- create package (if needed)
+The CI process fetches abapGit test repos from https://github.com/abapGit-tests. Then for each repository, the following steps are executed:
+
+- create a package (if needed)
 - clone
 - pull
 - syntax check
+- object check
+- create transport request
 - purge (uninstall)
+- delete transport request
+- check for leftovers
 
 Additionally, a set of generic tests is performed checking the latest abapGit build.
 
@@ -58,7 +64,7 @@ A job sequence is created with
 
 Optionally you can also let abapGit CI create the repositories in transportable packages. You need to activate the checkbox in the selection screen and specify the transport layer. Then the pull and purge actions will each get recorded into a transport request per repository. These get released and their content is checked to ensure it matches the objects in the repository.
 
-To set up a suitable transport landscape on the AS ABAP Developer Edition you need to create a new virtual system in STMS (for example `EXP`, `Virtual export system`). This serves as a dummy export target for transport requests. Next you need create a new transport layer (for example `ZEXP`) and connect the current system and the virtual system with it. Then save and activate the configuration.
+To set up a suitable transport landscape on the AS ABAP Developer Edition you need to create a new virtual system in STMS (for example `EXP`, `Virtual export system`). This serves as a dummy export target for transport requests. Next, you need to create a new transport layer (for example `ZEXP`) and connect the current system and the virtual system with it. Then save and activate the configuration.
 
 ![STMS transports landscape](/img/STMS.png)
 

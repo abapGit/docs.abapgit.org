@@ -1,6 +1,7 @@
 ---
 title: Debugging
-order: 75
+category: testing
+order: 10
 ---
 
 *******************************
@@ -15,11 +16,11 @@ In case you can't resolve or pinpoint the issue, try to reproduce it using a cas
 
 ## JavaScript
 
-Some pages in abapGit contain JavaScript. If such script fails, you typically see the following banner:
+Some pages in abapGit contain JavaScript. If the script fails, you typically see the following banner:
 
 ![image](https://user-images.githubusercontent.com/59966492/155704923-e1f7dd32-36cc-456c-9b02-dfb10fdb564b.png)
 
-Also the lower right corner of the HTML output will NOT show "JS OK". Troubleshooting depends on the type of SAP GUI you are using.
+Also, the lower right corner of the HTML output will NOT show "JS OK". Troubleshooting depends on the type of SAP GUI you are using.
 
 ### SAP GUI for Windows
 

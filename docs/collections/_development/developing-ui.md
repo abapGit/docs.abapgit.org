@@ -1,38 +1,39 @@
 ---
-title: UI - HTML Pages
-order: 91
+title: HTML Pages
+category: ui
+order: 10
 ---
 
-This doc covers page creation, html rendering and event handling.
-- See also [UI - CSS and assets](./developing-ui-css.html)
-- See also [UI - Java script](./developing-ui-js.html)
-- See also [Html forms](./developing-ui-forms.html)
+This documentation covers page creation, HTML rendering, and event handling.
+- See also [UI - CSS and Assets](./developing-ui-css.html)
+- See also [UI - JavaScript](./developing-ui-js.html)
+- See also [HTML Forms](./developing-ui-forms.html)
 
 ## TL;DR
 
 - To create a new page in abapGit you subclass `ZCL_ABAPGIT_GUI_PAGE` and redefine `RENDER_CONTENT` method *(also consider separating components that implement `ZIF_ABAPGIT_GUI_RENDERABLE` directly, this will probably become the primary approach in future)*
-- Use `ZCL_ABAPGIT_HTML` to collect HTML content - method `add` accepts strings, string_tables and instances of `ZCL_ABAPGIT_HTML`
+- Use `ZCL_ABAPGIT_HTML` to collect HTML content - method `add` accepts strings, string_tables, and instances of `ZCL_ABAPGIT_HTML`
 - Use `ZCL_ABAPGIT_HTML=>ICON` to render icons
 - Use `ZCL_ABAPGIT_HTML=>A` to render anchors, don't render them manually `<a>...</a>`
-- Please, please, care about usability, content readability and style in general :pray: ;)
-- Check `ZCL_ABAPGIT_GUI_CHUNK_LIB` for some existing html chunks like `render_error`
-- To register postponed html parts, scripts and hotkeys - access corresponding methods via `gui_services` method of `zcl_abapgit_gui_component`
+- Please, please, care about usability, content readability, and style in general :pray: ;)
+- Check `ZCL_ABAPGIT_GUI_CHUNK_LIB` for some existing HTML chunks like `render_error`
+- To register postponed HTML parts, scripts, and hotkeys - access corresponding methods via `gui_services` method of `zcl_abapgit_gui_component`
 
-## GUI components
+## GUI Components
 
-abapGit UI is based on HTML and `CL_GUI_HTML_VIEWER`. Main parts are:
+abapGit UI is based on HTML and `CL_GUI_HTML_VIEWER`. The main parts are:
 
 - *ZCL_ABAPGIT_GUI* - the class which initializes `CL_GUI_HTML_VIEWER` and manages page stack
-- *ZCL_ABAPGIT_GUI_ASSET_MANAGER* - manages static assets like images, css, js code and fonts
+- *ZCL_ABAPGIT_GUI_ASSET_MANAGER* - manages static assets like images, CSS, JS code, and fonts
 - *ZCL_ABAPGIT_HTML* - helper for HTML accumulation and rendering
 - *ZCL_ABAPGIT_GUI_ROUTER* - abapGit specific global event handling, main to route between the pages or run globally defined actions like repo installation
-- *ZCL_ABAPGIT_GUI_PAGE* - base class for pages. It renders typical html headers and abapGit related java scripts. ~~So in most cases you probably just want to subclass it and render just the content~~
-- *ZCL_ABAPGIT_GUI_COMPONENT* - base class for gui components. Gives access to `gui_services` to register postponed html parts, scripts and hotkeys. Usually, it is a good idea to subclass from it, if you want to use these features.
+- *ZCL_ABAPGIT_GUI_PAGE* - base class for pages. It renders typical HTML headers and abapGit-related java scripts. ~So in most cases you probably just want to subclass it and render just the content~
+- *ZCL_ABAPGIT_GUI_COMPONENT* - base class for GUI components. Gives access to `gui_services` to register postponed HTML parts, scripts, and hotkeys. Usually, it is a good idea to subclass from it, if you want to use these features.
 - *ZIF_ABAPGIT_GUI_RENDERABLE* - interface which a renderable component must expose to be able to interact with `ZCL_ABAPGIT_GUI`
-- *ZIF_ABAPGIT_GUI_EVENT_HANDLER* - interface which a component must expose to be able to register itself as a event handler in `ZCL_ABAPGIT_GUI`
+- *ZIF_ABAPGIT_GUI_EVENT_HANDLER* - interface which a component must expose to be able to register itself as an event handler in `ZCL_ABAPGIT_GUI`
 - *ZIF_ABAPGIT_GUI_HOTKEYS* - interface which a component must expose to be able to register hotkey actions
 
-## Rendering content
+## Rendering Content
 
 An example of `RENDER_CONTENT` (or any other helper method with HTML output)
 
@@ -53,38 +54,38 @@ METHOD render_content.
 ENDMETHOD.
 ```
 
-### Html helper
+### HTML Helper
 
-`ro_html` which is the instance of `ZCL_ABAPGIT_HTML` is helper tool for html rendering. It accumulates html content and then can output it with `render` method. It has a couple of important methods:
+`ro_html` which is the instance of `ZCL_ABAPGIT_HTML` is a helper tool for HTML rendering. It accumulates HTML content and then can output it with `render` method. It has a couple of important methods:
 
 - **ADD** - adds a chunk to accumulated HTML. You can pass a string or another `ZCL_ABAPGIT_HTML` instance. In the example above `render_some_stuff` may either return a string or have the same pattern as `render_content` (retuning `ZCL_ABAPGIT_HTML` instance)
-- **ADD_ICON and ICON** - renders an icon. abapGit uses web-fonts to render icons (see [adding icons](./adding-icons.html)). The method accepts the icon name and a css-class name which represents a color separated by '/'. E.g.  in the example above it will render 'star' icon and assign 'error' css class to it which has red color in abapGit styes. The method has it's static brother `ZCL_ABAPGIT_HTML=>ICON` which is more convenient in some cases and just returns a rendered html string.
-- **ADD_A and A** - renders a link (anchor) (`A` - static method). It is strongly suggested that you use this method instead of rendering `<a>` tags directly. Params:
-    - `IV_TXT` - text to be rendered inside anchor
-    - `IV_TYP` - type of action done on click. 3 options: 
-        - `zif_abapgit_html=>c_action_type-url`- direct link to an url,
+- **ADD_ICON and ICON** - renders an icon. abapGit uses web fonts to render icons (see [adding icons](./adding-icons.html)). The method accepts the icon name and a CSS class name which represents a color separated by '/'. E.g., in the example above it will render 'star' icon and assign 'error' CSS class to it which has red color in the abapGit styles. The method has its static brother `ZCL_ABAPGIT_HTML=>ICON` which is more convenient in some cases and just returns a rendered HTML string.
+- **ADD_A and A** - render a link (anchor) (`A` - static method). It is strongly suggested that you use this method instead of rendering `<a>` tags directly. Params:
+    - `IV_TXT` - text to be rendered inside the anchor
+    - `IV_TYP` - the type of action done on click. 3 options: 
+        - `zif_abapgit_html=>c_action_type-url`- direct link to an URL,
         - `...-sapevent` (the default) - pass an event to sap handler,
         - `...-onclick` - call a JS function,
         - `...-dummy` - just render an anchor but no action
     - `IV_ACT` - depending on the type should be either URL or sapevent name or JS function to call 
     - `IV_OPT` - `zif_abapgit_html=>c_html_opt-strong` or `...-cancel` or `...-crossout` - some semantic predefined styles to add to the link
-    - `IV_CLASS` - additional css class, if needed
-    - `IV_STYLE` - additional direct styles to use (generally discouraged, please use css classes instead)
+    - `IV_CLASS` - additional CSS class, if needed
+    - `IV_STYLE` - additional direct styles to use (generally discouraged, please use CSS classes instead)
     - `IV_ID` - id of the anchor (may be needed for JS code)
-- **SET_TITLE** - the method is used for debug purposes for postponed html parts. As it is not visible which class registered a part, so title can be used to specify the origin.
+- **SET_TITLE** - the method is used for debugging purposes for postponed HTML parts. As it is not visible which class registered an HTML part, the title can be used to specify the origin.
 
 ## Renderables
 
-Sub-classing `ZCL_ABAPGIT_GUI_PAGE` is not the only way to render the content. You may want to separate some visual component which is not a page e.g. `ZCL_ABAPGIT_GUI_VIEW_REPO` is a class like that. In essence you have to implement `ZIF_ABAPGIT_GUI_RENDERABLE` and it's method - `render`. Then you can reuse it or even pass directly to GUI class as a page to render.
+Sub-classing `ZCL_ABAPGIT_GUI_PAGE` is not the only way to render the content. You may want to separate some visual component that is not a page e.g. `ZCL_ABAPGIT_GUI_VIEW_REPO` is a class like that. In essence, you have to implement `ZIF_ABAPGIT_GUI_RENDERABLE` and its method - `render`. Then you can reuse it or even pass it directly to the GUI class as a page to render.
 
-It makes sense to also subclass your component from `ZCL_ABAPGIT_GUI_COMPONENT`. This class has a protected `gui_services` method returning the singleton instance of `ZIF_ABAPGIT_GUI_SERVICES`. The gui services are good for:
+It makes sense to also subclass your component from `ZCL_ABAPGIT_GUI_COMPONENT`. This class has a protected `gui_services` method returning the singleton instance of `ZIF_ABAPGIT_GUI_SERVICES`. The GUI services are good for:
 - registering self as an event handler (`register_event_handler`). Importantly, later registered event handlers have higher priority (processing is done from bottom to top)
-- accessing hotkey services (`get_hotkeys_ctl`) - to register own hotkeys for the page (hotkeys are combines from the whole component stack)
-- registering postponed html parts (`get_html_parts`)
+- accessing hotkey services (`get_hotkeys_ctl`) - to register own hotkeys for the page (hotkeys are combined from the whole component stack)
+- registering postponed HTML parts (`get_html_parts`)
 
-## Postponed HTML parts
+## Postponed HTML Parts
 
-Components may have postponed parts, e.g. scripts or hidden forms. These chunks may need to be rendered in another location of the page (e.g. scripts are rendered at the end). There is a mechanism to enable it:
+Components may have postponed parts, e.g. scripts or hidden forms. These chunks may need to be rendered in another location on the page (e.g. scripts are rendered at the end). There is a mechanism to enable it:
 
 ```abap
     " ... somewhere within render
@@ -94,16 +95,16 @@ Components may have postponed parts, e.g. scripts or hidden forms. These chunks 
 ```
 where `render_my_scripts( )` must return an instance of `ZCL_ABAPGIT_HTML`.
 
-Currently 2 collections are supported out of the box - scripts and hidden_forms (see definition of `zcl_abapgit_gui_component`). Scripts rendered after the page body. Hidden forms right before end of the body. But this does not limit you to these categories only - you may register own collections to exchange postponed parts between components supported by you. Collection is just a named list of `ZCL_ABAPGIT_HTML` instances.
+Currently, two collections are supported out of the box - scripts and hidden_forms (see definition of `zcl_abapgit_gui_component`). Scripts rendered after the page body. Hidden forms right before the end of the body. But this does not limit you to these categories only - you may register your own collections to exchange postponed parts between components supported by you. The collection is just a named list of `ZCL_ABAPGIT_HTML` instances.
 
-## Router and event handlers
+## Router and Event Handlers
 
 To process sapevents in abap the component (page) must implement `ZIF_ABAPGIT_GUI_EVENT_HANDLER=>on_event`. It imports `ii_event` instance which represents `sapevent` handler of `cl_gui_html_viewer`. In particular:
-- `ii_event->mv_action` - sapevent code (part of url before `?`)
-- `ii_event->mv_getdata` - raw url query (part of url after `?`)
+- `ii_event->mv_action` - sapevent code (part of URL before `?`)
+- `ii_event->mv_getdata` - raw URL query (part of URL after `?`)
 - `ii_event->mt_postdata` - raw post data (if present)
-- `ii_event->mi_gui_services` - instance of GUI services for easier access
-- `ii_event->query()` - returns parsed url query (`k1=v1&k2=v2...`) in form of `string_map`. Param names are upper cased (by default). Params that are not uniform are not parsed (`k1=v1&k2` - will result in `k1` only). Params can be addressed in 2 typical ways:
+- `ii_event->mi_gui_services` - the instance of GUI services for easier access
+- `ii_event->query()` - returns parsed url query (`k1=v1&k2=v2...`) in form of `string_map`. Param names are uppercased (by default). Params that are not uniform are not parsed (`k1=v1&k2` - will result in `k1` only). Params can be addressed in 2 typical ways:
   - `ii_event->query( )->get( 'XXX' )`
   - or `ii_event->query( )->to_abap( changing cs_container = ls_struc_with_fields )`
   - query string_map is immutable (attempt to `set` will raise an exception)
@@ -111,27 +112,24 @@ To process sapevents in abap the component (page) must implement `ZIF_ABAPGIT_GU
 - `ii_event->form_data()` - attempts to parse post_data assuming it is set of key value pairs. Returns a string map. Otherwise behaves as `query()` above. `iv_upper_cased = false` by default.
 
 Events can be processed on 2 levels - in page/component **or** in the router. On new event:
-- the GUI goes through event handlers stack - list of components that registered themselves as event handlers during rendering via `gui_services`
+- the GUI goes through the event handlers stack - a list of components that registered themselves as event handlers during rendering via `gui_services`
 - the processing is done from the last registered handler to the first one (stack top to bottom)
 - the first event handler that returns "handled" status breaks the cycle (see below how this is indicated)
 - if the event was not handled by the handlers in the stack the event would be passed to the router
 
-Router (`ZCL_ABAPGIT_GUI_ROUTER`) is the class which handle global abapGit commands like opening specific pages and actions like repo installation/deletion.
+Router (`ZCL_ABAPGIT_GUI_ROUTER`) is the class that handles global abapGit commands like opening specific pages and actions like repo installation/deletion.
 
 In order to indicate the result of event handling an `on_event` implementation must return `rs_handled-state` (element of `zcl_abapgit_gui=>c_event_state`) and, optionally, `rs_handled-page`:
 
-- `not_handled` (same as `initial`) - event was not handled, process by next handler (e.g. the router)
-- `re_render` - just re-render the current page (probably internal state of the page object was changed so the visualization should too)
+- `not_handled` (same as `initial`) - the event was not handled, process it by the next handler (e.g. the router)
+- `re_render` - just re-render the current page (probably an internal state of the page object was changed so the visualization should too)
 - `new_page` - render `ei_page`
-- `go_back` - render previous page in the call stack (e.g. user pressed F3)
-- `no_more_act` - action was handled, no further processing required, and in particular **no re-rendering**
-- `new_page_w_bookmark` - `ei_page` and put a bookmark - allows to use `go_back_to_bookmark` action that will skip all the page stack till the first bookmark
+- `go_back` - render the previous page in the call stack (e.g. user pressed F3)`no_more_act` - the action was handled, no further processing required, and in particular **no re-rendering**
+- `new_page_w_bookmark` - `ei_page` and put a bookmark - allows using `go_back_to_bookmark` action that will skip all the page stack till the first bookmark
 - `new_page_replacing` - `ei_page` and replace the current page in stack (so that F3 returns to the parent of the current page)
 - `go_back_to_bookmark` - go back and skip all the page stack till the first bookmark (works with `new_page_w_bookmark`)
 
 ## Hotkey
-
-TODO ...
 
 In a nutshell:
 
@@ -140,7 +138,7 @@ In a nutshell:
   gui_services( )->get_hotkeys_ctl( )->register_hotkeys( me ).
 ```
 
-The component must implement `zif_abapgit_gui_hotkeys` and return list of keys, their human readable meaning and corresponding event to invoke.
+The component must implement `zif_abapgit_gui_hotkeys` and return the list of keys, their human-readable meaning, and the corresponding event to invoke.
 
 ```abap
   METHOD zif_abapgit_gui_hotkeys~get_hotkey_actions.

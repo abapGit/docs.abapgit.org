@@ -4,7 +4,7 @@ category: online projects
 order: 70
 ---
 
-Online projects may require authentication to create branches or commits on the remote or even fetch the content in case of private repositories. Since abapGit uses git over HTTP the authentication mechanism is Basic Authentication (RFC 2617) using username and password. If the remote requires authentication for an action a popup will appear to enable the user to provide the necessary data. Once authentication is successful the session remains intact until abapGit is restarted.
+Online projects may require authentication to create branches or commits on the remote or even fetch the content in case of private repositories. Since abapGit uses git over HTTP the authentication mechanism is Basic Authentication (RFC 2617) using a combination of username and password or username and token (GitHub requires using personal tokens since 8/2021). If the remote requires authentication for an action a popup will appear to enable the user to provide the necessary data. Once authentication is successful the session remains intact until abapGit is restarted.
 
 ![Authentication dialog](img/auth_dialog.png)
 

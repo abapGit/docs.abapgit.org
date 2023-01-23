@@ -3,7 +3,7 @@ title: Welcome
 ---
 abapGit is a git client for ABAP developed in ABAP. It requires SAP BASIS version 702 or higher.
 
-Latest build: <a href="https://raw.githubusercontent.com/abapGit/build/main/zabapgit.abap" download>zabapgit.abap</a>
+Latest build: <a href="https://raw.githubusercontent.com/abapGit/build/main/zabapgit_standalone.prog.abap" download>zabapgit_standalone.prog.abap</a>
 
 For questions/comments/bugs/feature requests/wishes please create an [issue](https://github.com/abapGit/abapGit/issues).
 

@@ -13,8 +13,10 @@ abapGit exists in 2 flavours: _standalone_ version or _developer_ version.
 ## Prerequisites ##
 abapGit requires SAP BASIS version 702 or higher.
 
+For abapGit to work properly, the SAP GUI Browser Control must be set to `Internet Explorer` under `SAP GUI Options > Interaction Design > HTML Control > Browser Control` (see [known issues with Chromium-based browser control](https://github.com/abapGit/abapGit/issues/4841))
+
 ## Install Standalone Version ##
-1. Download the [ABAP code](https://raw.githubusercontent.com/abapGit/build/main/zabapgit.abap) (right click -> save-as) to a file.
+1. Download the [ABAP code](https://raw.githubusercontent.com/abapGit/build/main/zabapgit_standalone.prog.abap) (right click -> save-as) to a file.
 2. Via `SE38`, `SE80`, or [ADT](https://tools.eu1.hana.ondemand.com/#abap), create a new report named `ZABAPGIT_STANDALONE` (formerly `ZABAPGIT_FULL`). Note: Do *not* use the name `ZABAPGIT` if you plan to install the developer version.
 3. In source code change mode, upload the code from the file using Utilities -> More Utilities -> Upload/Download -> Upload
 4. Activate
@@ -32,7 +34,7 @@ In order to contribute to the abapGit project, you install the developer version
 Prerequisite to using the online feature is that [SSL must be setup](guide-ssl-setup.html). If your system is not connected to the Internet (e.g. behind a firewall) or doesn't allow proper SSL configuration, then you can use the offline scenario (see below).
 
 1. Run the standalone version of abapGit
-1. On the repository overview page, select "New Online"
+1. On the repository list page, select "New Online"
 1. Enter `https://github.com/abapGit/abapGit/` for the URL
 1. Enter package name `$ABAPGIT` (or select an existing or create new package)
 1. Select "Clone Online Repo"
@@ -47,7 +49,7 @@ Download latest version of the abapGit developer version from https://github.com
 ![](img/zip_download.png)
 
 1. Run the standalone version of abapGit
-1. On the repository overview page, select "New Offline"
+1. On the repository list page, select "New Offline"
 1. Enter repo name `abapGit` and package name `$ABAPGIT` (or select an existing or create new package)
 1. Select "Create Offline Repo"
 1. Select "Import <sup>zip</sup>"

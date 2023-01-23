@@ -81,6 +81,7 @@ Type   | Description   | Supported
 `JOBD` | Technical Job Definition | Yes
 `LPDC` | Launchpad short texts | [#107](https://github.com/abapGit/abapGit/issues/107)
 `MSAG` | Message Class | Yes
+`NONT` | SAP Object Type Node | Yes, [AFF](https://github.com/SAP/abap-file-formats)
 `NROB` | Number Range Objects | Yes
 `NSPC` | Namespace in R/3 Repository | Yes
 `OA2P` | OAuth2 Profile | Yes
@@ -95,6 +96,7 @@ Type   | Description   | Supported
 `PINF` | Package interface | Yes
 `PRAG` | Pragma in ABAP Source Code | Yes
 `PROG` | Program | Yes
+`RONT` | SAP Object Type | Yes, [AFF](https://github.com/SAP/abap-file-formats)
 `SAJC` | Application job catalog entry | [#1580](https://github.com/abapGit/abapGit/issues/1580)
 `SAJT` | Application job template | [1581](https://github.com/abapGit/abapGit/issues/1581)
 `SAMC` | ABAP Messaging Channels | Yes
@@ -112,8 +114,10 @@ Type   | Description   | Supported
 `SHLP` | Search Help | Yes
 `SHMA` | Shared Objects: Defined Area Attributes | Yes
 `SICF` | ICF Service | Yes
+`SMBC` | Business Configuration Maintenance Objects | Yes, [AFF](https://github.com/SAP/abap-file-formats)
 `SMIM` | Info Object from the MIME Repository | Yes
 `SMTG` | OM: Email Template | Yes
+`SOBJ` | Business Object Type | Yes
 `SOTS` | All Concepts (OTR) of a Package - Long Texts | Yes
 `SPLO` | Format Types | Yes
 `SPPF` | Page Format | Yes
