@@ -85,7 +85,7 @@ SAP Teched Barcelona
 
 [Is SAP’s ABAP a special snowflake or has a Git run it over?](https://diginomica.com/2018/07/03/is-saps-abap-a-special-snowflake-or-has-a-git-run-it-over/) - Den Howlett
 
-[ORGANISIERE DEINE ARBEIT MIT ABAPGIT	](https://inspiricon.de/abapgit/) -Andra Atanasoaie
+[ORGANISIERE DEINE ARBEIT MIT ABAPGIT ](https://inspiricon.de/abapgit/) -Andra Atanasoaie
 
 [Moderne ABAP Entwicklung mit abapGit](https://de.slideshare.net/ChristianGnter/moderne-abap-entwicklung-mit-abapgit) - Christian Günter
 
@@ -115,7 +115,7 @@ SAP Teched Barcelona
 
 [APACK - ABAP Package and Dependency Manager](https://www.youtube.com/watch?v=PfB2w7wuHQI), Sebastian Wolf
 
-[Versioning your local objects using abapgit](https://blogs.sap.com/2019/08/19/versioning-your-local-objects-using-abapgit/), 
+[Versioning your local objects using abapgit](https://blogs.sap.com/2019/08/19/versioning-your-local-objects-using-abapgit/),
 Frederik Hudak
 
 [Improving your ABAP code quality with open-source tools](https://github.com/jwigert/sapsa-impuls-2019-jw/blob/master/F%C3%B6rb%C3%A4ttra%20kvaliteten%20p%C3%A5%20din%20ABAP-kod%20med%20hj%C3%A4lp%20av%20%C3%B6ppen%20k%C3%A4llkod-verktyg.pdf), Johan Wigert (in Swedish)
@@ -124,7 +124,7 @@ Frederik Hudak
 
 ### 2020
 
-[How we do ABAP code review using abapGit](https://blogs.sap.com/2020/01/30/how-we-do-abap-code-review-using-abapgit/), 
+[How we do ABAP code review using abapGit](https://blogs.sap.com/2020/01/30/how-we-do-abap-code-review-using-abapgit/),
 Michael Pang
 
 [The journey to Git-based ABAP development: Part 1](https://blogs.sap.com/2020/02/26/the-journey-to-git-based-abap-development-part-1/), Marcello Urbani
@@ -167,6 +167,6 @@ Michael Pang
 
 [Part 5: Using ABAPGit to Transfer On-Premise ABAP Source Code to SAP BW bridge](https://blogs.sap.com/2022/08/25/part-5-using-abapgit-to-transfer-on-premise-abap-source-code-to-sap-bw-bridge/), Wilson Kurian
 
-[4 abapGit Use Cases That Will Blow Your Mind (and gCTS won’t help a bit)](https://www.youtube.com/watch?v=Yeo9rz-7Pdc&list=PL7VGlQRMcLSChz9ngnAVc89SqPDuMTsSr&index=2), Marc Bernard
+[4 abapGit Use Cases That Will Blow Your Mind (and gCTS won’t help a bit)](https://www.youtube.com/watch?v=Yeo9rz-7Pdc&t=31223s), Marc Bernard
 
 [ABAP File Formats](https://larshp.github.io/abapconf2022/), Albert Mink & Lars Hvam
