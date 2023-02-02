@@ -15,7 +15,7 @@ The abapGit application is displayed using a SAP GUI HTML Control embedded in SA
 abapGit is working without restrictions for *SAP GUI for Windows 7.60* or higher when using the HTML Control based on *Internet Explorer*.
 
 With *SAP GUI for Windows 7.70* or higher, there is the option to use *Edge (based on Chromium)* as the HTML Control. Unfortunately, this control 
-currently does **not** handle the `SAPEVENT` protocol which is used by abapGit (see below). Until this gap is closed by SAP, it's recommended
+currently does **not** handle the `SAPEVENT` protocol when triggered by JavaScript which is used by abapGit (see below). Until this gap is closed by SAP, it's recommended
 to use the *Internet Explorer* HTML Control.
 
 Note: Starting with *SAP GUI for Windows 8.00*, the *Edge (based on Chromium)* HTML Control is the default setting.
