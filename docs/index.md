@@ -25,3 +25,7 @@ tradtional enterprise products.
 It is a community effort to support the project, recommend [watching](https://help.github.com/articles/watching-and-unwatching-repositories/) the project to get a feeling about issue resolution. Everyone can suggest changes to abapGit via [pull requests](https://help.github.com/articles/about-pull-requests/).
 
 ![abapgit_1_99_0](img/abapgit_1_99_0.png)
+
+### Community vs. SAP Distribution of abapGit
+
+This website is documenting the community version of abapGit (available on [GitHub](https://github.com/abapGit/abapGit)). The SAP version of abapGit available as part of SAP Business Technology Platform is documented on [help.sap.com](https://help.sap.com/docs/BTP/65de2977205c403bbc107264b8eccf4b/d62ed9d54a764c53990f25f0ab6c27f9.html). When using the SAP version, please note that there are different capabilities and supported object types (as described by SAP). If the SAP version on BTP does not work correctly, open a ticket with SAP support.
