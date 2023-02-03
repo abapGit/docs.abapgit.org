@@ -125,6 +125,8 @@ Report [ZABAPGIT_TEST_SSL](guide-ssl-test.html) can be used to verify that the c
 
 ### Troubleshooting
 
+Connection issues typically lead to "Access to resource forbidden" (HTTP 403) or "Misdirected Request" (HTTP 421) errors.
+
 1. Go to transaction `SMICM`
 2. Check that ICM is in status "running" (green light)
 3. Select Goto > Services and check that the HTTPS service is active (green checkmark)
