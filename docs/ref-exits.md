@@ -95,13 +95,15 @@ Can be used for any postprocessing operation for deserialized objects. Since it 
 
 ### DETERMINE_TRANSPORT_REQUEST
 
+Set a transport request per repository. If set, no transport request popup appears and the transport is used for pull/delete (see [#5916](https://github.com/abapGit/abapGit/pull/5916)).
 
 ### GET_CI_TESTS
 
+Add your own repositories to run a complete CI cycle (clone, pull, check, delete) when executing unit tests for object serializer classes (see [#3993](https://github.com/abapGit/abapGit/pull/3993)). 
 
 ### GET_SSL_ID
 
-Possibility to change the default `ANONYM` ssl id to something system specific.
+Possibility to change the default `ANONYM` SSL ID to something system specific.
 
 ### HTTP_CLIENT
 
@@ -133,3 +135,4 @@ Can be used to add a message at repo level (repository view, see [#4653](https:/
 
 ### VALIDATE_BEFORE_PUSH
 
+Perform custom validations just before pushing into remote while being on the "Commit Message" screen (see [#6013](https://github.com/abapGit/abapGit/pull/6013)).
