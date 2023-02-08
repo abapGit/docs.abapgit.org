@@ -125,6 +125,10 @@ The exit also receives a repo meta data snapshot (`zif_abapgit_persistence=>ty_r
 
 This exit is called at the end of the serialize process and gives an opportunity to change the content of the serialzed files (see [#5194](https://github.com/abapGit/abapGit/issues/5194)).
 
+### VALIDATE_BEFORE_PUSH
+
+Perform custom validations just before pushing into remote while being on the "Commit Message" screen (see [#6013](https://github.com/abapGit/abapGit/pull/6013)).
+
 ### WALL_MESSAGE_LIST
 
 Can be used to add a message at list level (repository list, see [#4653](https://github.com/abapGit/abapGit/issues/4653)).
@@ -132,7 +136,3 @@ Can be used to add a message at list level (repository list, see [#4653](https:/
 ### WALL_MESSAGE_REPO
 
 Can be used to add a message at repo level (repository view, see [#4653](https://github.com/abapGit/abapGit/issues/4653)).
-
-### VALIDATE_BEFORE_PUSH
-
-Perform custom validations just before pushing into remote while being on the "Commit Message" screen (see [#6013](https://github.com/abapGit/abapGit/pull/6013)).
