@@ -170,3 +170,7 @@ Michael Pang
 [4 abapGit Use Cases That Will Blow Your Mind (and gCTS won’t help a bit)](https://www.youtube.com/watch?v=Yeo9rz-7Pdc&t=31223s), Marc Bernard
 
 [ABAP File Formats](https://larshp.github.io/abapconf2022/), Albert Mink & Lars Hvam
+
+### 2023
+
+[7 ways abapGit can transform your development approach for internal development](https://blogs.sap.com/2023/02/16/7-ways-abapgit-can-transform-your-development-approach-for-internal-development/), Ryan Fleischmann
