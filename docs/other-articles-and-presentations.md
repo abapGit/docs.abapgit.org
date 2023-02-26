@@ -174,3 +174,5 @@ Michael Pang
 ### 2023
 
 [7 ways abapGit can transform your development approach for internal development](https://blogs.sap.com/2023/02/16/7-ways-abapgit-can-transform-your-development-approach-for-internal-development/), Ryan Fleischmann
+
+[ABAPGit Installation on SAP NetWeaver developer edition 7.52](https://blogs.sap.com/2023/02/26/abapgit-installation-on-sap-netweaver-developer-edition-7.52/), Ali Jibran
