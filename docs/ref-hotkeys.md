@@ -40,7 +40,7 @@ c | Run Syntax Check
 d | Diff
 i | Run Code Inspector
 l | Show Log
-o | Repository Overview
+o | Repository List
 p | Pull
 r | Refresh Repository
 s | Stage
