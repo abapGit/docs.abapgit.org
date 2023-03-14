@@ -74,7 +74,7 @@ The root package of the repository is shown on the far left. Click the name to j
 
 ## Page Content
 
-In the area between header and footer is filled differently depending on the selected page or command. Some pages like the repository overview and repository view contain an additional menu bar. Pages that contain input forms, use the top menu bar to switch between forms (like tabs) and a row of buttons at the bottom to select commands.
+In the area between header and footer is filled differently depending on the selected page or command. Some pages like the repository list and repository view contain an additional menu bar. Pages that contain input forms, use the top menu bar to switch between forms (like tabs) and a row of buttons at the bottom to select commands.
 
 ## Page Footer
 
