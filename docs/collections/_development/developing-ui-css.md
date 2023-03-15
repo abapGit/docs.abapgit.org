@@ -115,7 +115,7 @@ Run the program. After the initial action (if chosen) it will start monitoring f
 
 ![result](../img/w3mimepoller-2.png)
 
-The latest version of the w3mipoller has also an option to track **all** W3MI files in the package (and it's sub-packages) at once. This can be convenient in case of simultaneous multiple file editing. Briefly:
+The latest version of the w3mipoller has also an option to track **all** W3MI files in the package (and its sub-packages) at once. This can be convenient in case of simultaneous multiple file editing. Briefly:
 
 - choose the `$ABAPGIT` package
 - choose the root directory to save files to
