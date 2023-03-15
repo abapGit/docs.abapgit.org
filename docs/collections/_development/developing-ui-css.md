@@ -101,7 +101,7 @@ Internally this is done by a combination of `ZCL_ABAPGIT_GUI_HTML_PROCESSOR` and
 
 To edit CSS files you have to download them to the frontend, edit, debug in IE or Chrome Devtools, and upload them back. Doing so via SMW0 may be inconvenient for multiple assets (main CSS + themes + js). One of the solutions is to use [W3MIPOLLER](https://github.com/sbcgua/abap_w3mi_poller). The idea of the tool is to define a connection between a MIME asset and a frontend file and then monitor file changes - as soon as you save the file, the poller detects it and automatically uploads it to the MIME storage.
 
-![](../img/w3mimepoller-1.png)
+![sel.screen](../img/w3mimepoller-1.png)
 
 In the selection screen, you define one or several pairs MIME-to-File. You can also save them as variants. Choose the right option at the bottom:
 
@@ -113,4 +113,15 @@ Just a handy recommendation: if you save a variant, save it with "just start pol
 
 Run the program. After the initial action (if chosen) it will start monitoring file changes - leave it running. Eventually, after a file was modified, it will report the upload on the screen.
 
-![](../img/w3mimepoller-2.png)
+![result](../img/w3mimepoller-2.png)
+
+The latest version of the w3mipoller has also an option to track **all** W3MI files in the package (and it's sub-packages) at once. This can be convenient in case of simultaneous multiple file editing. Briefly:
+
+- choose the `$ABAPGIT` package
+- choose the root directory to save files to
+- optionally enter regex for file names (e.g. ".*css$" if you intend to edit css file only)
+- optionally select "Sort by ..." flag to split files by sub-directories by extension (since abapgit html pages refer to `css/..` and `js/..` URIs is may be helpful)
+- see more in [project readme](https://github.com/sbcgua/abap_w3mi_poller)
+
+![whole project](../img/w3mimepoller-3.png)
+
