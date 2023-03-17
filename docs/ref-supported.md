@@ -10,6 +10,7 @@ Type   | Description   | Supported
 `AIFC` | Objects from AIF content | Yes
 `AMSD` | Logical Database Schema | Yes
 `AOBJ` | Archiving Object | [#804](https://github.com/abapGit/abapGit/issues/804)
+`AQBG` | ABAP Query: User group | Yes
 `AREA` | InfoArea | Yes
 `ASFC` | Field Catalog | Yes
 `ASIS` | Archiving Information Structure | [#1579](https://github.com/abapGit/abapGit/issues/1579)
