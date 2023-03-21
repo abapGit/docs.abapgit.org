@@ -64,6 +64,7 @@ Type   | Description   | Supported
 `FUGX` | Function Group with Customer Include: Customer Part | [#2851](https://github.com/abapGit/abapGit/issues/2851)
 `G4BA` | SAP Gateway OData V4 Backend Service Group & Assignments | Yes
 `G4BS` | SAP Gateway OData V4 Backend Service | Yes
+`GSMP` | Generic Simple Metric Provider | Yes, [AFF](https://github.com/SAP/abap-file-formats)
 `IAMU` | Language-Independent IAC Binary Data | Yes
 `IARP` | Parameters of IAC Language Resource | Yes
 `IASP` | Parameters of an IAC service | Yes
