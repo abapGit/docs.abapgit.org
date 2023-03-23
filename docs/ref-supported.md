@@ -12,6 +12,7 @@ Type   | Description   | Supported
 `AOBJ` | Archiving Object | [#804](https://github.com/abapGit/abapGit/issues/804)
 `AQBG` | ABAP Query: User group | Yes
 `AQSG` | ABAP Query: Functional area | Yes
+`AQQU` | ABAP Query: Query | Yes
 `AREA` | InfoArea | Yes
 `ASFC` | Field Catalog | Yes
 `ASIS` | Archiving Information Structure | [#1579](https://github.com/abapGit/abapGit/issues/1579)
