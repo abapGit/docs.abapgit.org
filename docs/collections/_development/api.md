@@ -131,7 +131,7 @@ zcl_abapgit_login_manager=>set(
 ```
 
 Or you can include the abapGit password dialog into your custom programs with this code
-```
+```abap
 TABLES: sscrfields.
 
 INCLUDE zabapgit_password_dialog.
