@@ -130,6 +130,26 @@ zcl_abapgit_login_manager=>set(
   iv_password = lv_password ).
 ```
 
+Or you can include the abapGit password dialog into your custom programs with this code
+```abap
+TABLES: sscrfields.
+
+INCLUDE zabapgit_password_dialog.
+
+INITIALIZATION.
+  lcl_password_dialog=>on_screen_init( ).
+
+AT SELECTION-SCREEN OUTPUT.
+  IF sy-dynnr = lcl_password_dialog=>c_dynnr.
+    lcl_password_dialog=>on_screen_output( ).
+  ENDIF.
+
+AT SELECTION-SCREEN.
+  IF sy-dynnr = lcl_password_dialog=>c_dynnr.
+    lcl_password_dialog=>on_screen_event( sscrfields-ucomm ).
+  ENDIF.
+```
+
 ### List Branches ###
 
 Get a list of all branches (including `main` branch):
