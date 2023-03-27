@@ -64,6 +64,10 @@ Determine the proxy port from the repository URL.
 
 Determine the proxy URL from the repository URL.
 
+### CHANGE_SUPPORTED_OBJECT_TYPES
+
+Add or remove supported object types
+
 ### CHANGE_TADIR
 
 Can be used to skip certain objects, or force a different object setup than currently in TADIR ([Example](https://gist.github.com/larshp/cca0ce0ba65efcde5dfcae416b0484f7)).
