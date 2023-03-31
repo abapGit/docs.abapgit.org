@@ -64,6 +64,10 @@ Determine the proxy port from the repository URL.
 
 Determine the proxy URL from the repository URL.
 
+### CHANGE_SUPPORTED_DATA_OBJECTS
+
+Add or remove supported data objects. You can add single tables, for example `TABU,RSADMIN`, or a set of tables, for example `TABU,T009*`.
+
 ### CHANGE_SUPPORTED_OBJECT_TYPES
 
 Add or remove supported object types
