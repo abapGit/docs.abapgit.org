@@ -45,6 +45,7 @@ order: 50
 * [Tricktresor](https://www.tricktresor.de)
 * [Yelcho Systems Consulting](http://www.yelcho.com.au/)
 * [Resulto Consultoria](https://www.resultoconsultoria.com/)
+* [Regesta Italia](https://www.regestaitalia.eu/)
 
 ### Projects 
 
