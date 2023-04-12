@@ -29,6 +29,7 @@ order: 50
 * [Discovery Consulting](https://www.discoveryconsulting.com.au)
 * [dbosoft](https://www.dbosoft.eu)
 * [emineo](https://www.emineo.ch/)
+* [FASTEC](https://www.fastec.de/en/)
 * [Hochfrequenz Unternehmensberatung GmbH](https://www.hochfrequenz.de/)
 * [INVIXO](http://invixo.com/)
 * [IT Culture](https://www.it-culture.net/)
