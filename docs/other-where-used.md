@@ -6,7 +6,9 @@ order: 50
 
 ### Customer
 * bonprix Handelsgesellschaft mbH, Germany
+* [City of Zurich](https://www.stadt-zuerich.ch/portal/en/index.html)
 * [CHS Inc.](https://www.chsinc.com)
+* [Hansgrohe](https://www.hansgrohe.com/)
 * [Haufe Group](https://www.haufegroup.com/en/home)
 * Inchcape Australia
 * [Linde Engineering](https://www.linde-engineering.com/en/index.html)
@@ -39,13 +41,13 @@ order: 50
 * [PM Eleven](https:///www.pmeleven.com)
 * [Progress Management](http://www.pmconseil.com/)
 * [Provide Technologies Inc](https://provide.services)
+* [Regesta Italia](https://www.regestaitalia.eu/)
+* [Resulto Consultoria](https://www.resultoconsultoria.com/)
 * [SBCG](https://www.sbcg.com.ua/)
 * SE38 IT-Engineering, Neuss, Germany
 * [SoftwareONE](https://www.softwareone.com)
 * [Tricktresor](https://www.tricktresor.de)
 * [Yelcho Systems Consulting](http://www.yelcho.com.au/)
-* [Resulto Consultoria](https://www.resultoconsultoria.com/)
-* [Regesta Italia](https://www.regestaitalia.eu/)
 
 ### Projects 
 
