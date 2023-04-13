@@ -77,7 +77,7 @@ There are some files with special meaning:
 
    abapGit repositories do not store any SAP package names. Only the package metadata is stored in these XML files. When installing a repository, abapGit will map the folder names to the SAP packages (see above).
 
-4. `#namespace#`
+4. `#namespace#` or `(namespace)`
 
    `/NAMESPACE/` in SAP object names is mapped to `#namespace#` in XML filenames and `(namespace)` in JSON filenames.
 
