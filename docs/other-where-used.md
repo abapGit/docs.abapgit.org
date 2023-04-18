@@ -15,6 +15,7 @@ order: 50
 * [Orica](https://www.orica.com)
 * Queensland Health
 * RheinEnergie AG, Cologne, Germany
+* [Schwarz Group](https://gruppe.schwarz/en)
 * Sword Holdings
 * [TRR, Sweden](https://www.trr.se)
 
