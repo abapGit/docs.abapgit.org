@@ -25,6 +25,7 @@ order: 50
 
 ### Consulting and Partner
 * [abat AG](https://www.abat.de/)
+* [adesso orange AG](https://www.adesso-orange.com/en/)
 * Computerservice Wolf
 * [CQSE](https://www.cqse.eu/)
 * [Discovery Consulting](https://www.discoveryconsulting.com.au)
