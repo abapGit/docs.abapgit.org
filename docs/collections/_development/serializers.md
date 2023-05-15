@@ -108,17 +108,20 @@ Serializers must implement all methods of interface [`ZIF_ABAPGIT_OBJECT`](https
 
 Method | Description
 -------|------------
-`SERIALIZE`             | Contains of all process steps to read the relevant object type specific information and serialize it (as one or more files)
-`DESERIALIZE`           | Contains of all process steps to create or update an object based on one or more files
-`DELETE`                | Contains of all process steps to delete an object based on one or more files
-`EXISTS`                | Returns whether a given object already exists in any state (i.e. return `abap_true` for inactive objects)
-`IS_LOCKED`             | Returns whether a given object is currently locked
-`IS_ACTIVE`             | Returns whether a given object exists in active state
-`CHANGED_BY`            | Returns the name of the use who last changed a given object (if undetermined, return `c_user_unknown`)
-`JUMP`                  | Navigates to the corresponding object maintenance screen
-`GET_METADATA`          | Returns object specific metadata (see below)
-`GET_COMPARATOR`        | Triggered before deserialization to perform checks (for example, to warn the user that database tables are changed)
-`GET_DESERIALIZE_STEPS` | Defines the deserialzation step or steps used to build the processing sequence (see below)
+`SERIALIZE`              | Contains of all process steps to read the relevant object type specific information and serialize it (as one or more files)
+`DESERIALIZE`            | Contains of all process steps to create or update an object based on one or more files
+`DELETE`                 | Contains of all process steps to delete an object based on one or more files
+`EXISTS`                 | Returns whether a given object already exists in any state (i.e. return `abap_true` for inactive objects)
+`IS_LOCKED`              | Returns whether a given object is currently locked
+`IS_ACTIVE`              | Returns whether a given object exists in active state
+`CHANGED_BY`             | Returns the name of the use who last changed a given object (if undetermined, return `c_user_unknown`)
+`JUMP`                   | Navigates to the corresponding object maintenance screen
+`GET_METADATA`           | Returns object specific metadata (see below)
+`GET_COMPARATOR`         | Triggered before deserialization to perform checks (for example, to warn the user that database tables are changed)
+`GET_DESERIALIZE_STEPS`  | Defines the deserialzation step or steps used to build the processing sequence (see below)
+`GET_DESERIALIZE_ORDER`  | Returns list of objects that shall be deserialized before an object (optional, see below)
+`MAP_FILENAME_TO_OBJECT` | Derive the object from a given filename (optional)
+`MAP_OBJECT_TO_FILENAME` | Derive the filename from a given object (optional)
 
 Example: [`DOMA`](https://github.com/abapGit/abapGit/blob/main/src/objects/zcl_abapgit_object_doma.clas.abap).
 
@@ -136,6 +139,10 @@ It's recommended to fill `CLASS` and `VERSION` metadata using `SUPER->GET_METADA
 ### Deserialization Step
 
 It is mandatory to provide at least one deserialization step (see below).
+
+### Deserialization Order
+
+This method is used to return a list of objects that shall be deserialized before the given object. 
 
 ## Super Class
 
@@ -189,6 +196,7 @@ Method | Description
 `READ`         | Return a value, structure, or internal table from the input (using ID transformation from XML accepting data loss)
 `GET_RAW`      | Return the input as an instance of an XML document (`IF_XML_ELEMENT`)
 `GET_METADATA` | Return the metadata used at time of serializing the object
+`I18N_PARAMS`  | Get the settings for internationalization (see below)
 
 In addition, the deserialize method must add or update the TADIR entry for the given object and insert the object into a transport request (for transportable packages). If the used SAP APIs are not performing these tasks, `TADIR_INSERT( iv_package )` and `CORR_INSERT( iv_package )` shall be called by the deserialize method.
 
@@ -207,7 +215,7 @@ The activation queue is built separately for each phase (see 'Deserialize Proces
 
 In general, the serializer class shall process texts of an object in all available languages i.e. the original language as well as any translations. It shall respect the "Serialize Main Language Only" setting of a repository and limit the texts to the language provided to the constructor (`MV_LANGUAGE`).
 
-The recommended approach is to check `io_xml->i18n_params( )-serialize_master_lang_only = abap_false` and then serialize the additional translations in the XML (typically using `I18N` prefix). During deserialize the translation languages can then be retrieved and processed accordingly (
+The recommended approach is to check `io_xml->i18n_params( )-main_language_only = abap_false` and then serialize the additional translations in the XML (typically using `I18N` prefix). During deserialize the translation languages can then be retrieved and processed accordingly.
 
 Example: [`TABL`](https://github.com/abapGit/abapGit/blob/main/src/objects/zcl_abapgit_object_tabl.clas.abap).
 
@@ -242,7 +250,7 @@ Objects are deserialized in three phases. After each phase, all objects included
 
 Step | Description | Activation
 -----|-------------|-----------
-`EARLY` | Used for objects (like classes and interfaces) that are dependencies for DDIC objects
+`EARLY` | Used for objects (like classes and interfaces) that are dependencies for DDIC objects | None
 `DDIC`  | Used for DDIC objects which require processing and activation before other object types | DDIC Mass Activation
 `ABAP`  | Used for non-DDIC objects (code or mostly anything else) which might depend on DDIC objects   | Workbench Mass Activation
 `LATE`  | Used for objects that depend on other objects processed in the previous two phases            | DDIC & Workbench Mass Activation

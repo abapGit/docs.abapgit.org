@@ -15,6 +15,7 @@ order: 50
 * [Orica](https://www.orica.com)
 * Queensland Health
 * RheinEnergie AG, Cologne, Germany
+* [Schwarz Group](https://gruppe.schwarz/en)
 * Sword Holdings
 * [TRR, Sweden](https://www.trr.se)
 
@@ -24,6 +25,7 @@ order: 50
 
 ### Consulting and Partner
 * [abat AG](https://www.abat.de/)
+* [adesso orange AG](https://www.adesso-orange.com/en/)
 * Computerservice Wolf
 * [CQSE](https://www.cqse.eu/)
 * [Discovery Consulting](https://www.discoveryconsulting.com.au)
