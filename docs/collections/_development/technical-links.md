@@ -8,15 +8,15 @@ Collection of links to various git-related documentation,
 
 [https://gist.github.com/schacon/6092633](https://gist.github.com/schacon/6092633)
 
-[https://github.com/git/git/blob/master/Documentation/technical/pack-protocol.txt](https://github.com/git/git/blob/master/Documentation/technical/pack-protocol.txt)
+[git reference](https://www.git-scm.com/docs)
 
-[https://github.com/git/git/blob/master/Documentation/technical/http-protocol.txt](https://github.com/git/git/blob/master/Documentation/technical/http-protocol.txt)
+[git protocol capabilities](https://www.git-scm.com/docs/protocol-capabilities)
 
-[https://github.com/git/git/blob/master/Documentation/technical/protocol-capabilities.txt](https://github.com/git/git/blob/master/Documentation/technical/protocol-capabilities.txt)
+[git HTTP protocol](https://www.git-scm.com/docs/http-protocol)
 
-[https://github.com/git/git/blob/master/Documentation/technical/pack-format.txt](https://github.com/git/git/blob/master/Documentation/technical/pack-format.txt)
+[git PACK protocol](https://www.git-scm.com/docs/pack-protocol)
 
-[https://github.com/git/git/tree/master/Documentation/technical](https://github.com/git/git/tree/master/Documentation/technical)
+[git pack format](https://www.git-scm.com/docs/pack-format)
 
 [http://alblue.bandlem.com/2011/08/git-tip-of-week-objects.html](http://alblue.bandlem.com/2011/08/git-tip-of-week-objects.html)
 
