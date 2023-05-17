@@ -105,6 +105,10 @@ Can be used for any postprocessing operation for deserialized objects. Since it 
 
 Set a transport request per repository. If set, no transport request popup appears and the transport is used for pull/delete (see [#5916](https://github.com/abapGit/abapGit/pull/5916)).
 
+### ENHANCE_REPO_TOOLBAR
+
+With this exit you can extend the toolbar with your own menu options. Currently, the exit is active for repository settings so you may define your own settings (see [#6249](https://github.com/abapGit/abapGit/pull/6249)).
+
 ### GET_CI_TESTS
 
 Add your own repositories to run a complete CI cycle (clone, pull, check, delete) when executing unit tests for object serializer classes (see [#3993](https://github.com/abapGit/abapGit/pull/3993)). 
