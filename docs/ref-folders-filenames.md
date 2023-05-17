@@ -77,9 +77,9 @@ There are some files with special meaning:
 
    abapGit repositories do not store any SAP package names. Only the package metadata is stored in these XML files. When installing a repository, abapGit will map the folder names to the SAP packages (see above).
 
-4. `#namespace#`
+4. `#namespace#` or `(namespace)`
 
-   `/NAMESPACE/` in SAP object names is mapped to `#namespace#` in filenames.
+   `/NAMESPACE/` in SAP object names is mapped to `#namespace#` in XML filenames and `(namespace)` in JSON filenames.
 
 ### Limitations
 
@@ -135,14 +135,17 @@ not the case, rename the files accordingly.
 
 Unknown causes. Open an [issue](https://github.com/sbcgua/ajson/issues).
 
-`Namespace { namespace } does not exist. Create it in transaction SE03`
+`Namespace { namespace } does not exist. Pull it first (or create it in transaction SE03)`
 
-If repository objects are based on a namespace, the namespace must be created first before other objects can be pulled. Either perform 
-*Advanced > Selective Pull* and pull *only* the namespace, or create the namespace in transaction `SE03` manually.
+If repository objects are based on a namespace, the namespace must be created first before other objects can be pulled. Either pull *only* the namespace, or create the namespace in transaction `SE03` manually.
 
 `Namespace { namespace } is not modifiable. Check it in transaction SE03`
 
 Set the namespace to `modifiable` in transaction `SE03`.
+
+`Package { package } is not in namespace { namespace }. Remove repository and use a different package`
+
+The root package of a repository must adhere to the naming convention of the namespace used in the repository. Use "Advanced > Remove" to remove the repository and create the repository again with a package name that begins with `/namespace/`.
 
 ### Technical Details
 
