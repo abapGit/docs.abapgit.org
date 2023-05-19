@@ -12,7 +12,7 @@ abapGit repositories do *not* store any SAP package names. The top (or root) SAP
 1. Let abapGit create the package automatically
 2. Create the package manually 
 
-If the repository contains sub packages, abapGit will create them automatically with the same settings as the top SAP package (see also [Folder Logic](ref-dot-abapgit.html#folder-logic)).
+If the repository contains sub packages, abapGit will create them automatically with the same settings as the top SAP package (see also [Folder Logic](settings-dot-abapgit.html#folder-logic)).
 
 ### Automatic Creation of Package
 
