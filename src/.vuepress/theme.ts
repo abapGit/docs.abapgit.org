@@ -3,7 +3,7 @@ import { enNavbar, deNavbar } from "./navbar/index.js";
 import { enSidebar, deSidebar } from "./sidebar/index.js";
 
 export default hopeTheme({
-  hostname: "https://devepos.com",
+  hostname: "https://docs.abapgit.org",
   author: {
     name: "abapGit",
     url: "https://github.com/abapGit"
