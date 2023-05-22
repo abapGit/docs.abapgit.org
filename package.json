@@ -1,8 +1,8 @@
 {
-  "name": "devepos",
+  "name": "docs.abapgit.org",
   "version": "1.0.0",
-  "description": "DevEpos Homepage",
-  "license": "MIT",
+  "description": "abapGit Documentation",
+  "license": "UNLICENSED",
   "type": "module",
   "scripts": {
     "docs:build": "vuepress build src",
