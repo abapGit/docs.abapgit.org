@@ -9,6 +9,7 @@ export default hopeTheme({
     url: "https://github.com/abapGit"
   },
   repo: "https://github.com/abapGit/docs.abapgit.org",
+  docsDir: "src",
   iconAssets: "fontawesome-with-brands",
   editLink: true,
   logo: "/logo.svg",
