@@ -11,7 +11,7 @@ For write-protected offline repositories, you can compare a package with all obj
 - abapGit Developer Version is installed on remote SAP system
 - Offline repository is write-protected
 - Same package names on both systems
-- Authorizations to run RFC function Z_ABAPGIT_SERIALIZE_PACKAGE and abapGit serialization process on remote system
+- Authorizations to run RFC function `Z_ABAPGIT_SERIALIZE_PACKAGE` and abapGit serialization process on remote system
 
 :::note
 The general recommendation is to use **online** repositories and a Git server for comparing and synchronizing systems. We do not recommend to create RFC destinations between different tier systems or creating RFC users with wide authorizations.

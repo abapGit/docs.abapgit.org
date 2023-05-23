@@ -4,15 +4,19 @@ category: online projects
 order: 30
 ---
 
-* Start ZABAPGIT
+* Start `ZABAPGIT`
 * Navigate to the repository
 
 ![](/img/uninstall1.png)
 
-* Click the "uninstall" link
+* Select "Advanced > Uninstall" 
 
 ![](/img/uninstall2.png)
 
-* It will now delete all objects in the package specified when installing the repository.
+* Confirm the dialog
 
-In contrast to "Uninstall" clicking the "remove" button deletes the reference between the git repository and the ABAP package but does not uninstall the associated ABAP package from the system.
+* abapGit will now delete all objects in the package specified when installing the repository
+
+:::info
+In contrast to "Uninstall",  selecting "Remove" deletes the reference between the git repository and the ABAP package but does *not* uninstall the associated ABAP package or objects from the system.
+:::

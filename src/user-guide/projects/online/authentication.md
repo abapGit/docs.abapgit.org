@@ -8,7 +8,7 @@ Online projects may require authentication to create branches or commits on the 
 
 ![Authentication dialog](/img/auth_dialog.png)
 
-Note: Apparently, SAP ABAP supports only RFC 2617 for Basic Authentication and *not* RFC 7617. Therefore, you have to use ASCII characters only for your repository passwords (including extended ASCII, hex 20 to FF, <https://en.wikipedia.org/wiki/ISO/IEC_8859-1>). The Euro symbol, for example, is *not* included since it's Unicode U+20AC (which would require RFC 7617 and UTF-8 encoding of passwords). SAP has documented this limitation in SAP Notes [1240796](https://launchpad.support.sap.com/#/notes/1240796).
+Note: Apparently, SAP ABAP supports only RFC 2617 for Basic Authentication and *not* RFC 7617. Therefore, you have to use ASCII characters only for your repository passwords (including extended ASCII, hex 20 to FF, <https://en.wikipedia.org/wiki/ISO/IEC_8859-1>). The Euro symbol, for example, is *not* included since it's Unicode U+20AC (which would require RFC 7617 and UTF-8 encoding of passwords). SAP has documented this limitation in SAP Notes [1240796](https://me.sap.com/notes/1240796).
 
 ## Token or Two Factor Authentication
 

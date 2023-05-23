@@ -11,7 +11,7 @@ abapGit uses SIL and MIT-licensed fonts, they are included in the distribution a
 
 To add an icon to the icon set follow the next procedure:
 
-1. Add the icon to repo [abapGit/icon-font](https://github.com/abapGit/icon-font) as documented [here](https://github.com/abapGit/icon-font/blob/main/README.md)
+1. Add the icon to repo [abapGit Icon Font](https://github.com/abapGit/icon-font) as documented [here](https://github.com/abapGit/icon-font/blob/main/README.md)
 2. Get the new abapGit font and icon files from the icon-font GitHub action
 3. Go to transaction `SMW0` and display the abapGit MIME objects (Binary > Package $abapgit)
 4. Upload the new font file to `ZABAPGIT_ICON_FONT`

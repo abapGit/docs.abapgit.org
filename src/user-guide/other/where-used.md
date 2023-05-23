@@ -6,18 +6,18 @@ order: 50
 
 ## Customer
 
-* bonprix Handelsgesellschaft mbH, Germany
+* [bonprix Handelsgesellschaft mbH, Germany](https://www.bonprix.de)
 * [City of Zurich](https://www.stadt-zuerich.ch/portal/en/index.html)
 * [CHS Inc.](https://www.chsinc.com)
 * [Hansgrohe](https://www.hansgrohe.com/)
 * [Haufe Group](https://www.haufegroup.com/en/home)
-* Inchcape Australia
-* [Linde Engineering](https://www.linde-engineering.com/en/index.html)
+* [Inchcape Australia](https://www.inchcape.com/en-au/)
+* [Linde Engineering](https://www.linde-engineering.com/en/)
 * [Orica](https://www.orica.com)
-* Queensland Health
-* RheinEnergie AG, Cologne, Germany
+* [Queensland Health](https://www.health.qld.gov.au/)
+* [RheinEnergie AG, Cologne, Germany](https://www.rheinenergie.com/de/)
 * [Schwarz Group](https://gruppe.schwarz/en)
-* Sword Holdings
+* [Sword Holdings](https://www.sword-group.com/)
 * [TRR, Sweden](https://www.trr.se)
 
 ## SAP
@@ -29,7 +29,7 @@ order: 50
 
 * [abat AG](https://www.abat.de/)
 * [adesso orange AG](https://www.adesso-orange.com/en/)
-* Computerservice Wolf
+* [Computerservice Wolf](https://www.computerservice-wolf.com/)
 * [CQSE](https://www.cqse.eu/)
 * [Discovery Consulting](https://www.discoveryconsulting.com.au)
 * [dbosoft](https://www.dbosoft.eu)
@@ -50,7 +50,7 @@ order: 50
 * [Regesta Italia](https://www.regestaitalia.eu/)
 * [Resulto Consultoria](https://www.resultoconsultoria.com/)
 * [SBCG](https://www.sbcg.com.ua/)
-* SE38 IT-Engineering, Neuss, Germany
+* [SE38 IT-Engineering, Neuss, Germany](http://www.se38.de/)
 * [SoftwareONE](https://www.softwareone.com)
 * [Tricktresor](https://www.tricktresor.de)
 * [Yelcho Systems Consulting](http://www.yelcho.com.au/)
@@ -61,4 +61,4 @@ Projects using abapGit are listed on [dotabap.org](http://dotabap.org).
 
 ## Updates
 
-Feel free to add your company to this list via pull request (the initial list came from [here](https://github.com/abapGit/abapGit/issues/1574)).
+Feel free to add your company to this list via pull request (the initial list came from [#1574](https://github.com/abapGit/abapGit/issues/1574)).
