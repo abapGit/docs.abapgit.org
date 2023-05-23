@@ -14,8 +14,8 @@ Example:
 
 Alternatively, you can create the namespace upfront as follows:
 
-1. Create namespace in transaction SE03, namespace role = C, and add the repair license
-1. Open namespace for modifications in SE03
+1. Create namespace in transaction `SE03`, namespace role `C`, and add the repair license
+1. Open namespace for modifications in `SE03`
 1. Create namespaced package (optional)
 1. Clone/pull as usual
 

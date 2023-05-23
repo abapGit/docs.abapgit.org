@@ -20,15 +20,19 @@ Some pages in abapGit contain JavaScript. If the script fails, you typically see
 
 Also, the lower right corner of the HTML output will NOT show "JS OK". Troubleshooting depends on the type of SAP GUI you are using.
 
+:::note
+Check [SAP GUI Setup](/user-guid/setup/sapgui.html) for known issues related to SAP GUI.
+:::
+
 ### SAP GUI for Windows
 
 If you are using SAP GUI 7.6 or below, or SAP GUI 7.7 with Internet Explorer control, then follow these instructions on how to use the IE Debugger in abapGit:
 
-[https://blogs.sap.com/2019/03/22/obscure-productivity-tips-debug-javascript-running-within-sapgui-browser/](https://blogs.sap.com/2019/03/22/obscure-productivity-tips-debug-javascript-running-within-sapgui-browser/)
+[Obscure productivity tips: Debug Javascript running within SAPGUI browser](https://blogs.sap.com/2019/03/22/obscure-productivity-tips-debug-javascript-running-within-sapgui-browser/)
 
 If you are using SAP GUI 7.7 with Edge (Chrome) control, use the developer tools that come with WebView2:
 
-[https://docs.microsoft.com/en-us/microsoft-edge/webview2/how-to/debug?tabs=devtools](https://docs.microsoft.com/en-us/microsoft-edge/webview2/how-to/debug?tabs=devtools)
+[Debug WebView2 Apps](https://docs.microsoft.com/en-us/microsoft-edge/webview2/how-to/debug?tabs=devtools)
 
 ### SAP GUI for HTML (Web)
 

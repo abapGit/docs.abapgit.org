@@ -27,9 +27,9 @@ Since abapGit is enforcing a linear history, you can find all changes in [commit
 The following steps need to be taken to create a new abapGit version:
 
 1. Create a new branch name like the new version. For example, `v1.121.0`.
-1. Update `zif_abapgit_version`(<https://github.com/abapGit/abapGit/blob/main/src/zif_abapgit_version.intf.abap>) and increase the minor version of constant `c_abap_version` by one. Example: `'1.120.0' > '1.121.'`.
-1. Update `changelog.txt`(<https://github.com/abapGit/abapGit/blob/main/changelog.txt>) and add a section at the top for the new version.
-1. Compile a list of the relevant pull requests (see above) based on a comparison between the most recent tag and `main`. For example, [`v1.120.0` vs `main`](https://github.com/abapGit/abapGit/compare/v1.120.0...main).
+1. Update [`zif_abapgit_version`](<https://github.com/abapGit/abapGit/blob/main/src/zif_abapgit_version.intf.abap>) and increase the minor version of constant `c_abap_version` by one. Example: `'1.120.0' > '1.121.'`.
+1. Update [`changelog.txt`](<https://github.com/abapGit/abapGit/blob/main/changelog.txt>) and add a section at the top for the new version.
+1. Compile a list of the relevant pull requests (see above) based on a comparison between the most recent tag and `main`. For example, [`v1.123.0` vs `main`](https://github.com/abapGit/abapGit/compare/v1.123.0...main).
 1. Label each change (PR) corresponding to the legend (`*`: fixed, `!`: changed, `+`: added, `-`: removed).
 1. Create a new, draft pull request from the new branch.
 1. Have the changes reviewed by someone else.

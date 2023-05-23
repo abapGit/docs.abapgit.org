@@ -18,7 +18,9 @@ With *SAP GUI for Windows 7.70* or higher, there is the option to use *Edge (bas
 currently does **not** handle the `SAPEVENT` protocol when triggered by JavaScript which is used by abapGit (see below). Until this gap is closed by SAP, it's recommended
 to use the *Internet Explorer* HTML Control.
 
-Note: Starting with *SAP GUI for Windows 8.00*, the *Edge (based on Chromium)* HTML Control is the default setting.
+:::info
+Starting with *SAP GUI for Windows 8.00*, the *Edge (based on Chromium)* HTML Control is the default setting.
+:::
 
 Workaround 1:
 
@@ -41,10 +43,10 @@ Known issues:
 
 Relevant SAP Notes:
 
-- [2913405 = SAP GUI for Windows: Dependencies to browsers / browser controls](https://launchpad.support.sap.com/#/notes/2913405)
-- [2901278 - SAP GUI HTML Control based on Chromium Edge: Legacy HTML does not work (correctly) / present limitations](https://launchpad.support.sap.com/#/notes/2901278)
-- [2957665 - SAP GUI HTML Control: Browser Control Fallback Configuration](https://launchpad.support.sap.com/#/notes/2957665)
-- [3153691 - SAP GUI HTML Control: Fallback mechanism is not working sometimes in some applications](https://launchpad.support.sap.com/#/notes/3153691)
+- [2913405 = SAP GUI for Windows: Dependencies to browsers / browser controls](https://me.sap.com/notes/2913405)
+- [2901278 - SAP GUI HTML Control based on Chromium Edge: Legacy HTML does not work (correctly) / present limitations](https://me.sap.com/notes/2901278)
+- [2957665 - SAP GUI HTML Control: Browser Control Fallback Configuration](https://me.sap.com/notes/2957665)
+- [3153691 - SAP GUI HTML Control: Fallback mechanism is not working sometimes in some applications](https://me.sap.com/notes/3153691)
 - [What’s New in SAP GUI for Windows](https://help.sap.com/docs/sap_gui_for_windows/e8f03b91f99d45f4ae9d90ddf6e44b70/64155e6b9cb84de79ac28b55ec6fa26c.html)
 
 ### SAP GUI for Java
@@ -55,7 +57,7 @@ You may confirm that you want to use this GUI anyway and continue.
 
 Known issues:
 
-- [Commit page is non-functional](https://github.com/abapGit/abapGit/issues/5082)
+- [Commit page is non-functional, #5082](https://github.com/abapGit/abapGit/issues/5082)
 
 ### SAP GUI for HTML
 
@@ -64,7 +66,7 @@ The workaround is to use "Back" buttons or menu items provided by abapGit.
 
 Known issues:
 
-- [Issue running abapGit in WebGUI (SAP GUI for HTML)](https://github.com/abapGit/abapGit/issues/4433)
+- [Issue running abapGit in WebGUI (SAP GUI for HTML), #4433](https://github.com/abapGit/abapGit/issues/4433)
 
 ### Browser
 

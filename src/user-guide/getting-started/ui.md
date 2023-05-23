@@ -16,7 +16,7 @@ Pressing the `F1` key anywhere in abapGit will open a palette of all possible co
 
 If you don't want to run any command, press `F1` again to close the palette.
 
-![keyboard_command_palette](/img/keyboard_command_palette.gif)
+![Command Palette](/img/keyboard_command_palette.gif)
 
 ### Repository Selector
 
@@ -24,7 +24,7 @@ Pressing the `F2` key anywhere in abapGit will open a palette of all existing re
 
 If you don't want to select any repository, press `F2` again to close the palette.
 
-![keyboard_repository_palette](/img/keyboard_repository_palette.png)
+![Repository Palette](/img/keyboard_repository_palette.png)
 
 ## Keyboard Navigation
 
@@ -39,7 +39,7 @@ abapGit supports the general browser control keys:
 
 For each page, abapGit defines certain hotkeys (or keyboard shortcuts). If you press a hotkey, it will execute the corresponding command immediately. You can display the list of possible hotkeys by pressing `?` anywhere in abapGit. You can find a [Hotkeys Cheat Sheet](/user-guide/reference/hotkeys.md) under references.
 
-![keyboard_hotkeys](/img/keyboard_hotkeys.png)
+![Hotkeys](/img/keyboard_hotkeys.png)
 
 To close the hotkey popup, press `?` again.
 

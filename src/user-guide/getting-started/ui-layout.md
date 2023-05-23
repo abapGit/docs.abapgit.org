@@ -10,7 +10,7 @@ The abapGit user interface is based on HTML. Each page is structured into four s
 
 At the top of each page, abapGit displays its logo and the current page title on the left, and optionally menu items on the right.
 
-![ui_top](/img/ui_top.png)
+![](/img/ui_top.png)
 
 This section is "sticky" and remains at the top of the page when scrolling downwards.
 
@@ -22,11 +22,11 @@ Pages in abapGit that are related to a repository contain a header including ess
 
 Online Repositories:
 
-![ui_header_online](/img/ui_header_online.png)
+![](/img/ui_header_online.png)
 
 Offline Repositories:
 
-![ui_header_offline](/img/ui_header_offline.png)
+![](/img/ui_header_offline.png)
 
 ### Repository 
 
@@ -40,31 +40,31 @@ abapGit allows to display the changelog of a repository and alert the user if a 
 
 An icon indicates if a repository is marked as a favorite. Click the icon to toggle the state.
 
-![ui_header_favorite_off](/img/ui_header_favorite_off.png)
+![](/img/ui_header_favorite_off.png)
 
-![ui_header_favorite_on](/img/ui_header_favorite_on.png)
+![](/img/ui_header_favorite_on.png)
 
 ### Write Protection
 
 If a repository is protected against changes (in local settings), then the header will show a lock icon.
 
-![ui_header_write_protected](/img/ui_header_write_protected.png)
+![](/img/ui_header_write_protected.png)
 
 ### Background Mode
 
 For repositories that have a defined background mode (in settings), a "BG" icon will be shown.
 
-![ui_header_background_mode](/img/ui_header_background_mode.png)
+![](/img/ui_header_background_mode.png)
 
 ### Branch / Tag / Commit
 
 The currently selected remote is shown on the right of the header. This can be either a branch like "main", a tag, or a commit (hash). 
 
-![ui_header_branch](/img/ui_header_branch.png)
+![](/img/ui_header_branch.png)
 
-![ui_header_tag](/img/ui_header_tag.png)
+![](/img/ui_header_tag.png)
 
-![ui_header_commit](/img/ui_header_commit.png)
+![](/img/ui_header_commit.png)
 
 Click the name to select a different branch or tag.
 
@@ -80,7 +80,7 @@ In the area between header and footer is filled differently depending on the sel
 
 At the end of each page, abapGit displays a footer.
 
-![ui_footer](/img/ui_footer.png)
+![](/img/ui_footer.png)
 
 ### Sponsor Us
 

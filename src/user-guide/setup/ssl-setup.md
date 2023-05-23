@@ -28,7 +28,7 @@ Secure connections require installation of the SAP Crypto Library (CommonCryptoL
 It's highly recommended to run a recent version of the Crypto Library to avoid known security issues. As of December 2022, the latest version is `8.5.47`.
 :::
 
-[Crypto Library in SAP Download Center](https://launchpad.support.sap.com/#/softwarecenter/template/products/%20_APP=00200682500000001943&_EVENT=DISPHIER&HEADER=Y&FUNCTIONBAR=N&EVENT=TREE&NE=NAVIGATE&ENR=01200615320100002625&V=MAINT&TA=ACTUAL&PAGE=SEARCH/SAPCRYPTOLIB)
+[Crypto Library in SAP Download Center](https://me.sap.com/softwarecenter/template/products/%20_APP=00200682500000001943&_EVENT=DISPHIER&HEADER=Y&FUNCTIONBAR=N&EVENT=TREE&NE=NAVIGATE&ENR=01200615320100002625&V=MAINT&TA=ACTUAL&PAGE=SEARCH/SAPCRYPTOLIB)
 
 You can find the installed version number in transaction `STRUST` > Environment > Display SSF Version:
 
@@ -36,7 +36,7 @@ You can find the installed version number in transaction `STRUST` > Environment 
 
 ### SAP System Profile
 
-See [SAP Note 510007](https://launchpad.support.sap.com/#/notes/510007), section 7, for detailed information on how to configure your SAP system to support SSL.
+See [SAP Note 510007](https://me.sap.com/notes/510007), section 7, for detailed information on how to configure your SAP system to support SSL.
 
 The currently recommended settings for TLS v1.2 interoperability are (requiring at least CommonCryptoLib 8.4.38, recommending at least 8.5.4):
 
@@ -153,8 +153,8 @@ The following blog posts on the SAP Community Network might be helpful:
 
 #### Actions Requiring Authentication
 
-To perform operations that require authentication, like e.g. cloning a private repository or pushing to any GitHub repository, you need to install not only the certificates for github.com but also for [https://**api**.github.com](https://api.github.com). Repeat the download and STRUST import steps as described in the sections above accordingly. (See also [Issue#1491](https://github.com/abapGit/abapGit/issues/1491))
+To perform operations that require authentication, like e.g. cloning a private repository or pushing to any GitHub repository, you need to install not only the certificates for github.com but also for [https://**api**.github.com](https://api.github.com). Repeat the download and STRUST import steps as described in the sections above accordingly. (See also [#1491](https://github.com/abapGit/abapGit/issues/1491))
 
 #### Accessing GitHub
 
-On [2018-02-22](https://githubengineering.com/crypto-removal-notice/), GitHub deprecated weak TLS connections.  See [SAP Note 510007](https://launchpad.support.sap.com/#/notes/510007) for details on required profile parameter changes.
+On [2018-02-22](https://githubengineering.com/crypto-removal-notice/), GitHub deprecated weak TLS connections.  See [SAP Note 510007](https://me.sap.com/notes/510007) for details on required profile parameter changes.
