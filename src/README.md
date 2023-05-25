@@ -37,7 +37,7 @@ this is possible because abapGit is plain text unlike traditional transport file
 That being said, abapGit is used by mutiple [organizations](/user-guide/other/where-used.md), all abapGit
 changes are reviewed via pull requests. And all 100+ [repository watchers](https://github.com/abapGit/abapGit/watchers) are
 automatically notified for every change to the code base, so potentially all changes are looked at by more people than
-tradtional enterprise products.
+traditional enterprise products.
 
 ## Support
 
