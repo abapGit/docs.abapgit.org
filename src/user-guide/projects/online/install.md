@@ -20,7 +20,7 @@ Use a new SAP package for each abapGit repository and do *not* use SAP packages 
 
 ![](/img/clone2.png)
 
-* Select "Clone Online Repo"
+* Select "Create Online Repo"
 
 * Select "Pull" to copy all objects from the Git repository into the SAP system
 
