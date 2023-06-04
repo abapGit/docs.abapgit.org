@@ -1,0 +1,77 @@
+
+
+
+Disclaimer: this functionality is new, so potententially may change
+
+Design comments
+
+Kinds of popups:
+- in-page - a hovering form, blocking the regular content
+- separate page - a regular page, yet that does not allow any page transitions others that `go back`
+
+Ideally, a visualisation component should not know that it is a popup. It is it's wrapper which should know and manage the aspects. For example: `zcl_abapgit_gui_picklist` - a component that renders a list to choose an item from. This component can rendered as a part of the page, or as a in-page popup, or as a separate page.
+
+Calling a separate-page popup would probably be initiated in the event handler and thus would look like this:
+
+```abap
+    rs_handled-state = zcl_abapgit_gui=>c_event_state-new_page.
+    rs_handled-page  = zcl_abapgit_gui_page_hoc=>create(
+      ii_child_component = mo_popup_picklist " Or another component
+      iv_show_as_modal   = abap_true ).
+```
+
+Passing `iv_show_as_modal` to `zcl_abapgit_gui_page_hoc` has the following effects on GUI:
+- only `re_render`, `go_back` and `no_more_act` states are accepted from the modal event handler (thus guaranteeing that popup will not forward to any other page rather than its caller)
+- `rounter` is excluded from the event chain (thus also removing the main source of page redirections)
+
+Calling a popup in-page:
+
+The example below focuses the functionality of `zcl_abapgit_gui_picklist`, yet it can be any other properly design compopnent in a popup.
+
+- take into account that re-rendering in-page popup also re-renders the underlying page. If the caller page is potentially large, probably, in-page popup is a sub-optimal choise.
+- the caller page should not interfere with the popup in terms of event and hotkey handling. Thus it must NO register handler if in-page popup is visible.
+
+Sample implementaion can be found in example in `zcl_abapgit_gui_page_sett_remo`, it includes:
+- `mo_popup_picklist` - an instance of a popup (one of - the page can show severral, yet all of them are managed by `zcl_abapgit_gui_picklist`)
+- in the event handler: the code that auto detects if the popup is an in-page or independent
+
+```abap
+    IF mo_popup_picklist IS BOUND. " Uniform popup state handling
+      IF mo_popup_picklist->is_in_page( ) = abap_true.
+        rs_handled-state = zcl_abapgit_gui=>c_event_state-re_render.
+      ELSE.
+        rs_handled-state = zcl_abapgit_gui=>c_event_state-new_page.
+        rs_handled-page  = zcl_abapgit_gui_page_hoc=>create(
+          ii_child_component = mo_popup_picklist
+          iv_show_as_modal   = abap_true ).
+      ENDIF.
+    ENDIF.
+```
+
+- in render: the code to render in-page popup it was initiated and skip own `register_handlers` respectively
+
+```abap
+    IF mo_popup_picklist IS NOT BOUND OR mo_popup_picklist->is_in_page( ) = abap_false.
+      register_handlers( ).
+    ELSEIF mo_popup_picklist->is_in_page( ) = abap_true.
+      " Block usual page events if the popup is an in-page popup
+      ri_html->add( zcl_abapgit_gui_in_page_modal=>create( mo_popup_picklist ) ).
+    ENDIF.
+```
+
+Initating the popup and retrieving the result
+Problem: SAP does not allow modal HTML forms, thus initialization and retrieving the result happens asyncroniously and independenetly. It is more the developer responsibility to keep this code readable. Current "state-of-art" approach suggests (though can potentially be improved):
+
+process initiation and result reading in the same method, the "mode" should be dictated by parameters (e.g. `iv_is_return = abap_true`)
+
+e.g. let's consider the `zcl_abapgit_gui_page_sett_remo->choose_branch`:
+- initiation would end up with `mo_popup_picklist = ... create component`, thus marking the presense of the popup for the further code
+- the returning part `iv_is_return = abap_true` is essentially cheching if the popup was cancelled by user `mo_popup_picklist->was_cancelled( )` and retriving the chosen entry `mo_popup_picklist->get_result_item( ... )`
+
+Now, it is important to uniformely initiate the return flow. in `zcl_abapgit_gui_page_sett_remo` this is done by `handle_picklist_state` which is called at the very beginning of the `render`. The method checks if the popup claim that it was fulfilled (confirmed or cancelled) and, if yes, calls the appropriate `choose_*` method based on `mo_popup_picklist->id( )`.
+
+
+Finally one more way to excape the popup is pressing the F3 or ESC - which are handled by GUI, not by the popup component. As a result of this: A) popup does not know that it was cancelled B) even further, the `back` will be applied to the caller page and not to the in-page popup !
+The solution to that is the `graceful back` procedure. Before going back the GUI send an event `go_back` to the top most component (which happens to be the popup). The component has a chance to: A) properly process the fact of exiting B) send back the `re_render` or `no_more_act` states - the 1st one will result in re-rendering of the parent (caller) page, yet with the popup in cancelled/fulfilled state, the latter gives an opportunity to cancel the `go_back` action (e.g. is the popup data was not saved)
+
+
