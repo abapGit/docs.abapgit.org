@@ -29,6 +29,7 @@ index: false
 
 - [Installation](projects/online/install.md)
 - [Keeping Code Up-to-date](projects/online/update.md)
+- [Uninstall](projects/online/uninstall.md)
 - [First Project](projects/online/first-project.md)
 - [Moving Package into Git](projects/online/moving-package.md)
 - [Pushing Changes to Git](projects/online/stage-commit.md)
