@@ -11,6 +11,7 @@ dir:
 
 - [Installation](install.md)
 - [Keeping Code Up-to-date](update.md)
+- [Uninstall](uninstall.md)
 - [First Project](first-project.md)
 - [Moving Package into Git](moving-package.md)
 - [Pushing Changes to Git](stage-commit.md)
