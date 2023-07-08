@@ -13,6 +13,7 @@ dir:
 
 - [Installation](online/install.md)
 - [Keeping Code Up-to-date](online/update.md)
+- [Uninstall](online/uninstall.md)
 - [First Project](online/first-project.md)
 - [Moving Package into Git](online/moving-package.md)
 - [Pushing Changes to Git](online/stage-commit.md)
