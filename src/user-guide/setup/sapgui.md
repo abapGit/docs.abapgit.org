@@ -15,7 +15,7 @@ The abapGit application is displayed using a SAP GUI HTML Control embedded in SA
 abapGit is working without restrictions for *SAP GUI for Windows 7.60* or higher when using the HTML Control based on *Internet Explorer*.
 
 With *SAP GUI for Windows 7.70* or higher, there is the option to use *Edge (based on Chromium)* as the HTML Control. Unfortunately, this control
-currently does **not** handle the `SAPEVENT` protocol when triggered by JavaScript which is used by abapGit (see below). Until this gap is closed by SAP, it's recommended
+currently does **not** handle the `SAPEVENT` protocol when triggered by JavaScript which is used by abapGit (see below). The gap is closed with *SAP GUI for Windows 8.00 SP03*. Unless you can use this version, it's recommended
 to use the *Internet Explorer* HTML Control.
 
 :::info
@@ -47,6 +47,9 @@ Relevant SAP Notes:
 - [2901278 - SAP GUI HTML Control based on Chromium Edge: Legacy HTML does not work (correctly) / present limitations](https://me.sap.com/notes/2901278)
 - [2957665 - SAP GUI HTML Control: Browser Control Fallback Configuration](https://me.sap.com/notes/2957665)
 - [3153691 - SAP GUI HTML Control: Fallback mechanism is not working sometimes in some applications](https://me.sap.com/notes/3153691)
+- [3337501 - SAP GUI for Windows Edge HTML Control: Crash is observed when calling ABAP method GET_BROWSER_STRING of CL_GUI_HTML_VIEWER](https://me.sap.com/notes/3337501)
+- [3335007 - SAP GUI for Windows Edge HTML control: Edge browser extension "SAP GUI connector for Microsoft Edge" is not working with SAP Logon Pad and NWBC](https://me.sap.com/notes/3335007)
+- [3331099 - SAP GUI for Windows Edge HTML control: Custom URI scheme support is now available](https://me.sap.com/notes/3331099)
 - [What’s New in SAP GUI for Windows](https://help.sap.com/docs/sap_gui_for_windows/e8f03b91f99d45f4ae9d90ddf6e44b70/64155e6b9cb84de79ac28b55ec6fa26c.html)
 
 ### SAP GUI for Java
