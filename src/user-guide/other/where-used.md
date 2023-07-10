@@ -48,6 +48,7 @@ order: 50
 * [Progress Management](http://www.pmconseil.com/)
 * [Provide Technologies Inc](https://provide.services)
 * [Regesta Italia](https://www.regestaitalia.eu/)
+* [rku.it GmbH](https://www.rku-it.de/)
 * [Resulto Consultoria](https://www.resultoconsultoria.com/)
 * [SBCG](https://www.sbcg.com.ua/)
 * [SE38 IT-Engineering, Neuss, Germany](http://www.se38.de/)
