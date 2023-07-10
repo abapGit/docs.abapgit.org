@@ -11,6 +11,7 @@ dir:
 
 - [HTML Pages](developing-ui.md)
 - [HTML Forms](developing-ui-forms.md)
+- [HTML Popups](html-popups.md)
 - [CSS and Assets](developing-ui-css.md)
 - [JavaScript](developing-ui-js.md)
 - [Icons](adding-icons.md)
