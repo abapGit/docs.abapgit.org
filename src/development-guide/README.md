@@ -31,6 +31,7 @@ Development related information
 
 - [HTML Pages](user-interface/developing-ui.md)
 - [HTML Forms](user-interface/developing-ui-forms.md)
+- [HTML Popups](user-interface/html-popups.md)
 - [CSS and Assets](user-interface/developing-ui-css.md)
 - [JavaScript](user-interface/developing-ui-js.md)
 - [Icons](user-interface/adding-icons.md)
