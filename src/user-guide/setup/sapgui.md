@@ -22,6 +22,8 @@ Starting with *SAP GUI for Windows 8.00*, the *Edge (based on Chromium)* HTML Co
 
 :::warning
 Using the *Edge (based on Chromium)* HTML Control with abapGit requires *SAP GUI for Windows 7.70 SP 13* or *SAP GUI for Windows 8.00 SP 3* or higher (see SAP Note 3331099).
+
+Even with these patches, there are still issues (see [#6339](https://github.com/abapGit/abapGit/issues/6339)).
 :::
 
 Alternative 1:
@@ -41,11 +43,12 @@ Configure *Internet Explorer* as a fallback solution for abapGit. The solution i
 
 Related issue:
 
-- [SAPGUI 7.70 - Issues with chromium-based browser control (WebView/Edge)](https://github.com/abapGit/abapGit/issues/4841)
+- [SAP GUI for Windows: Issues with chromium-based browser control (WebView/Edge)](https://github.com/abapGit/abapGit/issues/4841)
+- [SAP GUI 8.00 SP>=03 / 7.70 SP>=13 chromium browser control not working properly](https://github.com/abapGit/abapGit/issues/6339)
 
 Relevant SAP Notes:
 
-- [2913405 = SAP GUI for Windows: Dependencies to browsers/browser controls](https://me.sap.com/notes/2913405)
+- [2913405 - SAP GUI for Windows: Dependencies to browsers/browser controls](https://me.sap.com/notes/2913405)
 - [2901278 - SAP GUI HTML Control based on Chromium Edge: Legacy HTML does not work (correctly) / present limitations](https://me.sap.com/notes/2901278)
 - [2957665 - SAP GUI HTML Control: Browser Control Fallback Configuration](https://me.sap.com/notes/2957665)
 - [3153691 - SAP GUI HTML Control: Fallback mechanism is not working sometimes in some applications](https://me.sap.com/notes/3153691)
