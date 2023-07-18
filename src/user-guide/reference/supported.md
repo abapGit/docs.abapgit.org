@@ -51,6 +51,7 @@ order: 20
 | `ECTC` | eCATT Test Configuration                                     |                                                               Yes |
 | `ECTD` | eCATT Test Data Container                                    |                                                               Yes |
 | `ECVO` | eCATT Validation Object                                      |                                                               Yes |
+| `EEEC` | Event Consumption Model                                      |                                                               Yes |
 | `ENHC` | Composite Enhancement Implementation                         |                                                               Yes |
 | `ENHO` | Enhancement Implementation                                   |                                                               Yes |
 | `ENHS` | Enhancement Spot                                             |                                                               Yes |
