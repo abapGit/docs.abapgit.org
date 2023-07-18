@@ -6,7 +6,7 @@ order: 10
 
 ## Overview
 
-An abapGit Serializer is an ABAP class that supports creating, reading, updating, and deleting (CRUD) of objects of a given object type. In abapGit, reading of an object is implemented in a `serialize` method. Create and update are combined into a `deserialize` method. There is a `delete` method to remove an object from the system.
+An abapGit Serializer is an ABAP class that supports creating, reading, updating, and deleting (CRUD) objects of a given object type. In abapGit, the reading of an object is implemented in a `serialize` method. Create and update are combined into a `deserialize` method. There is a `delete` method to remove an object from the system.
 
 All object serializers must implement interface `ZIF_ABAPGIT_OBJECT` and be named `ZCL_ABAPGIT_OBJECT_{type}`, where `{type}` is the corresponding SAP object type (`TADIR-OBJECT`). As a description for the class, use `{type} - {description of type}` (for example, `TABL - Table`). It's recommended to use `ZCL_ABAPGIT_OBJECTS_SUPER` as a superclass since it provides several convenient methods.
 
@@ -14,11 +14,11 @@ In general, only SAP Standard APIs for retrieving and updating object informatio
 
 As code is stored in git, no usernames, timestamps, states (e.g. active/inactive), or other system-specific information should be part of the serialized object files. Only the active, most recent, and consistent version of an object shall be serialized.
 
-Auto-generated artifacts should be skipped if possible, for example: a CDS view might generate a VIEW artifact, and the VIEW should not be serialized, as it is not something the developer creates.
+Auto-generated artifacts should be skipped if possible, for example, a CDS view might generate a VIEW artifact, and the VIEW should not be serialized, as it is not something the developer creates.
 
 If an inactive version of an object exists, the class shall indicate so in the `is_active` method. abapGit displays such objects with a yellow bolt icon in the repo view. However, the inactive version must be ignored by the serializer.
 
-As a result, a repo shall only contain the definition of active objects. Therefore, the deserializer can assume that the repo contains a consistent object definition and shall create an active version of the object (or update and activate it).
+As a result, a repo shall only contain the definition of active objects. Therefore, the deserializer can assume that the repo has a consistent object definition and shall create an active version of the object (or update and activate it).
 
 ## To-Do List for New Serializers
 
@@ -26,43 +26,55 @@ The following list includes the mandatory and recommended tasks for adding a new
 
 1. Check [Support for New Object Types](https://github.com/abapGit/abapGit/issues/5912)
 
-   Create an [issue](https://github.com/abapGit/docs.abapgit.org/issues/new) with title "<OBJECT_TYPE>: Support for <OBJECT_TYPE_DESCRIPTION>" (for example, "TABL: Support for Tables"). If the object type is already listed, reference the existing issue is your new issue. Briefly describe why the object is needed and outline the implementation approach. 
-   
-2. Wait for OK from abapGit maintainers
+   If the object type is listed already (and not implemented), check the corresponding issue. Typically, you will find valuable discussions to continue or previous work to use as a starting point.
+
+   If the object type is not included in the list, create an [issue](https://github.com/abapGit/abapGit/issues/new) with the title "<OBJECT_TYPE>: Support for <OBJECT_TYPE_DESCRIPTION>" (for example, "TABL: Support for Tables"). Briefly describe why the object is needed and outline the implementation approach.
+
+3. Wait for the OK from abapGit maintainers
 
    Before starting the implementation, it's best to wait for feedback from the community. Once you get the go-ahead, the issue will be assigned to you.
-   
-3. Implement the serializer class
+
+::: info
+abapGit maintainers will add your issue to a [central list](https://github.com/abapGit/abapGit/issues/5912) and, if there's no further discussion required, close it. 
+:::
+
+4. Implement the serializer class
 
    Follow the instructions below. Often, it makes sense to use an existing serializer class as a template. This can save a lot of work especially if the new object type is similar to others.
-   
-4. Create a test repository
+
+::: warning
+Your code must comply with the [development guidelines](/development-guide/read-first/guidelines.md) for abapGit. Most notably your code must be compatible with 7.02 ABAP syntax and available standard SAP objects, use prefixing of variables, be pretty-printed, and pass all abaplint checks.
+
+You might get lots of abaplint errors. If you are uncertain how to resolve these, maintainers are happy to help.
+:::
+
+5. Create a test repository
 
    Define a minimal test case for the new object type and commit it to a test repo in [abapGit Test Repositories](https://github.com/abapGit-tests). If you don't have access, use the issue you created initially to ask for it. See "Testing" below for an example.
    
-5. Test your implementation
+6. Test your implementation
 
-   Perform a full test cycle with your test repository: 
+   Perform a complete test cycle with your test repository: 
    - Create New Online Repo for a local package (for example `$TABL`)
    - Execute a Pull (should install without any diffs)
    - Uninstall the repository (should not leave any objects of TADIR entries behind)
-   - Repeat the process for a transportable pacage (for example `ZTABL`)
+   - Repeat the process for a transportable package (for example `ZTABL`)
 
-6. Create a pull request for your implementation
+7. Create a pull request for your implementation
 
-   Fork the abapGit repository and add a branch for you serializer class. Commit your implementation (the `zcl_abapgit_object_<type>` class) to the branch, and create a pull request to the abapGit repository. Reference your issue in the pull request and add a link to the test repository.
+   Fork the abapGit repository and add a branch for your serializer class. Commit your implementation (the `zcl_abapgit_object_<type>` class) to the branch, and create a pull request to the abapGit repository. Reference your issue in the pull request and add a link to the test repository.
 
    Note: Object types using the ABAP File Format must be added to the [AFF Registry](https://github.com/abapGit/abapGit/blob/d0167ff97dcf6f90ed2721c40d194a5fb34f3ea0/src/objects/aff/zcl_abapgit_aff_registry.clas.abap#L51-L61) as well.
 
-7. Update documentation
+8. Update documentation
 
-   Add the new object type to the [list of supported objects](/user-guide/reference/supported.md). If the object type is using the ABAP File Format (JSON), add a link to the corresponding JSON schema in the [AFF Repo](https://github.com/SAP/abap-file-formats).
+   Add the new object type to the [list of supported objects](/user-guide/reference/supported.md). If the object type is using the ABAP File Format (JSON), add a link to the corresponding JSON schema in the [AFF repository](https://github.com/SAP/abap-file-formats).
 
-8. Wait for feedback from and merge by abapGit maintainers
+9. Wait for feedback from and merge by abapGit maintainers
 
    One of the maintainers will typically do a code review, run the test themselves, and either provide feedback or merge the pull request.
    
-9. Completing tasks
+10. Completing tasks
 
    After a successful merge, abapGit developer and standalone version will support the new object type. Congratulations. Feel free to tell the world about it!
    
@@ -108,18 +120,18 @@ Serializers must implement all methods of interface [`ZIF_ABAPGIT_OBJECT`](https
 
 Method | Description
 -------|------------
-`SERIALIZE`              | Contains of all process steps to read the relevant object type specific information and serialize it (as one or more files)
-`DESERIALIZE`            | Contains of all process steps to create or update an object based on one or more files
-`DELETE`                 | Contains of all process steps to delete an object based on one or more files
+`SERIALIZE`              | Contains all process steps to read the relevant object type-specific information and serialize it (as one or more files)
+`DESERIALIZE`            | Contains all process steps to create or update an object based on one or more files
+`DELETE`                 | Contains all process steps to delete an object based on one or more files
 `EXISTS`                 | Returns whether a given object already exists in any state (i.e. return `abap_true` for inactive objects)
 `IS_LOCKED`              | Returns whether a given object is currently locked
-`IS_ACTIVE`              | Returns whether a given object exists in active state
-`CHANGED_BY`             | Returns the name of the use who last changed a given object (if undetermined, return `c_user_unknown`)
+`IS_ACTIVE`              | Returns whether a given object exists in an active state
+`CHANGED_BY`             | Returns the name of the user who last changed a given object (if undetermined, return `c_user_unknown`)
 `JUMP`                   | Navigates to the corresponding object maintenance screen
-`GET_METADATA`           | Returns object specific metadata (see below)
+`GET_METADATA`           | Returns object-specific metadata (see below)
 `GET_COMPARATOR`         | Triggered before deserialization to perform checks (for example, to warn the user that database tables are changed)
 `GET_DESERIALIZE_STEPS`  | Defines the deserialzation step or steps used to build the processing sequence (see below)
-`GET_DESERIALIZE_ORDER`  | Returns list of objects that shall be deserialized before an object (optional, see below)
+`GET_DESERIALIZE_ORDER`  | Returns the list of objects that shall be deserialized before an object (optional, see below)
 `MAP_FILENAME_TO_OBJECT` | Derive the object from a given filename (optional)
 `MAP_OBJECT_TO_FILENAME` | Derive the filename from a given object (optional)
 
@@ -134,7 +146,7 @@ Attribute | Description
 `CLASS`        | Technical name used to identify the serializer within serialized XML files (format `LCL_OBJECT_{type}`)
 `VERSION`      | Version number of the serializer (format `v1.0.0`)
 
-It's recommended to fill `CLASS` and `VERSION` metadata using `SUPER->GET_METADATA( )` and then changing settings as required.
+It's recommended to fill `CLASS` and `VERSION` metadata using `SUPER->GET_METADATA( )` and then change settings as required.
 
 ### Deserialization Step
 
@@ -151,13 +163,13 @@ Serializers can take advantage of the following methods in [`ZCL_ABAPGIT_OBJECTS
 Method | Description
 -------|------------
 `GET_METADATA`             | Return default metadata for class and version
-`CORR_INSERT`              | Insert object into a transport (for transportable objects)
-`TADIR_INSERT`             | Insert object into TADIR
-`TADIR_DELETE`             | Delete object from TADIR
+`CORR_INSERT`              | Insert the object into a transport (for transportable objects)
+`TADIR_INSERT`             | Insert the object into TADIR
+`TADIR_DELETE`             | Delete the object from TADIR
 `EXISTS_A_LOCK_ENTRY_FOR`  | Check if an enqueue lock exists
 `SET_DEFAULT_PACKAGE`      | Set SAP package for RS_CORR_INSERT when it can't be supplied via APIs
 `SET_DEFAULT_TRANSPORT`    | Set transport request for RS_CORR_INSERT when it can't be supplied via APIs
-`IS_ACTIVE`                | Method to check if an ABAP Workbench object or it's parts are active
+`IS_ACTIVE`                | Method to check if an ABAP Workbench object or its parts are active
 `DELETE_DDIC`              | Method to remove DDIC objects
 
 In addition, there are some methods to handle documents associated with an object (transaction `SE61`, table `DOKIL`).
@@ -195,7 +207,7 @@ Method | Description
 -------|------------
 `READ`         | Return a value, structure, or internal table from the input (using ID transformation from XML accepting data loss)
 `GET_RAW`      | Return the input as an instance of an XML document (`IF_XML_ELEMENT`)
-`GET_METADATA` | Return the metadata used at time of serializing the object
+`GET_METADATA` | Return the metadata used at the time of serializing the object
 `I18N_PARAMS`  | Get the settings for internationalization (see below)
 
 In addition, the deserialize method must add or update the TADIR entry for the given object and insert the object into a transport request (for transportable packages). If the used SAP APIs are not performing these tasks, `TADIR_INSERT( iv_package )` and `CORR_INSERT( iv_package )` shall be called by the deserialize method.
@@ -215,7 +227,7 @@ The activation queue is built separately for each phase (see 'Deserialize Proces
 
 In general, the serializer class shall process texts of an object in all available languages i.e. the original language as well as any translations. It shall respect the "Serialize Main Language Only" setting of a repository and limit the texts to the language provided to the constructor (`MV_LANGUAGE`).
 
-The recommended approach is to check `io_xml->i18n_params( )-main_language_only = abap_false` and then serialize the additional translations in the XML (typically using `I18N` prefix). During deserialize the translation languages can then be retrieved and processed accordingly.
+The recommended approach is to check `io_xml->i18n_params( )-main_language_only = abap_false` and then serialize the additional translations in the XML (typically using the `I18N` prefix). During deserialize, the translation languages can then be retrieved and processed accordingly.
 
 Example: [`TABL`](https://github.com/abapGit/abapGit/blob/main/src/objects/zcl_abapgit_object_tabl.clas.abap).
 
