@@ -9,5 +9,7 @@ dir:
 
 ## Catalog
 
-- [Serializers](serializers.md)
+- [Overview](overview.md)
+- [Serializer Class](serializers.md)
+- [New Serializers](task-list.md)
 - [File Formats](file-formats.md)
