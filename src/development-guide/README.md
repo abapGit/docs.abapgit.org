@@ -18,7 +18,9 @@ Development related information
 
 ### Serializers
 
-- [Serializers](serializers/serializers.md)
+- [Overview](serializers/overview.md)
+- [Serializer Class](serializers/serializers.md)
+- [New Serializers](serializers/task-list.md)
 - [File Formats](serializers/file-formats.md)
 
 ### Testing
