@@ -73,9 +73,7 @@ export default hopeTheme({
       katex: true,
       mark: true,
       mermaid: true,
-      presentation: {
-        plugins: ["highlight", "math", "search", "notes", "zoom"]
-      },
+      presentation: ["highlight", "math", "search", "notes", "zoom"],
       stylize: [
         {
           matcher: "Recommended",
@@ -92,8 +90,7 @@ export default hopeTheme({
       sub: true,
       sup: true,
       tabs: true,
-      vPre: true,
-      vuePlayground: true
+      vPre: true
     }
   }
 });
