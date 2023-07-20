@@ -43,7 +43,7 @@ The main language is the languages in which all texts belonging to repository ob
 There are currently two options available for including translations in a repository:
 
 1. Object-specific logic provided by the object serializer class
-2. Generic logic provided by abapGit framework (experimental, #4415)
+2. Generic logic provided by abapGit framework (experimental, [#4415](https://github.com/abapGit/abapGit/pull/4415))
 
 If no translation languages are maintained in this setting, the first approach is used. If you maintain a list of translation languages (comma-separated, 2-letter ISO language codes), then these languages will be included in the serialization. See also [Translations and i18n](/user-guide/reference/translations.md)
 
