@@ -28,7 +28,7 @@ Ideally possible to run and use standalone
 
 Raw http client
 
-Does not know about objects or repositories
+Does not know about UI, objects or repositories
 
 Ideally possible to run and use standalone
 
