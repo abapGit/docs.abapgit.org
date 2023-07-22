@@ -10,7 +10,7 @@ Various conventions for packages,
 
 ### `/src/git/`
 
-Raw git client
+Raw git client, uses http package
 
 Does not know about UI, objects or repositories, everything is file based.
 
