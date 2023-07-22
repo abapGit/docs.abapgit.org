@@ -12,7 +12,7 @@ Various conventions for packages,
 
 Raw git client
 
-Does not know about objects or repositories, everything is file based.
+Does not know about UI, objects or repositories, everything is file based.
 
 Ideally possible to run and use standalone
 
