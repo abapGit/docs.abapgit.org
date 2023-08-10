@@ -161,7 +161,7 @@ order: 20
 | `XINX` | Extension Index                                              |                                                               Yes |
 | `XSLT` | Transformation                                               |                                                               Yes |
 
-If additional object types are required please add a comment to [issue](https://github.com/abapGit/abapGit/issues/5912))
+If additional object types are required please add a comment to [issue](https://github.com/abapGit/abapGit/issues/5912)
 
 Customizing can be moved via SCP1 Business configuration, or alternatively the data feature which can move table contents to and from git.
 
