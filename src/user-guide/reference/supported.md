@@ -161,8 +161,8 @@ order: 20
 | `XINX` | Extension Index                                              |                                                               Yes |
 | `XSLT` | Transformation                                               |                                                               Yes |
 
-If additional object types are required please open an [issue](https://github.com/abapGit/abapGit/issues)
+If additional object types are required please add a comment to [issue](https://github.com/abapGit/abapGit/issues/5912)
 
-Support for customizing planned, see [#1004](https://github.com/abapGit/abapGit/issues/1004)
+Customizing can be moved via SCP1 Business configuration, or alternatively the data feature which can move table contents to and from git.
 
-Also see [https://github.com/abapGit/abapGit-Plugins](https://github.com/abapGit/abapGit-Plugins)
+abapGit in SAP Business Technology Platform, ABAP Environment [supports other object types](https://help.sap.com/docs/btp/sap-business-technology-platform/released-abap-object-types)
