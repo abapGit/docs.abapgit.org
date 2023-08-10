@@ -13,3 +13,4 @@ dir:
 - [Development Guidelines](guidelines.md)
 - [Changelog](changelog.md)
 - [Versioning](versioning.md)
+- [Package Structure](package-structure.md)
