@@ -15,6 +15,7 @@ Development related information
 - [Development Guidelines](read-first/guidelines.md)
 - [Changelog](read-first/changelog.md)
 - [Versioning](read-first/versioning.md)
+- [Package Structure](read-first/package-structure.md)
 
 ### Serializers
 
