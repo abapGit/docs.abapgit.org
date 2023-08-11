@@ -21,9 +21,7 @@ Starting with *SAP GUI for Windows 8.00*, the *Edge (based on Chromium)* HTML Co
 :::
 
 :::warning
-Using the *Edge (based on Chromium)* HTML Control with abapGit requires *SAP GUI for Windows 7.70 SP 13* or *SAP GUI for Windows 8.00 SP 3* or higher (see SAP Note 3331099).
-
-Even with these patches, there are still issues (see [#6339](https://github.com/abapGit/abapGit/issues/6339)).
+Using the *Edge (based on Chromium)* HTML Control with abapGit requires *SAP GUI for Windows 7.70 SP 14* or *SAP GUI for Windows 8.00 SP 3 patch 1 or SP 4* or higher (see SAP Note 3331099).
 :::
 
 Alternative 1:
