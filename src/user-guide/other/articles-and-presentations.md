@@ -178,3 +178,5 @@ Michael Pang
 [ABAPGit Installation on SAP NetWeaver developer edition 7.52](https://blogs.sap.com/2023/02/26/abapgit-installation-on-sap-netweaver-developer-edition-7.52/), Ali Jibran
 
 [Undo with abapGit](https://abapinho.com/en/2023/03/abapgit-undo/), Nuno Godinho
+
+[What is abapGit?](https://switchedon.bowdark.com/what-is-abapgit-e6022c6e99d9), Colby Hemond 
