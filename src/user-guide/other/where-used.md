@@ -29,6 +29,7 @@ order: 50
 
 * [abat AG](https://www.abat.de/)
 * [adesso orange AG](https://www.adesso-orange.com/en/)
+* [asbrucon GmbH](https://www.asbrucon.de)
 * [Computerservice Wolf](https://www.computerservice-wolf.com/)
 * [CQSE](https://www.cqse.eu/)
 * [Discovery Consulting](https://www.discoveryconsulting.com.au)
