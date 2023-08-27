@@ -6,19 +6,15 @@ order: 78
 
 ## Folders
 
-abapGit is mapping SAP packages and sub-packages to folders in the git repository. There are three options for defining the folder logic (mapping mode) which
-are described in the [Repository Settings](/user-guide/repo-settings/dot-abapgit.md#folder-logic).
+abapGit is mapping SAP packages and sub-packages to folders in the git repository. There are three options for defining the folder logic (mapping mode) which are described in the [Repository Settings](/user-guide/repo-settings/dot-abapgit.md#folder-logic).
 
-The correct setting (`Prefix`, `Mixed`, or `Full`) for your system typically depends on the name of the target package for the repository as well as
-your naming conventions.
+The correct setting (`Prefix`, `Mixed`, or `Full`) for your system typically depends on the name of the target package for the repository as well as your naming conventions.
 
 ### Limitations
 
-When creating a repository for your own package(s) or installing a third-party repository, the setting (when you create the repository in your system) does not have to match the setting
-defined in the third-party repository. However, not all possible combinations are possible due to length restrictions of SAP package names.
+When creating a repository for your own package(s) or installing a third-party repository, the setting (when you create the repository in your system) does not have to match the setting defined in the third-party repository. However, not all possible combinations are possible due to the length restrictions of SAP package names.
 
-For example, if your target package name is already 20 characters long, installing a repository with mode `Prefix` and folder names longer than
-10 chararacters will lead to an error message since the resulting sub-package name will become too long.
+For example, if your target package name is already 20 characters long, installing a repository with mode `Prefix` and folder names longer than 10 characters will lead to an error message since the resulting sub-package name will become too long.
 
 ### Troubleshooting
 
@@ -26,8 +22,7 @@ For example, if your target package name is already 20 characters long, installi
 
 `Folder logic: length = 0, parent: { parent_package }, child: { package }`
 
-If these errors occur, then the package hierarchy cannot be converted to a folder structure for the given folder logic. First, try to use a different
-folder logic. If this does not work, change the naming conventions and possibly use a starting package with a shorter name.
+If these errors occur, then the package hierarchy cannot be converted to a folder structure for the given folder logic. First, try to use a different folder logic. If this does not work, change the naming conventions and possibly use a starting package with a shorter name.
 
 `Package { package } exceeds ABAP 30-characters name limit`
 
@@ -35,8 +30,7 @@ Try to use a starting package with a shorter name. If this does not work, use a 
 
 `Package { package } has a sub-package with the same name`
 
-This error can happen if you try to install a repository with folder logic `Prefix` into a system where you selected folder logic `Full`.
-Try using `Prefix` as in the original repository.
+This error can happen if you try to install a repository with folder logic `Prefix` into a system where you selected folder logic `Full`. Try using `Prefix` as in the original repository.
 
 ### Technical Details
 
@@ -44,22 +38,19 @@ The mapping is implemented in class [`zcl_abapgit_folder_logic`](https://github.
 
 ## Files
 
-abapGit is mapping SAP objects and object parts to files in the git repository. For each object (for [supported object types](/user-guide/reference/supported.md)), at least one file is being created. Often there are two files, one containing the object metadata and one containing the coding. Some object are split into several files
-to allow for easier editing and change tracking in git.
+abapGit is mapping SAP objects and object parts to files in the git repository. For each object (for [supported object types](/user-guide/reference/supported.md)), at least one file is being created. Often there are two files, one containing the object metadata and one containing the coding. Some objects are split into several files to allow for easier editing and change tracking in git.
 
 For example, DDIC objects are mapped to one file, programs are mapped to two files, and classes as well as function groups are mapped to several files.
 
-Filenames has the following convertion:
+Filenames have the following convention:
 
 `<object name>.<object type>.<extension>` or `<object name>.<object type>.<object part>.<extension>`
 
-The common extensions are `.xml` and `.json` for metadata as well as `.abap` for any coding. Other extensions are possible and used,
-for example, for MIME objects.
+The common extensions are `.xml` and `.json` for metadata as well as `.abap` for any coding. Other extensions are possible and used, for example, for MIME objects.
 
 You can find examples for most object types in the [abapGit Test Repositories](https://github.com/abapGit-tests).
 
-The metadata is stored either in XML or JSON format. JSON format has been introduced for some object and is based the
-[ABAP File Format](https://github.com/SAP/abap-file-formats).
+The metadata is stored either in XML or JSON format. JSON format has been introduced for some objects and is based on the [ABAP File Format](https://github.com/SAP/abap-file-formats).
 
 ### Special Cases
 
@@ -83,21 +74,15 @@ There are some files with special meaning:
 
 ### Limitations
 
-Git has a limit of 4096 characters for filenames. This is way more than required and allowed for many object names in SAP systems. Therefore,
-creating files directly in git (manually or via automation) is limited by the possible object names in SAP systems. It's highly recommended
-to always create objects in an SAP system and then push them to the repository.
+Git has a limit of 4096 characters for filenames. This is way more than required and allowed for many object names in SAP systems. Therefore, creating files directly in git (manually or via automation) is limited by the possible object names in SAP systems. It's highly recommended to always create objects in an SAP system and then push them to the repository.
 
-Some characters used in SAP object names are not allowed in git filenames. Also some characters in object names cause problems when identifying
-the object later. Therefore, abapGit will escape such characters. Examples: `%, #, ., =, ?, <, >`.
+Some characters used in SAP object names are not allowed in git filenames. Also, some characters in object names cause problems when identifying the object later. Therefore, abapGit will escape such characters. Examples: `%, #, ., =, ?, <, >`.
 
-There are cases where the name of an object is *not* unique across systems. This is usually the case if the object name is generated by the
-SAP system when creating the object. Examples are object names based on GUIDs or number ranges. abapGit will map such object names to a unique,
-system independent identifier. Example: ICF Services (`SICF`).
+There are cases where the name of an object is *not* unique across systems. This is usually the case if the object name is generated by the SAP system when creating the object. Examples are object names based on GUIDs or number ranges. abapGit will map such object names to a unique, system-independent identifier. Example: ICF Services (`SICF`).
 
 ### Troubleshooting
 
-It's possible that SAP object names contain characters that are not valid for git filenames. In such case, please open an
-[issue](https://github.com/sbcgua/ajson/issues).
+It's possible that SAP object names contain characters that are not valid for git filenames. In such a case, please open an [issue](https://github.com/sbcgua/ajson/issues).
 
 ### Technical Details
 
@@ -107,29 +92,23 @@ The mapping is implemented in class [`zcl_abapgit_filename_logic`](https://githu
 
 `Changed package assignment for object { type } { name }`
 
-If an object is assigned to a different package/folder in the repository, abapGit will show a warning. Pulling such objects will automatically
-reassign the object to the new pacakge.
+If an object is assigned to a different package/folder in the repository, abapGit will show a warning. Pulling such objects will automatically reassign the object to the new package.
 
 `Files for object { type } { name } are not placed in the same folder`
 
-For objects that are split into several files, all files must be included in the same folder. This can happen if files are moved manually in git.
-To resolve the issue, move the files to the same folder in git.
+For objects that are split into several files, all files must be included in the same folder. This can happen if files are moved manually in Git. To resolve the issue, move the files to the same folder in Git.
 
 `Package { package } already exists but is not a sub-package of { top package }. Check your package and folder logic, and either assign { package } to the package hierarchy of { top package } or remove package { package } from the repository.`
 
-If package already exist but is not included in the package hierarchy of the package assigned to the repository, then a manual change of the package
-is required i.e. setting a parent package to the repo package (or one of its sub-packages). We don't do this automatically since it's not clear where in the
-hierarchy the new package should be located or whether the sub package shall be removed from the repo.
+If a package already exists but is not included in the package hierarchy of the package assigned to the repository, then a manual change of the package is required i.e. setting a parent package to the repo package (or one of its sub-packages). We don't do this automatically since it's not clear where in the hierarchy the new package should be located or whether the sub package shall be removed from the repo.
 
 `Package and path do not match for object { type } { name }`
 
-This warning can happen if an object that is part of the repository exists already in the SAP system but is *not* included in the package hierarchy.
-Either delete the object (and pull it from the repo afterwards) or assign it to a package in the hierarchy.
+This warning can happen if an object that is part of the repository exists already in the SAP system but is *not* included in the package hierarchy. Either delete the object (and pull it from the repo afterward) or assign it to a package in the hierarchy.
 
 `Multiple files with same filename { filename }`
 
-Aside from the special name for packages (`package.devc.xml`) all filenames in the repository (under the starting folder) must be unique. If this is
-not the case, rename the files accordingly.
+Aside from the special name for packages (`package.devc.xml`) all filenames in the repository (under the starting folder) must be unique. If this is not the case, rename the files accordingly.
 
 `Filename is empty for object { type } { name }`
 
@@ -137,7 +116,7 @@ Unknown causes. Open an [issue](https://github.com/sbcgua/ajson/issues).
 
 `Namespace { namespace } does not exist. Pull it first (or create it in transaction SE03)`
 
-If repository objects are based on a namespace, the namespace must be created first before other objects can be pulled. Either pull *only* the namespace, or create the namespace in transaction `SE03` manually.
+If repository objects are based on a namespace, the namespace must be created first before other objects can be pulled. Either pull *only* the namespace or create the namespace in transaction `SE03` manually.
 
 `Namespace { namespace } is not modifiable. Check it in transaction SE03`
 
