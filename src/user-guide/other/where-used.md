@@ -9,6 +9,7 @@ order: 50
 * [bonprix Handelsgesellschaft mbH, Germany](https://www.bonprix.de)
 * [City of Zurich](https://www.stadt-zuerich.ch/portal/en/index.html)
 * [CHS Inc.](https://www.chsinc.com)
+* [Endress+Hauser InfoServe GmbH+Co. KG](https://www.endress.com/)
 * [Hansgrohe](https://www.hansgrohe.com/)
 * [Haufe Group](https://www.haufegroup.com/en/home)
 * [Inchcape Australia](https://www.inchcape.com/en-au/)
