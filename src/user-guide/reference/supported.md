@@ -125,6 +125,8 @@ order: 20
 | `SMIM` | Info Object from the MIME Repository                         |                                                               Yes |
 | `SMTG` | OM: Email Template                                           |                                                               Yes |
 | `SOBJ` | Business Object Type                                         |                                                               Yes |
+| `SOD1` | API Package                                                  |                                                               Yes |
+| `SOD2` | API Package Assignment                                       |                                                               Yes |
 | `SOTS` | All Concepts (OTR) of a Package - Long Texts                 |                                                               Yes |
 | `SPLO` | Format Types                                                 |                                                               Yes |
 | `SPPF` | Page Format                                                  |                                                               Yes |
