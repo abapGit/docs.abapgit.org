@@ -116,7 +116,7 @@ Possibility to change the default `ANONYM` SSL ID to something system-specific.
 
 ### HTTP_CLIENT
 
-Can be used for setting login tickets eg. in connection with abapGitServer connections between SAP systems ([Example](https://gist.github.com/larshp/71609852a79aa1e877f8c4020d18feac)).
+Can be used for setting logon tickets eg. in connection with abapGitServer connections between SAP systems ([Example](https://gist.github.com/larshp/71609852a79aa1e877f8c4020d18feac)).
 
 ### ON_EVENT
 
