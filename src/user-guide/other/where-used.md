@@ -45,6 +45,7 @@ order: 50
 * [Microsoft Azure](https://github.com/Microsoft/ABAP-SDK-for-Azure)
 * [Nuve Platform](https://www.nuveplatform.com/)
 * [objective partner](https://www.objective-partner.de)
+* [OREXES GmbH](https://www.orexes.de/)
 * [percept ltd](https://www.percept.sk)
 * [PM Eleven](https:///www.pmeleven.com)
 * [Progress Management](http://www.pmconseil.com/)
