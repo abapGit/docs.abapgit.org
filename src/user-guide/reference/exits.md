@@ -65,6 +65,10 @@ Determine the proxy port from the repository URL.
 
 Determine the proxy URL from the repository URL.
 
+### CHANGE_RFC_SERVER_GROUP
+
+Adjust the RFC Server Group used for parallel serialization (default `parallel_generators`). Also see [System resources](user-guide/setup/settings-personal.md#developer-version).
+
 ### CHANGE_SUPPORTED_DATA_OBJECTS
 
 Add or remove supported data objects. You can add single tables, for example, `TABU, RSADMIN`, or a set of tables, for example `TABU, T009*`.
