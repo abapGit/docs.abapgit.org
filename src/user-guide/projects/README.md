@@ -13,7 +13,6 @@ dir:
 
 - [Installation](online/install.md)
 - [Keeping Code Up-to-date](online/update.md)
-- [Uninstall](online/uninstall.md)
 - [First Project](online/first-project.md)
 - [Moving Package into Git](online/moving-package.md)
 - [Pushing Changes to Git](online/stage-commit.md)
@@ -26,3 +25,7 @@ dir:
 - [Import ZIP](offline/import-zip.md)
 - [Export ZIP](offline/export-zip.md)
 - [Compare RFC](offline/import-rfc.md)
+
+### Remove
+
+- [Uninstall](remmove/uninstall.md)
