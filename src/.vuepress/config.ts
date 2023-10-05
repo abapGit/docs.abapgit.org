@@ -46,7 +46,7 @@ export default defineUserConfig({
         "/guide-moving-package.html": "/user-guide/projects/online/moving-package.html",
         "/guide-offline-install.html": "/user-guide/projects/offline/install.html",
         "/guide-online-install.html": "/user-guide/projects/online/install.html",
-        "/guide-online-uninstall.html": "/user-guide/projects/online/uninstall.html",
+        "/guide-online-uninstall.html": "/user-guide/projects/remove/uninstall.html",
         "/guide-online-update.html": "/user-guide/projects/online/update.html",
         "/guide-regular-backup.html": "/user-guide/other/regular-backup.html",
         "/guide-sapgui.html": "/user-guide/setup/sapgui.html",
@@ -97,7 +97,8 @@ export default defineUserConfig({
         "/development/serializers.html": "/development-guide/serializers/serializers.html",
         "/development/technical-links.html": "/development-guide/technical-details/technical-links.html",
         "/development/tests.html": "/development-guide/testing/tests.html",
-        "/development/versioning.html": "/development-guide/read-first/versioning.html"
+        "/development/versioning.html": "/development-guide/read-first/versioning.html",
+        "/user-guide/projects/online/uninstall.html": "/user-guide/projects/remove/uninstall.html"
       }
     })    
   ]

@@ -126,7 +126,7 @@ zcl_abapgit_repo_srv=>get_instance( )->purge(
 Get the status of all files included in a repository:
 
 ```abap
-DATA(lt_result) = zcl_abapgit_file_status=>status( lo_repo ).
+DATA(lt_result) = zcl_abapgit_repo_status=>calculate( lo_repo ).
 ```
 
 
