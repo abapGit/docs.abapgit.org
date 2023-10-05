@@ -40,10 +40,20 @@ Optional parameters correspond to the input fields of "New Offline" in abapGit.
 
 ### List ###
 
-Get a list of all repository instances:
+Get a list of repository instances:
 
 ```abap
+" All repositories
 DATA(lt_repos) = zcl_abapgit_repo_srv=>get_instance( )->list( ).
+
+" Only offline repositories
+lt_repos = zcl_abapgit_repo_srv=>get_instance( )->list( iv_offline = abap_true ).
+
+" Only online repositories
+lt_repos = zcl_abapgit_repo_srv=>get_instance( )->list( iv_offline = abap_false ).
+
+" Only your favorite repositories (you can also use iv_offline as above)
+lt_repos = zcl_abapgit_repo_srv=>get_instance( )->list_favorites( ).
 ```
 
 Get a structured list of all repositories with properties and local settings:
