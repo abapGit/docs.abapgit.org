@@ -53,6 +53,10 @@ Force allowing serialization of SAP objects.
 
 If the hostnames are not properly configured, this exit can be used to modify the settings. This is especially useful when running abapGitServer on the local system.
 
+### CHANGE_MAX_PARALLEL_PROCESSES
+
+Adjust the determined maximum number of parallel processes used in parallel serialization. Also see [CHANGE_RFC_SERVER_GROUP](#change_rfc_server_group).
+
 ### CHANGE_PROXY_AUTHENTICATION
 
 Determine based on the repository URL if authentication is required when accessing the proxy.
@@ -67,7 +71,7 @@ Determine the proxy URL from the repository URL.
 
 ### CHANGE_RFC_SERVER_GROUP
 
-Adjust the RFC Server Group used for parallel serialization (default `parallel_generators`). Also see [System Resources](/user-guide/setup/settings-personal.md#developer-version).
+Adjust the RFC Server Group used for parallel serialization (default `parallel_generators`). The group may be cleared to use parallelization without a server group. Then [CHANGE_MAX_PARALLEL_PROCESSES](#change_max_parallel_processes) needs to be implemented as well. Also see [System Resources](/user-guide/setup/settings-personal.md#developer-version).
 
 ### CHANGE_SUPPORTED_DATA_OBJECTS
 
