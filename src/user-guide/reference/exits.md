@@ -153,3 +153,5 @@ Can be used to add a message at the list level (repository list, see [#4653](htt
 ### WALL_MESSAGE_REPO
 
 Can be used to add a message at the repo level (repository view, see [#4653](https://github.com/abapGit/abapGit/issues/4653)).
+
+[Example: encourage adding topic to repositories](https://gist.github.com/larshp/8e0a82c8a43d08f69cd49b8d807fbe83)
