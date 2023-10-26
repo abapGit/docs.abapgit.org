@@ -67,12 +67,13 @@ Known issues:
 
 ### SAP GUI for HTML
 
-abapGit also works with *SAP GUI for HTML*. However, using the browser "Back" feature leads to an unusable state (see below).
-The workaround is to use "Back" buttons or menu items provided by abapGit.
+abapGit also works with *SAP GUI for HTML*. However, there are currently several known issues, which prevent proper usage of this GUI.
 
 Known issues:
 
 - [Issue running abapGit in WebGUI (SAP GUI for HTML), #4433](https://github.com/abapGit/abapGit/issues/4433)
+- [SAP GUI for HTML: Toolbar on Repository List not working, #6567](https://github.com/abapGit/abapGit/issues/6567)
+- [SAP GUI for HTML: Staging does not work correctly, #6568](https://github.com/abapGit/abapGit/issues/6568)
 
 ### Browser
 
