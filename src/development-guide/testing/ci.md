@@ -58,7 +58,7 @@ A job sequence is created with
 
 ![abapGit CI job scheduler](/img/ZABAPGIT_CI_JOB_SCHEDULER.png)
 
-### Check transportable packages
+## Check transportable packages
 
 Optionally you can also let abapGit CI create the repositories in transportable packages. You need to activate the checkbox in the selection screen and specify the transport layer. Then the pull and purge actions will each get recorded into a transport request per repository. These get released and their content is checked to ensure it matches the objects in the repository.
 
@@ -66,7 +66,12 @@ To set up a suitable transport landscape on the AS ABAP Developer Edition you ne
 
 ![STMS transports landscape](/img/STMS.png)
 
-**Prerequisites:**
+## Prerequisites
 
-- abapGit developer version
-- SAP NetWeaver 7.50 or higher
+There are a few prerequisites for running the CI test suite:
+
+- abapGit developer version must be installed
+- SAP Basis 7.50 or higher
+- Tests are hosted at https://github.com/abapGit-tests
+- Test objects shall be included in SAP Basis 7.50 (Exception: the main object type is only available in higher releases)
+- Test objects from SAP ERP or industry solutions shall be avoided (Exception: the main object type is only available in ERP)
