@@ -38,7 +38,9 @@ The following settings are stored in the repository and therefore valid for all 
 
 You can give your repository a name and version. The name will be used in the corresponding column of the repository list. The version is taken from the code by specifying a constant in a class or interface that's part of your project.
 
-**Note** Users can overwrite the official name by entering a display name in their local settings.
+:::info
+Users can overwrite the official name by entering a display name in their local settings.
+:::
 
 ## Texts
 
@@ -46,7 +48,9 @@ You can give your repository a name and version. The name will be used in the co
 
 The main language is the language in which all texts belonging to repository objects will be created. It follows the SAP `sy-langu` values. Note that this implies that all objects in a repository must have the same main language.
 
-**Note:** abapGit does *not* support changing the main language of objects. Therefore, this setting can not be changed using abapGit. If the main language was changed in the git repository, you will have to uninstall the repository in your system (in the current main language) and reinstall it (in the new main language).
+:::warning
+abapGit does *not* support changing the main language of objects. Therefore, this setting can not be changed using abapGit. If the main language was changed in the git repository, you will have to uninstall the repository in your system (in the current main language) and reinstall it (in the new main language).
+:::
 
 ### Translation Languages
 
@@ -57,7 +61,7 @@ There are currently two options available for including translations in a reposi
 
 If no translation languages are maintained in this setting, the first approach is used. If you maintain a list of translation languages (comma-separated, 2-letter ISO language codes), then these languages will be included in the serialization. See also [Translations and i18n](/user-guide/reference/translations.md)
 
-Note: You can suppress translations with the local "Only Serialize Main Language" setting (see below).
+You can suppress translations with the local "Only Serialize Main Language" setting (see below).
 
 ## Files
 
@@ -159,6 +163,8 @@ In this section, you can specify the minimum requirements that should be fulfill
 
 ### ABAP Language Version
 
-**Warning** Using ABAP Language Version in abapGit is still an experimental feature. 
+:::warning
+Using ABAP Language Version in abapGit is still an experimental feature. 
+:::
 
-You can define how abapGit handles the ABAP Language Version of objects in a repository. The default setting is "Any" which allows objects of any ABAP Language Version to be included in your repository. The other settings will limit the type of objects to exactly one of the ABAP Language Versions. For more details, see [ABAP Language Version](./abap-language-version.html).
+You can define how abapGit handles the ABAP Language Version of objects in a repository. The default setting is "Any" which allows objects of any ABAP Language Version to be included in your repository. The other settings will limit the type of objects to exactly one of the ABAP Language Versions. For more details, see [ABAP Language Version](./reference/abap-language-version.html).
