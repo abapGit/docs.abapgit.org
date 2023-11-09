@@ -65,6 +65,7 @@ index: false
 - [Namespaces](reference/namespaces.md)
 - [Packages & Transports](reference/packages.md)
 - [Folders & Files](reference/folders-filenames.md)
+- [Note Analyzer](note-analyzer.md)
 - [APACK](reference/apack.md)
 - [Database Utility](reference/database-util.md)
 
