@@ -1,10 +1,10 @@
 ---
 title: APACK
 category: reference
-order: 80
+order: 88
 ---
 
-Packages with a class that implements `ZIF_APACK_MANIFEST` (the interface is automatically created at the initial start of abapGit) can define metadata that is interpreted by clients which support the APACK package and dependency management framework.
+Packages with a class that implements `ZIF_APACK_MANIFEST` (the interface is automatically created at the initial start of abapGit) can define metadata that is interpreted by clients that support the APACK package and dependency management framework.
 
 :::info
 APACK including dependencies is currently only supported by abapGit for ABAP Development Tools (ADT). Please also see the [respective tutorial](https://developers.sap.com/tutorials/abap-environment-abapgit.html) for details.
