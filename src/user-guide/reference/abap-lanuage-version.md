@@ -72,7 +72,11 @@ If your project uses programs, function modules, or classes that are not release
 This will ensure, that users will not be able to install the project on BTP.
 
 The other way around, if your project uses exclusively objects and code released for ABAP for Key Users or Cloud Development, then set the ABAP language version accordingly. 
-This will ensure, that only objects compatible with BTP will be included in your project.
+This will ensure, that only objects compatible with BTP will be included in your project. 
+
+:::info
+You can use [abaplint](https://github.com/abaplint/abaplint/blob/main/docs/getting_started.md) to automatically check for compatibility. 
+:::
 
 ### Further Information
 
