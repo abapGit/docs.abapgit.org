@@ -39,40 +39,62 @@ When serializing objects, the ABAP language version will be part of the metadata
 
 #### Import
 
-When deserializing objects, abapGit will set the ABAP language version according to the setting of the root package of the repository (which is limited by the system environment and software component of the package).
+When deserializing objects, abapGit will set the ABAP language version according to the metadata of each object. 
+
+:::warning
+The ABAP language version of an object might conflict with the setting of the root package of the repository (which is limited by the system environment and software component of the package). This might lead to errors during import or when trying to activate objects.
+:::
 
 ### Standard ABAP, ABAP for Key Users, ABAP for Cloud Development
 
-If a specific ABAP language version is defined, then all objects  in the repository must adhere to this ABAP language version. If not, you will receive an error message.
+If a specific ABAP language version is defined, then all objects in the repository must adhere to this ABAP language version. If not, you will receive an error message.
 
 :::info
 This setting is recommended for repositories that support only one platform. 
 :::
 
-### Export
+#### Export
 
 When serializing objects, the ABAP language version will **not* be part of the metadata of each object.
 
-### Import
+#### Import
 
 We distinguish two cases:
 
 1. The root package has the same or an undefined ABAP language version as specified in the repository
 
-When deserializing objects, abapGit will set the ABAP language version according to the setting in the repository.
+   When deserializing objects, abapGit will set the ABAP language version according to the setting in the repository.
 
 2. The root package has a different ABAP language version than specified in the repository
 
-When deserializing objects, abapGit will raise an error message alerting you to the mismatch. To import objects, change the ABAP language version of your root package to match the repository. 
-However, this might not be possible since you can't use "Standard ABAP" on BTP, for example. 
+   When deserializing objects, abapGit will raise an error message alerting you to the mismatch. To import objects, change the ABAP language version of your root package to match the repository. However, this might not be possible since you can't use "Standard ABAP" on BTP, for example. 
+
+### Summary
+
+The following table shows the combinations of ABAP language settings of the repository and of the root package used for importing:
+
+Root Package:              | Repo:<br>Any         | Repo:<br>Standard ABAP        | Repo:<br>ABAP for Key Users     | Repo:<br>ABAP for Cloud Development
+---------------------------|----------------------|-------------------------------|---------------------------------|-------------------------------------
+Undefined (Any)            | <span style="color:blue">(1)</span> | <span style="color:blue">(3)</span> | <span style="color:blue">(3)</span> | <span style="color:blue">(3)</span> 
+Standard ABAP              | <span style="color:blue">(1)</span> | <span style="color:green">(2)</span> | <span style="color:red">(4)</span> | <span style="color:red">(4)</span> 
+ABAP for Key Users         | <span style="color:blue">(1)</span> | <span style="color:red">(4)</span> | <span style="color:green">(2)</span> | <span style="color:red">(4)</span> 
+ABAP for Cloud Development | <span style="color:blue">(1)</span> | <span style="color:red">(4)</span> | <span style="color:red">(4)</span> | <span style="color:green">(2)</span> 
+
+<span style="color:blue">(1) Import possible; success if the root package (system) supports the ABAP language setting of individual objects</span>
+
+<span style="color:green">(2) Import possible</span>
+
+<span style="color:blue">(3) Import possible; success if root package (system) supports the ABAP language version of the repository</span> 
+
+<span style="color:red">(4) Import not possible; error message</span>
 
 ### Examples
 
-If your project uses programs, function modules, or classes that are not released for ABAP for Cloud Development, then set the ABAP language version to "Standard ABAP". 
-This will ensure, that users will not be able to install the project on BTP.
+If your project uses programs, function modules, or classes not released for ABAP for Cloud Development, then set the ABAP language version to "Standard ABAP". 
+This will ensure that users will not be able to install the project on BTP.
 
-The other way around, if your project uses exclusively objects and code released for ABAP for Key Users or Cloud Development, then set the ABAP language version accordingly. 
-This will ensure, that only objects compatible with BTP will be included in your project. 
+Conversely, if your project uses exclusively objects and code released for ABAP for Key Users or Cloud Development, then set the ABAP language version accordingly. 
+This will make sure that only objects compatible with BTP will be included in your project. 
 
 :::info
 You can use [abaplint](https://github.com/abaplint/abaplint/blob/main/docs/getting_started.md) to automatically check for compatibility. 
