@@ -21,6 +21,7 @@ There are four possible [settings](./repo-settings/dot-abapgit.html) for definin
 Setting | Description
 --------|------------
 Any (default)              | Object-specific ABAP Language Version
+Ignore                     | ABAP Language Version not serialized
 Standard ABAP              | Only objects with "Standard ABAP" are allowed
 ABAP for Key Users         | Only objects with "ABAP for Key Users" are allowed
 ABAP for Cloud Development | Only objects with "ABAP for Cloud Development" are allowed
@@ -30,7 +31,7 @@ ABAP for Cloud Development | Only objects with "ABAP for Cloud Development" are 
 If you do not define the ABAP language version (default setting "Any"), you can mix objects of any ABAP language version in a repository. 
 
 :::info
-This setting is recommended for cross-platform repositories that should run on-premises as well as on BTP.
+This setting is recommended for repositories that contain objects of more than one ABAP language version.
 :::
 
 #### Export
@@ -43,6 +44,26 @@ When deserializing objects, abapGit will set the ABAP language version according
 
 :::warning
 The ABAP language version of an object might conflict with the setting of the root package of the repository (which is limited by the system environment and software component of the package). This might lead to errors during import or when trying to activate objects.
+:::
+
+### Ignore ABAP Language Version
+
+If you set the ABAP Language Version to "ignore", it will not be serialized at all.
+
+:::info
+This setting is recommended for cross-platform repositories with code that runs on-premises as well as on BTP.
+:::
+
+#### Export
+
+When serializing objects, the ABAP language version will *not* be part of the object metadata.
+
+#### Import
+
+When deserializing objects, abapGit will set the ABAP language version according to the target SAP package (software component).
+
+:::warning
+The ABAP language version of the target package might lead to conflicts with the ABAP language version of the original system. This might lead to errors during import or when trying to activate objects.
 :::
 
 ### Standard ABAP, ABAP for Key Users, ABAP for Cloud Development
@@ -73,14 +94,14 @@ We distinguish two cases:
 
 The following table shows the combinations of ABAP language settings of the repository and of the root package used for importing:
 
-Root Package:              | Repo:<br>Any         | Repo:<br>Standard ABAP        | Repo:<br>ABAP for Key Users     | Repo:<br>ABAP for Cloud Development
----------------------------|----------------------|-------------------------------|---------------------------------|-------------------------------------
+Root Package:              | Repo:<br>Any or Ignore    | Repo:<br>Standard ABAP        | Repo:<br>ABAP for Key Users     | Repo:<br>ABAP for Cloud Development
+---------------------------|---------------------------|-------------------------------|---------------------------------|------------------------------------
 Undefined (Any)            | <span style="color:blue">(1)</span> | <span style="color:blue">(3)</span> | <span style="color:blue">(3)</span> | <span style="color:blue">(3)</span> 
 Standard ABAP              | <span style="color:blue">(1)</span> | <span style="color:green">(2)</span> | <span style="color:red">(4)</span> | <span style="color:red">(4)</span> 
 ABAP for Key Users         | <span style="color:blue">(1)</span> | <span style="color:red">(4)</span> | <span style="color:green">(2)</span> | <span style="color:red">(4)</span> 
 ABAP for Cloud Development | <span style="color:blue">(1)</span> | <span style="color:red">(4)</span> | <span style="color:red">(4)</span> | <span style="color:green">(2)</span> 
 
-<span style="color:blue">(1) Import possible; success if the root package (system) supports the ABAP language setting of individual objects</span>
+<span style="color:blue">(1) Import possible; success if the root package (system) and the ABAP language version of individual objects are compatible</span>
 
 <span style="color:green">(2) Import possible</span>
 
