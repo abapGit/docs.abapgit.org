@@ -1,1 +1,0 @@
-import{_ as e}from"./plugin-vue_export-helper-c27b6911.js";import{o,c as t,a as c}from"./app-20cce82d.js";const _={},s=c("p",null,"todo",-1),n=[s];function r(l,a){return o(),t("div",null,n)}const i=e(_,[["render",r],["__file","flow.html.vue"]]);export{i as default};
