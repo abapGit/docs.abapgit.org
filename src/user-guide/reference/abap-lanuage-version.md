@@ -31,7 +31,7 @@ ABAP for Cloud Development | Only objects with "ABAP for Cloud Development" are 
 If you do not define the ABAP language version (default setting "Any"), you can mix objects of any ABAP language version in a repository. 
 
 :::info
-This setting is recommended for repositories that contain objects of more than one ABAP language version.
+This setting is recommended for repositories containing objects of more than one ABAP language version, which you want to preserve during import.
 :::
 
 #### Export
@@ -48,15 +48,15 @@ The ABAP language version of an object might conflict with the setting of the ro
 
 ### Ignore ABAP Language Version
 
-If you set the ABAP Language Version to "ignore", it will not be serialized at all.
+If you set the ABAP Language Version to "Ignore" it will not be serialized. This avoids diffs due to variations in development and target environments. 
 
 :::info
-This setting is recommended for cross-platform repositories with code that runs on-premises as well as on BTP.
+This setting is recommended for cross-platform repositories with code that runs on-premises and on BTP.
 :::
 
 #### Export
 
-When serializing objects, the ABAP language version will *not* be part of the object metadata.
+When serializing objects, the ABAP language version will *not* be part of the object metadata. 
 
 #### Import
 
