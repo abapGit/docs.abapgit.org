@@ -1,1 +1,0 @@
-import{_ as e}from"./plugin-vue_export-helper-c27b6911.js";import{o,c as t,a as s}from"./app-f7148969.js";const c={},n=s("p",null,"BETA feature, use this if you know what you are doing",-1),r=[n];function _(a,l){return o(),t("div",null,r)}const u=e(c,[["render",_],["__file","flow.html.vue"]]);export{u as default};
