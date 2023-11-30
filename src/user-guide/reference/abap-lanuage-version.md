@@ -43,7 +43,7 @@ When serializing objects, the ABAP language version will be part of the metadata
 When deserializing objects, abapGit will set the ABAP language version according to the metadata of each object. 
 
 :::warning
-The ABAP language version of an object might conflict with the setting of the root package of the repository (which is limited by the system environment and software component of the package). This might lead to errors during import or when trying to activate objects.
+The ABAP language version of an object might lead to errors during import or when trying to activate objects. For example, if you try to import "Standard ABAP" into BTP which requires "ABAP for Cloud Development" you might get syntax errors.
 :::
 
 ### Ignore ABAP Language Version
@@ -63,7 +63,7 @@ When serializing objects, the ABAP language version will *not* be part of the ob
 When deserializing objects, abapGit will set the ABAP language version according to the target SAP package (software component).
 
 :::warning
-The ABAP language version of the target package might lead to conflicts with the ABAP language version of the original system. This might lead to errors during import or when trying to activate objects.
+The ABAP language version of an object might lead to errors during import or when trying to activate objects.
 :::
 
 ### Standard ABAP, ABAP for Key Users, ABAP for Cloud Development
@@ -111,11 +111,11 @@ ABAP for Cloud Development | <span style="color:blue">(1)</span> | <span style="
 
 ### Examples
 
-If your project uses programs, function modules, or classes not released for ABAP for Cloud Development, then set the ABAP language version to "Standard ABAP". 
+If your project uses programs, function modules, or classes not released for ABAP for Cloud Development, set the ABAP language version to "Standard ABAP". 
 This will ensure that users will not be able to install the project on BTP.
 
-Conversely, if your project uses exclusively objects and code released for ABAP for Key Users or Cloud Development, then set the ABAP language version accordingly. 
-This will make sure that only objects compatible with BTP will be included in your project. 
+Conversely, if your project uses exclusively objects and code released for ABAP for Key Users or Cloud Development, set the ABAP language version accordingly. 
+This will ensure that only objects compatible with BTP will be included in your project. 
 
 :::info
 You can use [abaplint](https://github.com/abaplint/abaplint/blob/main/docs/getting_started.md) to automatically check for compatibility. 
