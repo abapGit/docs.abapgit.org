@@ -16,7 +16,7 @@ Using ABAP Language Version in abapGit is still an experimental feature.
 
 ### Settings
 
-There are four possible [settings](./repo-settings/dot-abapgit.html) for defining how the ABAP language version is handled by abapGit:
+There are five possible [settings](./repo-settings/dot-abapgit.html) for defining how the ABAP language version is handled by abapGit:
 
 Setting | Description
 --------|------------
