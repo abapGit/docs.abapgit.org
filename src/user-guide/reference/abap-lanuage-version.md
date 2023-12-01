@@ -76,7 +76,7 @@ This setting is recommended for repositories that support only one platform.
 
 #### Export
 
-When serializing objects, the ABAP language version will **not* be part of the metadata of each object.
+When serializing objects, the ABAP language version will be part of the metadata of each object.
 
 #### Import
 
