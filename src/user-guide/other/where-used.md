@@ -23,7 +23,7 @@ order: 50
 
 ## SAP
 
-* [SAP IBSO](https://www.sap.com/services/application-development.html)
+* [SAP IBSO](https://news.sap.com/tags/sap-innovative-business-solutions/)
 * [SAP Labs Czech Republic](https://www.facebook.com/SAPLabsCZ/)
 
 ## Consulting and Partner
@@ -38,7 +38,7 @@ order: 50
 * [emineo](https://www.emineo.ch/)
 * [FASTEC](https://www.fastec.de/en/)
 * [Hochfrequenz Unternehmensberatung GmbH](https://www.hochfrequenz.de/)
-* [INVIXO](http://invixo.com/)
+* [INVIXO](https://invixo.com/)
 * [IT Culture](https://www.it-culture.net/)
 * [majcon](https://www.majcon.de/)
 * [Marc Bernard Tools](https://marcbernardtools.com/)
@@ -48,20 +48,20 @@ order: 50
 * [OREXES GmbH](https://www.orexes.de/)
 * [percept ltd](https://www.percept.sk)
 * [PM Eleven](https:///www.pmeleven.com)
-* [Progress Management](http://www.pmconseil.com/)
+* [Progress Management](https://web.archive.org/web/20170630023105/https://www.pmconseil.com/)
 * [Provide Technologies Inc](https://provide.services)
 * [Regesta Italia](https://www.regestaitalia.eu/)
 * [rku.it GmbH](https://www.rku-it.de/)
 * [Resulto Consultoria](https://www.resultoconsultoria.com/)
 * [SBCG](https://www.sbcg.com.ua/)
-* [SE38 IT-Engineering, Neuss, Germany](http://www.se38.de/)
+* [SE38 IT-Engineering, Neuss, Germany](https://www.se38.de/)
 * [SoftwareONE](https://www.softwareone.com)
 * [Tricktresor](https://www.tricktresor.de)
-* [Yelcho Systems Consulting](http://www.yelcho.com.au/)
+* [Yelcho Systems Consulting](https://www.yelcho.com.au/)
 
 ## Projects
 
-Projects using abapGit are listed on [dotabap.org](http://dotabap.org).
+Projects using abapGit are listed on [dotabap.org](https://dotabap.org).
 
 ## Updates
 

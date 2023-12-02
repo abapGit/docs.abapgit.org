@@ -6,17 +6,17 @@ order: 30
 
 ## 2014
 
-[Git client for ABAP – alpha release](http://blogs.sap.com/2014/07/17/git-client-for-abap-alpha-release/)
+[Git client for ABAP – alpha release](https://blogs.sap.com/2014/07/17/git-client-for-abap-alpha-release/)
 -Lars Hvam
 
 ## 2015
 
-[How can I use Git and GitHub for SAP software development?](http://searchsap.techtarget.com/answer/How-can-I-use-Git-and-GitHub-for-SAP-software-development)
+[How can I use Git and GitHub for SAP software development?](https://searchsap.techtarget.com/answer/How-can-I-use-Git-and-GitHub-for-SAP-software-development)
 -Ethan Jewett
 
 ## 2016
 
-[Implementing modern practices in an ABAP development shop](http://searchsap.techtarget.com/tip/Implementing-modern-practices-in-an-ABAP-development-shop)
+[Implementing modern practices in an ABAP development shop](https://searchsap.techtarget.com/tip/Implementing-modern-practices-in-an-ABAP-development-shop)
 -Ethan Jewett
 
 [SAP Inside Track Hamburg](https://larshp.github.io/sithh2016/)
@@ -57,7 +57,7 @@ SAUG National Summit 2017, September 5th
 SAP Teched Las Vegas
 -Graham Robinson
 
-[abapGit](https://larshp.github.io/Presentations/itsapcluj2017/abapgit/), [IT Conference on SAP Technologies](http://www.itconferencesap.com/), Cluj
+[abapGit](https://larshp.github.io/Presentations/itsapcluj2017/abapgit/), [IT Conference on SAP Technologies](https://web.archive.org/web/20180429031206/https://www.itconferencesap.com/), Cluj
 -Lars Hvam
 
 [abapGit NET53819](https://larshp.github.io/Presentations/teched-2017-emea/)
@@ -67,7 +67,7 @@ SAP Teched Barcelona
 [Getting started – Open sourcing ABAP code](https://blogs.sap.com/2017/11/19/getting-started-open-sourcing-abap-code/)
 -Lars Hvam
 
-[ABAP and the Cloud](http://sapinsider.wispubs.com/Assets/Articles/2017/November/SPI-ABAP-and-the-Cloud)
+[ABAP and the Cloud](https://sapinsider.wispubs.com/Assets/Articles/2017/November/SPI-ABAP-and-the-Cloud)
 -Karl Kessler
 
 [Innovative, Disruptive, Enterprise Focused and Boring – Choose Four. Reflections on SAP TechEd](https://redmonk.com/fryan/2017/12/11/innovative-disruptive-enterprise-focused-and-boring-choose-four-reflections-on-sap-teched/)
@@ -75,7 +75,7 @@ SAP Teched Barcelona
 
 ## 2018
 
-[abapGit](http://www.tricktresor.de/blog/abapgit) (in German) -Enno Wulff
+[abapGit](https://www.tricktresor.de/blog/abapgit) (in German) -Enno Wulff
 
 [ABAP Code Reviews with abapGit](https://blogs.sap.com/2018/03/23/abap-code-reviews-with-abapgit/) -Eduardo Copat
 
@@ -163,7 +163,7 @@ Michael Pang
 
 [Storing ABAP build artifacts in OCI registry](https://blogs.sap.com/2022/07/26/storing-abap-build-artifacts-in-oci-registry/), Lars Hvam
 
-[Managing SAP Application Dependencies with abapGit and APACK](https://blogs.sap.com/2022/07/28/managing-sap-application-dependencies-with-abapgit-and-apack/), Limor Wainstein
+[Managing SAP Application Dependencies with abapGit and APACK](https://web.archive.org/web/20220818015836/https://blogs.sap.com/2022/07/28/managing-sap-application-dependencies-with-abapgit-and-apack/), Limor Wainstein (archived)
 
 [Part 5: Using ABAPGit to Transfer On-Premise ABAP Source Code to SAP BW bridge](https://blogs.sap.com/2022/08/25/part-5-using-abapgit-to-transfer-on-premise-abap-source-code-to-sap-bw-bridge/), Wilson Kurian
 
@@ -181,4 +181,4 @@ Michael Pang
 
 [What is abapGit?](https://switchedon.bowdark.com/what-is-abapgit-e6022c6e99d9), Colby Hemond 
 
-[Managing Updates to abapGit in Shared Development Systems]https://blogs.sap.com/2023/09/22/managing-updates-to-abapgit-in-shared-development-systems/, Fabian Lupa
+[Managing Updates to abapGit in Shared Development Systems](https://blogs.sap.com/2023/09/22/managing-updates-to-abapgit-in-shared-development-systems/), Fabian Lupa

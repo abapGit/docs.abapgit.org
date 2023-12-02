@@ -6,16 +6,16 @@ order: 20
 
 ## Collection of links to various git-related documentation
 
-- [https://gist.github.com/schacon/6092633](https://gist.github.com/schacon/6092633)
+- [Git HTTP transport protocol documentation](https://gist.github.com/schacon/6092633)
 - [git reference](https://www.git-scm.com/docs)
 - [git protocol capabilities](https://www.git-scm.com/docs/protocol-capabilities)
 - [git HTTP protocol](https://www.git-scm.com/docs/http-protocol)
 - [git PACK protocol](https://www.git-scm.com/docs/pack-protocol)
 - [git pack format](https://www.git-scm.com/docs/pack-format)
-- [http://alblue.bandlem.com/2011/08/git-tip-of-week-objects.html](http://alblue.bandlem.com/2011/08/git-tip-of-week-objects.html)
-- [https://git-scm.herokuapp.com/book/en/Git-Internals-Transfer-Protocols](https://git-scm.herokuapp.com/book/en/Git-Internals-Transfer-Protocols)
-- [https://github.com/git/git/blob/master/builtin/receive-pack.c](https://github.com/git/git/blob/master/builtin/receive-pack.c)
-- [http://stefan.saasen.me/articles/git-clone-in-haskell-from-the-bottom-up/](http://stefan.saasen.me/articles/git-clone-in-haskell-from-the-bottom-up/)
+- [Git Tip of the Week: Objects](https://alblue.bandlem.com/2011/08/git-tip-of-week-objects.html)
+- [Git Internals - Transfer Protocols](https://git-scm.herokuapp.com/book/en/Git-Internals-Transfer-Protocols)
+- [Git receive-pack.c Source](https://github.com/git/git/blob/master/builtin/receive-pack.c)
+- [Reimplementing “git clone” in Haskell from the bottom up](https://stefan.saasen.me/articles/git-clone-in-haskell-from-the-bottom-up/)
 
 ```bash
 set GIT_CURL_VERBOSE=1

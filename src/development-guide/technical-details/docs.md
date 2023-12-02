@@ -16,4 +16,4 @@ All used icons are freely available at [Font Awesome](https://fontawesome.com/).
 
 2. `npm run docs:dev`
 
-3. Open the URL <http://localhost:8080> in a browser
+3. Open the URL `http://localhost:8080` in a browser
