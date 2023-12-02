@@ -24,7 +24,7 @@ Classes and interfaces are prefixed using `zcl_abapgit_` or `zif_abapgit_` (`zcx
 
 #### Variable Prefixing
 
-Variables are prefixed using the standard setting in [abapOpenChecks Naming Conventions](http://docs.abapopenchecks.org/checks/69/)
+Variables are prefixed using the standard setting in [abapOpenChecks Naming Conventions](https://docs.abapopenchecks.org/checks/69/)
 
 ### Downport
 
@@ -46,7 +46,7 @@ The maximum width of ABAP source code should be set at 120 characters per line a
 
 #### Pretty Printer
 
-Use pretty-printer, keywords upper case + indentation, [abapOpenChecks](http://docs.abapopenchecks.org/checks/06/) can be used for checking this.
+Use pretty-printer, keywords upper case + indentation, [abapOpenChecks](https://docs.abapopenchecks.org/checks/06/) can be used for checking this.
 
 ### Dynpros
 

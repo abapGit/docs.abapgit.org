@@ -44,7 +44,7 @@ index: false
 
 ### Remove
 
-- [Uninstall](projects/remmove/uninstall.md)
+- [Uninstall](projects/remove/uninstall.md)
 
 ### Repo Settings
 

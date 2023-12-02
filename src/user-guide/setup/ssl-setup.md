@@ -146,8 +146,8 @@ Connection issues typically lead to "Access to resource forbidden" (HTTP 403) or
 
 The following blog posts on the SAP Community Network might be helpful:
 
-- [Calling WebServices from ABAP via HTTPS/SSL with pfx certificates](http://scn.sap.com/people/jens.gleichmann/blog/2008/10/31/calling-webservices-from-abap-via-httpsssl-with-pfx-certificates)
-- [BSP a Developer’s Journal Part XIV – Consuming WebServices with ABAP](http://scn.sap.com/people/thomas.jung/blog/2004/11/17/bsp-a-developers-journal-part-xiv--consuming-webservices-with-abap)
+- [Calling WebServices from ABAP via HTTPS/SSL with pfx certificates](https://scn.sap.com/people/jens.gleichmann/blog/2008/10/31/calling-webservices-from-abap-via-httpsssl-with-pfx-certificates)
+- [BSP a Developer’s Journal Part XIV – Consuming WebServices with ABAP](https://scn.sap.com/people/thomas.jung/blog/2004/11/17/bsp-a-developers-journal-part-xiv--consuming-webservices-with-abap)
 
 ### Notes
 
