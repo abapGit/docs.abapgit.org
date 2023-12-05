@@ -11,7 +11,9 @@ With the 7.52 release, SAP provides the usage of the ABAP language version infor
 abapGit has been enhanced to support consistent handling of the ABAP language version across the different abapGit "flavors" (open-source / part of SAP BTP ABAP Enviromnent).
 
 :::warning 
-Using ABAP Language Version in abapGit is still an experimental feature. 
+Using ABAP language version in abapGit is still an experimental feature. 
+
+So far, abapGit handles ABAP language version only for a limited set of object types. See Spported Object Types, below. 
 :::
 
 ### Settings
@@ -121,8 +123,24 @@ This will ensure that only objects compatible with BTP will be included in your 
 You can use [abaplint](https://github.com/abaplint/abaplint/blob/main/docs/getting_started.md) to automatically check for compatibility. 
 :::
 
+### Supported Object Types
+
+So far, handling of ABAP language version is implemented for the following object types:
+
+`CLAS`, `DEVC`, `FUGR`, `INTF`, `PROG`
+
+The following object types are supported by abapGit but don't yet handle ABAP language version:
+- DDIC
+
+  `DOMA`, `DTEL`, `ENQU`, `TABL`, `TTYP`, `XSLT`
+  
+- Other
+
+  `AIFC`, `AUTH`, `BDEF`, `CHDO`, `DCLS`, `DDLS`, `DDLX`, `DTDC`, `ENHO`, `ENHS`, `G4BA`, `G4BS`, `IWMO`, `IWOM`, `IWSG`, `IWSV`, `IWVB`, `NROB`, `SKTD`, `SMIM`, `SRVB`, `SRVD`, `SUSH`, `SUSO`, `TOBJ`, `WAPA`, `XINX`
+
 ### Further Information
 
 [Standard Documentation](https://help.sap.com/doc/abapdocu_752_index_htm/7.52/en-US/abenabap_versions.htm)
 [Cloud Documentation](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/abenabap_versions.htm)
 [Blog and FAQ](https://blogs.sap.com/2022/09/09/abap-language-versions-faqs/)
+[Object Types Supporting ABAP Language Version (in general)](https://github.com/abapGit/abapGit/issues/6154#issuecomment-1749086748)
