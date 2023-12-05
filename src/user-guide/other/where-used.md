@@ -54,7 +54,7 @@ order: 50
 * [rku.it GmbH](https://www.rku-it.de/)
 * [Resulto Consultoria](https://www.resultoconsultoria.com/)
 * [SBCG](https://www.sbcg.com.ua/)
-* [SE38 IT-Engineering, Neuss, Germany](https://www.se38.de/)
+* [SE38 IT-Engineering, Neuss, Germany](http://www.se38.de/)
 * [SoftwareONE](https://www.softwareone.com)
 * [Tricktresor](https://www.tricktresor.de)
 * [Yelcho Systems Consulting](https://www.yelcho.com.au/)
