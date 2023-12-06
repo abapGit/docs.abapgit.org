@@ -13,17 +13,17 @@ abapGit has been enhanced to support consistent handling of the ABAP language ve
 :::warning 
 Using ABAP language version in abapGit is still an experimental feature. 
 
-So far, abapGit handles ABAP language version only for a limited set of object types. See Spported Object Types, below. 
+So far, abapGit handles ABAP language version only for a limited set of object types. See Supported Object Types, below. 
 :::
 
 ### Settings
 
-There are five possible [settings](./repo-settings/dot-abapgit.html) for defining how the ABAP language version is handled by abapGit:
+There are five possible [settings](/user-guide/repo-settings/dot-abapgit.md) for defining how the ABAP language version is handled by abapGit:
 
 Setting | Description
 --------|------------
-Any (default)              | Object-specific ABAP Language Version
-Ignore                     | ABAP Language Version not serialized
+Any (default)              | Object-specific ABAP language version
+Ignore                     | ABAP language version not serialized
 Standard ABAP              | Only objects with "Standard ABAP" are allowed
 ABAP for Key Users         | Only objects with "ABAP for Key Users" are allowed
 ABAP for Cloud Development | Only objects with "ABAP for Cloud Development" are allowed
@@ -50,7 +50,7 @@ The ABAP language version of an object might lead to errors during import or whe
 
 ### Ignore ABAP Language Version
 
-If you set the ABAP Language Version to "Ignore" it will not be serialized. This avoids diffs due to variations in development and target environments. 
+If you set the ABAP language version to "Ignore" it will not be serialized. This avoids diffs due to variations in development and target environments. 
 
 :::info
 This setting is recommended for cross-platform repositories with code that runs on-premises and on BTP.

@@ -164,7 +164,7 @@ In this section, you can specify the minimum requirements that should be fulfill
 ### ABAP Language Version
 
 :::warning
-Using ABAP Language Version in abapGit is still an experimental feature. 
+Using ABAP language version in abapGit is still an experimental feature. 
 :::
 
-You can define how abapGit handles the ABAP Language Version of objects in a repository. The default setting is "Any" which allows objects of any ABAP Language Version to be included in your repository. The other settings will limit the type of objects to exactly one of the ABAP Language Versions. For more details, see [ABAP Language Version](/user-guide/reference/abap-language-version.md).
+You can define how abapGit handles the ABAP language version of objects in a repository. The default setting is "Any" which allows objects of any ABAP language version to be included in your repository. The other settings will limit the type of objects to exactly one of the ABAP language versions. For more details, see [ABAP Language Version](/user-guide/reference/abap-language-version.md).
