@@ -127,16 +127,11 @@ You can use [abaplint](https://github.com/abaplint/abaplint/blob/main/docs/getti
 
 So far, handling of ABAP language version is implemented for the following object types:
 
-`CLAS`, `DEVC`, `FUGR`, `INTF`, `PROG`
+`CLAS`, `DEVC`, `FUGR`, `INTF`, `PROG`, and objects based on the ABAP file format.
 
-The following object types are supported by abapGit but don't yet handle ABAP language version:
-- DDIC
+It's planned to support other object types that include the ABAP language version as well.
 
-  `DOMA`, `DTEL`, `ENQU`, `TABL`, `TTYP`, `XSLT`
-  
-- Other
-
-  `AIFC`, `AUTH`, `BDEF`, `CHDO`, `DCLS`, `DDLS`, `DDLX`, `DTDC`, `ENHO`, `ENHS`, `G4BA`, `G4BS`, `IWMO`, `IWOM`, `IWSG`, `IWSV`, `IWVB`, `NROB`, `SKTD`, `SMIM`, `SRVB`, `SRVD`, `SUSH`, `SUSO`, `TOBJ`, `WAPA`, `XINX`
+See [Supported Object Types](./supported.md) for details.
 
 ### Further Information
 
