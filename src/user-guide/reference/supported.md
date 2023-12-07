@@ -14,7 +14,7 @@ order: 20
 | `AQBG` | ABAP Query: User group                                       |                                                               Yes | No      |
 | `AQQU` | ABAP Query: Query                                            |                                                               Yes | No      |
 | `AQSG` | ABAP Query: Functional area                                  |                                                               Yes | No      |
-| `AREA` | InfoArea                                                     |                                                               Yes | No      |
+| `AREA` | BW: InfoArea                                                 |                                                               Yes | No      |
 | `ASFC` | Field Catalog                                                |                                                               Yes | No      |
 | `ASIS` | Archiving Information Structure                              |           [#1579](https://github.com/abapGit/abapGit/issues/1579) | No      |
 | `AUTH` | Authorization Check Fields                                   |                                                               Yes | Planned |
@@ -91,7 +91,7 @@ order: 20
 | `NROB` | Number Range Objects                                         |                                                               Yes | Planned |
 | `NSPC` | Namespace in R/3 Repository                                  |                                                               Yes | No      |
 | `OA2P` | OAuth2 Profile                                               |                                                               Yes | No      |
-| `ODSO` | DataStore Object                                             |                                                               Yes | No      |
+| `ODSO` | BW: DataStore Object                                         |                                                               Yes | No      |
 | `OTGR` | Object type group                                            |                                                               Yes | No      |
 | `PARA` | SPA/GPA Parameters                                           |                                                               Yes | No      |
 | `PDAC` | Standard Rule                                                |           [#3914](https://github.com/abapGit/abapGit/issues/3914) | No      |
