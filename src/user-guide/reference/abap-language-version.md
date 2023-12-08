@@ -1,5 +1,5 @@
 ---
-title: Language Version
+title: ABAP Language Version
 category: reference
 order: 80
 ---
@@ -8,7 +8,7 @@ order: 80
 
 With the 7.52 release, SAP provides the usage of the ABAP language version information in the on-premises world.
 
-abapGit has been enhanced to support consistent handling of the ABAP language version across the different abapGit "flavors" (open-source / part of SAP BTP ABAP Enviromnent).
+abapGit has been enhanced to support consistent handling of the ABAP language version across the different abapGit "flavors" (open-source / part of SAP BTP ABAP environment).
 
 :::warning 
 Using ABAP language version in abapGit is still an experimental feature. 
@@ -33,7 +33,7 @@ ABAP for Cloud Development | Only objects with "ABAP for Cloud Development" are 
 If you do not define the ABAP language version (default setting "Any"), you can mix objects of any ABAP language version in a repository. 
 
 :::info
-This setting is recommended for repositories containing objects of more than one ABAP language version, which you want to preserve during import.
+This setting is recommended for repositories containing objects of more than one ABAP language version, which you would like to keep during import.
 :::
 
 #### Export
@@ -53,7 +53,7 @@ The ABAP language version of an object might lead to errors during import or whe
 If you set the ABAP language version to "Ignore" it will not be serialized. This avoids diffs due to variations in development and target environments. 
 
 :::info
-This setting is recommended for cross-platform repositories with code that runs on-premises and on BTP.
+This setting is recommended for cross-platform repositories with code running on-premises and BTP.
 :::
 
 #### Export
@@ -98,18 +98,16 @@ The following table shows the combinations of ABAP language settings of the repo
 
 Root Package:              | Repo:<br>Any or Ignore    | Repo:<br>Standard ABAP        | Repo:<br>ABAP for Key Users     | Repo:<br>ABAP for Cloud Development
 ---------------------------|---------------------------|-------------------------------|---------------------------------|------------------------------------
-Undefined (Any)            | <span style="color:blue">(1)</span> | <span style="color:blue">(3)</span> | <span style="color:blue">(3)</span> | <span style="color:blue">(3)</span> 
-Standard ABAP              | <span style="color:blue">(1)</span> | <span style="color:green">(2)</span> | <span style="color:red">(4)</span> | <span style="color:red">(4)</span> 
-ABAP for Key Users         | <span style="color:blue">(1)</span> | <span style="color:red">(4)</span> | <span style="color:green">(2)</span> | <span style="color:red">(4)</span> 
-ABAP for Cloud Development | <span style="color:blue">(1)</span> | <span style="color:red">(4)</span> | <span style="color:red">(4)</span> | <span style="color:green">(2)</span> 
+Undefined (Any)            | <span style="color:blue">(1)</span> | <span style="color:blue">(1)</span> | <span style="color:blue">(1)</span> | <span style="color:blue">(1)</span> 
+Standard ABAP              | <span style="color:blue">(1)</span> | <span style="color:green">(2)</span> | <span style="color:red">(3)</span> | <span style="color:red">(3)</span> 
+ABAP for Key Users         | <span style="color:blue">(1)</span> | <span style="color:red">(3)</span> | <span style="color:green">(2)</span> | <span style="color:red">(3)</span> 
+ABAP for Cloud Development | <span style="color:blue">(1)</span> | <span style="color:red">(3)</span> | <span style="color:red">(3)</span> | <span style="color:green">(2)</span> 
 
-<span style="color:blue">(1) Import possible; success if the root package (system) and the ABAP language version of individual objects are compatible</span>
+<span style="color:blue">(1) Import possible (success if the individual objects are compatible with the target system and ABAP language version)</span>
 
 <span style="color:green">(2) Import possible</span>
 
-<span style="color:blue">(3) Import possible; success if root package (system) supports the ABAP language version of the repository</span> 
-
-<span style="color:red">(4) Import not possible; error message</span>
+<span style="color:red">(3) Import not possible (error message)</span>
 
 ### Examples
 
