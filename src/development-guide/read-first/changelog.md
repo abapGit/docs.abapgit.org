@@ -8,7 +8,8 @@ abapGit allows showing a changelog notes, based on the changelog file in the rep
 
 abapGit itself does not use APACK and gets the current version from `zif_abapgit_version=>c_abap_version`. The version is then used to determine if the changelog was updated and should be shown to the user. 
 
-Here's what the settings look like for another repository: <br>
+Here's what the settings look like for another repository:
+
 ![version_setup](/img/version_constant_setup.png)
 
 
