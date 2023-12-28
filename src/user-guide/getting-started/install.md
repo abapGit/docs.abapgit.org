@@ -42,7 +42,7 @@ The prerequisite to using the online feature is that [SSL must be set up](/user-
 1. On the repository list page, select "New Online"
 1. Enter `https://github.com/abapGit/abapGit/` for the URL
 1. Enter package name `$ABAPGIT` (or select an existing or create a new package)
-1. Select "Clone Online Repo"
+1. Select "Create Online Repo"
 1. Select "Pull"
 
 Transaction `ZABAPGIT` is now available to run the developer version.
