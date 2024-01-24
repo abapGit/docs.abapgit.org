@@ -16,5 +16,5 @@ Check out further details in [Understanding the GitHub flow](https://guides.gith
 The forked repository can be deleted after the pull request has been closed.
 
 :::tip
-If you want to contribute to abapGit, please [see read this](/development-guide/read-first/contributing.md).
+If you want to contribute to abapGit, please see [Read First](https://docs.abapgit.org/development-guide/read-first/).
 :::
