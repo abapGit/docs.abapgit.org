@@ -20,7 +20,11 @@ Exceptions for existing objects:
 
 #### Object Prefixing
 
-Classes and interfaces are prefixed using `zcl_abapgit_` or `zif_abapgit_` (`zcx_abapgit_` for exception classes, `lcl_` and `ltcl_` for local and test classes). The description of objects should begin with `abapGit - ...`. 
+Classes and interfaces are prefixed using `zcl_abapgit_` or `zif_abapgit_` (`zcx_abapgit_` for exception classes, `lcl_` and `ltcl_` for local and test classes).
+
+### Object Descriptions
+
+The description of objects should begin with `abapGit - ...` (for example, `abapGit - Repository Content List`). For [serializer classes](/development-guide/serializers/overview.html), the text should contain the `TADIR` object type and description (for example, `abapGit - INTF - Interface (ABAP Objects)`).
 
 #### Variable Prefixing
 
