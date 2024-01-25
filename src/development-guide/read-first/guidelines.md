@@ -38,6 +38,12 @@ abapGit is targeted for [version 7.02](https://help.sap.com/doc/abapdocu_latest_
 
 The code must only reference standard SAP objects (classes, interfaces, DDIC types) that exist in version 7.02 and higher. Referencing objects that do *not* exist in 7.02 creates syntax errors and therefore requires using dynamic ABAP. DDIC types that do *not* exist in 7.02 should be replaced by local type definitions.
 
+### File Formats
+
+General file format guidelines are specified in [.editorconfig](https://github.com/abapGit/abapGit/blob/main/.editorconfig). If you are using abapGit to push files to the repository, these guidelines are followed automatically.
+
+If you are editing files outside of SAP GUI or ADT, for example on GitHub.com or in VS Code, the most common issues are using `cr` instead of `lf` at end of line, missing new line at end of file, and missing `BOM` at beginning of XML files. Please ensure that your IDE is setup to follow the `.editorconfig` specifications to avoid any issues.
+
 ### Formatting the Source Code
 
 #### Line Width
