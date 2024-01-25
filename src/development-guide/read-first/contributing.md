@@ -24,7 +24,7 @@ Having already [installed](/user-guide/getting-started/install.md#install-standa
 
 6. Submit a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork) with the changes.
 
-Alternatively to the steps above, use the GitHub web interface to change the files directly on a GitHub branch of your forked abapGit repository and then submit a pull request. This might make sense when, e.g., contributing to the documentation files such as the one you are reading right now (where contributions may be initiated through the "Improve this page" link above).
+Alternatively to the steps above, use the GitHub web interface to change the files directly on a GitHub branch of your forked abapGit repository and then submit a pull request. This might make sense when, e.g., contributing to the documentation files such as the one you are reading right now (where contributions may be initiated through the "Edit this page" link below).
 
 If you already have an old fork and would like to create a new pull request, you can sync your old fork to the current state following this guide: [Sync your fork to original repository](https://github.com/KirstieJane/STEMMRoleModels/wiki/Syncing-your-fork-to-the-original-repository-via-the-browser).
 
