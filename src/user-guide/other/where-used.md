@@ -23,7 +23,7 @@ order: 50
 
 ## SAP
 
-* [SAP IBSO](https://news.sap.com/tags/sap-innovative-business-solutions/)
+* [SAP IBSO](https://sap.com)
 * [SAP Labs Czech Republic](https://www.facebook.com/SAPLabsCZ/)
 
 ## Consulting and Partner
