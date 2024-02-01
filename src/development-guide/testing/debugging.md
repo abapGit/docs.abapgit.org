@@ -34,7 +34,7 @@ If you are using SAP GUI 7.7 or higher with *Edge (Chrome)* browser control, use
 
 [General: Debug WebView2 Apps](https://docs.microsoft.com/en-us/microsoft-edge/webview2/how-to/debug?tabs=devtools)
 SAP Note [3099670](https://me.sap.com/notes/3099670) - SAP GUI for Windows Chromium-based Edge Control: Adding remote debugging feature
-[How to Debug WebView2 in SAP GUI](https://blogs.sap.com/2023/01/20/sap-gui-for-windows-8.00-is-coming-on-27th-of-january-2023-new-features-lifecycle-information/comment-page-1/#comment-680362)
+[How to Debug WebView2 in SAP GUI](https://community.sap.com/t5/technology-blogs-by-sap/sap-gui-for-windows-8-00-is-coming-on-27th-of-january-2023-new-features/ba-p/13570993)
 
 ### SAP GUI for HTML (Web)
 
