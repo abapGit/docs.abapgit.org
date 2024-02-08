@@ -57,8 +57,8 @@ Download the latest version of the abapGit developer version from  <https://gith
 1. On the repository list page, select "New Offline"
 1. Enter repo name `abapGit` and package name `$ABAPGIT` (or select an existing or create a new package)
 1. Select "Create Offline Repo"
-1. Select "Import <sup>zip</sup>"
+1. Select "Import zip"
 1. Select the _abapGit-main.zip_ file
-1. Select "Pull <sup>zip</sup>"
+1. Select "Pull zip"
 
 Transaction `ZABAPGIT` is now available to run the developer version.

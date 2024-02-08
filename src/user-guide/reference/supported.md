@@ -42,9 +42,11 @@ order: 20
 | `DOCT` | General Text                                                 |                                                           **Yes** | No        |
 | `DOCV` | Documentation (Independent)                                  |                                                           **Yes** | No        |
 | `DOMA` | Domain                                                       |                                                           **Yes** | *Planned* |
+| `DRTY` | CDS Type                                                     |          **Yes**, [AFF](https://github.com/SAP/abap-file-formats) | **Yes**   |
 | `DRUL` | Dependency Rule                                              |                                                           **Yes** | No        |
 | `DSYS` | Chapter of a Book Structure                                  |                                                           **Yes** | No        |
 | `DTDC` | Dynamic Cache                                                |                                                           **Yes** | *Planned* |
+| `DTEB` | CDS Entity Buffer                                            |          **Yes**, [AFF](https://github.com/SAP/abap-file-formats) | **Yes**   |
 | `DTEL` | Data Element                                                 |                                                           **Yes** | *Planned* |
 | `ECAT` | eCATT Test Script                                            |                                                           **Yes** | No        |
 | `ECSD` | eCATT System Data Container                                  |                                                           **Yes** | No        |

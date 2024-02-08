@@ -64,6 +64,10 @@ Pull requests must pass all abaplint configured checks before they can be merged
 You can view abaplint findings directly in abapGit using an [extension](https://github.com/Marc-Bernard-Tools/ABAP-Lint-Ext-for-abapGit).
 :::
 
+### eslint
+
+JavaScript is checked using eslint. You can find the rules [here](https://github.com/abapGit/abapGit/blob/main/.eslintrc.yaml). All JavaScript code has to adhere to ES5 ([ECMAScript 2009](https://en.wikipedia.org/wiki/ECMAScript_version_history)) to be compatible with the IE-based HTML browser control used in older releases of SAP GUI.
+
 ### Internationalization (I18N)
 
 abapGit supports only the English language. Neither objects nor text literals are translated. Therefore, all objects shall be set to English as the original language, and text literals in the code shall be maintained in English. 

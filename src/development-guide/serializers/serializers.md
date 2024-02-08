@@ -155,7 +155,7 @@ In general, the serializer class shall process texts of an object in all availab
 
 The recommended approach is to check `io_xml->i18n_params( )-main_language_only = abap_false` and then serialize the additional translations in the XML (typically using the `I18N` prefix). During deserialize, the translation languages can then be retrieved and processed accordingly.
 
-Example: [`TABL`](https://github.com/abapGit/abapGit/blob/main/src/objects/zcl_abapgit_object_tabl.clas.abap).
+Example: [`TABL`](https://github.com/abapGit/abapGit/blob/main/src/objects/tabl/zcl_abapgit_object_tabl.clas.abap).
 
 Note: A new approach for serializing translations based on LXE is under development. See [#4470](https://github.com/abapGit/abapGit/issues/4470) for further details and discussion.
 
