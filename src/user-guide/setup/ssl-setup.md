@@ -149,11 +149,26 @@ The following blog posts on the SAP Community Network might be helpful:
 - [Calling WebServices from ABAP via HTTPS/SSL with pfx certificates](https://scn.sap.com/people/jens.gleichmann/blog/2008/10/31/calling-webservices-from-abap-via-httpsssl-with-pfx-certificates)
 - [BSP a Developer’s Journal Part XIV – Consuming WebServices with ABAP](https://scn.sap.com/people/thomas.jung/blog/2004/11/17/bsp-a-developers-journal-part-xiv--consuming-webservices-with-abap)
 
+:::info
+There might be user exits in play that modify the default connection behavior (see section below). Check which exits are implemented and what values they return!
+:::
+
 ### Notes
 
 #### Actions Requiring Authentication
 
-To perform operations that require authentication, like e.g. cloning a private repository or pushing to any GitHub repository, you need to install not only the certificates for github.com but also for [https://**api**.github.com](https://api.github.com). Repeat the download and STRUST import steps as described in the sections above accordingly. (See also [#1491](https://github.com/abapGit/abapGit/issues/1491))
+To perform operations that require authentication, like e.g. cloning a **private repository** or **pushing to any GitHub repository**, you need to install not only the certificates for github.com but also for [https://**api**.github.com](https://api.github.com). Repeat the download and STRUST import steps for the API server as described in the sections above accordingly (see also [#1491](https://github.com/abapGit/abapGit/issues/1491) and [#6768](https://github.com/abapGit/abapGit/issues/6768))
+
+### User Exits
+
+The following exits are available to customize certain aspects of connection to the Git server using ABAP:
+
+- Using a RFC connection instead of HTTP
+- Defining proxy host and port (if abapGit settings are not sufficient)
+- Defining the SSL certificate section (if other than `ANONYM`)
+- Identifying local systems and setting logon tickets
+
+See [User Exits](/user-guide/reference/exits.md) for more details.
 
 #### Accessing GitHub
 

@@ -20,7 +20,11 @@ Exceptions for existing objects:
 
 #### Object Prefixing
 
-Classes and interfaces are prefixed using `zcl_abapgit_` or `zif_abapgit_` (`zcx_abapgit_` for exception classes, `lcl_` and `ltcl_` for local and test classes). The description of objects should begin with `abapGit - ...`. 
+Classes and interfaces are prefixed using `zcl_abapgit_` or `zif_abapgit_` (`zcx_abapgit_` for exception classes, `lcl_` and `ltcl_` for local and test classes).
+
+### Object Descriptions
+
+The description of objects should begin with `abapGit - ...` (for example, `abapGit - Repository Content List`). For [serializer classes](/development-guide/serializers/overview.html), the text should contain the `TADIR` object type and description (for example, `abapGit - INTF - Interface (ABAP Objects)`).
 
 #### Variable Prefixing
 
@@ -65,6 +69,10 @@ Pull requests must pass all abaplint configured checks before they can be merged
 ::: info
 You can view abaplint findings directly in abapGit using an [extension](https://github.com/Marc-Bernard-Tools/ABAP-Lint-Ext-for-abapGit).
 :::
+
+### eslint
+
+JavaScript is checked using eslint. You can find the rules [here](https://github.com/abapGit/abapGit/blob/main/.eslintrc.yaml). All JavaScript code has to adhere to ES5 ([ECMAScript 2009](https://en.wikipedia.org/wiki/ECMAScript_version_history)) to be compatible with the IE-based HTML browser control used in older releases of SAP GUI.
 
 ### Internationalization (I18N)
 

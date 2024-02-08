@@ -70,11 +70,11 @@ Click the name to select a different branch or tag.
 
 ### Package
 
-The root package of the repository is shown on the far left. Click the name to jump to the package maintenance. 
+The root package of the repository is shown on the far right. Click the name to jump to the package maintenance. 
 
 ## Page Content
 
-In the area between header and footer is filled differently depending on the selected page or command. Some pages like the repository list and repository view contain an additional menu bar. Pages that contain input forms, use the top menu bar to switch between forms (like tabs) and a row of buttons at the bottom to select commands.
+The area between header and footer is filled differently depending on the selected page or command. Some pages like the repository list and repository view contain an additional menu bar. Pages that contain input forms, use the top menu bar to switch between forms (like tabs) and a row of buttons at the bottom to select commands.
 
 ## Page Footer
 
@@ -88,7 +88,7 @@ On the left, you find a link to the [Sponsor Us](https://abapgit.org/sponsor.htm
 
 ### Version
 
-In the middle under the abapGit logo, you see the current version of abapGit. This includes version number and a description whether you can running the [standalone](/user-guide/getting-started/install.html#install-standalone-version) or the [developer version](/user-guide/getting-started/install.html#install-developer-version).
+In the middle under the abapGit logo, you see the current version of abapGit. This includes version number and a description whether you are running the [standalone](/user-guide/getting-started/install.html#install-standalone-version) or the [developer version](/user-guide/getting-started/install.html#install-developer-version).
 
 Hovering of the logo shows the backend runtime of the last navigation step. Clicking the logo takes you to the [abapGit Homepage](https://abapgit.org/).
 
