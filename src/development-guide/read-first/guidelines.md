@@ -46,7 +46,13 @@ The code must only reference standard SAP objects (classes, interfaces, DDIC typ
 
 General file format guidelines are specified in [.editorconfig](https://github.com/abapGit/abapGit/blob/main/.editorconfig). If you are using abapGit to push files to the repository, these guidelines are followed automatically.
 
-If you are editing files outside of SAP GUI or ADT, for example on GitHub.com or in VS Code, the most common issues are using `cr` instead of `lf` at end of line, missing new line at end of file, and missing `BOM` at beginning of XML files. Please ensure that your IDE is setup to follow the `.editorconfig` specifications to avoid any issues.
+If you are editing files outside of SAP GUI or ADT, for example on GitHub.com or in VS Code, the most common issues are using `cr` instead of `lf` at end of line, missing new line at end of file, and missing `BOM` at beginning of XML files. Please ensure that your IDE is setup to follow the `.editorconfig` specifications to avoid any issues. 
+
+For more details, see [editorconfig.org](https://editorconfig.org). 
+
+::: info
+VS Code requires an extension for `.editorconfig` which you can find at [marketplace](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig).
+:::
 
 ### Formatting the Source Code
 
