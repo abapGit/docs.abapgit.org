@@ -117,9 +117,9 @@ This will ensure that users will not be able to install the project in systems w
 Conversely, if your project uses exclusively objects and code released for ABAP for Key Users or Cloud Development, set the ABAP language version accordingly. 
 This will ensure that only objects compatible with systems will be included in your project, where the use of "ABAP for Cloud Development" is enforced*. 
 
-When transferring code from an on premise system to a system where the use of "ABAP for Cloud Development" is enforced* you can use the repository setting **Ignore ABAP Language Version** if your code has been developed using ABAP Language Version "Standard ABAP" though it could be activated using ABAP Language Version "ABAP for Cloud Development" as well. For example a RAP business object that uses tables with custom developed data elements. In this case the ABAP Language Version would be set to "ABAP for Cloud Development" based on the settings of the target package.  
+When transferring code from an on premise system to a system where the use of "ABAP for Cloud Development" is enforced* you can use the repository setting **Ignore ABAP Language Version** if your code has been developed using ABAP language version "Standard ABAP" though it could be activated using ABAP language version "ABAP for Cloud Development" as well. An example for this would be a RAP business object that uses tables with custom developed data elements. In this case the ABAP language version would be set to "ABAP for Cloud Development" based on the settings of the target package.
 
-*_(SAP BTP ABAP Environment, SAP S/4HANA ABAP Environment or SAP S/4HANA on prem / private cloud when using a software component with ABAP Language Version "ABAP for Cloud Development")_
+*_(SAP BTP ABAP Environment, SAP S/4HANA ABAP Environment or SAP S/4HANA on prem / private cloud when using a software component with ABAP language version "ABAP for Cloud Development")_
 
 :::info
 You can use [abaplint](https://github.com/abaplint/abaplint/blob/main/docs/getting_started.md) to automatically check for compatibility. 
