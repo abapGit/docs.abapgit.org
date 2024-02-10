@@ -18,6 +18,10 @@ To support HTTPS, your SAP system must be configured accordingly:
 
 Note: Alternatively, connection details can be defined via [user exit](/user-guide/reference/exits.md#exits).
 
+::: warning
+There are usually policies in place of who is permitted to make changes to these settings in your SAP system. Please contact your SAP Basis and network team to coordinate requirements.
+:::
+
 We use GitHub.com as an example for configuring secure connections. This is also required if you want to clone and contribute to abapGit itself. The setup for other Git servers is quite similar and will require different certificates.
 
 ### SAP Crypto Library
