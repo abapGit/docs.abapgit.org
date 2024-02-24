@@ -166,7 +166,29 @@ order: 20
 | `WEBI` | Virtual End Point                                            |                                                           **Yes** | No        |
 | `XINX` | Extension Index                                              |                                                           **Yes** | *Planned* |
 | `XSLT` | Transformation                                               |                                                           **Yes** | *Planned* |
-| `ZN01` |                                                | **Yes** [Via Extension](https://github.com/neptune-software/dxp-sap-edition-abapgit-extension)  | N/A |
+| `ZN00` | Neptune Metadata                                             | **Yes** [Via Extension](https://github.com/neptune-software/dxp-sap-edition-abapgit-extension)  | N/A |
+| `ZN01` | Neptune App                                                  | **Yes** [Via Extension](https://github.com/neptune-software/dxp-sap-edition-abapgit-extension)  | N/A |
+| `ZN02` | Neptune API                                                  | **Yes** [Via Extension](https://github.com/neptune-software/dxp-sap-edition-abapgit-extension)  | N/A |
+| `ZN03` | Neptune Launchpad                                            | **Yes** [Via Extension](https://github.com/neptune-software/dxp-sap-edition-abapgit-extension)  | N/A |
+| `ZN04` | Neptune Tile Group                                           | **Yes** [Via Extension](https://github.com/neptune-software/dxp-sap-edition-abapgit-extension)  | N/A |
+| `ZN05` | Neptune Tile                                                 | **Yes** [Via Extension](https://github.com/neptune-software/dxp-sap-edition-abapgit-extension)  | N/A |
+| `ZN06` | Neptune Policy                                               | **Yes** [Via Extension](https://github.com/neptune-software/dxp-sap-edition-abapgit-extension)  | N/A |
+| `ZN07` | Neptune Launchpad Layout                                     | **Yes** [Via Extension](https://github.com/neptune-software/dxp-sap-edition-abapgit-extension)  | N/A |
+| `ZN08` | Neptune Tile Layout                                          | **Yes** [Via Extension](https://github.com/neptune-software/dxp-sap-edition-abapgit-extension)  | N/A |
+| `ZN09` | Neptune Enhancement                                          | **Yes** [Via Extension](https://github.com/neptune-software/dxp-sap-edition-abapgit-extension)  | N/A |
+| `ZN10` | Neptune Login Page                                           | **Yes** [Via Extension](https://github.com/neptune-software/dxp-sap-edition-abapgit-extension)  | N/A |
+| `ZN11` | Neptune Sticky Banner                                        | **Yes** [Via Extension](https://github.com/neptune-software/dxp-sap-edition-abapgit-extension)  | N/A |
+| `ZN12` | Neptune Splash Screen                                        | **Yes** [Via Extension](https://github.com/neptune-software/dxp-sap-edition-abapgit-extension)  | N/A |
+| `ZN13` | Neptune Custom Color                                         | **Yes** [Via Extension](https://github.com/neptune-software/dxp-sap-edition-abapgit-extension)  | N/A |
+| `ZN14` | Neptune Rich Text Template                                   | **Yes** [Via Extension](https://github.com/neptune-software/dxp-sap-edition-abapgit-extension)  | N/A |
+| `ZN15` | Neptune Custom JS Helper                                     | **Yes** [Via Extension](https://github.com/neptune-software/dxp-sap-edition-abapgit-extension)  | N/A |
+| `ZN16` | Neptune Documentation                                        | **Yes** [Via Extension](https://github.com/neptune-software/dxp-sap-edition-abapgit-extension)  | N/A |
+| `ZN17` | Neptune RFC Mapping                                          | **Yes** [Via Extension](https://github.com/neptune-software/dxp-sap-edition-abapgit-extension)  | N/A |
+| `ZN18` | Neptune Media Library                                        | **Yes** [Via Extension](https://github.com/neptune-software/dxp-sap-edition-abapgit-extension)  | N/A |
+| `ZN19` | Neptune Media Pack                                           | **Yes** [Via Extension](https://github.com/neptune-software/dxp-sap-edition-abapgit-extension)  | N/A |
+| `ZN20` | Neptune Url Alias                                            | **Yes** [Via Extension](https://github.com/neptune-software/dxp-sap-edition-abapgit-extension)  | N/A |
+| `ZN21` | Neptune oData                                                | **Yes** [Via Extension](https://github.com/neptune-software/dxp-sap-edition-abapgit-extension)  | N/A |
+| `ZN22` | Neptune Mobile Client                                        | **Yes** [Via Extension](https://github.com/neptune-software/dxp-sap-edition-abapgit-extension)  | N/A |
 
 If additional object types are required please add a comment to [issue](https://github.com/abapGit/abapGit/issues/5912)
 
