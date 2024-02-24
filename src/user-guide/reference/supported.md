@@ -166,6 +166,7 @@ order: 20
 | `WEBI` | Virtual End Point                                            |                                                           **Yes** | No        |
 | `XINX` | Extension Index                                              |                                                           **Yes** | *Planned* |
 | `XSLT` | Transformation                                               |                                                           **Yes** | *Planned* |
+| `ZN01` |                                                | **Yes** [Via Extension](https://github.com/neptune-software/dxp-sap-edition-abapgit-extension)  | N/A |
 
 If additional object types are required please add a comment to [issue](https://github.com/abapGit/abapGit/issues/5912)
 
