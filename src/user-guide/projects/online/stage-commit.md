@@ -26,18 +26,15 @@ You can "add", "remove" or "ignore" files. "Add" will update the file on git or 
 
 ## Commit
 
-Before any changes are transferred to your git repository, you can review them on the "Commit Page". At the top you get a summary of how many files will
-be added, remove, or ignored. You find list of files at the bottom.
+Before any changes are transferred to your git repository, you can review them on the "Commit Page". At the top you get a summary of how many files will be added, remove, or ignored. You find list of files at the bottom.
 
 ![](/img/committing_commit_1.png)
 ![](/img/committing_commit_2.png)
 
-For each commit, you have to enter three mandatory fields: "Comment", "Committer Name", and "Committer Email". Optionally, you can enter a longer
-description of your changes in "Body". Or you may enter an "Author Name" and "Author Email" if it's different from the committer (i.e. the current user).
+For each commit, you have to enter three mandatory fields: "Comment", "Committer Name", and "Committer Email". Optionally, you can enter a longer description of your changes in "Body". Or you may enter an "Author Name" and "Author Email" if it's different from the committer (i.e. the current user).
 
 When you select "Commit", your git repository will be updated.
 
-abapGit will update the local state of the objects and return to the repository view. Objects that were committed are now listed as unchanged (i.e. identical
-to the definition in git).
+abapGit will update the local state of the objects and return to the repository view. Objects that were committed are now listed as unchanged (i.e. identical to the definition in git).
 
 ![](/img/committing_done.png)
