@@ -18,15 +18,13 @@ Select "Stage" to collect the changed files into a staging area. All changed fil
 
 ![](/img/committing_stage.png)
 
-In order to commit any change to your repo, you can either select "Add All and Commit" or pick individual files using the action links to the right
-and click "Commii Selected".
+In order to commit any change to your repo, you can either select "Add All and Commit" or pick individual files using the action links to the right and click "Commit Selected".
 
-You can "add", "remove" or "ignore" files. "Add" will update the file on git or create it if it doesn't exist yet. "Remove" will drop the file from git.
-"Ignore" will include the file in the [ignore list](/user-guide/repo-settings/dot-abapgit.md) without changing it in git.
+You can "add", "remove" or "ignore" files. "Add" will update the file on git or create it if it doesn't exist yet. "Remove" will drop the file from git. "Ignore" will include the file in the [ignore list](/user-guide/repo-settings/dot-abapgit.md) without changing it in git.
 
 ## Commit
 
-Before any changes are transferred to your git repository, you can review them on the "Commit Page". At the top you get a summary of how many files will be added, remove, or ignored. You find list of files at the bottom.
+Before any changes are transferred to your git repository, you can review them on the "Commit Page". At the top you get a summary of how many files will be added, removed, or ignored. You find the list of files at the bottom.
 
 ![](/img/committing_commit_1.png)
 ![](/img/committing_commit_2.png)
