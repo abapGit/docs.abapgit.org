@@ -22,7 +22,7 @@ Development related information
 - [Overview](serializers/overview.md)
 - [Serializer Class](serializers/serializers.md)
 - [New Serializers](serializers/task-list.md)
-- [File Formats](serializers/file-formats.md)
+- [File Naming and Formats](serializers/file-formats.md)
 
 ### Testing
 

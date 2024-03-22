@@ -12,4 +12,4 @@ dir:
 - [Overview](overview.md)
 - [Serializer Class](serializers.md)
 - [New Serializers](task-list.md)
-- [File Formats](file-formats.md)
+- [File Naming and Formats](file-formats.md)
