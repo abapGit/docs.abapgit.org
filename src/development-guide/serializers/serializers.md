@@ -10,10 +10,12 @@ The constructor is implemented in the superclass and takes two parameters as inp
 
 Parameter | Description
 ----------|------------
-`IS_ITEM`     | Contains object type, object name, SAP package, and state (active/inactive)
-`IV_LANGUAGE` | Contains the language key for the main language of the repository
+`IS_ITEM`        | Contains object type, object name, SAP package, and state (active/inactive)
+`IV_LANGUAGE`    | Contains the language key for the main language of the repository
+`IO_FILES`       | Collection of files associtated with the object
+`IO_I18N_PARAMS` | Parameters related to translation of objects
 
-These parameters are stored in attributes `MS_ITEM` and `MV_LANGUAGE` respectively.
+These parameters are stored in attributes `MS_ITEM`, `MV_LANGUAGE`, `MO_FILES`, and `MO_I18N_PARAMS` respectively.
 
 Requirements that are necessary to support an object type should be checked in the constructor using the following logic. This is typical if object types are not supported in lower releases. 
 
@@ -23,14 +25,16 @@ Requirements that are necessary to support an object type should be checked in t
     DATA ...
 
     super->constructor(
-      is_item     = is_item
-      iv_language = iv_language ).
+      is_item        = is_item
+      iv_language    = iv_language
+      io_files       = io_files
+      io_i18n_params = io_i18n_params ).
 
     TRY.
         " Check requirements...
       CATCH cx_root.
         " Raise an exception if not supported
-        zcx_abapgit_exception=>raise( 'Object type DDLS not supported' ).
+        zcx_abapgit_exception=>raise( 'Object type SRFC not supported' ).
     ENDTRY.
 
   ENDMETHOD.
