@@ -116,7 +116,8 @@ CLASS lcl_report IMPLEMENTATION.
       li_http_client   TYPE REF TO if_http_client,
       lv_error_message TYPE string,
       lv_reason        TYPE string,
-      lv_response      TYPE string.
+      lv_response      TYPE string,
+      li_exit          TYPE REF TO object.
 
     IF iv_url IS INITIAL.
       RETURN.
@@ -147,6 +148,20 @@ CLASS lcl_report IMPLEMENTATION.
         username             = p_puser
         password             = p_ppwd ).
     ENDIF.
+
+    TRY.
+        CALL METHOD ('ZCL_ABAPGIT_EXIT')=>('GET_INSTANCE')
+          RECEIVING
+            ri_exit = li_exit.
+
+        CALL METHOD li_exit->('ZIF_ABAPGIT_EXIT~HTTP_CLIENT')
+          EXPORTING
+            iv_url    = iv_url
+            ii_client = li_http_client.
+
+      CATCH cx_root.
+        " no abapGit dev version installed. Ok.
+    ENDTRY.
 
     li_http_client->send( ).
 
