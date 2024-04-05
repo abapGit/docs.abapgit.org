@@ -320,7 +320,7 @@ CLASS lcl_report IMPLEMENTATION.
       ls_value  LIKE LINE OF lt_values.
 
     ls_value-key = if_http_request=>co_protocol_version_1_0.
-    ls_value-text = 'HTTP/1'.
+    ls_value-text = 'HTTP/1.0'.
     APPEND ls_value TO lt_values.
 
     ls_value-key = if_http_request=>co_protocol_version_1_1.
