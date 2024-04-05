@@ -40,9 +40,10 @@ SELECTION-SCREEN SKIP.
 SELECTION-SCREEN BEGIN OF BLOCK sc_serv WITH FRAME TITLE sc_titl2.
   PARAMETERS:
     p_url1 TYPE string LOWER CASE DEFAULT 'https://github.com' OBLIGATORY,
-    p_url2 TYPE string LOWER CASE DEFAULT 'https://api.github.com',
-    p_id   TYPE strustssl-applic DEFAULT 'ANONYM' OBLIGATORY.
 * api.github.com is used when pushing code back to github
+    p_url2 TYPE string LOWER CASE DEFAULT 'https://api.github.com',
+    p_id   TYPE strustssl-applic DEFAULT 'ANONYM' OBLIGATORY,
+    p_http TYPE i DEFAULT if_http_request=>co_protocol_version_1_1 OBLIGATORY AS LISTBOX VISIBLE LENGTH 30.
 SELECTION-SCREEN END OF BLOCK sc_serv.
 
 SELECTION-SCREEN SKIP.
@@ -70,6 +71,9 @@ CLASS lcl_report DEFINITION.
       RETURNING
         VALUE(rv_url) TYPE string.
 
+
+    METHODS http_protocol_list_box.
+
   PRIVATE SECTION.
 
     TYPES:
@@ -85,6 +89,12 @@ CLASS lcl_report DEFINITION.
         response TYPE string,
       END OF ty_link,
       ty_links TYPE STANDARD TABLE OF ty_link WITH NON-UNIQUE KEY line.
+
+    TYPES:
+      BEGIN OF ty_http_protocol,
+        http_protocol TYPE c LENGTH 4,
+        text          TYPE c LENGTH 30,
+      END OF ty_http_protocol.
 
     DATA mt_links TYPE ty_links.
 
@@ -111,13 +121,10 @@ CLASS lcl_report IMPLEMENTATION.
   METHOD run.
 
     DATA:
-      lv_code          TYPE i,
-      lv_url           TYPE string,
-      li_http_client   TYPE REF TO if_http_client,
-      lv_error_message TYPE string,
-      lv_reason        TYPE string,
-      lv_response      TYPE string,
-      li_exit          TYPE REF TO object.
+      lv_code        TYPE i,
+      li_http_client TYPE REF TO if_http_client,
+      lv_reason      TYPE string,
+      lv_response    TYPE string.
 
     IF iv_url IS INITIAL.
       RETURN.
@@ -149,19 +156,7 @@ CLASS lcl_report IMPLEMENTATION.
         password             = p_ppwd ).
     ENDIF.
 
-    TRY.
-        CALL METHOD ('ZCL_ABAPGIT_EXIT')=>('GET_INSTANCE')
-          RECEIVING
-            ri_exit = li_exit.
-
-        CALL METHOD li_exit->('ZIF_ABAPGIT_EXIT~HTTP_CLIENT')
-          EXPORTING
-            iv_url    = iv_url
-            ii_client = li_http_client.
-
-      CATCH cx_root.
-        " no abapGit dev version installed. Ok.
-    ENDTRY.
+    li_http_client->request->set_version( p_http ).
 
     li_http_client->send( ).
 
@@ -174,7 +169,7 @@ CLASS lcl_report IMPLEMENTATION.
 
     IF sy-subrc <> 0.
       display_error( 'HTTP Client Receive' ).
-      
+
       li_http_client->get_last_error(
         IMPORTING
           message = lv_response ).
@@ -323,6 +318,32 @@ CLASS lcl_report IMPLEMENTATION.
 
   ENDMETHOD.
 
+
+  METHOD http_protocol_list_box.
+
+    DATA:
+      lt_values TYPE vrm_values,
+      ls_value  LIKE LINE OF lt_values.
+
+    ls_value-key = if_http_request=>co_protocol_version_1_0.
+    ls_value-text = 'HTTP/1'.
+    APPEND ls_value TO lt_values.
+
+    ls_value-key = if_http_request=>co_protocol_version_1_1.
+    ls_value-text = 'HTTP/1.1'.
+    APPEND ls_value TO lt_values.
+
+    CALL FUNCTION 'VRM_SET_VALUES'
+      EXPORTING
+        id              = 'P_HTTP'
+        values          = lt_values
+      EXCEPTIONS
+        id_illegavrm_id = 1
+        OTHERS          = 2.
+    ASSERT sy-subrc = 0.
+
+  ENDMETHOD.
+
 ENDCLASS.
 
 DATA go_report TYPE REF TO lcl_report.
@@ -337,6 +358,7 @@ INITIALIZATION.
   %_p_url1_%_app_%-text  = 'URL (Read Access)'.
   %_p_url2_%_app_%-text  = 'URL (Write Access)'.
   %_p_id_%_app_%-text    = 'SSL Client Identity'.
+  %_p_http_%_app_%-text  = 'HTTP protocol'.
   sc_titl3               = 'Proxy Settings (Optional)'.
   %_p_proxy_%_app_%-text = 'Hostname/IP'.
   %_p_pport_%_app_%-text = 'Port'.
@@ -359,6 +381,8 @@ AT SELECTION-SCREEN OUTPUT.
       MODIFY SCREEN.
     ENDIF.
   ENDLOOP.
+
+  go_report->http_protocol_list_box( ).
 
 AT SELECTION-SCREEN ON VALUE-REQUEST FOR p_url1.
   p_url1 = go_report->f4_url( ).
