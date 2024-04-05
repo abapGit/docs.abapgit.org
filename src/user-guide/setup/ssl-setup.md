@@ -171,6 +171,7 @@ The following exits are available to customize certain aspects of connection to 
 - Defining proxy host and port (if abapGit settings are not sufficient)
 - Defining the SSL certificate section (if other than `ANONYM`)
 - Identifying local systems and setting logon tickets
+- Changing the used HTTP protocol
 
 See [User Exits](/user-guide/reference/exits.md) for more details.
 
