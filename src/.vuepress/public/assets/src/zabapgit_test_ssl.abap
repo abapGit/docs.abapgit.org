@@ -90,12 +90,6 @@ CLASS lcl_report DEFINITION.
       END OF ty_link,
       ty_links TYPE STANDARD TABLE OF ty_link WITH NON-UNIQUE KEY line.
 
-    TYPES:
-      BEGIN OF ty_http_protocol,
-        http_protocol TYPE c LENGTH 4,
-        text          TYPE c LENGTH 30,
-      END OF ty_http_protocol.
-
     DATA mt_links TYPE ty_links.
 
     METHODS display_error
