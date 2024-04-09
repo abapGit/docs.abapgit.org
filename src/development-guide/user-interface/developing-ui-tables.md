@@ -74,11 +74,17 @@ Finally, call the table `render` method to produce html. Pass the data table to 
 
 ![Simplest table](/img/ui_table_simple.png)
 
+## 2-level header
+
+You can create groups of columns with `define_column_group`. See an example in `zcl_abapgit_gui_page_whereused` class. `title` and `id` are both options, but you have to start before the first column if you plan to use groups (because it calculates spans from start).
+
+![2-level header](/img/ui_table_2_level_head.png)
+
 ## CSS styles
 
 There are several options to styling your table:
 
-- First, you can pass the element id, and css class of the table itself to the `render` method. 
+- First, you can pass the element id, and css class of the table itself to the `render` method.
 - Passing `iv_wrap_in_div` parameter will wrap your table in another `div` with the given css class name, primarily for visual styling purposes (e.g. see padded borders and rounded corners in the screenshot below).
 
 There are default CSS styles in abapGit to reuse if you don't want to bother with any specific styling - `default-table` and `default-table-container`, respectively, for the wrapping `div`.
@@ -153,6 +159,8 @@ table td[data-cid="id"] { font-weight: bold; }
 table tr[data-kind="error"] { background-color: red; }
 ```
 
+If you use 2-level header and pass `iv_group_id` it will also appear as a `data-gid` attribute in all relevant cells.
+
 ## Cell rendering
 
 You can define your column so that the `column_id` and the field to take a value from have different names. In the example below the `iv_value` in `render_cell` will be taken from the `person_id` field in the table structure.
@@ -203,3 +211,30 @@ Technical-wise sorting markers are links with events defined like `sapevent:sort
 ```
 
 ... and then applying the `ms_sorting_state` elsewhere before rendering the table
+
+### In-table sorting
+
+This feature is **experimental**, use with care. See `zcl_abapgit_gui_page_whereused` as an example.
+
+To simplify sorting handling you may create your table component as a class member, and pass `is_initial_sorting_state`.
+
+```abap
+DATA ls_sorting_state TYPE zif_abapgit_html_table=>ty_sorting_state.
+ls_sorting_state-column_id = 'xyz'.
+mi_table = zcl_abapgit_html_table=>create(
+  is_initial_sorting_state = ls_sorting_state ).
+```
+
+In the event handling method use `process_sorting_request` instead of `detect_sorting_request`.
+
+```abap
+IF mi_table->process_sorting_request( ii_event->mv_action ) = abap_true.
+  rs_handled-state = zcl_abapgit_gui=>c_event_state-re_render.
+  RETURN.
+ENDIF.
+```
+
+With this approach you will not need any other sorting logic to implement the table component will handle sorting for you. Please mind the caveats though:
+
+- The `column_id` (or supplied `from_field`) **must** exist as a table field (for sortable columns)
+- To do the sorting the component creates a copy of the data internally. Mind memory consumption.
