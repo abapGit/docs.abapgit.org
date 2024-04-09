@@ -5,6 +5,7 @@ order: 10
 ---
 
 This documentation covers page creation, HTML rendering, and event handling.
+
 - See also [UI - CSS and Assets](./developing-ui-css.html)
 - See also [UI - JavaScript](./developing-ui-js.html)
 - See also [HTML Forms](./developing-ui-forms.html)
@@ -61,17 +62,17 @@ ENDMETHOD.
 - **ADD** - adds a chunk to accumulated HTML. You can pass a string or another `ZCL_ABAPGIT_HTML` instance. In the example above `render_some_stuff` may either return a string or have the same pattern as `render_content` (retuning `ZCL_ABAPGIT_HTML` instance)
 - **ADD_ICON and ICON** - renders an icon. abapGit uses web fonts to render icons (see [adding icons](./adding-icons.html)). The method accepts the icon name and a CSS class name which represents a color separated by '/'. E.g., in the example above it will render 'star' icon and assign 'error' CSS class to it which has red color in the abapGit styles. The method has its static brother `ZCL_ABAPGIT_HTML=>ICON` which is more convenient in some cases and just returns a rendered HTML string.
 - **ADD_A and A** - render a link (anchor) (`A` - static method). It is strongly suggested that you use this method instead of rendering `<a>` tags directly. Params:
-    - `IV_TXT` - text to be rendered inside the anchor
-    - `IV_TYP` - the type of action done on click. 3 options: 
-        - `zif_abapgit_html=>c_action_type-url`- direct link to an URL,
-        - `...-sapevent` (the default) - pass an event to sap handler,
-        - `...-onclick` - call a JS function,
-        - `...-dummy` - just render an anchor but no action
-    - `IV_ACT` - depending on the type should be either URL or sapevent name or JS function to call 
-    - `IV_OPT` - `zif_abapgit_html=>c_html_opt-strong` or `...-cancel` or `...-crossout` - some semantic predefined styles to add to the link
-    - `IV_CLASS` - additional CSS class, if needed
-    - `IV_STYLE` - additional direct styles to use (generally discouraged, please use CSS classes instead)
-    - `IV_ID` - id of the anchor (may be needed for JS code)
+  - `IV_TXT` - text to be rendered inside the anchor
+  - `IV_TYP` - the type of action done on click. 3 options:
+    - `zif_abapgit_html=>c_action_type-url`- direct link to an URL,
+    - `...-sapevent` (the default) - pass an event to sap handler,
+    - `...-onclick` - call a JS function,
+    - `...-dummy` - just render an anchor but no action
+  - `IV_ACT` - depending on the type should be either URL or sapevent name or JS function to call
+  - `IV_OPT` - `zif_abapgit_html=>c_html_opt-strong` or `...-cancel` or `...-crossout` - some semantic predefined styles to add to the link
+  - `IV_CLASS` - additional CSS class, if needed
+  - `IV_STYLE` - additional direct styles to use (generally discouraged, please use CSS classes instead)
+  - `IV_ID` - id of the anchor (may be needed for JS code)
 - **SET_TITLE** - the method is used for debugging purposes for postponed HTML parts. As it is not visible which class registered an HTML part, the title can be used to specify the origin.
 
 ## Renderables
@@ -79,6 +80,7 @@ ENDMETHOD.
 Sub-classing `ZCL_ABAPGIT_GUI_PAGE` is not the only way to render the content. You may want to separate some visual component that is not a page e.g. `ZCL_ABAPGIT_GUI_VIEW_REPO` is a class like that. In essence, you have to implement `ZIF_ABAPGIT_GUI_RENDERABLE` and its method - `render`. Then you can reuse it or even pass it directly to the GUI class as a page to render.
 
 It makes sense to also subclass your component from `ZCL_ABAPGIT_GUI_COMPONENT`. This class has a protected `gui_services` method returning the singleton instance of `ZIF_ABAPGIT_GUI_SERVICES`. The GUI services are good for:
+
 - registering self as an event handler (`register_event_handler`). Importantly, later registered event handlers have higher priority (processing is done from bottom to top)
 - accessing hotkey services (`get_hotkeys_ctl`) - to register own hotkeys for the page (hotkeys are combined from the whole component stack)
 - registering postponed HTML parts (`get_html_parts`)
@@ -93,6 +95,7 @@ Components may have postponed parts, e.g. scripts or hidden forms. These chunks 
       iv_collection = c_html_parts-scripts
       ii_part       = render_my_scripts( ) ).
 ```
+
 where `render_my_scripts( )` must return an instance of `ZCL_ABAPGIT_HTML`.
 
 Currently, two collections are supported out of the box - scripts and hidden_forms (see definition of `zcl_abapgit_gui_component`). Scripts rendered after the page body. Hidden forms right before the end of the body. But this does not limit you to these categories only - you may register your own collections to exchange postponed parts between components supported by you. The collection is just a named list of `ZCL_ABAPGIT_HTML` instances.
@@ -100,6 +103,7 @@ Currently, two collections are supported out of the box - scripts and hidden_for
 ## Router and Event Handlers
 
 To process sapevents in abap the component (page) must implement `ZIF_ABAPGIT_GUI_EVENT_HANDLER=>on_event`. It imports `ii_event` instance which represents `sapevent` handler of `cl_gui_html_viewer`. In particular:
+
 - `ii_event->mv_action` - sapevent code (part of URL before `?`)
 - `ii_event->mv_getdata` - raw URL query (part of URL after `?`)
 - `ii_event->mt_postdata` - raw post data (if present)
@@ -112,6 +116,7 @@ To process sapevents in abap the component (page) must implement `ZIF_ABAPGIT_GU
 - `ii_event->form_data()` - attempts to parse post_data assuming it is set of key value pairs. Returns a string map. Otherwise behaves as `query()` above. `iv_upper_cased = false` by default.
 
 Events can be processed on 2 levels - in page/component **or** in the router. On new event:
+
 - the GUI goes through the event handlers stack - a list of components that registered themselves as event handlers during rendering via `gui_services`
 - the processing is done from the last registered handler to the first one (stack top to bottom)
 - the first event handler that returns "handled" status breaks the cycle (see below how this is indicated)
