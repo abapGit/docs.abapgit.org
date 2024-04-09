@@ -19,6 +19,7 @@ This documentation covers page creation, HTML rendering, and event handling.
 - Please, please, care about usability, content readability, and style in general :pray: ;)
 - Check `ZCL_ABAPGIT_GUI_CHUNK_LIB` for some existing HTML chunks like `render_error`
 - To register postponed HTML parts, scripts, and hotkeys - access corresponding methods via `gui_services` method of `zcl_abapgit_gui_component`
+- See `zcl_abapgit_gui_page_template` as en example and template for new pages. Also see other page templates available in `test` sub-package. Follow the `TODO` comments in the template code.
 
 ## GUI Components
 
