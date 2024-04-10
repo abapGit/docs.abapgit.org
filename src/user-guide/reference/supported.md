@@ -154,8 +154,8 @@ order: 20
 | `UCSA` | Unified Connectivity Service Assembly                        |                                                           **Yes** | No        |
 | `UDMO` | Data model                                                   |                                                           **Yes** | No        |
 | `UENO` | Entity type                                                  |                                                           **Yes** | No        |
-| `UIPG` | Fiori Launchpad Page                                         |          **Yes**, [AFF](https://github.com/SAP/abap-file-formats) | No        |
-| `UIST` | Fiori Launchpad Space Template                               |          **Yes**, [AFF](https://github.com/SAP/abap-file-formats) | No        |
+| `UIPG` | Fiori Launchpad Page Template                                |          **Yes**, [AFF](https://github.com/SAP/abap-file-formats) | **Yes**   |
+| `UIST` | Fiori Launchpad Space Template                               |          **Yes**, [AFF](https://github.com/SAP/abap-file-formats) | **Yes**   |
 | `VCLS` | View cluster                                                 |                                                           **Yes** | No        |
 | `VIEW` | View                                                         |                                                           **Yes** | No        |
 | `W3HT` | Web Reporting/Internet Transaction Server HTML Templates     |                                                           **Yes** | No        |
