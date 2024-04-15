@@ -11,9 +11,9 @@ abapGit exists in 2 flavours: _standalone_ version or _developer_ version.
 * The standalone version is targeted at users. It consists of one (huge) program which contains all the needed code. You run the standalone version in transaction `SE38`, executing the program you created.
 * The developer version is targeted at developers contributing to the abapGit codebase. It consists of all the ABAP programs/classes/interfaces/etc. of the abapGit project. You run the developer version with transaction `ZABAPGIT`. Only the developer version supports parallel processing, so it might be of interest to you even if you do not intend to contribute. 
 
-:::warning
+::: warning
 There's also an SAP version of abapGit available that is part of SAP Business Technology Platform and SAP S/4HANA Cloud. It's documented on [help.sap.com](https://help.sap.com/docs/BTP/65de2977205c403bbc107264b8eccf4b/d62ed9d54a764c53990f25f0ab6c27f9.html). When using the SAP version, note that there are different capabilities and supported object types (as described by SAP). If the SAP version does not work correctly, open a [ticket with SAP support](https://me.sap.com/servicessupport/cases).
-:
+:::
 
 ## Prerequisites
 
