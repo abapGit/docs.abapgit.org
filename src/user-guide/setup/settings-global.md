@@ -21,7 +21,7 @@ or its IP address.
 If your proxy requires you to login, set the proxy authentication flag. Then abapGit will prompt you for your proxy user and password, when an online connection is required.
 
 In case the proxy should not be used for all repositories, exceptions can be maintained. Enter each exception on a separate line. Patterns are allowed,
-for example "*.sap.internal*".
+for example `*.sap.internal*`.
 
 ## Commit Message Settings
 
