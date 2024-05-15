@@ -26,6 +26,14 @@ Classes and interfaces are prefixed using `zcl_abapgit_` or `zif_abapgit_` (`zcx
 
 The description of objects should begin with `abapGit - ...` (for example, `abapGit - Repository Content List`). For [serializer classes](/development-guide/serializers/overview.html), the text should contain the `TADIR` object type and description (for example, `abapGit - INTF - Interface (ABAP Objects)`).
 
+#### Sub-object Descriptions
+
+To document sub-objects like class methods and parameters, you should use [ABAP Doc](https://help.sap.com/doc/abapdocu_latest_index_htm/latest/en-US/index.htm?file=abendoccomment.htm) comments. You can see an example in [zcx_abapgit_exception](https://github.com/abapGit/abapGit/blob/40c5cd7212dd7fece00667cab31afc55830a7310/src/zcx_abapgit_exception.clas.abap#L50-L76).
+
+::: warning
+Do not maintain texts for methods and parameters in SE24/SE80 and don't use `<p class="shorttext synchronized">` in ADT. This will lead to errors when checking the class/interface XML file in GitHub.
+:::
+
 #### Variable Prefixing
 
 Variables are prefixed using the standard setting in [abapOpenChecks Naming Conventions](https://docs.abapopenchecks.org/checks/69/)
