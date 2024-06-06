@@ -120,6 +120,6 @@ The latest version of the w3mipoller has also an option to track **all** W3MI fi
 - choose the root directory to save files to
 - optionally enter regex for file names (e.g. ".*css$" if you intend to edit css file only)
 - optionally select "Sort by ..." flag to split files by sub-directories by extension (since abapgit html pages refer to `css/..` and `js/..` URIs is may be helpful)
-- see more in [project readme](https://github.com/sbcgua/abap_w3mi_poller)
+- see more in [ABAP W3MI poller readme](https://github.com/sbcgua/abap_w3mi_poller)
 
 ![whole project](/img/w3mimepoller-3.png)
