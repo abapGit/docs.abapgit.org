@@ -15,7 +15,7 @@ If the development version is installed create global class `ZCL_ABAPGIT_USER_EX
 To support both versions with the same code, proceed as follows:
 
 1. Implement `ZCL_ABAPGIT_USER_EXIT` as a global class and test with the developer version.
-2. Cut & paste the complete code of `ZCL_ABAPGIT_USER_EXIT` into include `ZABAPGIT_USER_EXIT` and change the beginning to a local class.
+2. Copy & paste the complete code of `ZCL_ABAPGIT_USER_EXIT` into include `ZABAPGIT_USER_EXIT` and change the beginning to a local class.
 
 ```abap
 CLASS zcl_abapgit_user_exit DEFINITION
