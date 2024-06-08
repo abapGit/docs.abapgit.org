@@ -57,7 +57,7 @@ Relevant SAP Notes:
 
 ### SAP GUI for Java
 
-When you start abapGit for the first using *SAP GUI for JAVA*, you will get a warning that this GUI is not supported and there might be issues.
+When you start abapGit for the first time using *SAP GUI for JAVA*, you will get a warning that this GUI is not supported and there might be issues.
 
 You may confirm that you want to use this GUI anyway and continue.
 
