@@ -5,9 +5,10 @@ order: 50
 ---
 
 Personal settings in abapGit are valid only for the logged on user. You can maintain the
-settings from the repository list or repository view by selecting "Settings > Personal".
+settings from the repository list or repository view by selecting "Global Settings" > "Personal".
 
-![](/img/settings-personal-0.png)
+![image](https://github.com/francisco-milan/docs.abapgit.org/assets/36721657/1a90cc1e-3d01-4482-a120-21da71276458)
+![image](https://github.com/francisco-milan/docs.abapgit.org/assets/36721657/8e3f8f19-f38d-4051-8218-37230039df7d)
 
 Note: Personal settings are relevant to all of your repositories.
 
