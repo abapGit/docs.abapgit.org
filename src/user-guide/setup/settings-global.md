@@ -37,7 +37,7 @@ By default, the [commit page](/user-guide/projects/online/stage-commit.md#commit
 
 Note: These settings are only available when using the [Development Version](/user-guide/getting-started/install.md#install-developer-version) of abapGit.
 
-![](/img/settings-global-3.png)
+![image](https://github.com/francisco-milan/docs.abapgit.org/assets/36721657/1e5e2e13-c215-48df-822f-686609089a6d)
 
 ### Enable Critical Unit Tests
 The developer version of abapGit might contain unit tests that impact system settings (like creating/deleting test objects). By default, these test are disabled.
