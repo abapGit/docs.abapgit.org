@@ -12,8 +12,7 @@ Global settings in abapGit are valid system-wide and for all users. You can main
 
 Note: Global settings are relevant for online projects, only.
 
-![](/img/settings-global-1.png)
-![](/img/settings-global-2.png)
+![image](https://github.com/francisco-milan/docs.abapgit.org/assets/36721657/1df41c1a-b1b2-47ab-affd-d6bb42ad72cd)
 
 ## Proxy Settings
 
