@@ -20,8 +20,7 @@ If you turn on "Show Last Opened Repository", abapGit will jump directly to the 
 
 ## User Interface
 
-You can switch the **Theme** for abapGit between several choices: Default, Dark, and Belize. Alternatively, you can select "Synced with SAP GUI" to use the same theme
-you are using for SAP GUI (availability depends on SAP GUI release).
+You can switch the **Theme** for abapGit between several choices: Default, Dark, and Belize. Alternatively, you can select "Synced with SAP GUI" to use the same theme you are using for SAP GUI (availability depends on SAP GUI release).
 
 The size of icons can be influenced using **Icon scaling**. If automatic detection does not work properly, you can pick a better size with the other settings.
 
@@ -38,14 +37,11 @@ Large | abapGit will force the icons to double in size
 ## Interaction
 
 Typically, when objects are changed, the system will display a popup to confirm the activation of objects. This gives the change to address syntax errors, for example.
-If you want objects to be activated automatically, select **Activate Objects Without Popup**. If there are syntax errors, abapGit will indicate this with an icon next to
-the objects in the repository view.
+If you want objects to be activated automatically, select **Activate Objects Without Popup**. If there are syntax errors, abapGit will indicate this with an icon next to the objects in the repository view.
 
-If you are using ABAP Development Tools (ADT) in Eclipse, we recommend to turn on **Enable Jump to ABAP Development Tools**. Clicking on objects names in abapGit will then
-open the object in ADT (if available).
+If you are using ABAP Development Tools (ADT) in Eclipse, we recommend to turn on **Enable Jump to ABAP Development Tools**. Clicking on objects names in abapGit will then open the object in ADT (if available).
 
-**Enable Vimium-like Link Hints** and **Key to Activate Link Hints** provide a feature similarly to the [Vimium browser](https://vimium.github.io/). After pressing the
-activation key (default "t"), abapGit will uses a clever highlighting method to navigate using links.
+**Enable Vimium-like Link Hints** and **Key to Activate Link Hints** provide a feature similarly to the [Vimium browser](https://vimium.github.io/). After pressing the activation key (default "t"), abapGit will uses a clever highlighting method to navigate using links.
 
 ![](/img/settings-personal-3.png)
 
