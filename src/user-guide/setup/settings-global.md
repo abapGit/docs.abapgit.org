@@ -4,9 +4,11 @@ category: setup
 order: 40
 ---
 
-Global settings in abapGit are valid system-wide and for all users. You can maintain the settings from the repository list or repository view by selecting "Settings > Global".
+Global settings in abapGit are valid system-wide and for all users. You can maintain the settings from the repository list or repository view by selecting "Global Settings" > "Global".
 
-![](/img/settings-global-0.png)
+![image](https://github.com/abapGit/docs.abapgit.org/assets/36721657/d9d2793d-cc38-4c55-adf0-792b879dddde)
+![image](https://github.com/abapGit/docs.abapgit.org/assets/36721657/26e8e815-ce40-42df-a336-47e1dadf4867)
+
 
 Note: Global settings are relevant for online projects, only.
 
