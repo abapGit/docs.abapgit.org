@@ -12,7 +12,7 @@ settings from the repository list or repository view by selecting "Global Settin
 
 Note: Personal settings are relevant to all of your repositories.
 
-![](/img/settings-personal-1.png)
+![image](https://github.com/francisco-milan/docs.abapgit.org/assets/36721657/7f196541-dacd-466b-800a-d5d367ea0247)
 
 ## Startup
 
