@@ -6,13 +6,13 @@ order: 40
 
 Global settings in abapGit are valid system-wide and for all users. You can maintain the settings from the repository list or repository view by selecting "Global Settings" > "Global".
 
-![image](https://github.com/abapGit/docs.abapgit.org/assets/36721657/d9d2793d-cc38-4c55-adf0-792b879dddde)
-![image](https://github.com/abapGit/docs.abapgit.org/assets/36721657/26e8e815-ce40-42df-a336-47e1dadf4867)
+![abapGit](/img/settings-global-4.png)
+![abapGit](/img/settings-global-5.png)
 
 
 Note: Global settings are relevant for online projects, only.
 
-![image](https://github.com/francisco-milan/docs.abapgit.org/assets/36721657/1df41c1a-b1b2-47ab-affd-d6bb42ad72cd)
+![abapGit](/img/settings-global-6.png)
 
 ## Proxy Settings
 
@@ -37,7 +37,7 @@ By default, the [commit page](/user-guide/projects/online/stage-commit.md#commit
 
 Note: These settings are only available when using the [Development Version](/user-guide/getting-started/install.md#install-developer-version) of abapGit.
 
-![image](https://github.com/francisco-milan/docs.abapgit.org/assets/36721657/1e5e2e13-c215-48df-822f-686609089a6d)
+![abapGit](/img/settings-global-7.png)
 
 ### Enable Critical Unit Tests
 The developer version of abapGit might contain unit tests that impact system settings (like creating/deleting test objects). By default, these test are disabled.
