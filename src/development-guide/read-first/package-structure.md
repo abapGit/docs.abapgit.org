@@ -38,4 +38,4 @@ Don't do any manual changes in this folder, its a renamed copy of https://github
 
 ### `/src/objects/aff/`
 
-Dont do any manual changes in this folder, mirroed from https://github.com/abapGit/aff_mirror
+Don't do any manual changes in this folder, mirrored from https://github.com/abapGit/aff_mirror
