@@ -79,9 +79,9 @@ The following list provides a quick reference to hotkeys **used** in abapGit.
 | Key | Description              |
 | --- | ------------------------ |
 | a   | Refresh All              |
-| h   | Toogle Hidden Characters |
+| h   | Toggle Hidden Characters |
 | r   | Refresh Local            |
-| u   | Toogle Split/Unified     |
+| u   | Toggle Split/Unified     |
 
 ## Code Inspector
 
