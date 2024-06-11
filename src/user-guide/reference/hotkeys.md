@@ -29,7 +29,7 @@ The following list provides a quick reference to hotkeys **used** in abapGit.
 | o     | New Offline Repository |
 | p     | Pull                   |
 | s     | Stage                  |
-| x     | abapGit Settings       |
+| x     | Global Settings        |
 
 ## Repository View
 
