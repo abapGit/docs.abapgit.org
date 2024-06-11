@@ -28,7 +28,7 @@ Each commit to an online repository requires a commit message. The corresponding
 
 You can also maintain a default for the comment. Variables $OBJECT and $FILE will be replaced by the number of objects or files contained in the commit.
 
-By default, the [commit page](/user-guide/projects/online/stage-commit.md#commit) contains fields for "Author Name" and "Author Email" which you can enter in case they are different from the committer. If the author is always the same as the committer, these fields are not required and you can use the "Hide Author Fields" option to remove them from on the commit page.
+By default, the [commit page](/user-guide/projects/online/stage-commit.md#commit) contains fields for "Author Name" and "Author Email" which you can enter in case they are different from the committer. If the author is always the same as the committer, these fields are not required and you can use the "Hide Author Fields" option to remove them from the commit page.
 
 ## Development Internal Settings
 
