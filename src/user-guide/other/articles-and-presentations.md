@@ -182,3 +182,7 @@ Michael Pang
 [What is abapGit?](https://switchedon.bowdark.com/what-is-abapgit-e6022c6e99d9), Colby Hemond 
 
 [Managing Updates to abapGit in Shared Development Systems](https://blogs.sap.com/2023/09/22/managing-updates-to-abapgit-in-shared-development-systems/), Fabian Lupa
+
+## 2024
+
+[Happy Birthday abapGit, 10 years](https://www.linkedin.com/pulse/happy-birthday-abapgit-10-years-lars-hvam-petersen-dh3mf/), Lars Hvam
