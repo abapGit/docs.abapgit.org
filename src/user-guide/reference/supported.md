@@ -23,6 +23,7 @@ order: 20
 | `BDEF` | Behaviour Definition                                         |                                                           **Yes** | *Planned* |
 | `BMFR` | Application Component                                        |           [#2108](https://github.com/abapGit/abapGit/issues/2108) | No        |
 | `BOBF` | BOPF: Business Object Model                                  |             [#165](https://github.com/abapGit/abapGit/issues/165) | No        |
+| `BGQC` | Background Processing Context                                |          **Yes**, [AFF](https://github.com/SAP/abap-file-formats/tree/main/file-formats) | **Yes**        |
 | `CHAR` | Object characteristic                                        |                                                           **Yes** | No        |
 | `CHDO` | Change Document Object                                       |                                                           **Yes** | *Planned* |
 | `CHKC` | ATC Check Category                                           |          **Yes**, [AFF](https://github.com/SAP/abap-file-formats) | **Yes**   |
@@ -154,6 +155,7 @@ order: 20
 | `UCSA` | Unified Connectivity Service Assembly                        |                                                           **Yes** | No        |
 | `UDMO` | Data model                                                   |                                                           **Yes** | No        |
 | `UENO` | Entity type                                                  |                                                           **Yes** | No        |
+| `UIAD` | Launchpad App Descriptor Item                                |          **Yes**, [AFF](https://github.com/SAP/abap-file-formats) | **Yes**   |
 | `UIPG` | Fiori Launchpad Page Template                                |          **Yes**, [AFF](https://github.com/SAP/abap-file-formats) | **Yes**   |
 | `UIST` | Fiori Launchpad Space Template                               |          **Yes**, [AFF](https://github.com/SAP/abap-file-formats) | **Yes**   |
 | `VCLS` | View cluster                                                 |                                                           **Yes** | No        |
