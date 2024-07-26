@@ -39,7 +39,10 @@ Large | abapGit will force the icons to double in size
 Typically, when objects are changed, the system will display a popup to confirm the activation of objects. This gives the change to address syntax errors, for example.
 If you want objects to be activated automatically, select **Activate Objects Without Popup**. If there are syntax errors, abapGit will indicate this with an icon next to the objects in the repository view.
 
-If you are using ABAP Development Tools (ADT) in Eclipse, we recommend to turn on **Enable Jump to ABAP Development Tools**. Clicking on objects names in abapGit will then open the object in ADT (if available).
+If you are using ABAP Development Tools (ADT) in Eclipse, we recommend to turn on **Enable Jump to ABAP Development Tools**. Clicking on objects names in abapGit will then
+open the object in ADT (if available). Please ensure that ADT Link Handling is enabled in eclipse preferecenes.
+![eclipse - ABAP development](/img/adt1.png)
+![adt link handler](/img/adt2.png)
 
 **Enable Vimium-like Link Hints** and **Key to Activate Link Hints** provide a feature similarly to the [Vimium browser](https://vimium.github.io/). After pressing the activation key (default "t"), abapGit will uses a clever highlighting method to navigate using links.
 
