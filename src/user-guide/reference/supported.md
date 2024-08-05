@@ -47,6 +47,7 @@ order: 20
 | `DRTY` | CDS Type                                                     |          **Yes**, [AFF](https://github.com/SAP/abap-file-formats) | **Yes**   |
 | `DRUL` | Dependency Rule                                              |                                                           **Yes** | No        |
 | `DSFD` | CDS Scalar Function Definition                               |          **Yes**, [AFF](https://github.com/SAP/abap-file-formats) | **Yes**   |
+| `DSFI` | CDS Scalar Function Implementation                           |          **Yes**, [AFF](https://github.com/SAP/abap-file-formats) | **Yes**   |
 | `DSYS` | Chapter of a Book Structure                                  |                                                           **Yes** | No        |
 | `DTDC` | Dynamic Cache                                                |                                                           **Yes** | *Planned* |
 | `DTEB` | CDS Entity Buffer                                            |          **Yes**, [AFF](https://github.com/SAP/abap-file-formats) | **Yes**   |
