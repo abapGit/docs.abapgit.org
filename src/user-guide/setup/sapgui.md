@@ -53,6 +53,7 @@ Relevant SAP Notes:
 - [3331099 - SAP GUI for Windows Edge HTML control: Custom URI scheme support is now available](https://me.sap.com/notes/3331099)
 - [3335007 - SAP GUI for Windows Edge HTML control: Edge browser extension "SAP GUI connector for Microsoft Edge" is not working with SAP Logon Pad and NWBC](https://me.sap.com/notes/3335007)
 - [3337501 - SAP GUI for Windows Edge HTML Control: Crash is observed when calling ABAP method GET_BROWSER_STRING of CL_GUI_HTML_VIEWER](https://me.sap.com/notes/3337501)
+- [3355910 - SAP GUI for Windows Edge HTML Control: Fixed issues caused due to introduction of new custom URI support APIs](https://me.sap.com/notes/3355910)
 - [What’s New in SAP GUI for Windows](https://help.sap.com/docs/sap_gui_for_windows/e8f03b91f99d45f4ae9d90ddf6e44b70/64155e6b9cb84de79ac28b55ec6fa26c.html)
 
 ### SAP GUI for Java
