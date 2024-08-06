@@ -149,6 +149,7 @@ order: 20
 | `SUSC` | Authorization object class                                   |                                                           **Yes** | No        |
 | `SUSH` | Assignment: Service --> Authorization Objects                |                                                           **Yes** | *Planned* |
 | `SUSO` | Authorization object                                         |                                                           **Yes** | *Planned* |
+| `SWCR` | Software Component Relations                                 |          **Yes**, [AFF](https://github.com/SAP/abap-file-formats) | **Yes**   |
 | `SXCI` | Business Add-Ins - Implementations                           |                                                           **Yes** | No        |
 | `TABL` | Table                                                        |                                                           **Yes** | *Planned* |
 | `TOBJ` | Definition of a Maintenance and Transport Object             |                                                           **Yes** | *Planned* |
