@@ -6,6 +6,7 @@ order: 50
 
 ## Customer
 
+* [AB-InBev](https://www.ab-inbev.com/)
 * [bonprix Handelsgesellschaft mbH, Germany](https://www.bonprix.de)
 * [City of Zurich](https://www.stadt-zuerich.ch/portal/en/index.html)
 * [CHS Inc.](https://www.chsinc.com)
