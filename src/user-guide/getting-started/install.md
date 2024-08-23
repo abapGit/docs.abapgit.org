@@ -30,7 +30,7 @@ You can check your system for recommended SAP Notes using [Note Analyzer](/user-
 3. In source code change mode, upload the code from the file using Utilities -> More Utilities -> Upload/Download -> Upload
 4. Activate
 
-Typically, abapGit will only be used in the development system, so it can be installed in a local `$` package (e.g.  `$ZABAPGIT`).
+Typically, abapGit will only be used in the development system, so it can be installed in a local `$` package (e.g.  `$ABAPGIT`).
 
 Now you can use abapGit by executing the report in transaction `SE38`.
 
