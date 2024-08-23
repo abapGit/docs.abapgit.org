@@ -14,7 +14,7 @@ Having already [installed](/user-guide/getting-started/install.md#install-standa
 1. [Install the development version](/user-guide/getting-started/install.md#install-developer-version) of abapGit, by running `ZABAPGIT_STANDALONE` and either:
    1. cloning your *own [fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/getting-started/about-collaborative-development-models)* of the [abapGit repository](https://github.com/abapGit/abapGit) using abapGit's "New Online" option or
    2. [downloading the zip file and installing it](/user-guide/getting-started/install.md#install-developer-version) using the "New Offline" option
-2. When specifying a package for the repository in step 1, assign a different (new, e.g. `$ZABAPGIT`) package to the one `ZABAPGIT_STANDALONE` is in
+2. When specifying a package for the repository in step 1, assign a different (new, e.g. `$ABAPGIT`) package to the one `ZABAPGIT_STANDALONE` is in
 
 3. Your system will now contain the abapGit package, along with several sub-packages and development objects such as classes, interfaces, function groups, etc. There will also be the development version of the abapGit program (transaction `ZABAPGIT`). The standalone program, `ZABAPGIT_STANDALONE` will remain unaffected, to serve as [fallback](/user-guide/getting-started/upgrade.md#troubleshooting).
 
