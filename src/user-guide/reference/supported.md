@@ -70,8 +70,8 @@ order: 20
 | `FORM` | SAPscript form                                               |                                                           **Yes** | No        |
 | `FTGL` | Feature Toggle                                               |                                                           **Yes** | No        |
 | `FUGR` | Function Group                                               |                                                           **Yes** | **Yes**   |
-| `FUGS` | Function Group with Customer Include: SAP Part               |           [#2851](https://github.com/abapGit/abapGit/issues/2851) | Unknown |
-| `FUGX` | Function Group with Customer Include: Customer Part          |           [#2851](https://github.com/abapGit/abapGit/issues/2851) | Unknown |
+| `FUGS` | Function Group with Customer Include: SAP Part               |                                                           **Yes** | **Yes**   |
+| `FUGX` | Function Group with Customer Include: Customer Part          |           [#2851](https://github.com/abapGit/abapGit/issues/2851) | Unknown   |
 | `G4BA` | SAP Gateway OData V4 Backend Service Group & Assignments     |                                                           **Yes** | *Planned* |
 | `G4BS` | SAP Gateway OData V4 Backend Service                         |                                                           **Yes** | *Planned* |
 | `GSMP` | Generic Simple Metric Provider                               |          **Yes**, [AFF](https://github.com/SAP/abap-file-formats) | **Yes**   |
