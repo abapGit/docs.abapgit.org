@@ -46,4 +46,6 @@ If credentials are required for accessing the repository, you will have to maint
 
 ### Custom background modes
 
-Implement interface `ZIF_ABAPGIT_BACKGROUND` in a global class, and it will automatically show up in the abapGit background settings, making it possible to configure and run for a repository.
+Implement interface `ZIF_ABAPGIT_BACKGROUND` in a global class, and it will automatically show up in the abapGit background settings, making it possible to configure and run for a repository. While using the standalone version of abapGit implement the include `ZABAPGIT_BACKGROUND_USER_EXIT`.
+All implementations of the interface as well as the local include will be determined automatically.
+Both ways of adding a plugin can exist in parallel, but due to the restrictions of dynamic method calls global classes are available within the developer version only. Same is true for include based implementations, which are executed by the standalone version only.
