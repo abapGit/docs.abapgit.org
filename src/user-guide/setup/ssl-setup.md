@@ -6,9 +6,9 @@ order: 20
 
 ## Overview
 
-In general, Git servers require secure connections. Therefore, abapGit is using secure connections based on HTTPS to access Git servers.
+In general, Git servers require secure connections. Therefore, abapGit uses secure HTTPS connections to access Git servers.
 
-Note: Using unsecure HTTP connections is possible but strongly discouraged since the content of your repository would become visible on the network.
+Note: Using unsecured HTTP connections is possible, but it is strongly discouraged since the content of your repository will become visible on the network.
 
 To support HTTPS, your SAP system must be configured accordingly:
 
@@ -26,7 +26,7 @@ We use GitHub.com as an example for configuring secure connections. This is also
 
 ### SAP Crypto Library
 
-Secure connections require installation of the SAP Crypto Library (CommonCryptoLib 8). Since SAP NetWeaver 7.4 this library is installed with the system. However, if your system is older or not up-to-date, you might have to update the library to a more recent version.
+Secure connections require the installation of the SAP Crypto Library (CommonCryptoLib 8). Since SAP NetWeaver 7.4 this library is installed with the system. However, if your system is older or not up-to-date, you might have to update the library to a more recent version.
 
 :::note
 It's highly recommended to run a recent version of the Crypto Library to avoid known security issues. As of December 2022, the latest version is `8.5.47`.
@@ -70,7 +70,7 @@ If configured correctly, transaction `SMICM` > Goto > Services (`Shift + F1`) wi
 
 As a default, abapGit uses an anonymous client connection (`ANONYM - SSL Client (Anonymous)`). A secure connection requires that the Git server certificate is available in the certificate list. The certificate must also be valid!
 
-First, download the server certificates to you local machine. Then import and add these certificates to your SAP system.
+First, download the server certificates to your local machine. Then import and add these certificates to your SAP system.
 
 [Trust Manager in SAP Documentation](https://help.sap.com/docs/SAP_NETWEAVER_750/280f016edb8049e998237fcbd80558e7/4c5bdb17f85640f1e10000000a42189c.html)
 
@@ -94,7 +94,7 @@ If done correctly, transaction `STRUST` will show the Git server certificates in
 
 1. Use Firefox to go to [https://github.com](https://github.com)
 2. Click on the lock icon and then "More Information ..." and there "View Certificate"
-3. Switch to the Details Tab and choose the first certificate of the hierarchy and click Export
+3. Switch to the Details Tab, choose the first certificate of the hierarchy and click Export
 4. Do the same for the next certificate in the hierarchy
 
 ##### Option C - Safari
@@ -108,13 +108,13 @@ If done correctly, transaction `STRUST` will show the Git server certificates in
 ##### Option D - Manual
 
 1. Goto GitHub, find the certificate that it is using
-2. Download certificate from [https://www.digicert.com/digicert-root-certificates.htm](https://www.digicert.com/digicert-root-certificates.htm)
+2. Download the certificate from [https://www.digicert.com/digicert-root-certificates.htm](https://www.digicert.com/digicert-root-certificates.htm)
 
 #### Install the Certificate Files
 
 1. Install the certificates in transaction `STRUST`:
 2. Click on the Change button
-3. Open "SSL client Client SSL Client (Anonymous)" folder
+3. Open the "SSL client Client SSL Client (Anonymous)" folder
 4. In the third box called "Certificate", click on the bottom-left button "Import certificate" to bring the certificate into the system
 5. Select "Add to certificate list"
 6. Repeat the process for all downloaded certificates
@@ -132,6 +132,12 @@ Report [ZABAPGIT_TEST_SSL](/user-guide/setup/ssl-test.md) can be used to verify 
 
 ### Troubleshooting
 
+:::info
+The following SAP Notes contain the details for setup and troubleshooting:
+- SAP Note [510007](https://me.sap.com/notes/510007) - Additional considerations about setting up SSL on Application Server ABAP
+- SAP Note [2368112](https://me.sap.com/notes/2368112) - Outgoing HTTPS connection does not work in AS ABAP
+:::
+
 Connection issues typically lead to "Access to resource forbidden" (HTTP 403) or "Misdirected Request" (HTTP 421) errors.
 
 1. Go to transaction `SMICM`
@@ -140,7 +146,7 @@ Connection issues typically lead to "Access to resource forbidden" (HTTP 403) or
 4. Select Goto > Trace Files > Display All to view the ICM trace (`dev_icm`)
 
 - Check for any errors
-- Find the section called "SSL Initialization" and check if it ends with "Success - SapCryptoLib SSL ready!"
+- Find the "SSL Initialization" section and check if it ends with "Success - SapCryptoLib SSL ready!"
 - Compare the listed SSL settings to the recommended settings of SAP Note 51007 (and mentioned above)
 
 5. Go to transaction `STRUST`
