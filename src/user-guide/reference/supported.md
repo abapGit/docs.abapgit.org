@@ -11,6 +11,7 @@ order: 20
 | `AMSD` | Logical Database Schema                                      |                                                           **Yes** | No        |
 | `AOBJ` | Archiving Object                                             |             [#804](https://github.com/abapGit/abapGit/issues/804) | No        |
 | `APIS` | API Release State                                            |                                                           **Yes** | No        |
+| `APLO` | Application Log Objects                                      |          **Yes**, [AFF](https://github.com/SAP/abap-file-formats) | **Yes**   |
 | `AQBG` | ABAP Query: User group                                       |                                                           **Yes** | No        |
 | `AQQU` | ABAP Query: Query                                            |                                                           **Yes** | No        |
 | `AQSG` | ABAP Query: Functional area                                  |                                                           **Yes** | No        |
@@ -21,9 +22,9 @@ order: 20
 | `AVAR` | Activation Variants for Assertions and Breakpoints           |                                                           **Yes** | No        |
 | `AVAS` | Classification                                               |                                                           **Yes** | No        |
 | `BDEF` | Behaviour Definition                                         |                                                           **Yes** | *Planned* |
+| `BGQC` | Background Processing Context                                |          **Yes**, [AFF](https://github.com/SAP/abap-file-formats/tree/main/file-formats) | **Yes**        |
 | `BMFR` | Application Component                                        |           [#2108](https://github.com/abapGit/abapGit/issues/2108) | No        |
 | `BOBF` | BOPF: Business Object Model                                  |             [#165](https://github.com/abapGit/abapGit/issues/165) | No        |
-| `BGQC` | Background Processing Context                                |          **Yes**, [AFF](https://github.com/SAP/abap-file-formats/tree/main/file-formats) | **Yes**        |
 | `CHAR` | Object characteristic                                        |                                                           **Yes** | No        |
 | `CHDO` | Change Document Object                                       |                                                           **Yes** | *Planned* |
 | `CHKC` | ATC Check Category                                           |          **Yes**, [AFF](https://github.com/SAP/abap-file-formats) | **Yes**   |
@@ -110,7 +111,9 @@ order: 20
 | `PROG` | Program                                                      |                                                           **Yes** | **Yes**   |
 | `RONT` | SAP Object Type                                              |          **Yes**, [AFF](https://github.com/SAP/abap-file-formats) | **Yes**   |
 | `SAJC` | Application job catalog entry                                |           [#1580](https://github.com/abapGit/abapGit/issues/1580) | No        |
+| `SAJC` | Application Job Catalog Entry                                |          **Yes**, [AFF](https://github.com/SAP/abap-file-formats) | **Yes**   |
 | `SAJT` | Application job template                                     |            [1581](https://github.com/abapGit/abapGit/issues/1581) | No        |
+| `SAJT` | Application Job Templates                                    |          **Yes**, [AFF](https://github.com/SAP/abap-file-formats) | **Yes**   |
 | `SAMC` | ABAP Messaging Channels                                      |                                                           **Yes** | No        |
 | `SAPC` | ABAP Push Channels                                           |                                                           **Yes** | No        |
 | `SCP1` | BC Set or Customizing Profile                                |                                                           **Yes** | No        |
