@@ -22,9 +22,10 @@ order: 20
 | `AVAR` | Activation Variants for Assertions and Breakpoints           |                                                           **Yes** | No        |
 | `AVAS` | Classification                                               |                                                           **Yes** | No        |
 | `BDEF` | Behaviour Definition                                         |                                                           **Yes** | *Planned* |
-| `BGQC` | Background Processing Context                                |          **Yes**, [AFF](https://github.com/SAP/abap-file-formats/tree/main/file-formats) | **Yes**        |
+| `BGQC` | Background Processing Context                                |          **Yes**, [AFF](https://github.com/SAP/abap-file-formats) | **Yes**   |
 | `BMFR` | Application Component                                        |           [#2108](https://github.com/abapGit/abapGit/issues/2108) | No        |
 | `BOBF` | BOPF: Business Object Model                                  |             [#165](https://github.com/abapGit/abapGit/issues/165) | No        |
+| `CDBO` | Custom Data Browser Object                                   |          **Yes**, [AFF](https://github.com/SAP/abap-file-formats) | **Yes**   |
 | `CHAR` | Object characteristic                                        |                                                           **Yes** | No        |
 | `CHDO` | Change Document Object                                       |                                                           **Yes** | *Planned* |
 | `CHKC` | ATC Check Category                                           |          **Yes**, [AFF](https://github.com/SAP/abap-file-formats) | **Yes**   |
