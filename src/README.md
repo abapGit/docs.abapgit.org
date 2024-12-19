@@ -43,3 +43,7 @@ It is a community effort to support the project, recommend [watching](https://he
 ## Community vs. SAP Distribution of abapGit
 
 This website is documenting the community version of abapGit (available on [GitHub](https://github.com/abapGit/abapGit)). The SAP version of abapGit available that is part of SAP Business Technology Platform and SAP S/4HANA Cloud is documented on [help.sap.com](https://help.sap.com/docs/BTP/65de2977205c403bbc107264b8eccf4b/d62ed9d54a764c53990f25f0ab6c27f9.html). When using the SAP version, please note that there are different capabilities and supported object types (as described by SAP). If the SAP version does not work correctly, open a [ticket with SAP support](https://me.sap.com/servicessupport/cases).
+
+## License
+
+The abapGit documentation is available under the [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/) license.
