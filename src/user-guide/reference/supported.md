@@ -1,7 +1,7 @@
 ---
 title: Supported Object Types
 category: reference
-order: 20
+order: 5
 ---
 
 | Type   | Description                                                  |                                                         Supported | ABAP Language Version |
@@ -77,6 +77,7 @@ order: 20
 | `G4BA` | SAP Gateway OData V4 Backend Service Group & Assignments     |                                                           **Yes** | *Planned* |
 | `G4BS` | SAP Gateway OData V4 Backend Service                         |                                                           **Yes** | *Planned* |
 | `GSMP` | Generic Simple Metric Provider                               |          **Yes**, [AFF](https://github.com/SAP/abap-file-formats) | **Yes**   |
+| `HTTP` | HTTP Destination                                             |                                                           **Yes** | No        |
 | `IAMU` | Language-Independent IAC Binary Data                         |                                                           **Yes** | No        |
 | `IARP` | Parameters of IAC Language Resource                          |                                                           **Yes** | No        |
 | `IASP` | Parameters of an IAC service                                 |                                                           **Yes** | No        |
