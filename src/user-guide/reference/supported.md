@@ -1,7 +1,7 @@
 ---
 title: Supported Object Types
 category: reference
-order: 5
+order: 10
 ---
 
 | Type   | Description                                                  |                                                         Supported | ABAP Language Version |
