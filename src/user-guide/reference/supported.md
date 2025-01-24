@@ -37,9 +37,9 @@ order: 10
 | `CUS0` | Customizing IMG Activity                                     |                                                           **Yes** | No        |
 | `CUS1` | Customizing Transactions                                     |                                                           **Yes** | No        |
 | `CUS2` | Customizing Attributes                                       |                                                           **Yes** | No        |
-| `DCLS` | ABAP Data Control Language Sources                           |                                                           **Yes** | *Planned* |
-| `DDLS` | Data Definition Language Source                              |                                                           **Yes** | *Planned* |
-| `DDLX` | CDS metadata extension                                       |                                                           **Yes** | *Planned* |
+| `DCLS` | ABAP Data Control Language Sources                           |                                                           **Yes** | **Yes**   |
+| `DDLS` | Data Definition Language Source                              |                                                           **Yes** | **Yes**   |
+| `DDLX` | CDS metadata extension                                       |                                                           **Yes** | **Yes**   |
 | `DEVC` | Package                                                      |                                                           **Yes** | **Yes**   |
 | `DIAL` | Dialog Module                                                |                                                           **Yes** | No        |
 | `DOCT` | General Text                                                 |                                                           **Yes** | No        |
