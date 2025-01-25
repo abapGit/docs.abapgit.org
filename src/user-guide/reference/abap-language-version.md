@@ -129,7 +129,7 @@ You can use [abaplint](https://github.com/abaplint/abaplint/blob/main/docs/getti
 
 So far, handling of ABAP language version is implemented for the following object types:
 
-`CLAS`, `DEVC`, `FUGR`, `INTF`, `PROG`, and objects based on the ABAP file format.
+`CLAS`, `DEVC`, `FUGR`, `INTF`, `PROG`, `DDLS`, `DDLX`, `DCLS` and objects based on the ABAP file format.
 
 It's planned to support other object types that include the ABAP language version as well.
 
