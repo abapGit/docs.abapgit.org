@@ -65,6 +65,7 @@ index: false
 - [Namespaces](reference/namespaces.md)
 - [Packages & Transports](reference/packages.md)
 - [Folders & Files](reference/folders-filenames.md)
+- [Data Config](reference/data-config.md)
 - [ABAP Language Version](reference/abap-language-version.md)
 - [Note Analyzer](reference/note-analyzer.md)
 - [APACK](reference/apack.md)
