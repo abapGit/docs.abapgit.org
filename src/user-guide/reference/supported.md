@@ -187,5 +187,5 @@ If additional object types are required please add a comment to [issue](https://
 Customizing can be moved via `SCP1` Business Sets configuration, or alternatively, the [data feature](data-config.md) which can move table contents to and from git.
 
 :::info
-abapGit in SAP Business Technology Platform, ABAP Environment [supports other object types](https://help.sap.com/docs/btp/sap-business-technology-platform/released-abap-object-types)!
+abapGit in SAP Business Technology Platform, ABAP Environment [supports other object types](https://help.sap.com/docs/btp/sap-business-technology-platform/released-abap-object-types).
 :::
