@@ -34,6 +34,7 @@ order: 10
 | `CLAS` | Class (ABAP Objects)                                         |                                                           **Yes** | **Yes**   |
 | `CMOD` | Customer enhancement projects                                |                                                           **Yes** | No        |
 | `CMPT` | Code Composer Template                                       |                                                           **Yes** | No        |
+| `COTA` | Communication Target                                         |                                                           **Yes** | No        |
 | `CUS0` | Customizing IMG Activity                                     |                                                           **Yes** | No        |
 | `CUS1` | Customizing Transactions                                     |                                                           **Yes** | No        |
 | `CUS2` | Customizing Attributes                                       |                                                           **Yes** | No        |
