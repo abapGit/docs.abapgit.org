@@ -1,5 +1,5 @@
 ---
-title: abapGit flow
+title: abapGit Flow
 category: reference
 order: 90
 ---
@@ -14,7 +14,11 @@ Filtered git operations is not a real git thing, it's something else than git. I
 
 The flow page gives an overview of all features that a developer is working on across their favorite repositories.
 
+![](/img/flow_2.png)
+
 ## Enabling
 
 To enable a repository to work with flow, go to the local repository settings and tick "Flow Page".
 Furthermore, developers must set their favorite repositories, so abapGit knows which parts each developer is working on.
+
+![](/img/flow_1.png)
