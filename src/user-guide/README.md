@@ -14,6 +14,7 @@ index: false
 - [Uninstall](getting-started/uninstall.md)
 - [UI Layout](getting-started/ui-layout.md)
 - [UI Features](getting-started/ui.md)
+- [Troubleshooting](getting-started/troubleshooting.md)
 
 ### Setup
 
