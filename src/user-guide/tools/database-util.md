@@ -1,7 +1,7 @@
 ---
 title: Database Utility
-category: reference
-order: 99
+category: tools
+order: 10
 ---
 
 `Database Utility` is a tool for managing database entries created by abapGit. You can access the tool via the tools icon in the top right corner of the abapGit home page [](/img/utilities.png). 
