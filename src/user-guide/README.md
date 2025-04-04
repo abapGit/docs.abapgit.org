@@ -11,7 +11,7 @@ index: false
 
 - [Installation](getting-started/install.md)
 - [Upgrading](getting-started/upgrade.md)
-- [Uninstalling](getting-started/uninstall.md)
+- [Uninstall](getting-started/uninstall.md)
 - [UI Layout](getting-started/ui-layout.md)
 - [UI Features](getting-started/ui.md)
 
