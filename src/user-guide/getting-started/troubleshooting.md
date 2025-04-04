@@ -6,6 +6,17 @@ order: 60
 
 The most common issues with abapGit are listed here
 
+## Connection Types
+
+There are several ways to connect from your SAP system to a git server. For example:
+
+- SAP System > HTTP/S > Git Server
+- SAP System > HTTP/S > Proxy > Git Server
+- SAP System > Exit( RFC Destination ) > HTTP/S > Git Server
+- SAP System > Exit( RFC Destination + Proxy ) > HTTP/S > Git Server
+
+Be sure to check all areas.
+
 ## HTTP Errors
 
 ### 401 - Unauthorized and 403 - Forbidden
@@ -62,3 +73,11 @@ Behaviour of abapGit can be changed using [User Exits](/user-guide/reference/exi
 
 - Check "Debug Info" from the tools menu on the repository overview (shows which exits are active in your system)
 - In case of issues, deactivate all exits to narrow down the root cause.
+
+## SAP ABAP Development Tools (ADT)
+
+If you are using the ADT abapGit plugin provided by SAP, check [SAP BTP, Working with abapGit](https://help.sap.com/docs/btp/sap-business-technology-platform/working-with-abapgit).
+
+## SAP Cloud Solutions
+
+You can find tips for connections from SAP Cloud solutions [here](https://github.com/abapGit/abapGit/issues/6206#issuecomment-2047638552).
