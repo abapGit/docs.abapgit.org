@@ -55,6 +55,15 @@ index: false
 - [Background Mode](repo-settings/background-mode.md)
 - [Statistics](repo-settings/stats.md)
 
+## Tools
+
+- [Database Utility](tools/database-util.md)
+- [Package to ZIP](tools/package-to-zip.md)
+- [Transport to ZIP](tools/transport-to-zip.md)
+- [Objects to Files](tools/objects-to-files.md)
+- [Debug Info](tools/debug-info.md)
+- [IE Dev Tools](tools/ie-dev-tools.md)
+
 ### Reference
 
 - [Translations and I18n](reference/translations.md)
@@ -70,7 +79,6 @@ index: false
 - [ABAP Language Version](reference/abap-language-version.md)
 - [Note Analyzer](reference/note-analyzer.md)
 - [APACK](reference/apack.md)
-- [Database Utility](reference/database-util.md)
 
 ### Other
 
