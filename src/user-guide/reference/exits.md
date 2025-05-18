@@ -49,6 +49,10 @@ This exit can be used to change the path and filename displayed in the repositor
 
 Force allowing serialization of SAP objects.
 
+### CHANGE_COMMITTER_INFO
+
+Change user information for the staging page, can be used for non-personalized usernames, [example](https://gist.github.com/larshp/8ba845d6377204a7fe75c5f87b05f795).
+
 ### CHANGE_LOCAL_HOST
 
 If the hostnames are not properly configured, this exit can be used to modify the settings. This is especially useful when running abapGitServer on the local system.
