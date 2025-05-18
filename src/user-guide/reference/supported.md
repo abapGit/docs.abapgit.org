@@ -157,6 +157,7 @@ order: 10
 | `SUSO` | Authorization object                                         |                                                           **Yes** | *Planned* |
 | `SWCR` | Software Component Relations                                 |          **Yes**, [AFF](https://github.com/SAP/abap-file-formats) | **Yes**   |
 | `SXCI` | Business Add-Ins - Implementations                           |                                                           **Yes** | No        |
+| `SXSD` | BADI Definition                                              |                                                           **Yes** | No        |
 | `TABL` | Table                                                        |                                                           **Yes** | *Planned* |
 | `TABU` | Table Data                                                   |                            **Yes**, [Data Config](data-config.md) | No        |
 | `TOBJ` | Definition of a Maintenance and Transport Object             |                                                           **Yes** | *Planned* |
