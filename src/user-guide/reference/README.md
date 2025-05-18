@@ -4,7 +4,7 @@ icon: book-open
 article: false
 index: false
 dir:
-    order: 50
+order: 50
 ---
 
 ## Catalog
@@ -18,6 +18,7 @@ dir:
 - [Namespaces](namespaces.md)
 - [Packages & Transports](packages.md)
 - [Folders & Files](folders-filenames.md)
+- [Data Config](data-config.md)
 - [ABAP Language Version](abap-language-version.md)
 - [Note Analyzer](note-analyzer.md)
 - [APACK](apack.md)

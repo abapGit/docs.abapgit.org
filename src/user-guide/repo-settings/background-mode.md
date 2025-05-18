@@ -44,6 +44,16 @@ If credentials are required for accessing the repository, you will have to maint
 * Create a step for the program `ZABAPGIT` (or `ZABAPGIT_STANDALONE`, depending on which version of abapGit you are using). This will execute *all* defined background activities.
 * You can check the log of the job with transaction `SM37`
 
+### Delivered background modes
+
+abapGit includes following background modes:
+
+- Automatic pull
+- Automatic push with auto author (derived from users who last changed objects)
+- Automatic push with fixed author (provided in the settings)
+
+Modes for "Transport to Branch" and "Branch to Transport" can be installed from [this repository](https://github.com/abapGit/background_modes).
+
 ### Custom background modes
 
 Implement interface `ZIF_ABAPGIT_BACKGROUND` in a global class, and it will automatically show up in the abapGit background settings, making it possible to configure and run for a repository. While using the standalone version of abapGit implement the include `ZABAPGIT_BACKGROUND_USER_EXIT`.

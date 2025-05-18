@@ -11,9 +11,10 @@ index: false
 
 - [Installation](getting-started/install.md)
 - [Upgrading](getting-started/upgrade.md)
-- [Uninstalling](getting-started/uninstall.md)
+- [Uninstall](getting-started/uninstall.md)
 - [UI Layout](getting-started/ui-layout.md)
 - [UI Features](getting-started/ui.md)
+- [Troubleshooting](getting-started/troubleshooting.md)
 
 ### Setup
 
@@ -54,6 +55,15 @@ index: false
 - [Background Mode](repo-settings/background-mode.md)
 - [Statistics](repo-settings/stats.md)
 
+## Tools
+
+- [Database Utility](tools/database-util.md)
+- [Package to ZIP](tools/package-to-zip.md)
+- [Transport to ZIP](tools/transport-to-zip.md)
+- [Objects to Files](tools/objects-to-files.md)
+- [Debug Info](tools/debug-info.md)
+- [IE Dev Tools](tools/ie-dev-tools.md)
+
 ### Reference
 
 - [Translations and I18n](reference/translations.md)
@@ -65,6 +75,7 @@ index: false
 - [Namespaces](reference/namespaces.md)
 - [Packages & Transports](reference/packages.md)
 - [Folders & Files](reference/folders-filenames.md)
+- [Data Config](reference/data-config.md)
 - [ABAP Language Version](reference/abap-language-version.md)
 - [Note Analyzer](reference/note-analyzer.md)
 - [APACK](reference/apack.md)

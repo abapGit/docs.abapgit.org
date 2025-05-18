@@ -11,6 +11,7 @@ dir:
 
 - [Installation](install.md)
 - [Upgrading](upgrade.md)
-- [Uninstalling](uninstall.md)
+- [Uninstall](uninstall.md)
 - [UI Layout](ui-layout.md)
 - [UI Features](ui.md)
+- [Troubleshooting](troubleshooting.md)

@@ -34,6 +34,7 @@ order: 10
 | `CLAS` | Class (ABAP Objects)                                         |                                                           **Yes** | **Yes**   |
 | `CMOD` | Customer enhancement projects                                |                                                           **Yes** | No        |
 | `CMPT` | Code Composer Template                                       |                                                           **Yes** | No        |
+| `COTA` | Communication Target                                         |                                                           **Yes** | No        |
 | `CUS0` | Customizing IMG Activity                                     |                                                           **Yes** | No        |
 | `CUS1` | Customizing Transactions                                     |                                                           **Yes** | No        |
 | `CUS2` | Customizing Attributes                                       |                                                           **Yes** | No        |
@@ -156,7 +157,9 @@ order: 10
 | `SUSO` | Authorization object                                         |                                                           **Yes** | *Planned* |
 | `SWCR` | Software Component Relations                                 |          **Yes**, [AFF](https://github.com/SAP/abap-file-formats) | **Yes**   |
 | `SXCI` | Business Add-Ins - Implementations                           |                                                           **Yes** | No        |
+| `SXSD` | BADI Definition                                              |                                                           **Yes** | No        |
 | `TABL` | Table                                                        |                                                           **Yes** | *Planned* |
+| `TABU` | Table Data                                                   |                            **Yes**, [Data Config](data-config.md) | No        |
 | `TOBJ` | Definition of a Maintenance and Transport Object             |                                                           **Yes** | *Planned* |
 | `TRAN` | Transaction                                                  |                                                           **Yes** | No        |
 | `TTYP` | Table Type                                                   |                                                           **Yes** | *Planned* |
@@ -183,6 +186,8 @@ order: 10
 
 If additional object types are required please add a comment to [issue](https://github.com/abapGit/abapGit/issues/5912)
 
-Customizing can be moved via SCP1 Business configuration, or alternatively, the data feature which can move table contents to and from git.
+Customizing can be moved via `SCP1` Business Sets configuration, or alternatively, the [data feature](data-config.md) which can move table contents to and from git.
 
-abapGit in SAP Business Technology Platform, ABAP Environment [supports other object types](https://help.sap.com/docs/btp/sap-business-technology-platform/released-abap-object-types)
+:::info
+abapGit in SAP Business Technology Platform, ABAP Environment [supports other object types](https://help.sap.com/docs/btp/sap-business-technology-platform/released-abap-object-types).
+:::
