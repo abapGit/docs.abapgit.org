@@ -21,6 +21,7 @@ order: 50
 * [Schwarz Group](https://gruppe.schwarz/en)
 * [Sword Holdings](https://www.sword-group.com/)
 * [TRR, Sweden](https://www.trr.se)
+* [GEZE, Germany](https://www.geze.com)
 
 ## SAP
 
