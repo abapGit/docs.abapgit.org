@@ -7,11 +7,11 @@ order: 11
 There are currently two options available for including translations in a repository: 
 
 1. Object-specific logic provided by the object serializer class
-2. LXE framework (experimental, [#4415](https://github.com/abapGit/abapGit/pull/4415)) 
+2. LXE framework ([#4415](https://github.com/abapGit/abapGit/pull/4415), [#7232](https://github.com/abapGit/abapGit/pull/7232))
 
 If no translation languages are maintained in this setting, the first approach is used.
 
-## LXE framework (Highly experimental, use with care)
+## LXE Framework
 
 ### Concept
 
@@ -26,11 +26,7 @@ The old approach was to find all translations available for the object and seria
 
 ## New approach
 
-... uses LXE framework which supposedly identifies all translations relevant to the object. And also allow requesting specific languages to be serialized in an easy way.
-
-## Current limitations
-
-The LXE approach is currently limited to PROG and FUGR objects.
+... uses LXE framework which supposedly identifies all translations relevant to the object. And also allow requesting specific languages to be serialized in an easy way. 
 
 ## Usage
 
