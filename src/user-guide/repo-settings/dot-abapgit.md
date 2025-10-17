@@ -151,9 +151,13 @@ files as well as repository configuration related to workflows like build or lin
 
 Assuming that the default starting folder `/src/` is used, any files in root `/` or any other folder than the starting folder are ignored automatically. Therefore it will not be necessary to list files of the root folder in the ignore list (and as a consequence, the default ignore list is empty).
 
-The ignore logic is based on the "covers pattern" operator (not regex). A file is ignored, if the path and file cover at least one of the patterns listed in this setting.
+The ignore logic is based on the "[CP - covers pattern](https://help.sap.com/doc/abapdocu_latest_index_htm/LATEST/en-US/ABENLOGEXP_STRINGS.html)" operator (note: it's not a Regex). A file is ignored, if the path and file cover at least one of the patterns listed in this setting.
 
-Example: `/src/hr/zcl_confidential*` will ignore all classes in the `/src/hr` package that begin with `zcl_confidential`.
+Examples: 
+
+- `/src/hr/zcl_confidential*`:  ignore all classes in the `/src/hr` package that begin with `zcl_confidential`.
+- `*.prog.abap`: ignore all programs (in all packages)
+- `*#namespc#cl_test.*`: ignore class `/namespc/cl_test` (in filenames namespace separators `/` are replaces with `#`)
 
 ## ABAP
 
