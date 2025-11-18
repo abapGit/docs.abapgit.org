@@ -46,6 +46,10 @@ abapGit is targeted for [version 7.02](https://help.sap.com/doc/abapdocu_latest_
 
 [abaplint](https://abaplint.org) will automatically check every pull request for language syntax that is compatible with 7.02.
 
+#### Check Warnings and Errors
+
+The goal is to have as few warnings on high, latest ABAP releases as possible, and no errors on low, earliest supported release (i.e. 7.02). See [design decision](https://github.com/abapGit/abapGit/issues/7438#issuecomment-3441285648).
+
 #### Standard Objects
 
 The code must only reference standard SAP objects (classes, interfaces, DDIC types) that exist in version 7.02 and higher. Referencing objects that do *not* exist in 7.02 creates syntax errors and therefore requires using dynamic ABAP. DDIC types that do *not* exist in 7.02 should be replaced by local type definitions.
