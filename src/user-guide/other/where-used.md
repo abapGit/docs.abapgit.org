@@ -34,6 +34,7 @@ order: 50
 * [adesso business consulting AG](https://www.adesso-bc.com/)
 * [asbrucon GmbH](https://www.asbrucon.de)
 * [Computerservice Wolf](https://www.computerservice-wolf.com/)
+* [Conduct](https://www.conduct.ai/)
 * [CQSE](https://www.cqse.eu/)
 * [Discovery Consulting](https://www.discoveryconsulting.com.au)
 * [dbosoft](https://www.dbosoft.eu)
