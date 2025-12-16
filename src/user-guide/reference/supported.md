@@ -162,6 +162,7 @@ order: 10
 | `TABU` | Table Data                                                   |                            **Yes**, [Data Config](data-config.md) | No        |
 | `TOBJ` | Definition of a Maintenance and Transport Object             |                                                           **Yes** | *Planned* |
 | `TRAN` | Transaction                                                  |                                                           **Yes** | No        |
+| `TRUL` | Transformation Rule                                          |                                                           **Yes** | No        |
 | `TTYP` | Table Type                                                   |                                                           **Yes** | *Planned* |
 | `TYPE` | Type Group                                                   |                                                           **Yes** | No        |
 | `UCSA` | Unified Connectivity Service Assembly                        |                                                           **Yes** | No        |
