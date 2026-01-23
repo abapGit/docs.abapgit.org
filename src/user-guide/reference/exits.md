@@ -150,6 +150,11 @@ This exit is called at the end of the serialize process and gives an opportunity
 
 Perform custom validations just before pushing into remote while being on the "Commit Message" screen (see [#6013](https://github.com/abapGit/abapGit/pull/6013)).
 
+### VALIDATE_AFTER_PUSH
+
+Perform custom validations right after push has been performed. The updated meta data of the repository like *commit hash ID* or the current *branch name* are provided.
+Integration of these data into the code base are the most common use case (see [#7521](https://github.com/abapGit/abapGit/pull/7521)).
+
 ### WALL_MESSAGE_LIST
 
 Can be used to add a message at the list level (repository list, see [#4653](https://github.com/abapGit/abapGit/issues/4653)).
