@@ -28,6 +28,12 @@
      <DOKU_REF/>
     </item>
     <item>
+     <SCOPE_ID>OBJECT_DESD</SCOPE_ID>
+     <DESCRIPTION>DESD</DESCRIPTION>
+     <SOLUTION>BASIS</SOLUTION>
+     <DOKU_REF/>
+    </item>
+    <item>
      <SCOPE_ID>OBJECT_HTTP</SCOPE_ID>
      <DESCRIPTION>HTTP</DESCRIPTION>
      <SOLUTION>BASIS</SOLUTION>
@@ -148,6 +154,12 @@
      <NUMBER>0003616245</NUMBER>
      <DESCRIPTION>SU22 - incorrect check for authorization objects</DESCRIPTION>
      <VERSION>0002</VERSION>
+    </item>
+    <item>
+     <SCOPE_ID>OBJECT_DESD</SCOPE_ID>
+     <NUMBER>0003709523</NUMBER>
+     <DESCRIPTION>ABAP CDS: DDIF_STATE_GET returns illegal_input for objects of type DESD</DESCRIPTION>
+     <VERSION>0001</VERSION>
     </item>
     <item>
      <SCOPE_ID>GUI</SCOPE_ID>
@@ -546,6 +558,12 @@
      <SWCOMPONENT>SAP_BASIS</SWCOMPONENT>
      <RELEASE>757</RELEASE>
      <SPLEVEL>7</SPLEVEL>
+    </item>
+    <item>
+     <NUMBER>0003709523</NUMBER>
+     <SWCOMPONENT>SAP_BASIS</SWCOMPONENT>
+     <RELEASE>816</RELEASE>
+     <SPLEVEL>2</SPLEVEL>
     </item>
    </NOTE_VALIDITY>
    <NOTE_COMMENT>
