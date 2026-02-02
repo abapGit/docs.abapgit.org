@@ -42,6 +42,7 @@ order: 10
 | `DDLS` | Data Definition Language Source                              |                                                           **Yes** | **Yes**   |
 | `DDLX` | CDS metadata extension                                       |                                                           **Yes** | **Yes**   |
 | `DEVC` | Package                                                      |                                                           **Yes** | **Yes**   |
+| `DESD` | Dictionary External Schema Definition                        |          **Yes**, [AFF](https://github.com/SAP/abap-file-formats) | **Yes**   |
 | `DIAL` | Dialog Module                                                |                                                           **Yes** | No        |
 | `DOCT` | General Text                                                 |                                                           **Yes** | No        |
 | `DOCV` | Documentation (Independent)                                  |                                                           **Yes** | No        |
