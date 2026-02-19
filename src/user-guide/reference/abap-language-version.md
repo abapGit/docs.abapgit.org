@@ -10,12 +10,6 @@ With the 7.52 release, SAP provides the usage of the ABAP language version infor
 
 abapGit has been enhanced to support consistent handling of the ABAP language version across the different abapGit "flavors" (open-source / part of SAP BTP ABAP environment).
 
-:::warning 
-Using ABAP language version in abapGit is still an experimental feature. 
-
-So far, abapGit handles ABAP language version only for a limited set of object types. See Supported Object Types, below. 
-:::
-
 ### Settings
 
 There are five possible [settings](/user-guide/repo-settings/dot-abapgit.md) for defining how the ABAP language version is handled by abapGit:
@@ -126,12 +120,6 @@ You can use [abaplint](https://github.com/abaplint/abaplint/blob/main/docs/getti
 :::
 
 ### Supported Object Types
-
-So far, handling of ABAP language version is implemented for the following object types:
-
-`CLAS`, `DEVC`, `FUGR`, `INTF`, `PROG`, `DDLS`, `DDLX`, `DCLS` and objects based on the ABAP file format.
-
-It's planned to support other object types that include the ABAP language version as well.
 
 See [Supported Object Types](./supported.md) for details.
 
