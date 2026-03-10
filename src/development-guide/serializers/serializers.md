@@ -33,8 +33,8 @@ Requirements that are necessary to support an object type should be checked in t
     TRY.
         " Check requirements...
       CATCH cx_root.
-        " Raise an exception if not supported
-        zcx_abapgit_exception=>raise( 'Object type SRFC not supported' ).
+        " Raise an exception if not supported        
+        RAISE EXCEPTION TYPE zcx_abapgit_type_not_supported EXPORTING obj_type = ms_item-obj_type.
     ENDTRY.
 
   ENDMETHOD.
