@@ -59,26 +59,24 @@ Relevant SAP Notes:
 
 ### SAP GUI for Java
 
-When you start abapGit for the first time using *SAP GUI for JAVA*, you will get a warning that this GUI is not supported and there might be issues.
+When you start abapGit for the first time using *SAP GUI for Java*, you will get a warning that this GUI is not supported and there might be issues.
 
 You may confirm that you want to use this GUI anyway and continue.
 
 Known issues:
 
-- [Commit page is non-functional, #5082](https://github.com/abapGit/abapGit/issues/5082)
+- [SAP GUI for Java - Minor issues: Hotkeys, vimium features and command palettes not working, #6829](https://github.com/abapGit/abapGit/issues/6829)
 
 ### SAP GUI for HTML
 
-abapGit also works with *SAP GUI for HTML*. However, there are currently several known issues, which prevent proper usage of this GUI.
+abapGit also works with *SAP GUI for HTML*. There is one known issue, which prevents proper usage of the patch feature in abapGit.
 
 Known issues:
 
-- [Issue running abapGit in WebGUI (SAP GUI for HTML), #4433](https://github.com/abapGit/abapGit/issues/4433)
-- [SAP GUI for HTML: Toolbar on Repository List not working, #6567](https://github.com/abapGit/abapGit/issues/6567)
-- [SAP GUI for HTML: Staging does not work correctly, #6568](https://github.com/abapGit/abapGit/issues/6568)
+- [SAP GUI for HTML: Patching does not work, 7636](https://github.com/abapGit/abapGit/issues/7636)
 
 ### Browser
 
-A plain HTML version that runs in any browser is available as a [proof-of-concept](https://github.com/abapGit/web-edition).
+A plain HTML version that runs in any browser is available as a [proof-of-concept](https://github.com/abapGit/abapGit-web-classic).
 
 This solution is currently limited by the fact that will use several SAP GUI popups that don't work in a browser.
