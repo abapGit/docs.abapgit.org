@@ -110,6 +110,8 @@ ENDIF.
 
 Can be used for any postprocessing operation for deserialized objects. Since it is a postprocessing step, only logs can be added to `ii_log` and one should not terminate the process by raising an exception, which may lead to inconsistencies.
 
+Example: [Version code inspector variant](https://gist.github.com/larshp/fc7c4c205116a74a801fa3c850e6b7b3)
+
 ### DETERMINE_TRANSPORT_REQUEST
 
 Set a transport request per repository. If set, no transport request popup appears and the transport is used for pull/delete (see [#5916](https://github.com/abapGit/abapGit/pull/5916)).
