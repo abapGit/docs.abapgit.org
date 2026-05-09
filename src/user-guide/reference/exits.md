@@ -61,6 +61,10 @@ If the hostnames are not properly configured, this exit can be used to modify th
 
 Adjust the determined maximum number of parallel processes used in parallel serialization. Also see [CHANGE_RFC_SERVER_GROUP](#change_rfc_server_group).
 
+### CHANGE_PASSWORD_POPUP_USERNAME
+
+Allows changing username based on URL
+
 ### CHANGE_PROXY_AUTHENTICATION
 
 Determine based on the repository URL if authentication is required when accessing the proxy.
