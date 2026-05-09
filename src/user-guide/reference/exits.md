@@ -61,6 +61,10 @@ If the hostnames are not properly configured, this exit can be used to modify th
 
 Adjust the determined maximum number of parallel processes used in parallel serialization. Also see [CHANGE_RFC_SERVER_GROUP](#change_rfc_server_group).
 
+### CHANGE_PASSWORD_POPUP_USERNAME
+
+Allows changing username based on URL
+
 ### CHANGE_PROXY_AUTHENTICATION
 
 Determine based on the repository URL if authentication is required when accessing the proxy.
@@ -109,6 +113,8 @@ ENDIF.
 ### DESERIALIZE_POSTPROCESS
 
 Can be used for any postprocessing operation for deserialized objects. Since it is a postprocessing step, only logs can be added to `ii_log` and one should not terminate the process by raising an exception, which may lead to inconsistencies.
+
+Example: [Version code inspector variant](https://gist.github.com/larshp/fc7c4c205116a74a801fa3c850e6b7b3)
 
 ### DETERMINE_TRANSPORT_REQUEST
 
