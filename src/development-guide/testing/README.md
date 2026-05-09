@@ -10,5 +10,6 @@ dir:
 ## Catalog
 
 - [Debugging](debugging.md)
+- [PR Tests](pr.md)
 - [Unit Tests](tests.md)
 - [CI Tests](ci.md)
