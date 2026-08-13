@@ -32,7 +32,8 @@ Secure connections require the installation of the SAP Crypto Library (CommonCry
 It's highly recommended to run a recent version of the Crypto Library to avoid known security issues. As of August 2026, the latest version is `8.6.04`.
 :::
 
-[Crypto Library in SAP Software Center](https://me.sap.com/softwarecenter/template/products/%20_APP=00200682500000001943&_EVENT=DISPHIER&HEADER=Y&FUNCTIONBAR=N&EVENT=TREE&NE=NAVIGATE&ENR=01200615320100002625&V=MAINT&TA=ACTUAL&PAGE=SEARCH/SAPCRYPTOLIB)
+- SAP Note [1848999](https://me.sap.com/notes/1848999) - Central Note for CommonCryptoLib 8 (SAPCRYPTOLIB)
+- [Crypto Library in SAP Software Center](https://me.sap.com/softwarecenter/template/products/%20_APP=00200682500000001943&_EVENT=DISPHIER&HEADER=Y&FUNCTIONBAR=N&EVENT=TREE&NE=NAVIGATE&ENR=01200615320100002625&V=MAINT&TA=ACTUAL&PAGE=SEARCH/SAPCRYPTOLIB)
 
 You can find the installed version number in transaction `STRUST` > Environment > Display SSF Version:
 
@@ -135,6 +136,7 @@ Report [ZABAPGIT_TEST_SSL](/user-guide/setup/ssl-test.md) can be used to verify 
 :::info
 The following SAP Notes contain the details for setup and troubleshooting:
 - SAP Note [510007](https://me.sap.com/notes/510007) - Additional considerations about setting up SSL on Application Server ABAP
+- SAP Note [1848999](https://me.sap.com/notes/1848999) - Central Note for CommonCryptoLib 8 (SAPCRYPTOLIB)
 - SAP Note [2368112](https://me.sap.com/notes/2368112) - Outgoing HTTPS connection does not work in AS ABAP
 :::
 
