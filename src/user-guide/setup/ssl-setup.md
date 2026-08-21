@@ -29,10 +29,11 @@ We use GitHub.com as an example for configuring secure connections. This is also
 Secure connections require the installation of the SAP Crypto Library (CommonCryptoLib 8). Since SAP NetWeaver 7.4 this library is installed with the system. However, if your system is older or not up-to-date, you might have to update the library to a more recent version.
 
 :::note
-It's highly recommended to run a recent version of the Crypto Library to avoid known security issues. As of December 2022, the latest version is `8.5.47`.
+It's highly recommended to run a recent version of the Crypto Library to avoid known security issues. As of August 2026, the latest version is `8.6.04`.
 :::
 
-[Crypto Library in SAP Download Center](https://me.sap.com/softwarecenter/template/products/%20_APP=00200682500000001943&_EVENT=DISPHIER&HEADER=Y&FUNCTIONBAR=N&EVENT=TREE&NE=NAVIGATE&ENR=01200615320100002625&V=MAINT&TA=ACTUAL&PAGE=SEARCH/SAPCRYPTOLIB)
+- SAP Note [1848999](https://me.sap.com/notes/1848999) - Central Note for CommonCryptoLib 8 (SAPCRYPTOLIB)
+- [Crypto Library in SAP Software Center](https://me.sap.com/softwarecenter/template/products/%20_APP=00200682500000001943&_EVENT=DISPHIER&HEADER=Y&FUNCTIONBAR=N&EVENT=TREE&NE=NAVIGATE&ENR=01200615320100002625&V=MAINT&TA=ACTUAL&PAGE=SEARCH/SAPCRYPTOLIB)
 
 You can find the installed version number in transaction `STRUST` > Environment > Display SSF Version:
 
@@ -42,16 +43,16 @@ You can find the installed version number in transaction `STRUST` > Environment 
 
 See [SAP Note 510007](https://me.sap.com/notes/510007), section 7, for detailed information on how to configure your SAP system to support SSL.
 
-The currently recommended settings for TLS v1.2 interoperability are (requiring at least CommonCryptoLib 8.4.38, recommending at least 8.5.4):
+The currently recommended settings for TLS v1.2 interoperability are (requiring at least CommonCryptoLib 8.5.4):
 
 ```
-ssl/ciphersuites             = 135:PFS:HIGH::EC_X25519:EC_P256:EC_HIGH
-ssl/client_ciphersuites      = 150:PFS:HIGH::EC_X25519:EC_P256:EC_HIGH
+ssl/ciphersuites             = 897:PFS:HIGH::EC_X25519:EC_P256:EC_HIGH
+ssl/client_ciphersuites      = 912:PFS:HIGH::EC_X25519:EC_P256:EC_HIGH
 icm/HTTPS/client_sni_enabled = TRUE
 ssl/client_sni_enabled       = TRUE
 
 SETENV_26 = SECUDIR=$(DIR_INSTANCE)$(DIR_SEP)sec
-SETENV_27 = SAPSSL_CLIENT_CIPHERSUITES=150:PFS:HIGH::EC_X25519:EC_P256:EC_HIGH
+SETENV_27 = SAPSSL_CLIENT_CIPHERSUITES=912:PFS:HIGH::EC_X25519:EC_P256:EC_HIGH
 SETENV_28 = SAPSSL_CLIENT_SNI_ENABLED=TRUE 
 ```
 
@@ -135,6 +136,7 @@ Report [ZABAPGIT_TEST_SSL](/user-guide/setup/ssl-test.md) can be used to verify 
 :::info
 The following SAP Notes contain the details for setup and troubleshooting:
 - SAP Note [510007](https://me.sap.com/notes/510007) - Additional considerations about setting up SSL on Application Server ABAP
+- SAP Note [1848999](https://me.sap.com/notes/1848999) - Central Note for CommonCryptoLib 8 (SAPCRYPTOLIB)
 - SAP Note [2368112](https://me.sap.com/notes/2368112) - Outgoing HTTPS connection does not work in AS ABAP
 :::
 
