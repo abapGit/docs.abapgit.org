@@ -134,6 +134,7 @@ order: 10
 | `SHMA` | Shared Objects: Defined Area Attributes                      | **Yes**                                                                                  | No                    |
 | `SICF` | ICF Service                                                  | **Yes**                                                                                  | No                    |
 | `SKTD` | Knowledge Transfer Document                                  | **Yes**                                                                                  | **Yes**               |
+| `SLDD` | Generic Application Access Rules                             | **Yes**                                                                                  | No                    |
 | `SMBC` | Business Configuration Maintenance Objects                   | **Yes**, [AFF](https://github.com/SAP/abap-file-formats/tree/main/file-formats/smbc)     | **Yes**               |
 | `SMIM` | Info Object from the MIME Repository                         | **Yes**                                                                                  | **Yes**               |
 | `SMTG` | OM: Email Template                                           | **Yes**                                                                                  | No                    |
