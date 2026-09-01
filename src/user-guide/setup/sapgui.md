@@ -6,7 +6,7 @@ order: 10
 
 ## General
 
-The primary front-end for abapGit is **SAP GUI for Windows**. With limitations, abapGit can work with *SAP GUI for Java* and *SAP GUI for HTML*.
+abapGit supports the latest versions of *SAP GUI for Windows*, *SAP GUI for Java*, and *SAP GUI for HTML*.
 
 The abapGit application is displayed using a SAP GUI HTML Control embedded in SAP GUI.
 
@@ -59,23 +59,11 @@ Relevant SAP Notes:
 
 ### SAP GUI for Java
 
-When you start abapGit for the first time using *SAP GUI for JAVA*, you will get a warning that this GUI is not supported and there might be issues.
-
-You may confirm that you want to use this GUI anyway and continue.
-
-Known issues:
-
-- [Commit page is non-functional, #5082](https://github.com/abapGit/abapGit/issues/5082)
+The latest version of *SAP GUI for Java* is supported. We recommend keeping SAP GUI for Java up to date to benefit from the latest fixes and improvements.
 
 ### SAP GUI for HTML
 
-abapGit also works with *SAP GUI for HTML*. However, there are currently several known issues, which prevent proper usage of this GUI.
-
-Known issues:
-
-- [Issue running abapGit in WebGUI (SAP GUI for HTML), #4433](https://github.com/abapGit/abapGit/issues/4433)
-- [SAP GUI for HTML: Toolbar on Repository List not working, #6567](https://github.com/abapGit/abapGit/issues/6567)
-- [SAP GUI for HTML: Staging does not work correctly, #6568](https://github.com/abapGit/abapGit/issues/6568)
+The latest version of *SAP GUI for HTML* is supported.
 
 ### Browser
 
