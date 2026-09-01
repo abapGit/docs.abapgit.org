@@ -34,7 +34,7 @@ Requirements that are necessary to support an object type should be checked in t
         " Check requirements...
       CATCH cx_root.
         " Raise an exception if not supported
-        zcx_abapgit_exception=>raise( 'Object type SRFC not supported' ).
+        RAISE EXCEPTION TYPE zcx_abapgit_type_not_supported EXPORTING obj_type = ms_item-obj_type.
     ENDTRY.
 
   ENDMETHOD.
@@ -196,6 +196,7 @@ Step | Description | Activation
 `DDIC`  | Used for DDIC objects which require processing and activation before other object types | DDIC Mass Activation
 `ABAP`  | Used for non-DDIC objects (code or mostly anything else) which might depend on DDIC objects   | Workbench Mass Activation
 `LATE`  | Used for objects that depend on other objects processed in the previous two phases            | DDIC & Workbench Mass Activation
+`LXE`   | Used for objects that support the [LXE framework](../../user-guide/reference/translations.html#lxe-framework) for translations | n/a
 
 Within each phase, the sequence of objects is determined by abapGit based on known object type dependencies. For details, see method `PRIORITIZE_DESER` in [`ZCL_ABAPGIT_FILE_DESERIALIZE`](https://github.com/abapGit/abapGit/blob/main/src/objects/core/zcl_abapgit_file_deserialize.clas.abap).
 

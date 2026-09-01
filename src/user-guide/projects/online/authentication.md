@@ -16,7 +16,7 @@ Most git hosts allow for two factor authentication. Relevant for abapGit is how 
 
 - [GitHub](https://docs.github.com/en/github/authenticating-to-github/accessing-github-using-two-factor-authentication#using-two-factor-authentication-with-the-command-line): username / token or oauth / token
 - [GitLab](https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html): oauth / token
-- [Bitbucket](https://support.atlassian.com/bitbucket-cloud/docs/app-passwords/): username / app password (Settings > Account settings > Username, not E-mail)
+- [Bitbucket](https://support.atlassian.com/bitbucket-cloud/docs/create-an-api-token/): username / token (Settings > Account settings > Security > Create API token with scopes)
 - [Azure DevOps](https://docs.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate): username / token
 - [AWS CodeCommit](https://docs.aws.amazon.com/codecommit/latest/userguide/setting-up-gc.html): generated username / password
 

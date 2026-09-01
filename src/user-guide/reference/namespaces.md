@@ -19,4 +19,6 @@ Alternatively, you can create the namespace upfront as follows:
 1. Create namespaced package (optional)
 1. Clone/pull as usual
 
-Objects will appear as repaired in the customer system, compare with git source to determine if the objects are modified.
+:::info
+Namespaced object require different transport, i.e. workbench development/correction or repair tasks, when importing into a system. The type of task depends on the original (source) system and the role of the namespace, i.e. producer or consumer. For more details, see [Source System](/user-guide/repo-settings/dot-abapgit.html#source-system) under repository settings.
+:::

@@ -165,6 +165,18 @@ Examples:
 
 In this section, you can specify the minimum requirements that should be fulfilled to allow installation of the repository. Listed software components should exist in the target system and be at the given release or higher. If the target system matches the minimum release, then it must also be at the given patch level or higher.
 
+### Source System
+
+#### Default Behaviour
+
+When importing objects in the default customer namespace (Y- or Z-packages), objects are assigned to the current system (`TADIR-SRCSYSTEM = SY-SYSID`). It works the same way, when importing objects into a namespace that has a producer key. This means you can freely create and modify objects in this namespace. However, if the namespace only has a repair key, abapGit will assign the importing objects to "SAP" (`TADIR-SRCSYSTEM = 'SAP'`). As a result, you will not be able to modify the objects. 
+
+#### Setting a Source System
+
+If you want to allow modifying objects even if only a repair key is present (or part of the NSPC object in the repo), then you can set the source system in the repository settings to "SID". During import, abapGit will assign objects to the current system (`SY-SYSID`), which makes them modifiable. The typical use case is open-source projects using a namespace.
+
+If you want to preserve the original system, you can set the source system accordingly. For example, your repository originates in system "DEV". Set source system in your repository settings to "DEV". When you import the repository to system "ABC" objects will be assigned to "DEV" and therefore will not be modifiable. The typical use case is landscapes with multiple development systems where you want to share common packages (but keep the link to the original).
+
 ### ABAP Language Version
 
 :::warning

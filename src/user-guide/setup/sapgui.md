@@ -67,6 +67,6 @@ The latest version of *SAP GUI for HTML* is supported.
 
 ### Browser
 
-A plain HTML version that runs in any browser is available as a [proof-of-concept](https://github.com/abapGit/web-edition).
+A plain HTML version that runs in any browser is available as a [proof-of-concept](https://github.com/abapGit/abapGit-web-classic).
 
 This solution is currently limited by the fact that will use several SAP GUI popups that don't work in a browser.
