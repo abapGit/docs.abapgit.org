@@ -31,6 +31,10 @@ The list of user exits can change at any time, make sure to syntax check user ex
 
 ## Exits
 
+### ADJUST_COMMIT_MESSAGE
+
+Adjust or generate the commit comment and body on the "Commit Message" screen, based on the repository and the staged files. The exit is called when the user clicks the button enabled via [ENABLE_ADJUST_COMMIT_MESSAGE](#enable_adjust_commit_message) (see [#7757](https://github.com/abapGit/abapGit/pull/7757)).
+
 ### ADJUST_DISPLAY_COMMIT_URL
 
 Can be used to set the URL to display a commit. There are default implementations for some providers:
@@ -120,6 +124,14 @@ Example: [Version code inspector variant](https://gist.github.com/larshp/fc7c4c2
 
 Set a transport request per repository. If set, no transport request popup appears and the transport is used for pull/delete (see [#5916](https://github.com/abapGit/abapGit/pull/5916)).
 
+### ENABLE_ADJUST_COMMIT_MESSAGE
+
+Return a button text to add a button to the "Commit Message" screen, which triggers [ADJUST_COMMIT_MESSAGE](#adjust_commit_message). If the returned text is initial, no button is shown (see [#7757](https://github.com/abapGit/abapGit/pull/7757)).
+
+### ENHANCE_ANY_TOOLBAR
+
+Extend any page menu or toolbar with your own menu options, for example in the repository list or database utility (see [#7132](https://github.com/abapGit/abapGit/pull/7132)).
+
 ### ENHANCE_REPO_TOOLBAR
 
 With this exit, you can extend the toolbar with your own menu options. Currently, the exit is active for repository settings so you may define your own settings (see [#6249](https://github.com/abapGit/abapGit/pull/6249)).
@@ -140,6 +152,10 @@ Can be used for setting logon tickets eg. in connection with abapGitServer conne
 
 This exit allows you to extend abapGit with new features that are not suitable for abapGit itself. For example, you can link to a new page from a wall message. Another use case is redirecting menu items to a custom page rather than standard abapGit, for example using a company-specific solution to replace "Advanced > Run Code Inspector" (see [#4722](https://github.com/abapGit/abapGit/issues/4722)).
 
+### POST_PULL
+
+Called at the end of a pull, after the objects are deserialized and the changes are committed. The repository and the log are provided for any further processing.
+
 ### PRE_CALCULATE_REPO_STATUS
 
 Can be used to modify local and remote files before calculating diff status. Useful to remove diffs that are caused by deployment between different system versions (see also [abapgit xml stripper plugin](https://github.com/sbcgua/abapgit_xml_stripper_plugin)).
@@ -148,7 +164,7 @@ Can be used to modify local and remote files before calculating diff status. Use
 
 The exit also receives a repo metadata snapshot (`zif_abapgit_persistence=>ty_repo`) to identify the repo and its attributes in the current system (e.g. package). This can be used to enable/disable the exit for specific repos.
 
-### SERIALIZE_POSTPROCESSING
+### SERIALIZE_POSTPROCESS
 
 This exit is called at the end of the serialize process and gives an opportunity to change the content of the serialized files (see [#5194](https://github.com/abapGit/abapGit/issues/5194)).
 
