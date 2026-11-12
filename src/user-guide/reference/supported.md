@@ -151,6 +151,7 @@ order: 10
 | `SRVD` | Service Definition                                           | **Yes**                                                                                  | **Yes**               |
 | `SSFO` | SAP Smart Form                                               | **Yes**                                                                                  | No                    |
 | `SSST` | SAP Smart Style                                              | **Yes**                                                                                  | No                    |
+| `STCS` | Task List                                                    | **Yes**                                                                                  | No                    |
 | `STVI` | Transaction Variants                                         | **Yes**                                                                                  | No                    |
 | `STYL` | SAPscript style                                              | **Yes**                                                                                  | No                    |
 | `SUCU` | Authorization Groups (TBRG_AUTH)                             | **Yes**                                                                                  | No                    |
