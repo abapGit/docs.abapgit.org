@@ -168,6 +168,10 @@ The exit also receives a repo metadata snapshot (`zif_abapgit_persistence=>ty_re
 
 This exit is called at the end of the serialize process and gives an opportunity to change the content of the serialized files (see [#5194](https://github.com/abapGit/abapGit/issues/5194)).
 
+### VALIDATE_BEFORE_PULL
+
+Perform custom validations before a pull; raise `zcx_abapgit_exception` to cancel it. The exit is called twice: when the deserialize checks are calculated, before the remote `.abapgit.xml` is saved (`is_checks` is empty), and after the pull popup, before any changes are made to the system (`is_checks` holds the decisions of the popup) (see [#8006](https://github.com/abapGit/abapGit/pull/8006)).
+
 ### VALIDATE_BEFORE_PUSH
 
 Perform custom validations just before pushing into remote while being on the "Commit Message" screen (see [#6013](https://github.com/abapGit/abapGit/pull/6013)).
