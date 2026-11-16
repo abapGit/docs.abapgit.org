@@ -26,6 +26,8 @@ abapGit maintainers will add your issue to a [central list](https://github.com/a
 
    Follow the instructions below. Often, it makes sense to use an existing serializer class as a template. This can save a lot of work especially if the new object type is similar to others.
 
+   If SAP provides an ABAP File Format object handler for the object type, follow [Adding AFF support](aff.md).
+
 ::: warning
 Your code must comply with the [development guidelines](/development-guide/read-first/guidelines.md) for abapGit. Most notably your code must be compatible with 7.02 ABAP syntax and available standard SAP objects, use prefixing of variables, be pretty-printed, and pass all abaplint checks.
 
@@ -48,7 +50,7 @@ You might get lots of abaplint errors. If you are uncertain how to resolve these
 
    Fork the abapGit repository and add a branch for your serializer class. Commit your implementation (the `zcl_abapgit_object_<type>` class) to the branch, and create a pull request to the abapGit repository. Reference your issue in the pull request and add a link to the test repository.
 
-   Note: Object types using the ABAP File Format must be added to the [AFF Registry](https://github.com/abapGit/abapGit/blob/d0167ff97dcf6f90ed2721c40d194a5fb34f3ea0/src/objects/aff/zcl_abapgit_aff_registry.clas.abap#L51-L61) as well.
+   Note: Object types using the ABAP File Format must be added to the [AFF Registry](aff.md#register-the-object-type) as well.
 
 7. Update documentation
 
